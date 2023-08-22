@@ -1,0 +1,1 @@
+document.getElementById('demostracion').innerHTML = 'Otra forma de poner el código'

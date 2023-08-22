@@ -1,0 +1,1 @@
+console.log('intro al curso de javascript by freecodecamp');
