@@ -42,3 +42,5 @@ array5[array5.length]='seis';
 console.log(array5);
 array5[array5.length]='siete';
 console.log(array5);
+
+document.getElementById('culo').innerHTML = 'otro culo';
