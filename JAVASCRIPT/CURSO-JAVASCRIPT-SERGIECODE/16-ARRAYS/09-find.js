@@ -14,6 +14,6 @@ let resultado = nombres.find(x = (nombre , index , arr)   => {
     }else{
         console.log(nombre , 'no es el que estoy buscando')
     }
-}) // se va a ejecutar para todos los elementos del array ..
+}) // se va a ejecutar para todos los elementos del array .. no se puede romper el análisis..
 
 ///////////////////////////////////////////////////////////////////////////////////////////
