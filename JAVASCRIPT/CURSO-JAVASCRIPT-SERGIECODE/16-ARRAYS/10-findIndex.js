@@ -26,3 +26,4 @@ function buscarElPrimero(nombre){
     return nombre == 'Alfredo';
 }
 console.log(res_2) // va a retornar un indice del primer elemento que cumpla esa condición..
+
