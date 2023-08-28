@@ -37,12 +37,19 @@ console.log(c_e)
 
 console.log('op 1 ---------------------------------------------------')
 //////// optimizando un poco ...??
+let cantidad = 0;
 let respVocales = vocales.forEach((vocal) => {
     let respuestaLetras = arrayLetras.find((letra) => {
         // imprimi si está pero no te dice cuántas hay de cada una ..
-        if (vocal == letra) console.log(vocal)
+        if (vocal == letra) {
+            console.log(vocal)
+            cantidad++;
+        }
     })
+    console.log(cantidad)
+    cantidad = 0;
 })
+
 console.log('op 2 ---------------------------------------------------')
 let a = 0;
 let e = 0;
