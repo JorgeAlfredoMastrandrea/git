@@ -16,23 +16,23 @@ console.log('sin signos --> : ' , cadenaSinSignos);
 let cadenaToArray = cadenaSinSignos.split(' ');
 console.log(cadenaToArray)
 // creo un objeto con cada una de las palabras ..
-let objetoArray = new Map();
-// para cada ṕalabra del array, genero un par clave : valor donde clave es la palabra y valor es cero ..
-let objetoMap = cadenaToArray.map((palabra) => {
-    objetoArray.set(palabra , 0);
+let objetoClaveValor = new Map();
+// para cada ṕalabra del array, genero un par clave : valor donde clave es la palabra y valor es cero (inicializado)..
+let x = cadenaToArray.map((palabraDiccionario) => {
+    objetoClaveValor.set(palabraDiccionario , 0);
 })
-console.log(objetoArray);
+console.log(objetoClaveValor);
 // ahora empiezo a contar cuantas veces aparecen las palabras ...
 // recorro el array en busca de las palabras
 let cantidadPorPalabra = 0;
 let respPalabras = cadenaToArray.forEach((palabraDiccionario) => {
     // buscar las palabras dentro del array de palabras (ojo array)
-    let cantidadDeVocales = cadenaToArray.find((palabraTexto) => {        
+    let buscar = cadenaToArray.find((palabraTexto) => {        
         if (palabraDiccionario == palabraTexto) {
             cantidadPorPalabra++;
-            objetoArray.set(palabraDiccionario , cantidadPorPalabra);
+            objetoClaveValor.set(palabraDiccionario , cantidadPorPalabra);
         }            
     })
     cantidadPorPalabra = 0;
 })
-console.log(objetoArray)
+console.log(objetoClaveValor)
