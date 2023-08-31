@@ -2,13 +2,13 @@
 
 try{
     // acá va el código que puede fallar..
+    //if resultado no es lo que esperamos ---> lanzamos un error// throw : el código que definimos acá para un error a la medida de lo que queramos hacer
 }catch{
     // cuando hay un error, acá ponemos el código para manejar el error
 }finally{
     // siempre se ejecuta
     // finalmente acá definimos el código para ejecutar a pesar del resultado
 }
-// throw : el código que definimos acá para un error a la medida de lo que queramos hacer
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
 let dividendo = 10;
