@@ -19,4 +19,3 @@ myCalculator(5, 5, myDisplayer);
 ////             Where callbacks really shine are in asynchronous functions,                  ////
 ////   where one function has to wait for another function (like waiting for a file to load). ////
 //////////////////////////////////////////////////////////////////////////////////////////////////
-6:06 video
