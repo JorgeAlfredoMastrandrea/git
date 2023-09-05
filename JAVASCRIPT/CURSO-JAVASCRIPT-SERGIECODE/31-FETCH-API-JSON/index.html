@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FETCH-API-JSON</title>
+</head>
+<body>
+    <div class="w3-container w3-center" >
+        <p>FETCH-API-JSON</p>
+        <div class="w3-cell-row" style="width:100%">
+
+            <div class="w3-container w3-red w3-cell">
+              <p>01-GET</p>
+              <label>id ?</label>
+              <input class="w3-input" type="text" id="get">              
+              <input class="w3-button w3-white" type="button" value="Buscar" onclick="get()">              
+            </div>
+          
+            <div class="w3-container w3-green w3-cell">
+              <p>02-POST</p>              
+              <label>title ?</label>
+              <input class="w3-input" type="text" id="postTitle">
+              <label>body ?</label>
+              <input class="w3-input" type="text" id="postBody">
+              <label>userId ?</label>
+              <input class="w3-input" type="text" id="postUserID">
+              <input class="w3-button w3-white" type="button" value="Enviar" onclick="post()">
+            </div>
+
+            <div class="w3-container w3-blue w3-cell">
+              <p>03-PUT</p>
+              <label>Id ?</label>
+              <input class="w3-input" type="text" id="putId">
+              <label>Title ?</label>
+              <input class="w3-input" type="text" id="putTitle">
+              <label>Body ?</label>
+              <input class="w3-input" type="text" id="putBody">
+              <label>userId ?</label>
+              <input class="w3-input" type="text" id="putUserId">
+              <input class="w3-button w3-white" type="button" value="Put" onclick="put()">
+            </div>
+
+            <div class="w3-container w3-gray w3-cell">
+                <p>04-PATCH</p>
+            </div>
+
+            <div class="w3-container w3-yellow w3-cell">
+                <p>05-DELETE</p>
+            </div>
+          
+          </div>        
+    </div>
+
+
+    <script src="scripts.js">
+    </script>    
+</body>
+</html>
