@@ -18,4 +18,4 @@ fetch(`${urlBase}/posts/${posteoPATCH}`,{
 
 })
       .then(response => response.json())
-      .then(json => console.log(json)) culo
+      .then(json => console.log(json))
