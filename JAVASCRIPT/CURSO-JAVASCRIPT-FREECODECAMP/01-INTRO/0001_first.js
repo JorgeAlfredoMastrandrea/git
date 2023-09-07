@@ -812,3 +812,165 @@ function checkEqual(a , b){
 console.log('es a igual a b ?? ', checkEqual(3,4));
 console.log('---------------------------------------------------------------------------------')
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Multiple Ternary Operators
+function checkSign(num){
+    return num > 0 ? 'positive' : num < 0 ? 'negative' : 'zero'
+}
+console.log(checkSign(3));
+console.log(checkSign(-3));
+console.log('---------------------------------------------------------------------------------')
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// diferencia entre var vs let
+
+
+console.log('---------------------------------------------------------------------------------')
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// const Keyword
+
+console.log('---------------------------------------------------------------------------------')
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Mutate an Array Declared with const
+const arr_s = [1,2,3,4];
+function editInPlace(){    
+    "use strict"; // me dice que javascript se ajusta al modo estricto, por lo tanto no puedo cambiar asignaciones
+    // arr_s = [4,3,2,1]; // no puedo cambiar algo que es constante, es decir que al ser const no se puede..
+    // la única forma de poder cambiar es reasignando uno por uno usando los []
+    arr_s[0] = 4;
+    arr_s[1] = 3;
+    arr_s[2] = 2;
+    arr_s[3] = 1;
+}
+editInPlace()
+console.log('---------------------------------------------------------------------------------')
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Prevent Object Mutation
+function freezObject(){
+    "use strict";
+    const MATH_CONSTANTS = {
+        PI:3.14,
+    };
+
+    Object.freeze(MATH_CONSTANTS); // he frizado el objeto, la totalidad..!!!
+
+    try{
+        MATH_CONSTANTS.PI = 99;
+    }catch(ex){
+        console.log(ex);
+    }
+    return MATH_CONSTANTS.PI;
+}
+
+console.log(freezObject()); // si imprime 99 es porque he cambiado un atributo de una constante, debo usar Object.freeze para que no cambie
+
+console.log('---------------------------------------------------------------------------------')
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+console.log('-----------------FUNCION ARROW CON ----------------------------------------------')
+// Arrow Functions sirve para creear funciones anónimas..?!?!
+
+// función anónima:
+var magic_1 = function(){
+    return new Date();
+}
+console.log(magic_1())
+
+// la misma función anónima pero en función flecha..
+var magic_2 = () => {
+    return new Date();
+}
+console.log(magic_2())
+
+// la misma función flecha anterior pero mas reducida..
+var magic_3 = () => new Date();
+console.log(magic_3())
+
+console.log('-----------------FUNCION ARROW CON PARÁMETROS------------------------------------')
+const myConcat = (arg1,arg2) => arg1.concat(arg2);
+console.log(myConcat('Hola ' ,'todo bien '))
+console.log(myConcat([1,2,3] ,[4,5,6]))
+
+console.log('-----------------WRITE HIGHER ORDER ARROW FUNCTIONS------------------------------')
+const misNumeros = [4, 5.8 , -3 , 2 , 46 ,-7 , -4.3];
+// hacer una función que calcule el cuadrado de los números enteros y positivos
+const squareList = (arr) => {
+    const squareIntArr = arr.filter(num => Number.isInteger(num) && num > 0 ).map(x => x * x);
+    return squareIntArr;
+}
+const squaredIntegers = squareList(misNumeros);
+console.log(squaredIntegers);
+console.log('---------------------------------------------------------------------------------')
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Default Parameters
+// para cuando en una función dejamos declarados parametros por defecto
+const increment = (function() {
+    return function incrementar(number , value = 1){
+        return number + value;
+    };
+})();
+console.log(increment(5,2));
+console.log(increment(5));
+
+// otra version usando la forma clásica ..
+function incrementar(number , value = 1){
+    return number + value;
+}
+console.log(incrementar(5,2))
+console.log(incrementar(5))
+console.log('---------------------------------------------------------------------------------')
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Rest Operator with function parameters (...argumentos) el operador rest son los tres puntos seguidos 
+// de una palabra que representa el nombre de los argumentos
+console.log('version 1');
+const sumaV1 = (function() {
+    return function suma(x,y,z){
+        const argumentos = [x,y,z];
+        return argumentos.reduce((a,b) => a + b , 0);
+    };
+})()
+console.log(sumaV1(1,2,3));
+
+console.log('version 2');
+const sumaV2 = (function() {
+    return function suma(...argumentos){ // convierte todo lo que le pasamos acá en un array
+        return argumentos.reduce((a,b) => a + b , 0);
+    };
+})()
+console.log(sumaV2(1,2,3));
+console.log('---------------------------------------------------------------------------------')
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Use the Spread Operator to evaluate arrays in-pace
+2:55
+
+console.log('---------------------------------------------------------------------------------')
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Destructuring Assignment
+
+console.log('---------------------------------------------------------------------------------')
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Template Literals
+
+console.log('---------------------------------------------------------------------------------')
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Simple Fields
+
+console.log('---------------------------------------------------------------------------------')
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Declarative Functions
+
+console.log('---------------------------------------------------------------------------------')
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// class Syntax
+
+console.log('---------------------------------------------------------------------------------')
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// getters and setters
+
+console.log('---------------------------------------------------------------------------------')
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// import and export
+
+console.log('---------------------------------------------------------------------------------')
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
