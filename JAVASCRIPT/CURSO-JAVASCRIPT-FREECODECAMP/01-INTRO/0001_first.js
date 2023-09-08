@@ -941,12 +941,47 @@ const sumaV2 = (function() {
 console.log(sumaV2(1,2,3));
 console.log('---------------------------------------------------------------------------------')
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Use the Spread Operator to evaluate arrays in-pace
-2:55
-
+// Use the Spread Operator to evaluate arrays in-place
+const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', ]
+let arr2;
+(function(){
+    // cuando hacemos que un array sea igual a otro, se cambiamos algo en uno, se cambia en el otro
+    // para que no suceda esto, podemos usar el operador ...arr para que cuando lo igualemos
+    // el segundo array será uno que tiene los valores del primero per no será una copia de ese ..
+    // arr2 = arr1; // esto hace que un array sea copia del otro por lo tanto cuadno cambio un elemento 
+    // de uno, el otro array refleja el mismo cambio, para evitar eso hacemos : arr2 = [...arr1];
+    arr2 = [...arr1];
+    arr1[0] = 'potato';
+})();
+console.log(arr2);
 console.log('---------------------------------------------------------------------------------')
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Destructuring Assignment
+// Use Destructuring Assignment to assignment to assign variables from objects.
+var voxel = {
+    x: 3.6 , 
+    y: 7.4 , 
+    z: 6.54
+ };
+
+ var x = voxel.x;
+ var y = voxel.y;
+ var z = voxel.z;
+
+ const {
+    x: a , 
+    y: b , 
+    z: c
+ } = voxel
+
+ const AVG_TEMPERATURES = {
+    today       : 77.5,
+    tomorrow    : 79
+ }
+
+ function getTempOfTmrr(avgTemperatures){
+    "use strict";
+
+ }
 
 console.log('---------------------------------------------------------------------------------')
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
