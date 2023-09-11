@@ -957,43 +957,158 @@ console.log(arr2);
 console.log('---------------------------------------------------------------------------------')
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Use Destructuring Assignment to assignment to assign variables from objects.
+// neatly assigning values taken directly from object to a variable
 var voxel = {
     x: 3.6 , 
     y: 7.4 , 
     z: 6.54
  };
 
+ // forma antigua
  var x = voxel.x;
  var y = voxel.y;
  var z = voxel.z;
 
+ // forma nueva (detructuring assigment)
+ // copiar el valor de x en la variable aa, copiar el valor de y en bb, copiar el valor de z y copiarlo en cc
  const {
-    x: a , 
-    y: b , 
-    z: c
+    x: aa , 
+    y: bb , 
+    z: cc   
  } = voxel
 
- const AVG_TEMPERATURES = {
+// EJEMPLO
+// EJEMPLO Use Destructuring Assignment to assignment to assign variables from objects.
+const AVG_TEMPERATURES = {
     today       : 77.5,
     tomorrow    : 79
  }
 
- function getTempOfTmrr(avgTemperatures){
+function getTempOfTmrw(avgTemperatures){
     "use strict";
-
- }
-
+    // el codigo que va a cambiar :
+    /////// const tempOfTomorrow = undefined; // change this line
+    const { tomorrow : tempOfTomorrow } = avgTemperatures;
+    // cambiar el còdigo de arriba a esta linea
+    return tempOfTomorrow;
+}
+console.log(getTempOfTmrw(AVG_TEMPERATURES));
 console.log('---------------------------------------------------------------------------------')
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Template Literals
+// Destructuring Assigment with Nested Objects
+// NESTED OBJECT LOCAL_FORECAST
+const LOCAL_FORECAST = {
+    today       :   { min   : 72    , max   : 38    },
+    tomorrow    :   { min   : 73.3  , max   : 84.6  }    
+}
+function getMaxOfTmrw(forecast){
+    "use_strict";
 
+    const { tomorrow : { max : maxOfTomorrow}} = forecast;
+    return maxOfTomorrow;
+}
+console.log(getMaxOfTmrw(LOCAL_FORECAST))
 console.log('---------------------------------------------------------------------------------')
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Simple Fields
-
+// Use Destructuring Assigment to Assign Variables from Array
+const [zz , xx , , yy] = [1 ,2 ,3 ,4 ,5 , 6];
+console.log('Asignacón desestructurada : ' , zz , xx , yy);
+//////////
+let a1 = 8; b1 = 6;
+(() => {
+    "use_strict";
+    // switchear los valores de a1 y de b1
+    [a1 , b1] = [b1 , a1];
+})();
+console.log(a1);
+console.log(b1);
 console.log('---------------------------------------------------------------------------------')
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Declarative Functions
+// Use Destructuring Assigment with the Rest Operator
+// 3:03
+const source = [1,2,3,4,5,6,7,8,9,10];
+function removeFirstTwo(list){
+    const [ , ,  ...arr] = list; // al poner las dos comas lo que hacemos es decirle, no quiero esos dos primeros..
+    return arr;
+}
+const arr = removeFirstTwo(source);
+console.log('devolver el array con los dos primeros elementos removidos : ' , arr);
+console.log('array original' , source);
+console.log('---------------------------------------------------------------------------------')
+// Use Destructuring Assigment to Pass an oBject as a Function`s Parameters
+// esto es muy usado en API cuando hay que sacar la info particular y viene mucho mas de lo que necesitamos ...
+const stats = {
+    max                 :   56.78,
+    standard_deviation  :   4.34,
+    median              :   34.54,
+    node                :   23.87,
+    min                 :   -0.75,
+    average             :   35.85
+};
+const half = (function() {
+
+    return function half({ max , min }) {
+        return (max + min ) / 2.0;
+    };
+})();
+console.log(stats);
+console.log(half(stats))
+console.log('---------------------------------------------------------------------------------')
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Create Strings using Template Literals
+// los template literal son un tipo especial de string que hacen mas facil la creación de strings complejos
+const person = {
+    name: 'Zodiac Hasbro',
+    age:56
+}
+
+// template literal with multi-line and string interpolation
+const greetin = `Hello, my name is ${person.name}!
+I am ${person.age} years old.`;
+console.log(greetin);
+console.log('---------------------');
+
+const res = {
+    succes : ['max-length' , 'no-amd' , 'prefer-arrow-functions'],
+    failure: ['no-var' , 'var-on-top' , 'linebreak'],
+    skipped: ['id-blacklist','no-dup-keys']
+};
+function makeList(arr){
+    const resultDisplayArray = [];
+
+    for (let i = 0; i < arr.length; i++)
+    {
+        resultDisplayArray.push(`<li class="text-warning">${arr[i]}</li>`)
+    }
+    return resultDisplayArray;
+}
+
+const resultDisplayArray = makeList(res.failure);
+console.log(resultDisplayArray);
+console.log('---------------------------------------------------------------------------------')
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Write Concise Object Literal Declarations Using Simple Fields
+// una función arrow que toma tres parámetros y devuelve un objeto
+
+const createPerson = (name , age , gender) => {
+    // devuelve un objeto con los argumentos ennviados ...
+    // key:value
+    return  {
+        name : name,
+        age: age,
+        gender: gender
+    };
+};
+console.log(createPerson('Zodiac Hasbro' , 56 , 'male'));
+// otra forma de hacer esto mas chico sería:
+// es la misma que la anterior pero mas reducido ...
+const createPersonv2 = (name , age , gender) => ({name , age, gender});
+console.log(createPersonv2('Zodiac Hasbro' , 56 , 'male'))
+console.log('---------------------------------------------------------------------------------')
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Write Concise Declarative Functions
+//3:12
+// const 
 
 console.log('---------------------------------------------------------------------------------')
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
