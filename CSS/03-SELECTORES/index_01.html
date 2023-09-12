@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <!--varios marcadores a la vez h1,h2... body (a todo el cuerpo) *, significa que absolutamente todo va a tener ese estilo--> 
+    <!-- # selector de id -->
+    <!-- . selector de clase -->
+    <!-- h1.seccion3 es un selector combinado es decir que puedo afectar a un elemento pero dentro de una seccion especifica -->
+    <style>        
+        /* seleccion de elementos, varios marcadores a la vez h1,h2. */
+        h1,h2{                          
+            background-color: black;
+            color: white;
+        }
+        /* seleccion de elemento */
+        body{
+            background-color:green;
+        }
+        /* esto se va a aplicar a la totalidad del documento */
+        *{
+            text-align: center;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;  
+        }
+        /* # selector de id */
+        #titulo{
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+            background-color: brown;
+        }
+        /* # selector de id */
+        #parrafo{
+            background-color: blueviolet;
+            color: aqua;
+            text-align: end;
+        }
+        /* . selector de clase */
+        .seccion1{
+            background-color: yellowgreen;
+            color: black;
+        }
+        /* . selector de clase */
+        .seccion2{
+            background-color: red;
+            color: blue;
+        }
+        /* h1.seccion3 es un selector combinado es decir que puedo afectar a un elemento pero dentro de una seccion especifica */
+        h2.seccion3{
+            background-color: chartreuse;
+            color:chocolate;
+        }
+        /* seleccionamos el elemento p si y solo si tiene el id=parrafoSeleccionado */
+        /* esto es algo redundante porque solamente podemos dejar parrafoSeleccionado y sería lo mismo */
+        p#parrafoSeleccionado{
+            color:violet;
+        }
+        /* defino otra clase la cual después voy a ponerla dentro de otro elemento */
+        .estilo-fuente-distinto{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        /* acá combino dos clases */
+        .seccion1.estilo-fuente-distinto{
+            text-align: left;
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <h1>
+        Esto es un título
+    </h1>
+    <h2>
+        Este no es el título
+    </h2>
+    <h1 id="titulo">
+        Esto si
+    </h1>
+    <p id="parrafo">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Aspernatur et aliquid cupiditate provident placeat incidunt voluptatem nesciunt, <br>consequuntur ipsa aut blanditiis tenetur architecto ad repellat amet nam. Facere, mollitia repellendus.
+    </p>
+    <h3 class="seccion1">
+        Título h3
+    </h3>
+    <p class="seccion1 estilo-fuente-distinto"> <!-- acá pongo dos clases dentro de la misma etiqueta -->
+        esto combina una clase seccion 1 y otra clase estilo-fuente-distinto
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt consequuntur quos facilis omnis sunt repudiandae mollitia eum esse, asperiores earum quae itaque obcaecati qui maiores autem voluptas. Repudiandae, corrupti! Illo.
+    </p>
+    <h3 class="seccion2">
+        Título h3
+    </h3>
+    <p class="seccion2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt consequuntur quos facilis omnis sunt repudiandae mollitia eum esse, asperiores earum quae itaque obcaecati qui maiores autem voluptas. Repudiandae, corrupti! Illo.
+    </p>
+    <h2 class="seccion3">
+        Sección 3 con un id, combinado
+    </h2>
+    <p class="seccion3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt consequuntur quos facilis omnis sunt repudiandae mollitia eum esse, asperiores earum quae itaque obcaecati qui maiores autem voluptas. Repudiandae, corrupti! Illo.
+    </p>
+    <p class="seccion3" id ="parrafoSeleccionado">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ad esse, voluptatem aspernatur libero numquam odit labore, aliquid minus tenetur cupiditate. Deserunt libero exercitationem enim ea nostrum numquam dicta aut.</p>
+</body>
+</html>
