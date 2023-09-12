@@ -1108,19 +1108,106 @@ console.log('-------------------------------------------------------------------
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Write Concise Declarative Functions
 //3:12
-// const 
-
+// una constante puede contener una función ..
+const bicycle = {
+    gear : 2,
+    // no usamos la palabra function ..
+    setGear(newGear){
+        "use_strict";
+        this.gear = newGear;
+    }
+};
+bicycle.setGear(3);
+console.log(bicycle.gear);
 console.log('---------------------------------------------------------------------------------')
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// class Syntax
+// Use class Syntax to define a Constructor Function ...
+var SpaceShuttle = function(targetPlanet){
+    this.targetPlanet = targetPlanet;
+}
+var zeus = new SpaceShuttle('Jupiter');
+console.log(zeus.targetPlanet);
 
+// la forma de abajo es la misma que la de arriba.. se usa la palabra class ..
+class SpaceShuttle2 {
+    constructor(targetPlanet){
+        this.targetPlanet = targetPlanet;
+    }
+}
+var zusi = new SpaceShuttle2('Mars');
+console.log(zusi.targetPlanet);
+
+// otra forma ..
+function makeClass(){
+    class Vegetable {
+        constructor(name){
+            this.name = name;
+        }
+    }
+    return Vegetable;
+}
+const Vegetable = makeClass();
+const carrot = new Vegetable('carrot');
+console.log(carrot.name);
 console.log('---------------------------------------------------------------------------------')
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// getters and setters
+// Use getters and setters to control acces to an object
+class Book {
+    constructor(author) {
+        this._autor = author;
+    }
+    // getter
+    get writer(){
+        return this._autor;
+    }
+    // setter
+    set writer(updateAuthor){
+        this._autor = updateAuthor;
+    }
+}
+// otra forma
+function makeClass2(){
+    class Thermostat{
+        constructor(temp){
+            this._temp = 5/9 * (temp - 32);
+        }
+        get temperature(){
+            return this._temp;
+        }
+        set temperature(updateTemp){
+            this._temp = updateTemp;
+        }
+    }
+    return Thermostat;
+}
 
+const Thermostat = makeClass2();
+const thermos = new Thermostat(76);
+let temp = thermos.temperature;
+// acá estamos usando el set
+thermos.temperature = 26; 
+// acá usamos el get , tanto en el get como en el set no usamos los parnetesis ..!!
+temp = thermos.temperature;
+console.log(temp)
 console.log('---------------------------------------------------------------------------------')
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// import and export
+// Understanding the Difference between import and requiere
+// se debe poner en node lo siguiente para que esto funcione :
+// {
+//     // ...
+//     "type": "module",
+//     // ...
+// }
+// import { capitalizeString } from "../string_function.js";
+// const cap = capitalizeString('hello!');
+// console.log(cap)
+console.log('---------------------------------------------------------------------------------')
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// importar todo
+// import * as xxxx from www;
+console.log('---------------------------------------------------------------------------------')
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Create an EExport Fallback with export default
 
 console.log('---------------------------------------------------------------------------------')
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
