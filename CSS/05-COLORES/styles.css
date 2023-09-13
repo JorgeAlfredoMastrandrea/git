@@ -4,4 +4,10 @@ body{
 h1{
     background-color: #efc81a87; /* los dos ultimos representan la transparencia */
 }
+h2{
+    background-color: rgba(255, 255, 255, 1);
+}
+h3{
+    background-color: hsl(0, 100%, 50%);
+}
 /*minuto 50*/
