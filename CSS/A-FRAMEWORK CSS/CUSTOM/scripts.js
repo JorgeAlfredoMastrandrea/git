@@ -1,6 +1,7 @@
 const w3_panel = (() =>{
     var element = document.querySelector('#w3_panel');
     var style = element.currentStyle || window.getComputedStyle(element);
+    // https://www.w3schools.com/jsref/prop_style_padding.asp
     document.getElementById("w3_panel").style.padding = "50px 10px 20px 30px";
     console.log(parseInt(style.paddingLeft));
     console.log(parseInt(style.paddingTop));
