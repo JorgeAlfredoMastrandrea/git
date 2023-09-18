@@ -1,5 +1,33 @@
-/*51:11*/
+/*1:11:52*/
 
 html{
     font-size: 62.5%;
+}
+
+body{
+    margin: 0;
+    font-family: 'Poppins';
+}
+
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto; /*sin margen arriba ni abajo y centrado 'auto'*/
+}
+
+header{
+    display: flex; /*esto hace que tenga la forma de columna que queremos*/
+    justify-content: space-between; /* esto hace que se genere un espacio entre ambos */
+    align-items: center; /*genera un espacio vertical alineado*/    
+}
+
+nav{
+    margin: 4em;
+
+}
+
+nav ul{
+    list-style-type: none; /*es para que desaparezcan los puntos de los ul*/
+    display: flex; /*ac{a queda uno al lado del otro los elementos del ul*/
+    gap: 4.1em; /*esto genera el espacio entre los items*/
+    margin: 0; /*reseteamos los márrgenes*/
 }
