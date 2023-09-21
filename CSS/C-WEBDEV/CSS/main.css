@@ -78,6 +78,10 @@ h1{
     font-size: 1.8rem;
 }
 
+.cta-btns{
+    margin:5em 0;
+}
+
 .cta-btns , .secondary-cta { 
     display:flex;
     gap:2em;
@@ -99,9 +103,41 @@ h1{
     color:black;
     display:block;
     padding: 1.8em 0;
+    align-items: center;
 }
 
 .secondary-cta svg { 
     width: 20px;
+}
+
+.news {
+    display: flex;
+    gap:3em;
+    padding: 5em;
+    border:1px solid black;
+    border-radius: .8em;
+    position: relative;    
+}
+
+.news:before {
+    position: absolute;
+    content: "";
+    background: url('../images/confetti.svg');
+    width: 100px;
+    height: 100px;
+    top: -20px;
+    left: -20px;
+    z-index: 2;
+}
+
+p.employees {
+    font-size: 3.3rem;
+    margin:0; /*the far the fort the faart oh my god 1:39:07*/
+    font-weight: 200;
+}
+
+p.details {
+    /* 1:39:52*/
+
 }
 
