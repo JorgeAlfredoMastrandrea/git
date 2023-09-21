@@ -14,6 +14,8 @@ body{
     margin: 0 auto; /*sin margen arriba ni abajo y centrado 'auto'*/
 }
 
+/* Navbar */
+
 header{
     display: flex; /*esto hace que tenga la forma de columna que queremos*/
     justify-content: space-between; /* esto hace que se genere un espacio entre ambos */
@@ -28,6 +30,78 @@ nav{
 nav ul{
     list-style-type: none; /*es para que desaparezcan los puntos de los ul*/
     display: flex; /*ac{a queda uno al lado del otro los elementos del ul*/
-    gap: 4.1em; /*esto genera el espacio entre los items*/
+    gap: 4.1em; /*esto genera el espacio entre los items esto se usa para cuando hay espacios o diseño */
     margin: 0; /*reseteamos los márrgenes*/
 }
+
+nav a{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: 1.6rem; /* rem se usa para los textos*/
+    position: relative; /* es relativo a la posicion de ese elemento contenedor */
+}
+
+nav ul li a.active::before{
+    position: absolute;
+    content: "";
+    width: 35%;
+    height: 1px;
+    border-bottom: 2px solid black;
+    bottom: -6px;
+}
+
+/* Hero section */
+
+main{
+    display: flex;    
+    gap: 8em; /*hueco entre las columnas*/
+    margin-top: 11em;
+}
+
+.left-col{
+    width: 45%;
+}
+
+.right-col{
+    flex-grow: 1; /*de acuerdo al contenido que se va a colocar, es el ancho que vamos a estar viendo va a consumir el tamaño segun el contenido*/
+}
+
+h1{
+    font-size: 5.2rem;
+    font-family: 'Playfair Display';
+    font-weight: normal;
+    margin: 0; /* sacamos le margen top y todos */    
+}
+
+.subhead{
+    font-size: 1.8rem;
+}
+
+.cta-btns , .secondary-cta { 
+    display:flex;
+    gap:2em;
+}
+
+.primary-cta{
+    background-color: #F1E2D1;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color:black;
+    text-decoration: none;
+    border-radius: 1.9em;
+    padding: 1em 2em;
+}
+
+.secondary-cta { 
+    font-size: 1.8rem;
+    text-decoration: none;
+    color:black;
+    display:block;
+    padding: 1.8em 0;
+}
+
+.secondary-cta svg { 
+    width: 20px;
+}
+
