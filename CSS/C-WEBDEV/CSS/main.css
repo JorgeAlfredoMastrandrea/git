@@ -42,13 +42,24 @@ nav a{
     position: relative; /* es relativo a la posicion de ese elemento contenedor */
 }
 
-nav ul li a.active::before{
+/* esto es para hacer la linea debajo de las opciones de naveghación */
+nav ul li a.active:before{
     position: absolute;
     content: "";
     width: 35%;
     height: 1px;
     border-bottom: 2px solid black;
     bottom: -6px;
+}
+
+nav ul li a:before {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 1px;
+    border-bottom: 2px solid rgb(255, 122, 122);
+    bottom: -6px;
+    transition: width .3s; /*esto se mide en segundos*/
 }
 
 /* Hero section */
@@ -104,10 +115,12 @@ h1{
     display:block;
     padding: 1.8em 0;
     align-items: center;
+    
 }
 
 .secondary-cta svg { 
     width: 20px;
+    transition: transform .3s;
 }
 
 .news {
@@ -134,10 +147,141 @@ p.employees {
     font-size: 3.3rem;
     margin:0; /*the far the fort the faart oh my god 1:39:07*/
     font-weight: 200;
+    line-height: 100%; /* esto es para que el 50000 que aparece se quede alineado con la otra columna*/
 }
 
 p.details {
     /* 1:39:52*/
+    font-size: 1.4rem;
+    margin:0;
+}
+
+/* right column gallery */
+.right-col {
+    display: grid;
+    gap: 2.3em;
+    grid-template-columns: auto auto; /* es igual a esto -> grid-template-columns: repeat(2,auto)  */
+    grid-template-areas: /* esto es para que queden las tarjetas acomodadas de tal forma que una ocupe todo una columna y la otra quede en dos partes */
+        "left right"
+        "left bottom";
+}
+
+.card {
+    background-color: grey;
+    border-radius:  .8em;
+    padding: 1.1em;
+    display: flex;
+    align-items: end; /* esto es para que quede el texto de la tarjeta alineado al fondo */
+    background-size: 150%;
+    transition: background-size 800ms; /*esto es para hacer la animacion*/
 
 }
 
+.card1 {
+    grid-area: left;
+    background-image: url('../images/clothing1.jpg');
+    position: relative; /* esto es para poner ese dibujo del cordon con la etiqueta que aparece arriba de la tarjeta*/
+}
+
+/* es el cordon con la etiqueta que aparece arriba */
+.card1:before { 
+    position: absolute;
+    content: "";
+    background: url('../images/tag.svg') no-repeat; /* para que la imagen no se repita */
+    width: 100%;
+    height: 100%;
+    top: 20%;
+    left: -30px;
+    pointer-events: none; /* esto es para que se puede usar el enlace que esta dentro de la tarjeta !!*/
+}
+
+.card2 {    
+    background-image: url('../images/clothing2.jpg');
+}
+
+.card3 {
+    background-image: url('../images/clothing3.jpg');
+}
+
+.card-details {
+    background: white;
+    border-radius: .6em;
+    padding: 2em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 800ms; /*para hacer que se mueva el detalle cuando pasamos el puntero por arriba*/
+}
+
+.card-details a {
+    color: black;
+    text-decoration: none;
+    font-size:  1.6rem;
+    font-weight: bold;
+}
+
+.card-details p{
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+p.product-price {
+    font-size:  1.8rem;    
+}
+
+/* micro-interactions */
+nav ul lia:hover::before {
+    width: 35%;
+}
+
+.primary-cta:hover {
+    background: #E2d1BD;    
+}
+
+.secondary-cta:hover svg {
+    transform: translate(10px);
+}
+
+.secondary-cta:hover{
+    text-decoration: underline;
+}
+
+.card:hover{
+    background-size: 160%;
+}
+
+.card:hover .card-details {
+    transform: translateY(-20px);
+}
+
+/*intro animation*/
+.overlay {
+    position: absolute;
+    z-index: 999;
+    background: white;
+    width: 100%;
+    height: 100%;
+    animation: reveal 1s ease-in forwards;
+    transform-origin: bottom;
+}
+
+@keyframes reveal {
+    from {
+        transform: scaleY(1);
+    }
+    to {
+        transform: scaleY(0);
+    }    
+}
+
+main{
+    animation: growIn 2s cubic-bezier(0.075 , 0.82 , 0.165 , 1) forwards;
+    transform: scale(.4);
+}
+
+@keyframes growIn{   
+    to{
+        transform: scale(1);
+    }
+}
