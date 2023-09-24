@@ -1,0 +1,129 @@
+html, body {
+  font-family: Verdana, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+  
+html {
+  overflow-x: hidden;
+}
+  
+h1 {
+  font-size: 36px;
+}
+  
+h2 {
+    font-size: 30px;
+}
+  
+h3 {
+  font-size: 24px;
+}
+  
+h4 {
+  font-size: 20px;
+}
+  
+h5 {
+  font-size: 18px;
+}
+  
+h6 {
+  font-size: 16px;
+}  
+  
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 400;
+  margin: 10px 0;
+}  
+  
+hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+}
+  
+a {
+  color: inherit;
+}
+
+/*.w3-responsive {
+  display: block;
+  overflow-x: auto;
+}*/
+  
+.w3-container {
+  padding: 0.01em 16px;
+}
+
+.w3-container:after, .w3-container:before {
+  content: "";
+  display: table;
+  clear: both;
+}
+  
+.w3-cell-row:before, .w3-cell-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.w3-cell-row {
+  display: table;
+  width: 100%;
+}
+  
+.w3-cell {
+  display: table-cell;  
+}
+  
+.w3-cell-top {
+  vertical-align: top;
+}
+  
+.w3-cell-middle {
+  vertical-align: middle;
+}
+  
+.w3-cell-bottom {
+  vertical-align: bottom;
+}  
+
+
+@media (max-width: 600px) {
+  .w3-modal-content {
+    margin: 0 10px;
+    width: auto !important;
+  }
+  .w3-modal {
+    padding-top: 30px;
+  }
+  .w3-dropdown-hover.w3-mobile .w3-dropdown-content, .w3-dropdown-click.w3-mobile .w3-dropdown-content {
+    position: relative;
+  }
+  .w3-hide-small {
+    display: none !important;
+  }
+  .w3-mobile {
+    display: block;
+    width: 100% !important;
+  }
+  .w3-bar-item.w3-mobile, .w3-dropdown-hover.w3-mobile, .w3-dropdown-click.w3-mobile {
+    text-align: center;
+  }
+  .w3-dropdown-hover.w3-mobile {
+    width: 100%;
+  }
+  .w3-dropdown-hover.w3-mobile .w3-btn, .w3-dropdown-hover.w3-mobile .w3-button {
+    width: 100%;
+  }
+  .w3-dropdown-click.w3-mobile {
+    width: 100%;
+  }
+  .w3-dropdown-click.w3-mobile .w3-btn, .w3-dropdown-click.w3-mobile .w3-button {
+    width: 100%;
+  }
+}
+  /*# sourceMappingURL=design_system_v1.css.map */
+  

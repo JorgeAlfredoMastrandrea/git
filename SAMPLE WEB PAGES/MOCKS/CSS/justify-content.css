@@ -1,0 +1,96 @@
+/* Positional alignment */
+.center {
+    display: flex;
+    justify-content: center;
+  }
+  
+.start{
+  display: flex;
+  justify-content: start;
+}
+  
+.right {
+  display: flex;
+  justify-content:right;
+}
+  
+.end{
+  display: flex;
+  justify-content:end;
+}
+  
+.left{
+  display: flex;
+  justify-content:left;
+}
+  
+.right{
+  display: flex;
+  justify-content:right;
+}
+  
+.normal{
+  display: flex;
+  justify-content:normal;
+}
+  
+.space-between{
+  /* Distribute items evenly The first item is flush with the start,the last is flush with the end */
+  display: flex;
+  justify-content:space-between;
+}
+  
+.space-around{
+  /* Distribute items evenly Start and end gaps are half the size of the space between each item */
+  display: flex;
+  justify-content:space-around;
+}
+  
+.space-evenly{
+  /* Distribute items evenly Start, in-between, and end gaps have equal sizes */
+  display: flex;
+  justify-content:space-evenly;
+}
+  
+.stretch{
+  /* Distribute items evenly Stretch 'auto'-sized items to fit the container */
+  display: flex;
+  justify-content:stretch;
+}
+
+/* Overflow alignment 
+justify-content: safe center;
+justify-content: unsafe center;
+*/
+
+/* Global values 
+justify-content: inherit;
+justify-content: initial;
+justify-content: revert;
+justify-content: revert-layer;
+justify-content: unset;
+*/
+
+/*  vertical alignment */
+.positional-aligment{  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 70%; /*controla la altura de la columna*/
+}
+
+.positional-aligment-relative{  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-5%, -5%);
+  height: 50%;
+}
+
+.positional-parent-flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20%;
+}

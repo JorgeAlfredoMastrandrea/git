@@ -174,7 +174,6 @@ p.details {
     align-items: end; /* esto es para que quede el texto de la tarjeta alineado al fondo */
     background-size: 150%;
     transition: background-size 800ms; /*esto es para hacer la animacion*/
-
 }
 
 .card1 {
