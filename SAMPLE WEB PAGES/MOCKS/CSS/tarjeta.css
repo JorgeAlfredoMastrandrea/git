@@ -45,6 +45,42 @@ p.tarjeta-descripcion-titulo{
     font-weight: bold;
 }
 
+
+/*+++++++++++++++++++++++++*/
+img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute; 
+}
+  
+.overlay_0 {
+    left: 6%;
+    right: 6%;
+    top: 85.5% ;
+    padding: .5rem;    
+    background: rgba(244, 32, 142, 0.241);
+}
+
+.mi-display-bottommiddle {
+    position: absolute;
+    left: 27%;
+    bottom: 0;
+    transform: translate(-50%, -20%);
+    -ms-transform: translate(-50%, 0%);
+  }
+
+.div-transparente{
+    width:inherit;
+    height:100%;
+    background-color: rgba(164, 144, 144, 0.715);
+
+}
+
 @media (max-width: 768px) {
     .tarjeta-contenedor{
       width: 500px;
