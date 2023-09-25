@@ -1,0 +1,52 @@
+.centrado {
+    text-align: center !important;
+} 
+
+.tarjeta-contenedor {
+    width:20%;
+    background-color: grey;
+    border-radius:  .8em;
+    padding: 1.1em;   
+    align-items: end; /* esto es para que quede el texto de la tarjeta alineado al fondo */
+    background-size: 150%;
+}
+
+.tarjeta-imagen {
+    width: 25%;
+}
+
+.tarjeta-descripcion {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.tarjeta-descipcion-contenedor{
+    background: rgb(205, 194, 194);
+    border-radius: .6em;
+    padding: 4.5em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+p.tarjeta-descripcion-titulo{
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.tarjeta-descripcion-cuerpo{
+    font-weight: normal;
+    font-size:small ;
+    color: black;
+    text-decoration: none;
+    font-size:  0.8rem;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .tarjeta-contenedor{
+      width: 500px;
+    }
+  }
