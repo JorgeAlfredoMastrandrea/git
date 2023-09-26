@@ -1,0 +1,40 @@
+.cajita1{
+    height: 300px;
+    width: 300px;
+    border: 5px solid;
+    background-color: blue;
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-bottom: 30px;
+}
+
+.cajita2{
+    height: 300px;
+    width: 300px;
+    border: 5px solid;
+    background-color: red;
+}
+
+.cajita3{
+    height: 300px;
+    width: 300px;
+    border: 5px solid;
+    background-color: green;
+    margin-top: 30px;
+}
+
+.cajita4{
+    height: 300px;
+    width: 300px;
+    border: 5px solid;
+    background-color: gray;
+    margin: 10px;
+}
+
+.cajita5{
+    height: 300px;
+    width: 300px;
+    border: 5px solid;
+    background-color: fuchsia;
+    margin: 10px 20px 30px 40px;
+}

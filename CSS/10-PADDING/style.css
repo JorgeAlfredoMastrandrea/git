@@ -1,0 +1,9 @@
+/* el padding funciona como el margin pero del lado del borde para adentro*/
+.cajita1{    
+    border: 5px solid;
+    background-color: aquamarine;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-bottom: 30px;
+    padding: 20px;
+}

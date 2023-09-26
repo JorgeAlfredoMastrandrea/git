@@ -1,0 +1,12 @@
+ul{
+    list-style-type: circle;
+    background-color: black;
+    padding: 20px;
+}
+li{
+    color: white;
+    background-color: gray;
+    padding: 5px;
+    margin: 5px;
+
+}
