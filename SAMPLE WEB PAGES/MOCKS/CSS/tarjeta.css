@@ -3,16 +3,18 @@
 } 
 
 .tarjeta-contenedor {
-    width:20%;
+    width:30%;
     background-color: grey;
-    border-radius:  .8em;
-    padding: 1.1em;   
+    border-radius:  1.8em;
+    padding: 0.30em;   
     align-items: end; /* esto es para que quede el texto de la tarjeta alineado al fondo */
     background-size: 150%;
+    /*transform: scale(0.9);*/
 }
 
 .tarjeta-imagen {
     width: 25%;
+    border-radius:  1.8em;
 }
 
 .tarjeta-descripcion {
@@ -74,11 +76,27 @@ img {
     -ms-transform: translate(-50%, 0%);
   }
 
-.div-transparente{
-    width:inherit;
-    height:100%;
-    background-color: rgba(164, 144, 144, 0.715);
+.mi-display-bottommiddle-2 {
+    position: absolute;
+    left: 27%;
+    bottom: 0;
+    transform: translate(-50%, -20%);
+    -ms-transform: translate(-50%, 0%);
+}  
 
+.div-transparente{
+    width:85%;
+    height:27%;
+    bottom: 5%;
+    border-radius: 20px;
+    background-color: rgba(224, 91, 193, 0.497);
+}
+
+.link-a {
+    color: black;
+    text-decoration: none;
+    font-size:  1.50rem;
+    font-weight: bold;
 }
 
 @media (max-width: 768px) {
