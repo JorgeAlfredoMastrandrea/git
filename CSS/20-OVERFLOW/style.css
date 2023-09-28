@@ -1,0 +1,7 @@
+.container{
+    background-color: red;
+    width: 300px;
+    height: 100px;
+    overflow: scroll; /*permit que aparezca la barra de scroll*/
+    overflow-x: hidden; /*oculta la barra de scroll horizontal*/
+}
