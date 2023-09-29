@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="frmwk.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Sales', 'Expenses', 'Profit'],
+          ['2014', 1000, 400, 200],
+          ['2015', 1170, 460, 250],
+          ['2016', 660, 1120, 300],
+          ['2017', 1030, 540, 350]
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Company Performance',
+            subtitle: 'Sales, Expenses, and Profit: 2014-2017',
+          },
+          bars: 'horizontal' // Required for Material Bar Charts.
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+    
+    <title>01</title>
+</head>
+<body>
+    <div id="content" >
+        <!--div class="w3-display-container w3-green"-->
+            <!--div class="w3-display-topmiddle"-->
+    
+                <div class="w3-card-4 w3-dark-grey" >
+
+                    <div class="w3-container w3-center">
+                    <h3>Friend request</h3>
+                    <!--img src="clothing2.jpg" alt="Avatar" style="width:80%"-->
+                    <div id="barchart_material"></div>
+                    <h5>John Doe</h5>
+                    
+                    <button class="w3-button w3-green">Accept</button>
+                    <button class="w3-button w3-red">Decline</button>
+                    <button class="w3-button w3-blue" id="download-pdf">Download PDF</button>
+                    </div>
+                    
+                    
+                </div>
+            <!--/div-->
+        <!--/div-->
+        
+    </div>  
+  
+    
+      
+    <script>
+        document.getElementById('download-pdf')
+        .addEventListener('click', () => {
+            const element = document.getElementById('content');
+            const options = {
+                filename: 'GFG.pdf',
+                page_size: 'A4',
+                margin: 0 ,
+                image: { type: 'jpeg', quality: 1 },
+                html2canvas: { scale: 1 },
+                jsPDF: { 
+                    unit: 'cm', 
+                    format: 'A4', 
+                    orientation: 'portrait' 
+                }
+            };
+            html2pdf().set(options).from(element).save();
+        });
+    </script>
+    
+</body>
+</html>

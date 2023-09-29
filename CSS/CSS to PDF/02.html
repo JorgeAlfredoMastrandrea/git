@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="frmwk.css">
+    
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['bar']});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+            ['Year', 'Sales', 'Expenses', 'Profit'],
+            ['2014', 1000, 400, 200],
+            ['2015', 1170, 460, 250],
+            ['2016', 660, 1120, 300],
+            ['2017', 1030, 540, 350]
+          ]);
+  
+          var options = {
+            chart: {
+              title: 'Company Performance',
+              subtitle: 'Sales, Expenses, and Profit: 2014-2017',
+            },
+            bars: 'horizontal' // Required for Material Bar Charts.
+          };
+  
+          var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+  
+          chart.draw(data, google.charts.Bar.convertOptions(options));
+        }
+      </script>
+
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="w3-card-4 w3-dark-grey" >
+
+        <div class="w3-container w3-center">
+        <h3>Friend request</h3>
+        <!--img src="clothing2.jpg" alt="Avatar" style="width:80%"-->
+        <div id="barchart_material"></div>
+        <h5>John Doe</h5>
+        
+        <button class="w3-button w3-green">Accept</button>
+        <button class="w3-button w3-red">Decline</button>
+        <input class="w3-button w3-red" id="generate_pdf" value="Generate PDF">
+        </div>
+        
+        
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>  
+<script>
+$(document).ready(function () {  
+    var form = $('.form'),  
+    cache_width = form.width(),  
+    a4 = [595.28, 841.89]; // for a4 size paper width and height  
+
+    $('#generate_pdf').on('click', function () {  
+        $('body').scrollTop(0);  
+        generatePDF();  
+    });  
+    
+    function generatePDF() {  
+        getCanvas().then(function (canvas) {  
+            var img = canvas.toDataURL("image/png"),  
+             doc = new jsPDF({  
+                 unit: 'px',  
+                 format: 'a4'  
+             });  
+            doc.addImage(img, 'JPEG', 20, 20);  
+            doc.save('tech-html-to-pdf.pdf');  
+            form.width(cache_width);  
+        });  
+    }  
+      
+    function getCanvas() {  
+        form.width((a4[0] * 1.33333) - 80).css('max-width', 'none');  
+        return html2canvas(form, {  
+            imageTimeout: 2000,  
+            removeContainer: true  
+        });  
+    }
+});
+</script>
+    
+</body>
+</html>

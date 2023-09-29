@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating PDF from HTML</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.debug.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js" ></script>
+
+    <link rel="stylesheet" href="css_page_size.css">
+    <link rel="stylesheet" href="frmwk.css">
+    <title>Document</title>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['bar']});
+        google.charts.setOnLoadCallback(drawChart_1);
+        function drawChart_1() {
+          var data = google.visualization.arrayToDataTable([
+            ['Year', 'Sales', 'Expenses', 'Profit'],
+            ['2014', 1000, 400, 200],
+            ['2015', 1170, 460, 250],
+            ['2016', 660, 1120, 300],
+            ['2017', 1030, 540, 350]
+          ]);
+  
+          var options = {
+            chart: {
+              title: 'Company Performance',
+              subtitle: 'Sales, Expenses, and Profit: 2014-2017',
+            },
+            bars: 'horizontal' // Required for Material Bar Charts.
+          };
+  
+          var chart_1 = new google.charts.Bar(document.getElementById('barchart_material_1'));
+  
+          chart_1.draw(data, google.charts.Bar.convertOptions(options));          
+        }
+    </script>
+
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart_3);
+
+    function drawChart_3() {
+
+      var data = google.visualization.arrayToDataTable([
+        ['Task', 'Hours per Day'],
+        ['Work',     11],
+        ['Eat',      2],
+        ['Commute',  2],
+        ['Watch TV', 2],
+        ['Sleep',    7]
+      ]);
+
+      var options = {
+        title: 'My Daily Activities'
+      };
+
+      var chart_3 = new google.visualization.PieChart(document.getElementById('piechart'));
+      chart_3.draw(data, options);
+    }
+  </script>
+
+<script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart_4);
+
+    function drawChart_4() {
+      var data = google.visualization.arrayToDataTable([
+        ['Year', 'Sales', 'Expenses'],
+        ['2013',  1000,      400],
+        ['2014',  1170,      460],
+        ['2015',  660,       1120],
+        ['2016',  1030,      540]
+      ]);
+
+      var options = {
+        title: 'Company Performance',
+        hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+        vAxis: {minValue: 0}
+      };
+
+      var chart_4 = new google.visualization.AreaChart(document.getElementById('chart_div'));
+      chart_4.draw(data, options);
+    }
+  </script>
+
+
+
+</head>
+<body>
+    <div class="w3-container w3-center">
+        <p>The w3-container class is an important w3.CSS class.</p>
+    </div>   
+   
+    <div id="whatToPrint" class="w3-cell-row" style="width: 50%;">
+        <div class="w3-container w3-red w3-cell w3-center">
+            <div id="barchart_material_1"></div>
+            <h5>John Doe</h5>                    
+            <button class="w3-button w3-green">Accept</button>
+            <button class="w3-button w3-red">Decline</button> 
+            <a href="javascript:generatePDF()" id="downloadButton">Click to download</a>                   
+        </div>           
+    </div>   
+
+    <script>
+        async function generatePDF() {
+            document.getElementById("downloadButton").innerHTML = "Currently downloading, please wait";
+
+            //Downloading
+            var downloading = document.getElementById("whatToPrint");
+            var doc = new jsPDF('l', 'pt');
+
+            await html2canvas(downloading, {
+                //allowTaint: true,
+                //useCORS: true,
+                width: 530
+            }).then((canvas) => {
+                //Canvas (convert to PNG)
+                doc.addImage(canvas.toDataURL("image/png"), 'PNG', 5, 5, 500, 200);
+            })
+
+            doc.save("Document.pdf");
+
+            //End of downloading
+
+            document.getElementById("downloadButton").innerHTML = "Click to download";
+        }
+    </script>
+</body>
+</html>
+
+<!--
+
+HTML + CSS -> PNG (html2canvas)
+PNG -> Add to PDF (jsPDF)
+Download PDF (jsPDF)
+
+-->
