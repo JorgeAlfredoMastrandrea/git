@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', function () {
 		html2canvas(document.querySelector('#content')).then((canvas) => {
 			let base64image = canvas.toDataURL('image/png');
 			// console.log(base64image);
-			let pdf = new jsPDF('p', 'px', [2100, 2970]);
-			pdf.addImage(base64image, 'PNG', 0, 0, (210*10), (297*10));
+			let pdf = new jsPDF('p', 'px', [2970, 2970]);
+			pdf.addImage(base64image, 'PNG', 0, 0, (297*10), (297*10));
 			pdf.save('webtylepress-two.pdf');
 		});
 	});
