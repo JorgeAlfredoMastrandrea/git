@@ -1,0 +1,48 @@
+/*
+las propíedades width, height, min-width max-width, min-height, max-height nos ayudan a darle altura y ancho a los elementos div y depende como lo usamamos
+va a ser los resultados que se van a obtener, se pueden especificar altos maximos que pueden ser rebalsados por el contenido pero pueden controlarse con otras propiedades
+*/
+.cajita1{    
+    border: 5px solid;
+    border-color: blue;
+    background-color: aquamarine;
+    min-height: 100px; /*el min-height va a dejar un minimo de altura pero se va a adaptar al contenido de lo que pongamos dentro*/
+    width: 100px;
+    color: white;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.cajita2{    
+    border: 5px solid;
+    border-color: blue;
+    background-color: aquamarine;
+    max-height: 100px; /*esto va a hacer que se reblase el texto porque lo que hemos puesto supera el maximo permitido (100px)*/
+    width: 100px;
+    color: black;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.cajitaAzul{    
+    border: 5px solid;
+    border-color: rgb(229, 171, 24);
+    background-color: blue;
+    color: white;
+    height: 500px;
+    width: 500px;
+
+}
+
+.cajitaRoja{    
+    border: 5px solid;
+    border-color: rgb(229, 171, 24);
+    background-color: red;
+    color: white;
+    height: 100px;
+    min-width: 100px; /*al haber especificado el min-width la caja roja va a ocupar todo el maximo del padre*/
+}

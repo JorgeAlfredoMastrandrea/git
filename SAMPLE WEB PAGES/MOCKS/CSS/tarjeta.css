@@ -3,16 +3,18 @@
 } 
 
 .tarjeta-contenedor {
-    width:20%;
+    width:30%;
     background-color: grey;
-    border-radius:  .8em;
-    padding: 1.1em;   
+    border-radius:  1.8em;
+    padding: 0.30em;   
     align-items: end; /* esto es para que quede el texto de la tarjeta alineado al fondo */
     background-size: 150%;
+    /*transform: scale(0.9);*/
 }
 
 .tarjeta-imagen {
     width: 25%;
+    border-radius:  1.8em;
 }
 
 .tarjeta-descripcion {
@@ -45,8 +47,81 @@ p.tarjeta-descripcion-titulo{
     font-weight: bold;
 }
 
-@media (max-width: 768px) {
+
+/*+++++++++++++++++++++++++*/
+img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute; 
+}
+  
+.overlay_0 {
+    left: 6%;
+    right: 6%;
+    top: 85.5% ;
+    padding: .5rem;    
+    background: rgba(244, 32, 142, 0.241);
+}
+
+.mi-display-bottommiddle {
+    position: absolute;
+    left: 27%;
+    bottom: 0;
+    transform: translate(-50%, -20%);
+    -ms-transform: translate(-50%, 0%);
+  }
+
+.mi-display-bottommiddle-2 {
+    position: absolute;
+    left: 27%;
+    bottom: 0;
+    transform: translate(-50%, -20%);
+    -ms-transform: translate(-50%, 0%);
+}  
+
+.div-transparente{
+    width:85%;
+    height:27%;
+    bottom: 5%;
+    border-radius: 20px;
+    background-color: rgba(224, 91, 193, 0.497);
+}
+
+.link-a {
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 601px) {
     .tarjeta-contenedor{
       width: 500px;
+    }
+    .a{
+        font-size: 25px;
+    }
+  }
+
+@media screen and (max-width: 600px) {
+    .tarjeta-contenedor{
+      width: 400px;
+    }
+    .a{
+        font-size: 18px;
+    }
+  }
+
+  @media screen and (min-width: 800px) {
+    .tarjeta-contenedor{
+      width: 800px;
+    }
+    .a{
+        font-size: 35px;
     }
   }
