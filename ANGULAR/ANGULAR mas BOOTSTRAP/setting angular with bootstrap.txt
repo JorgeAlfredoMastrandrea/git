@@ -19,7 +19,7 @@ Here, you’ll choose if you’re building an app with multiple pages.“Which s
 Here, select your preferred CSS platform.Then, navigate to the project folder. 
 Switch into it using the cd command to access your project.When the project is ready and you’re in the correct folder, start it by running the following: 
 
-ng serve --open3. 
+--------->     este no me funcionó : ng serve --open3. 
 
 Get Bootstrap Ready and InstalledIf you’re running Angular already, you’ll need to open a new console window to manage the installation. 
 
@@ -53,7 +53,7 @@ insertar esto en angular.json
 
 "5. Build a ModalNow that you’ve installed Bootstrap, let’s see how it works with a small modal. 
 Angular generates an example app with a single main component under the app folder.Click on the app.component.html file. 
-You’ll see a default template. Erase the code that’s there and add the following code to create a button and modal:" https://blog.hubspot.com/website/add-bootstrap-to-angular-2
+You’ll see a default template. Erase the code that’s there and add the following code to create a button and modal:
 
 <div role="main">
   <button (click)="trigger()" data-toggle="modal" data-target="#helloModal" type="button" class="btn btn-primary">Click Me!</button>
@@ -77,7 +77,11 @@ You’ll see a default template. Erase the code that’s there and add the follo
   </div>
 </div>
 
-"Open the app.component.html file in the same folder, and add the following additional imports after Component:" https://blog.hubspot.com/website/add-bootstrap-to-angular-2
+
+ESCRIBIR ESTO:
+npm i --save-dev @types/bootstrap
+
+"Open the app.component.html file in the same folder, and add the following additional imports after Component:
 
 import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import * as bootstrap from 'bootstrap';
@@ -87,7 +91,7 @@ However, this works best after you initialize the view, so you need to reference
 To call Bootstrap’s features, you also need to add its import, which is the final line of the code snippet above.
 Note that you may need to add the Bootstrap types so that TypeScript can understand the class. 
 If so, in your console window in the same folder, type: npm i –save-dev @types/bootstrapNow you’re ready to create a functional modal. 
-In app.component.ts, add these methods and variables to the class:" https://blog.hubspot.com/website/add-bootstrap-to-angular-2
+In app.component.ts, add these methods and variables to the class:
 
 export class AppComponent implements AfterViewInit {
   @ViewChild('helloModal') helloEl?: ElementRef;
