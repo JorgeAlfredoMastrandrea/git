@@ -1,0 +1,122 @@
+este es el primero que usé y no funcionó bien: https://fbellod.medium.com/como-integrar-el-framework-bootstrap-en-un-proyecto-angular-a5d53fa79e03
+
+https://blog.hubspot.com/website/add-bootstrap-to-angular-2
+
+"How to Add Bootstrap to AngularIn this tutorial, we’ll be building an Angular CLI application under Node.js. 
+Then, we’ll install Bootstrap via NPM and set it up. 
+Once configured, we’ll build a small application with a button and a modal.1. 
+PrerequisitesTo follow this tutorial, you will need:Node.js installed.npm installed.An IDE. 
+This demonstration uses Visual Studio Code.Angular CLI installed on your machine. 
+To install the Angular CLI, you need to open a console window. 
+It’s recommended to install the CLI globally so that you can start new projects anywhere. 
+
+Then, run npm install -g @angular/cli@latest.For a preview of the final project, take a look at the complete project code.2. 
+
+Create a ProjectThe next step is to build the project. 
+Move to the directory that you wish to create it in, and type the following command: ng new hello-worldYou can replace hello-world with your own project ID.
+Running this command will load the CLI and prompt you to answer the following questions:“Add Angular Routing?”: 
+Here, you’ll choose if you’re building an app with multiple pages.“Which stylesheet format would you like to use?”: 
+Here, select your preferred CSS platform.Then, navigate to the project folder. 
+Switch into it using the cd command to access your project.When the project is ready and you’re in the correct folder, start it by running the following: 
+
+ng serve --open3. 
+
+Get Bootstrap Ready and InstalledIf you’re running Angular already, you’ll need to open a new console window to manage the installation. 
+
+Then, enter the following: 
+
+npm install bootstrap jquery @popperjs/core
+--------->     este no me funcionó :         npm install --save bootstrapWait 
+
+for the installation to finish, which should only take a few minutes.Next, you need to import Bootstrap CSS.
+In your application’s global scss file — which will most likely be styles.scss — import the Bootstrap file using this command: 
+
+@import "~bootstrap/dist/css/bootstrap.css";
+
+This will include the Bootstrap 5 styling, allowing you to use all the CSS features that Bootstrap provides.4. 
+Prepare the FeaturesNext, you need to install Bootstrap’s features. Navigate to the angular.json file and open it. 
+It should be in the top-level directory of your project folder.By default, Angular won’t recognize that Bootstrap’s JS is installed. 
+You need to locate the scripts section of the configuration file to get it to do so. 
+
+Insert this line, pointing it toward Bootstrap’s files:
+./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js
+
+If you don’t want to import the Bootstrap.css file, you can also include it here under styles, below src/styles.scss:"
+
+insertar esto en angular.json
+"styles":   [              
+                "src/styles.scss"
+],
+"scripts": [              
+              "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+]
+
+"5. Build a ModalNow that you’ve installed Bootstrap, let’s see how it works with a small modal. 
+Angular generates an example app with a single main component under the app folder.Click on the app.component.html file. 
+You’ll see a default template. Erase the code that’s there and add the following code to create a button and modal:" https://blog.hubspot.com/website/add-bootstrap-to-angular-2
+
+<div role="main">
+  <button (click)="trigger()" data-toggle="modal" data-target="#helloModal" type="button" class="btn btn-primary">Click Me!</button>
+</div>
+<div #helloModal class="modal fade" id="helloModal" role="dialog" aria-labelledby="helloModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="helloModalLabel">Greetings!</h5>
+        <button (click)="trigger()" type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Hello, World! I'm a modal!
+      </div>
+      <div class="modal-footer">
+        <button (click)="trigger()" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+"Open the app.component.html file in the same folder, and add the following additional imports after Component:" https://blog.hubspot.com/website/add-bootstrap-to-angular-2
+
+import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+import * as bootstrap from 'bootstrap';
+
+"ElementRef allows Angular 2 to reference elements in the HTML, and ViewChild defines them. 
+However, this works best after you initialize the view, so you need to reference AfterViewInit. 
+To call Bootstrap’s features, you also need to add its import, which is the final line of the code snippet above.
+Note that you may need to add the Bootstrap types so that TypeScript can understand the class. 
+If so, in your console window in the same folder, type: npm i –save-dev @types/bootstrapNow you’re ready to create a functional modal. 
+In app.component.ts, add these methods and variables to the class:" https://blog.hubspot.com/website/add-bootstrap-to-angular-2
+
+export class AppComponent implements AfterViewInit {
+  @ViewChild('helloModal') helloEl?: ElementRef;
+  modal?: bootstrap.Modal;
+  ngAfterViewInit() {
+    this.modal = new bootstrap.Modal(this.helloEl?.nativeElement, {});
+  }
+ 
+  trigger() {
+    this.modal?.toggle();
+  }
+}
+
+"Here’s a breakdown of what you just added:First, you added a @ViewChild reference and pointed it to the helloModal target. 
+This is the elementRef that you need. Note that adding ? allows TypeScript to assume that it’s undefined.
+Then, you created a modal? variable with the type bootstrap.Modal. 
+It references the Bootstrap modal class.Next, you created two methods, ngAfterViewInit() and trigger(), 
+which are implemented AfterViewInit.Inside AfterViewInit, you called the bootstrap modal and referenced ElementRef and its native element. 
+You can configure options to pass to the modal here or leave it blank with a {}.
+Finally, in your trigger() method, you called this.modal?.toggle() to change the visible state.Now, when you click the button on the page, the modal should pop up:" https://blog.hubspot.com/website/add-bootstrap-to-angular-2
+
+"Now, when you click the button on the page, the modal should pop up" https://blog.hubspot.com/website/add-bootstrap-to-angular-2
+
+"In the template code, the Angular method (click) references the trigger() method, which calls Bootstrap. 
+You can configure other features this way as well, by referencing the element and linking them in the template.
+Using Bootstrap with AngularIn this tutorial, you created a default Angular application using TypeScript and SASS and then applied Bootstrap 5 and its CSS to Angular. 
+You also learned how to display a modal using just Bootstrap and Angular’s native code.You can use Bootstrap to enhance any application you’re developing, 
+allowing you to rapidly prototype and build responsive applications far quicker than you would otherwise. 
+It’s also mobile-first, so your website should work even smoother with smaller screens. 
+You can use all of its features to build creative applications quickly and easily." https://blog.hubspot.com/website/add-bootstrap-to-angular-2
+
+
