@@ -1,0 +1,47 @@
+https://www.google.com/search?q=react+sub+projects&oq=react+sub+pr&gs_lcrp=EgZjaHJvbWUqBwgCECEYoAEyBggAEEUYOTIHCAEQIRigATIHCAIQIRigATIHCAMQIRigATIHCAQQIRigATIHCAUQIRigAdIBCTMwMTkyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8
+
+https://stackoverflow.com/questions/58930216/use-one-react-project-within-another
+
+https://dev.to/dabit3/building-micro-frontends-with-react-vue-and-single-spa-52op
+
+https://medium.jonasbandi.net/hosting-multiple-react-applications-on-the-same-document-c887df1a1fcd
+
+https://single-spa.js.org/
+
+https://storybook.js.org/
+
+Microfrontends and single-spa
+https://www.youtube.com/playlist?list=PLLUD8RtHvsAOhtHnyGx57EYXoaNsxGrTU
+
+Mircro frontends en Angular🌐En español en 30 minutos utilizando la herramienta single-spa
+https://www.youtube.com/watch?v=XbNsZSYXBp0
+
+¿Esto es MICRO-FRONTEND? Angular y React explicación y ejercicio practico
+https://www.youtube.com/watch?v=_6QZFdSitHo
+
+webpack 
+Concepts
+At its core, webpack is a static module bundler for modern JavaScript applications. 
+When webpack processes your application, it internally builds a dependency graph from one or more entry points 
+and then combines every module your project needs into one or more bundles, which are static assets to serve your content from.
+https://webpack.js.org/
+
+MICRO - FRONTEND con Angular y Module Federation
+https://www.youtube.com/watch?v=12x2QpDCsfk
+
+
+ver esto: (también está para Angular)
+Building a React Micro-Frontend Application with Single SPA
+https://www.youtube.com/watch?v=esw-kXhv7Ik
+
+
+How to Develop and Deploy Micro-Frontends with Single-SPA
+https://www.freecodecamp.org/news/developing-and-deploying-micro-frontends-with-single-spa/
+
+
+nada que ver pero está bueno para hacer esquemas : https://whimsical.com/
+
+
+
+
+
