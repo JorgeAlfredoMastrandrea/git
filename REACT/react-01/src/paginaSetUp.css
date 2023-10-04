@@ -1,0 +1,35 @@
+/*
+https://www.tutorialspoint.com/css/css_paged_media.htm
+*/
+
+@page {
+    size: 210mm 297mm;
+    margin-left: 15mm;
+    margin-right: 15mm;
+    margin-top: 5mm;
+    margin-bottom: 5mm;
+}
+
+@media print {
+    @page {
+        size: portrait;
+    }
+
+    .print-preview {
+        width: 210mm !important;
+        height: 297mm !important;
+        margin-left: 15mm;
+        margin-right: 15mm;
+        margin-top: 5mm;
+        margin-bottom: 5mm;
+    }
+}
+
+@media print {
+    .page-break {
+      margin-top: 160mm;
+      display: block;
+      page-break-before: auto;
+    }
+}
+
