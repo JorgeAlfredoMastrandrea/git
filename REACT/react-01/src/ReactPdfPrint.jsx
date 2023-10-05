@@ -3,12 +3,13 @@
 // https://www.react-google-charts.com/
 
 // react bootstrap
-//npm install react-bootstrap bootstrap
+// npm install react-bootstrap bootstrap
 // https://react-bootstrap.netlify.app/docs/getting-started/introduction
 
 // react-to-pdf-printing
 // npm install react-to-print
 // https://www.npmjs.com/package/react-to-print
+// https://github.com/gregnb/react-to-print
 // https://medium.com/@massoud-sharifi/reacttoprint-8f9d35b3e2d7
 
 /*
@@ -18,12 +19,13 @@ However, it should be very easy to use react-to-print to take the information yo
 */
 
 
-import React, { useRef } from 'react'
+import React, { useState , useRef } from 'react'
 import { Chart } from 'react-google-charts';
 import { useReactToPrint } from 'react-to-print';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import "../src/paginaSetUp.css";
+
 
 export const data = [
   ["Year", "Sales", "Expenses", "Profit"],
@@ -41,21 +43,57 @@ export const options = {
 };
 
 export const ReactPdfPrint = () => {  
+  
   const componentRef = useRef();
-  const handlePrint = useReactToPrint({    
+  const handlePrint = useReactToPrint({
     content: () => componentRef.current,    
     documentTitle:'Gráfico 1',
-    //onAfterPrint: ()=> alert('Se imprimió')    
-});  
+    //onAfterPrint: ()=> alert('Se imprimió ')    
+    //onBeforePrint: () => console.log(componentRef.current),
+    //onAfterPrint: ()=> alert('Se imprimió ')
+  });  
 
-return (
-  <>           
-    <div ref = { componentRef } class="container-fluid justify-content-center mt-3" className="print-preview">    
-      <div class="row">
-        <div class="col bg-success"></div>
-        <div class="col-10 bg-warning">
-          <h1 className='text-center my-3 border p-2'>Gráfico</h1>
-          <p style={{textAlign:"justify"}}>
+  return (
+    // ref = { componentRef } 
+    <>           
+      <div ref = { componentRef } class="container-fluid justify-content-center mt-3" className="print-preview">    
+        <div class="row">
+          <div class="col bg-success"></div>
+          <div class="col-10 bg-warning">
+            <h1 className='text-center my-3 border p-2'>Gráfico</h1>
+            <p style={{textAlign:"justify"}}>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+              Molestias, aperiam, nihil blanditiis nobis ad modi delectus nemo vel enim dignissimos in. 
+              Itaque quos nisi autem error nemo pariatur provident dolore?
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+              Molestias, aperiam, nihil blanditiis nobis ad modi delectus nemo vel enim dignissimos in. 
+              Itaque quos nisi autem error nemo pariatur provident dolore?
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+              Molestias, aperiam, nihil blanditiis nobis ad modi delectus nemo vel enim dignissimos in. 
+              Itaque quos nisi autem error nemo pariatur provident dolore?            
+            </p>
+            <div class=".img-fluid. max-width: 100%;">
+              
+                <Chart
+                  chartType="Bar"
+                  width="100%"
+                  height="400px"
+                  data={data}
+                  options={options}
+                />
+              
+            </div> 
+          </div>
+          <div class="col bg-success"></div>
+        </div>  
+        
+        <p style={{textAlign:"justify"}}>
+            Andres es mentiroso Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Molestias, aperiam, nihil blanditiis nobis ad modi delectus nemo vel enim dignissimos in. 
+            Itaque quos nisi autem error nemo pariatur provident dolore?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Molestias, aperiam, nihil blanditiis nobis ad modi delectus nemo vel enim dignissimos in. 
+            Itaque quos nisi autem error nemo pariatur provident dolore?
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
             Molestias, aperiam, nihil blanditiis nobis ad modi delectus nemo vel enim dignissimos in. 
             Itaque quos nisi autem error nemo pariatur provident dolore?
@@ -64,112 +102,82 @@ return (
             Itaque quos nisi autem error nemo pariatur provident dolore?
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
             Molestias, aperiam, nihil blanditiis nobis ad modi delectus nemo vel enim dignissimos in. 
-            Itaque quos nisi autem error nemo pariatur provident dolore?            
+            Itaque quos nisi autem error nemo pariatur provident dolore?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Molestias, aperiam, nihil blanditiis nobis ad modi delectus nemo vel enim dignissimos in. 
+            Itaque quos nisi autem error nemo pariatur provident dolore?
           </p>
-          <div style={{width:"55%"}}>
-            <Chart
-              chartType="Bar"
-              width="100%"
-              height="400px"
-              data={data}
-              options={options}
-            />
-          </div> 
+
+        <div className="page-break"></div>      
+
+        <div class="row">        
+          <h1 className='text-center my-3 border p-2'>Gráfico</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Molestias, aperiam, nihil blanditiis nobis ad modi delectus nemo vel enim dignissimos in. 
+            Itaque quos nisi autem error nemo pariatur provident dolore?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Molestias, aperiam, nihil blanditiis nobis ad modi delectus nemo vel enim dignissimos in. 
+            Itaque quos nisi autem error nemo pariatur provident dolore?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Molestias, aperiam, nihil blanditiis nobis ad modi delectus nemo vel enim dignissimos in. 
+            Itaque quos nisi autem error nemo pariatur provident dolore?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Molestias, aperiam, nihil blanditiis nobis ad modi delectus nemo vel enim dignissimos in. 
+            Itaque quos nisi autem error nemo pariatur provident dolore?
+          </p>
+          <div style={{width:"50%"}}>
+            <div class="center-block">
+              <Chart
+                chartType="Bar"
+                width="100%"
+                height="400px"
+                data={data}
+                options={options}
+              />
+              </div>
+          </div>
         </div>
-        <div class="col bg-success"></div>
-      </div>  
+
+        <div className="page-break"></div>      
+
+        <div class="row">        
+          <h1 className='text-center my-3 border p-2'>Gráfico</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Molestias, aperiam, nihil blanditiis nobis ad modi delectus nemo vel enim dignissimos in. 
+            Itaque quos nisi autem error nemo pariatur provident dolore?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Molestias, aperiam, nihil blanditiis nobis ad modi delectus nemo vel enim dignissimos in. 
+            Itaque quos nisi autem error nemo pariatur provident dolore?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Molestias, aperiam, nihil blanditiis nobis ad modi delectus nemo vel enim dignissimos in. 
+            Itaque quos nisi autem error nemo pariatur provident dolore?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Molestias, aperiam, nihil blanditiis nobis ad modi delectus nemo vel enim dignissimos in. 
+            Itaque quos nisi autem error nemo pariatur provident dolore?
+          </p>
+          <div style={{width:"50%"}} class="col-xs-12">
+            <div class="center-block">
+              <Chart
+                chartType="Bar"
+                width="100%"
+                height="400px"
+                data={data}
+                options={options}
+              />
+              </div>
+          </div>
+        </div>    
+
+
+      </div>   
       
-      <p style={{textAlign:"justify"}}>
-          Andres es mentiroso Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-          Molestias, aperiam, nihil blanditiis nobis ad modi delectus nemo vel enim dignissimos in. 
-          Itaque quos nisi autem error nemo pariatur provident dolore?
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-          Molestias, aperiam, nihil blanditiis nobis ad modi delectus nemo vel enim dignissimos in. 
-          Itaque quos nisi autem error nemo pariatur provident dolore?
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-          Molestias, aperiam, nihil blanditiis nobis ad modi delectus nemo vel enim dignissimos in. 
-          Itaque quos nisi autem error nemo pariatur provident dolore?
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-          Molestias, aperiam, nihil blanditiis nobis ad modi delectus nemo vel enim dignissimos in. 
-          Itaque quos nisi autem error nemo pariatur provident dolore?
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-          Molestias, aperiam, nihil blanditiis nobis ad modi delectus nemo vel enim dignissimos in. 
-          Itaque quos nisi autem error nemo pariatur provident dolore?
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-          Molestias, aperiam, nihil blanditiis nobis ad modi delectus nemo vel enim dignissimos in. 
-          Itaque quos nisi autem error nemo pariatur provident dolore?
-        </p>
-
-      <div className="page-break"></div>      
-
-      <div class="row">        
-        <h1 className='text-center my-3 border p-2'>Gráfico</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-          Molestias, aperiam, nihil blanditiis nobis ad modi delectus nemo vel enim dignissimos in. 
-          Itaque quos nisi autem error nemo pariatur provident dolore?
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-          Molestias, aperiam, nihil blanditiis nobis ad modi delectus nemo vel enim dignissimos in. 
-          Itaque quos nisi autem error nemo pariatur provident dolore?
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-          Molestias, aperiam, nihil blanditiis nobis ad modi delectus nemo vel enim dignissimos in. 
-          Itaque quos nisi autem error nemo pariatur provident dolore?
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-          Molestias, aperiam, nihil blanditiis nobis ad modi delectus nemo vel enim dignissimos in. 
-          Itaque quos nisi autem error nemo pariatur provident dolore?
-        </p>
-        <div style={{width:"50%"}}>
-          <div class="center-block">
-            <Chart
-              chartType="Bar"
-              width="100%"
-              height="400px"
-              data={data}
-              options={options}
-            />
-            </div>
+      <div class="container d-flex justify-content-center mt-50 mb-50">        
+        <div class="row">
+          <Button class="btn btn-danger" onClick={handlePrint}>Print</Button>
         </div>
-      </div>
-
-      <div className="page-break"></div>      
-
-      <div class="row">        
-        <h1 className='text-center my-3 border p-2'>Gráfico</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-          Molestias, aperiam, nihil blanditiis nobis ad modi delectus nemo vel enim dignissimos in. 
-          Itaque quos nisi autem error nemo pariatur provident dolore?
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-          Molestias, aperiam, nihil blanditiis nobis ad modi delectus nemo vel enim dignissimos in. 
-          Itaque quos nisi autem error nemo pariatur provident dolore?
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-          Molestias, aperiam, nihil blanditiis nobis ad modi delectus nemo vel enim dignissimos in. 
-          Itaque quos nisi autem error nemo pariatur provident dolore?
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-          Molestias, aperiam, nihil blanditiis nobis ad modi delectus nemo vel enim dignissimos in. 
-          Itaque quos nisi autem error nemo pariatur provident dolore?
-        </p>
-        <div style={{width:"50%"}} class="col-xs-12">
-          <div class="center-block">
-            <Chart
-              chartType="Bar"
-              width="100%"
-              height="400px"
-              data={data}
-              options={options}
-            />
-            </div>
-        </div>
-      </div>    
-
-
-    </div>   
-    
-    <div class="container d-flex justify-content-center mt-50 mb-50">        
-      <div class="row">           
-        <Button class="btn btn-danger" onClick={handlePrint}>Print</Button>
-      </div>
-    </div>      
-  </>
+      </div>      
+    </>
   )
 }
