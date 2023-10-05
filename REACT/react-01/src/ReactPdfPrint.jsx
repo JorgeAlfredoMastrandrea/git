@@ -57,10 +57,11 @@ export const ReactPdfPrint = () => {
   return (
     // ref = { componentRef } 
     <>           
-      <div ref = { componentRef } class="container-fluid justify-content-center mt-3" className="print-preview">    
+      <div ref = { componentRef } class="container-fluid justify-content-center mt-3" className="print-preview">               
         <div class="row">
           <div class="col bg-success"></div>
           <div class="col-10 bg-warning">
+            <div className="cabecera"></div> 
             <h1 className='text-center my-3 border p-2'>Gráfico</h1>
             <p style={{textAlign:"justify"}}>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
@@ -68,10 +69,7 @@ export const ReactPdfPrint = () => {
               Itaque quos nisi autem error nemo pariatur provident dolore?
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
               Molestias, aperiam, nihil blanditiis nobis ad modi delectus nemo vel enim dignissimos in. 
-              Itaque quos nisi autem error nemo pariatur provident dolore?
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-              Molestias, aperiam, nihil blanditiis nobis ad modi delectus nemo vel enim dignissimos in. 
-              Itaque quos nisi autem error nemo pariatur provident dolore?            
+                         
             </p>
             <div class=".img-fluid. max-width: 100%; ">
               <div class="d-flex justify-content-center align-items-center">
@@ -89,7 +87,7 @@ export const ReactPdfPrint = () => {
         </div>  
         
         <p style={{textAlign:"justify"}}>
-            Andres es mentiroso Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Andres es un mentiroso que no le importa el trabajo Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
             Molestias, aperiam, nihil blanditiis nobis ad modi delectus nemo vel enim dignissimos in. 
             Itaque quos nisi autem error nemo pariatur provident dolore?
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
@@ -100,18 +98,13 @@ export const ReactPdfPrint = () => {
             Itaque quos nisi autem error nemo pariatur provident dolore?
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
             Molestias, aperiam, nihil blanditiis nobis ad modi delectus nemo vel enim dignissimos in. 
-            Itaque quos nisi autem error nemo pariatur provident dolore?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-            Molestias, aperiam, nihil blanditiis nobis ad modi delectus nemo vel enim dignissimos in. 
-            Itaque quos nisi autem error nemo pariatur provident dolore?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-            Molestias, aperiam, nihil blanditiis nobis ad modi delectus nemo vel enim dignissimos in. 
-            Itaque quos nisi autem error nemo pariatur provident dolore?
+                       
           </p>
 
         <div className="page-break"></div>      
 
-        <div class="row">        
+        <div class="row">
+          <div className="cabecera"></div>        
           <h1 className='text-center my-3 border p-2'>Gráfico</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
@@ -142,7 +135,8 @@ export const ReactPdfPrint = () => {
 
         <div className="page-break"></div>      
 
-        <div class="row">        
+        <div class="row">
+          <div className="cabecera"></div>        
           <h1 className='text-center my-3 border p-2'>Gráfico</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
