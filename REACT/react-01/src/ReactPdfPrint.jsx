@@ -47,6 +47,7 @@ export const ReactPdfPrint = () => {
   const componentRef = useRef();
   const handlePrint = useReactToPrint({
     content: () => componentRef.current,    
+
     documentTitle:'Gráfico 1',
     //onAfterPrint: ()=> alert('Se imprimió ')    
     //onBeforePrint: () => console.log(componentRef.current),
@@ -72,16 +73,16 @@ export const ReactPdfPrint = () => {
               Molestias, aperiam, nihil blanditiis nobis ad modi delectus nemo vel enim dignissimos in. 
               Itaque quos nisi autem error nemo pariatur provident dolore?            
             </p>
-            <div class=".img-fluid. max-width: 100%;">
-              
+            <div class=".img-fluid. max-width: 100%; ">
+              <div class="d-flex justify-content-center align-items-center">
                 <Chart
                   chartType="Bar"
-                  width="100%"
+                  width="148mm"
                   height="400px"
                   data={data}
                   options={options}
                 />
-              
+              </div>
             </div> 
           </div>
           <div class="col bg-success"></div>
