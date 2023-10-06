@@ -1,5 +1,9 @@
 /*
 https://www.tutorialspoint.com/css/css_paged_media.htm
+https://www.tutorialspoint.com/css/css_paged_media.htm
+
+buenísimo para entender como funciona para imprimir las hojas: 
+https://www.smashingmagazine.com/2015/01/designing-for-print-with-css/
 */
 
 @page {
@@ -7,7 +11,8 @@ https://www.tutorialspoint.com/css/css_paged_media.htm
     margin-left: 15mm;
     margin-right: 15mm;
     margin-top: 23mm;
-    margin-bottom: 5mm;
+    margin-bottom: 23mm;
+    /*position: fixed;*/
 }
 
 @media print {
@@ -21,15 +26,19 @@ https://www.tutorialspoint.com/css/css_paged_media.htm
         margin-left: 15mm;
         margin-right: 15mm;
         margin-top: 23mm;
-        margin-bottom: 5mm;
+        margin-bottom: 13mm;
+        /*display: block;*/        
     }
 }
 
 @media print {
     .page-break {
-      margin-top: 183mm;
+      margin-top: 23mm;
+      margin-bottom: 13mm;
       display: block;
-      page-break-before: auto;      
+      /*page-break-before: auto;      */
+      page-break-before: always;
+      page-break-after: avoid;
     }
 }
 
@@ -37,12 +46,13 @@ https://www.tutorialspoint.com/css/css_paged_media.htm
 
 @media print {
     .cabecera {
-        background-color: #333;
+        border-style: none;
+        border: none;        
         background-size: cover;
         background-image: url('assets/_a_00_DGE_plantilla_encabezado_A4_Vertical.jpg');        
         background-position: center;
         background-repeat: no-repeat;
-        position: absolute;
+        position: fixed;
         /*width: 2480px;*/
         /*height: 586px;*/
         width: 354px;
@@ -52,27 +62,36 @@ https://www.tutorialspoint.com/css/css_paged_media.htm
         left:60mm;
     } 
     
-    .pie { 
-        background-color: #333; 
-        color: white; 
-        text-align: center; 
-        padding: 1px; 
+    .pie {
+        border-style: none;
+        border: none;        
+        background-size: cover;
+        background-image: url('assets/_a_01_DGE_plantilla_pie_de_pagina_1_Horizontal.jpg');        
+        background-position: center;
+        background-repeat: no-repeat;
+        position: fixed;
+        /*width: 3508px;*/
+        /*height: 418px;*/
+        width: 501px;
+        height: 59px;
+        top: 284mm;
+        /*left: 0mm;*/
+        left:35mm; 
     } 
 
+    /*
     .cabecera:after {         
         content: ".";
         display: block; 
         text-align: center; 
-    } 
+    }
 
     .pie:after {
         content: ".";
         display: block; 
         text-align: center; 
-    }  
-} 
-
-
+    }*/
+}
 
 
 

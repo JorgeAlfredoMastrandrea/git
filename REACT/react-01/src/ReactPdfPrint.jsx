@@ -58,11 +58,12 @@ export const ReactPdfPrint = () => {
     // ref = { componentRef } 
     <>           
       <div ref = { componentRef } class="container-fluid justify-content-center mt-3" className="print-preview">               
-        <div class="row">
+      <div className="cabecera"></div>
+      <div className="pie"></div>  
+        <div class="row">        
           <div class="col bg-success"></div>
-          <div class="col-10 bg-warning">
-            <div className="cabecera"></div> 
-            <h1 className='text-center my-3 border p-2'>Gráfico</h1>
+          <div class="col-10 bg-warning">          
+            <h1 className='text-center my-3  p-2'>Gráfico</h1>
             <p style={{textAlign:"justify"}}>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
               Molestias, aperiam, nihil blanditiis nobis ad modi delectus nemo vel enim dignissimos in. 
@@ -80,8 +81,8 @@ export const ReactPdfPrint = () => {
                   data={data}
                   options={options}
                 />
-              </div>
-            </div> 
+              </div>              
+            </div>            
           </div>
           <div class="col bg-success"></div>
         </div>  
@@ -104,7 +105,7 @@ export const ReactPdfPrint = () => {
         <div className="page-break"></div>      
 
         <div class="row">
-          <div className="cabecera"></div>        
+          
           <h1 className='text-center my-3 border p-2'>Gráfico</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
@@ -135,8 +136,7 @@ export const ReactPdfPrint = () => {
 
         <div className="page-break"></div>      
 
-        <div class="row">
-          <div className="cabecera"></div>        
+        <div class="row">        
           <h1 className='text-center my-3 border p-2'>Gráfico</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
@@ -163,11 +163,8 @@ export const ReactPdfPrint = () => {
               />
               </div>
           </div>
-        </div>    
-
-
-      </div>   
-      
+        </div>
+      </div>      
       <div class="container d-flex justify-content-center mt-50 mb-50">        
         <div class="row">
           <Button class="btn btn-danger" onClick={handlePrint}>Print</Button>
