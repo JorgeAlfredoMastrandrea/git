@@ -105,10 +105,10 @@
     <main>
         <!-- contenedor principal -->
         <div class="container-fluid text-center">
-            <div class="row mb-3 text-center">
+            <div class="vh-100 row mb-3 text-center">
                 <div class="col-6 col-lg-4 themed-grid-col">
                     <!-- barra lateral -->
-                    <div>
+                    <div id="barra-lateral">
                         barra lateral
                     </div>
                     <!-- fin barra lateral-->
@@ -116,7 +116,7 @@
 
                 <div class="col-sm-6 col-lg-8 themed-grid-col">
                     <!-- contenedor lateral donde se muestra la información -->
-                    <div>
+                    <div id="contenedor-lateral">
                         contenedor lateral donde se muestra la información
                         <div class="row">
                             <!-- barra de navegación superior por fecha-->
@@ -125,9 +125,11 @@
                             </div>
                             <!-- fin barra de navegación superior por fecha-->
                             <!-- desde acá empiezo a poner los datos que voy a visualizar -->
+                            <!-- la idea es la de poder traer el layout y los datos ya armados desde Python, como si fuese un content que se va a mostrar -->
                             <div class="container-fluid text-center">
                                 los datos que voy a visualizar van acá los puedo dividir en filas y adentro por
-                                columnas..
+                                columnas..estarán dentro de otro contenedor..el cual será el que dibuja el contenido ya
+                                armado junto con los datos
                                 <div class="row text-center">
                                     <div class="col with .gx-4 gutters themed-grid-col">acá va una tarjeta de
                                         información</div>
@@ -150,7 +152,7 @@
                                     <div class="col with .gx-4 gutters themed-grid-col">acá va una tarjeta de
                                         información</div>
                                     <div class="col with .gx-4 gutters themed-grid-col">acá va una tarjeta de
-                                        información con mas información con mucha mas otras cosas</div>                                    
+                                        información con mas información con mucha mas otras cosas</div>
                                 </div>
                             </div>
                         </div>
