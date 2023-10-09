@@ -6,43 +6,185 @@
     "Localidad":"JUNIN",
     "FluidezLectoraAño":"2022",
     "FluidezLectoraMes":"06",
-    "Curso":{
+    "ListaDeCursos":["1°","2°","3°","4°","5°","6°","7°"],
+    "CursosYDivisiones":{
+        "1°":["A","B","C","D","E"],
+        "2°":["A","B","C","D"],
+        "3°":["A","B","C"],
+        "4°":["A","B"],
+        "5°":["A","B"],
+        "6°":["A"],
+        "7°":["A"]
+    },
+    "Desempeño":{
         "1°":{
-            "DesempeñoPorCurso":{
-                "Avanzado":"33.3",
-                "Medio":"33.3",
-                "Básico":"33.3",
-                "Crítico":"33.3"
-            },
+            "DesempeñoPorCurso":[
+                ["Crítico", "Básico", "Medio", "Avanzado"],
+                ["1°" , 33.33 , 33.33 , 33.33 , 33.33]
+            ],
             "DesempeñoPorCursoSupervisiónProvincia":[
                 ["Crítico", "Básico", "Medio", "Avanzado"],
-                ["2014", "1000", "400", "200"],
-                ["2015", "1170", "460", "250"],
-                ["2016", "660", "1120", "300"],
-                ["2017", "1030", "540", "350"]
+                ["1°"       , 33.33 , 33.33 , 33.33 , 33.33],
+                ["Sup."     , 33.33 , 33.33 , 33.33 , 33.33],
+                ["Provincia", 33.33 , 33.33 , 33.33 , 33.33]
+            ],
+            "DesempeñoPorDivisión":[
+                ["Crítico", "Básico", "Medio", "Avanzado"],
+                ["A" , 33.33 , 33.33 , 33.33 , 33.33],
+                ["B" , 33.33 , 33.33 , 33.33 , 33.33],
+                ["C" , 33.33 , 33.33 , 33.33 , 33.33],
+                ["D" , 33.33 , 33.33 , 33.33 , 33.33],
+                ["E" , 33.33 , 33.33 , 33.33 , 33.33]
             ]
-        },
-        "2°":{
-
-        },
-        "3°":{
-
-        },
-        "4°":{
-
-        },
-        "5°":{
-
-        },
-        "6°":{
-
-        },
-        "7°":{
-
         }
     },
-    "Curso_División":{
-
+    "Matrículas":{
+        "MatrículaPorCurso":{
+            "1°":100,
+            "2°":90,
+            "3°":80,
+            "4°":70,
+            "5°":60,
+            "6°":50,
+            "7°":40
+        },
+        "MatrículaPorCursoYDivisión":{
+            "1°":{
+                "A":20,
+                "B":20,
+                "C":20,
+                "D":20,
+                "E":20
+            },
+            "2°":{
+                "A":30,
+                "B":20,
+                "C":20,
+                "D":20
+            },
+            "3°":{
+                "A":30,
+                "B":30,
+                "C":20
+            },
+            "4°":{
+                "A":50,
+                "B":20
+            },
+            "5°":{
+                "A":30,
+                "B":30
+            },
+            "6°":{
+                "A":25,
+                "B":25
+            },
+            "7°":{
+                "A":20,
+                "B":20
+            }
+        }
+    },
+    "Cantidades":{
+        "CantidadesAlumnosPorCursoYDesempeño":{
+            "1°":{
+                "Encabezado":{
+                    "NombreColumnasYFormato":{
+                        "Desempeño":"string",
+                        "Cantidad":"number"
+                    }
+                },
+                "Filas":[
+                    ["Avanzado" , 15],
+                    ["Medio"    , 20],
+                    ["Básico"   , 25],
+                    ["Crítico"  , 30]
+                ]
+            },
+            "2°":{
+                "Encabezado":{
+                    "NombreColumnasYFormato":{
+                        "Desempeño":"string",
+                        "Cantidad":"number"
+                    }
+                },
+                "Filas":[
+                    ["Avanzado" , 15],
+                    ["Medio"    , 20],
+                    ["Básico"   , 25],
+                    ["Crítico"  , 30]
+                ]
+            },
+            "3°":{
+                "Encabezado":{
+                    "NombreColumnasYFormato":{
+                        "Desempeño":"string",
+                        "Cantidad":"number"
+                    }
+                },
+                "Filas":[
+                    ["Avanzado" , 15],
+                    ["Medio"    , 20],
+                    ["Básico"   , 25],
+                    ["Crítico"  , 30]
+                ]
+            },
+            "4°":{
+                "Encabezado":{
+                    "NombreColumnasYFormato":{
+                        "Desempeño":"string",
+                        "Cantidad":"number"
+                    }
+                },
+                "Filas":[
+                    ["Avanzado" , 15],
+                    ["Medio"    , 20],
+                    ["Básico"   , 25],
+                    ["Crítico"  , 30]
+                ]
+            },
+            "5°":{
+                "Encabezado":{
+                    "NombreColumnasYFormato":{
+                        "Desempeño":"string",
+                        "Cantidad":"number"
+                    }
+                },
+                "Filas":[
+                    ["Avanzado" , 15],
+                    ["Medio"    , 20],
+                    ["Básico"   , 25],
+                    ["Crítico"  , 30]
+                ]
+            },
+            "6°":{
+                "Encabezado":{
+                    "NombreColumnasYFormato":{
+                        "Desempeño":"string",
+                        "Cantidad":"number"
+                    }
+                },
+                "Filas":[
+                    ["Avanzado" , 15],
+                    ["Medio"    , 20],
+                    ["Básico"   , 25],
+                    ["Crítico"  , 30]
+                ]
+            },
+            "7°":{
+                "Encabezado":{
+                    "NombreColumnasYFormato":{
+                        "Desempeño":"string",
+                        "Cantidad":"number"
+                    }
+                },
+                "Filas":[
+                    ["Avanzado" , 15],
+                    ["Medio"    , 20],
+                    ["Básico"   , 25],
+                    ["Crítico"  , 30]
+                ]
+            }
+        }
     }
-
 }
