@@ -1,3 +1,6 @@
+// Como pasar data y eventos entre componentes en ReactJs
+// https://www.freecodecamp.org/espanol/news/pasar-data-y-eventos-entre-componentes-en-reactjs/
+
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -7,10 +10,12 @@ import navLinksData from "./cursos-divisiones.json";
 
 
 function App() {
-
+  
   return (
     <>
-      <Navegacion_v1 avLinksData={navLinksData} />
+      <Navegacion_v1
+        navLinksData={navLinksData}
+        estiloClassName='list-unstyled ps-0' />
     </>
   )
 }

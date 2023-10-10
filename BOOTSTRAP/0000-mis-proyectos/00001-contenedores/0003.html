@@ -105,6 +105,16 @@
     <main class="d-flex flex-nowrap">
         <!-- contenedor principal -->
         <div class="container-fluid text-center">
+            <!-- fila en la que va la barra de las fechas barra de navegación superior por fecha -->
+            <div class="row">
+                <div class="col-md-12 themed-grid-col">
+                    barra de navegación superior por fecha, acá van a aparecer los años de cada uno de los operativos y al hacer click sobre ellos se van
+                    a desplegar las distintas mediciones y el usuario las va a poder seleccionar, de esta selección se va a determinar los datos
+                    que van a mostrarse en la barra lateral en la que van a aparecer los cursos y las divisiones medidas, por defecto siempre
+                    debe mostrar el último operativo
+                </div>
+            </div>
+            <!-- fila en la que va la barra de las fechas fin barra de navegación superior por fecha -->
             <div class="vh-100 row mb-3 text-center">
                 <div class="flex-shrink-0 p-1 col-6 col-lg-1 themed-grid-col">
                     <!-- barra lateral -->
@@ -118,11 +128,7 @@
                     <!-- contenedor lateral donde se muestra la información -->
                     <div id="contenedor-lateral">
                         contenedor lateral donde se muestra la información
-                        <div class="row">
-                            <!-- barra de navegación superior por fecha-->
-                            <div class="col-md-12 themed-grid-col">
-                                barra de navegación superior por fecha
-                            </div>
+                        <div class="row">                            
                             <!-- fin barra de navegación superior por fecha-->
                             <!-- desde acá empiezo a poner los datos que voy a visualizar -->
                             <!-- la idea es la de poder traer el layout y los datos ya armados desde Python, como si fuese un content que se va a mostrar -->
