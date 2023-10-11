@@ -25,33 +25,32 @@ export const Navegacion_v1 = (propiedades) => {
     // voy a recorrer el objeto json recibido, uso un objeto .map para hacerlo
     // en caso de encontrar una propiedad de tipo enviado por parámetro entonces se trata de un li principal
     return (
-        <ul className="px-7 list-unstyled p-0 mb-8 mt-8">
+
+        <div className="px-7 list-unstyled p-0 mb-8 mt-8">
             {navLinksData.map((el, i) => {
                 return (
                     <>
-                        <li key={el.id} className="px-3" onClick={(event) => subMenuOnClickrHandler(el.id)} onMouseLeave={(event) => subMenuOnMouseLeaveHandler(el.id)}>
+                        <div key={el.id} className="px-3" onClick={(event) => subMenuOnClickrHandler(el.id)} onMouseLeave={(event) => subMenuOnMouseLeaveHandler(el.id)}>
                             <button className="btn d-inline-flex align-items-center rounded border-1 collapsed px-0 py-0"
                                 data-bs-toggle="collapse" data-bs-target="#" aria-expanded="true">
                                 <a href="#" className="h4 link-body-emphasis d-inline-flex text-decoration-none rounded"><strong>{el.nombre}</strong></a>
                             </button>
-
                             {showSubMenu[el.id] &&
                                 el.división.map((ele) => {
-                                    if (!ele.división) {
-                                        return (
-                                            <li key={ele.id} className="btn list-unstyled p-0 rounded border-0">
-                                                <button className="btn p-0" data-bs-toggle="collapse" data-bs-target="#" aria-expanded="true">
-                                                    <a href="#" className="text-primary h6 p-1"><small>{ele.nombre}</small></a>
-                                                </button>
-                                            </li>
-                                        );
-                                    }
+                                    return (
+                                        <div key={ele.id} className="btn list-unstyled p-0 rounded border-0">
+                                            <button className="btn p-0" data-bs-toggle="collapse" data-bs-target="#" aria-expanded="true">
+                                                <a href="#" className="text-primary h6 p-1"><small>{ele.nombre}</small></a>
+                                            </button>
+                                        </div>
+                                    );
                                 })}
-                        </li>
-                        <li className="border-bottom my-0"></li>
+                        </div>
+                        <div className="border-bottom my-0"></div>
                     </>
                 );
             })}
-        </ul>
+        </div>
+
     );
 }
