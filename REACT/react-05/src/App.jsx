@@ -5,15 +5,17 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { Navegacion_v1 } from './componentes/Navegacion_v1'
+import { NavegaciónCursoDivisión } from './componentes/NavegaciónCursoDivisión'
+import { NavegaciónAñoMedición } from './componentes/NavegaciónAñoMedición'
 import navLinksData from "./cursos-divisiones.json";
+import navLinkAñoMedicion from "./mediciones-2022.json";
 
 
 function App() {
-  
+
   return (
     <>
-      <Navegacion_v1 navLinksData={navLinksData}/>
+      <NavegaciónAñoMedición navLinkAñoMedicion={navLinkAñoMedicion} />      
     </>
   )
 }
