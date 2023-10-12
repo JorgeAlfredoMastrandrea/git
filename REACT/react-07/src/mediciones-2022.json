@@ -1,0 +1,279 @@
+[
+    {
+        "id": 1,
+        "año": "2022",
+        "mes": [
+            {
+                "id": 6,
+                "nombre": "junio",
+                "CursoDivision": [
+                    {
+                        "id": 1,
+                        "curso": "1°",
+                        "nombre": "1°",
+                        "división": [
+                            {
+                                "id": 11,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 12,
+                                "nombre": "B"
+                            },
+                            {
+                                "id": 13,
+                                "nombre": "C"
+                            },
+                            {
+                                "id": 14,
+                                "nombre": "D"
+                            },
+                            {
+                                "id": 15,
+                                "nombre": "E"
+                            },
+                            {
+                                "id": 16,
+                                "nombre": "F"
+                            },
+                            {
+                                "id": 17,
+                                "nombre": "G"
+                            },
+                            {
+                                "id": 18,
+                                "nombre": "H"
+                            },
+                            {
+                                "id": 19,
+                                "nombre": "I"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 2,
+                        "curso": "2°",
+                        "nombre": "2°",
+                        "división": [
+                            {
+                                "id": 21,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 22,
+                                "nombre": "B"
+                            },
+                            {
+                                "id": 23,
+                                "nombre": "C"
+                            },
+                            {
+                                "id": 24,
+                                "nombre": "D"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 3,
+                        "curso": "3°",
+                        "nombre": "3°",
+                        "división": [
+                            {
+                                "id": 31,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 32,
+                                "nombre": "B"
+                            },
+                            {
+                                "id": 33,
+                                "nombre": "C"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 4,
+                        "curso": "4°",
+                        "nombre": "4°",
+                        "división": [
+                            {
+                                "id": 41,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 42,
+                                "nombre": "B"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 5,
+                        "curso": "5°",
+                        "nombre": "5°",
+                        "división": [
+                            {
+                                "id": 51,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 52,
+                                "nombre": "B"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 6,
+                        "curso": "6°",
+                        "nombre": "6°",
+                        "división": [
+                            {
+                                "id": 61,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 62,
+                                "nombre": "B"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 7,
+                        "curso": "7°",
+                        "nombre": "7°",
+                        "división": [
+                            {
+                                "id": 71,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 72,
+                                "nombre": "B"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 8,
+                "nombre": "agosto",
+                "CursoDivision": [
+                    {
+                        "id": 2,
+                        "curso": "2°",
+                        "nombre": "2°",
+                        "división": [
+                            {
+                                "id": 21,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 22,
+                                "nombre": "B"
+                            },
+                            {
+                                "id": 23,
+                                "nombre": "C"
+                            },
+                            {
+                                "id": 24,
+                                "nombre": "D"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 3,
+                        "curso": "3°",
+                        "nombre": "3°",
+                        "división": [
+                            {
+                                "id": 31,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 32,
+                                "nombre": "B"
+                            },
+                            {
+                                "id": 33,
+                                "nombre": "C"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 4,
+                        "curso": "4°",
+                        "nombre": "4°",
+                        "división": [
+                            {
+                                "id": 41,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 42,
+                                "nombre": "B"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 11,
+                "nombre": "noviembre",
+                "CursoDivision": [                    
+                    {
+                        "id": 4,
+                        "curso": "4°",
+                        "nombre": "4°",
+                        "división": [
+                            {
+                                "id": 41,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 42,
+                                "nombre": "B"
+                            }
+                            ,
+                            {
+                                "id": 43,
+                                "nombre": "C"
+                            },
+                            {
+                                "id": 44,
+                                "nombre": "D"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 5,
+                        "curso": "5°",
+                        "nombre": "5°",
+                        "división": [
+                            {
+                                "id": 51,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 52,
+                                "nombre": "B"
+                            },
+                            {
+                                "id": 53,
+                                "nombre": "C"
+                            },
+                            {
+                                "id": 54,
+                                "nombre": "D"
+                            },
+                            {
+                                "id": 55,
+                                "nombre": "E"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
