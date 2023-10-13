@@ -2,8 +2,10 @@ import { useState } from 'react'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './grid.css';
-import { NavegaciónAñoMedición } from './componentes/NavegaciónAñoMedición'
+import { NavegaciónAñoMedición } from './componentes/NavegaciónAñoMedición';
+import { NavegaciónCursoDivisión } from './componentes/NavegaciónCursoDivisión';
 import navLinkAñoMedicion from "./mediciones-2022.json";
+import navLinksData from "./cursos-divisiones.json";
 
 
 function App() {
@@ -21,11 +23,11 @@ function App() {
             </div>
           </div>
 
-          <div className="vh-100 row mb-3 text-center">
-            <div className="flex-shrink-0 p-1 col-6 col-lg-1 themed-grid-col">
+          <div className="vh-100 row mb-3">
+            <div className="flex-shrink-0 p-0 col-sm-6 col-lg-1 themed-grid-col">
 
               <div id="barra-lateral">
-                barra lateral
+                <NavegaciónCursoDivisión navLinksData={navLinksData}/>
               </div>
 
             </div>
