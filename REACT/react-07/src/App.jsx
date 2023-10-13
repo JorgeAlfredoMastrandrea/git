@@ -14,34 +14,51 @@ function App() {
   return (
     <>
       <div className="d-flex flex-nowrap">
-
         <div className="container-fluid text-center">
+          <div className="vh-100 row mb-3 text-center">
+            <div className="col-sm-12 col-lg-12 themed-grid-col">
 
-          <div className="row">
-            <div className="col-md-12 themed-grid-col">
-              <NavegaciónAñoMedición navLinkAñoMedicion={navLinkAñoMedicion} />
-            </div>
-          </div>
+              <div id="contenedor-principal">
+                
+                <div id="fila-fecha">
+                  <div className="row">
+                    <div className="container-fluid text-center">
+                      <div className="row text-center">
+                        <div className="col with .gx-4 gutters themed-grid-col">
+                          Año y medición
+                          <NavegaciónAñoMedición navLinkAñoMedicion={navLinkAñoMedicion} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-          <div className="vh-100 row mb-3">
-            <div className="flex-shrink-0 p-0 col-sm-6 col-lg-1 themed-grid-col">
+                <div id="fila-fecha">
+                  <div className="row">
+                    <div className="container-fluid text-center">
+                      <div className="row text-center">
+                        <div className="col with .gx-4 gutters themed-grid-col">
+                          Curso y divisiones
+                          <NavegaciónCursoDivisión navLinksData={navLinksData} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-              <div id="barra-lateral">
-                <NavegaciónCursoDivisión navLinksData={navLinksData}/>
-              </div>
-
-            </div>
-
-            <div className="col-sm-6 col-lg-11 themed-grid-col">
-
-              <div id="contenedor-lateral">
+                <div id="fila-herramientas"></div>
+                <div className="row">
+                  <div className="container-fluid text-center">
+                    <div className="row text-center">
+                      <div className="col with .gx-4 gutters themed-grid-col">
+                        fila de herramientas
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
                 <div className="row">
-
                   <div className="container-fluid text-center">
-                    los datos que voy a visualizar van acá los puedo dividir en filas y adentro por
-                    columnas..estarán dentro de otro contenedor..el cual será el que dibuja el contenido ya
-                    armado junto con los datos
                     <div className="row text-center">
                       <div className="col with .gx-4 gutters themed-grid-col">acá va una tarjeta de
                         información</div>
@@ -68,13 +85,13 @@ function App() {
                     </div>
                   </div>
                 </div>
-              </div>
 
+              </div>
             </div>
           </div>
         </div>
-
       </div>
+
     </>
   )
 }

@@ -61,11 +61,11 @@ export const NavegaciónAñoMedición = (propiedades) => {
     // voy a recorrer el objeto json recibido, uso un objeto .map para hacerlo
     // en caso de encontrar una propiedad de tipo enviado por parámetro entonces se trata de un li principal
     return (
-        <div className="px-7 list-unstyled p-0 mb-8 mt-8">
+        <div className="">
             {navLinkAñoMedicion.map((el, i) => {
                 return (
                     <>
-                        <div key={el.id} className="px-3 " onClick={(event) => subMenuHandler(navLinkAñoMedicion, i, el, el.id, true)}>
+                        <div key={el.id} className="" onClick={(event) => subMenuHandler(navLinkAñoMedicion, i, el, el.id, true)}>
                             <button id={el.id} className="btn d-inline-flex align-items-center rounded border-1 collapsed px-0 py-0" data-bs-toggle="collapse" data-bs-target="#" aria-expanded="true">
                                 <a href="#" className="m-1 px-2 py-1  h4 link-body-emphasis d-inline-flex text-decoration-none rounded"><strong>{el.año}</strong></a>
                             </button>
@@ -79,7 +79,7 @@ export const NavegaciónAñoMedición = (propiedades) => {
                                 );
                             })}
                         </div>
-                        <div className="border-bottom my-0"></div>
+                        
                     </>
                 );
             })}
