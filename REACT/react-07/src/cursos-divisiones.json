@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id": "curso-1",
         "curso":"1°",
         "nombre":"1°",
         "división":[
@@ -44,7 +44,7 @@
         ]
     },
     {
-        "id": 2,
+        "id": "curso-2",
         "curso":"2°",
         "nombre":"2°",
         "división":[
@@ -67,7 +67,7 @@
         ]
     },
     {
-        "id": 3,
+        "id": "curso-3",
         "curso":"3°",
         "nombre":"3°",
         "división":[
@@ -86,7 +86,7 @@
         ]
     },
     {
-        "id": 4,
+        "id": "curso-4",
         "curso":"4°",
         "nombre":"4°",
         "división":[
@@ -101,7 +101,7 @@
         ]
     },
     {
-        "id": 5,
+        "id": "curso-5",
         "curso":"5°",
         "nombre":"5°",
         "división":[
@@ -116,7 +116,7 @@
         ]
     },
     {
-        "id": 6,
+        "id": "curso-6",
         "curso":"6°",
         "nombre":"6°",
         "división":[
@@ -131,7 +131,7 @@
         ]
     },
     {
-        "id": 7,
+        "id": "curso-7",
         "curso":"7°",
         "nombre":"7°",
         "división":[

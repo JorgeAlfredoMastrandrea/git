@@ -9,36 +9,27 @@ import navLinksData from "./cursos-divisiones.json";
 
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
-      <div className="d-flex flex-nowrap">
-        <div className="container-fluid text-center">
-          <div className="vh-100 row mb-3 text-center">
-            <div className="col-sm-12 col-lg-12 themed-grid-col">
+      <div className="d-flex flex-nowrap ">
+        <div className="container-fluid text-center p-0">
+          <div className="vh-100 row mb-3 text-center ">
+            <div className="col-sm-12 col-lg-12 themed-grid-col p-0">
 
               <div id="contenedor-principal">
-                
-                <div id="fila-fecha">
+
+                <div id="fila-fecha-">
                   <div className="row">
-                    <div className="container-fluid text-center">
-                      <div className="row text-center">
-                        <div className="col with .gx-4 gutters themed-grid-col">
-                          Año y medición
+                    <div className="container-fluid text-center p-0">
+                      <div className="row text-center mt-0 ">
+                        <div className="col-sm-12 col-lg-5 themed-grid-col p-0">
+                          Ciclo lectivo / Mes
                           <NavegaciónAñoMedición navLinkAñoMedicion={navLinkAñoMedicion} />
                         </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div id="fila-fecha">
-                  <div className="row">
-                    <div className="container-fluid text-center">
-                      <div className="row text-center">
-                        <div className="col with .gx-4 gutters themed-grid-col">
-                          Curso y divisiones
+                        <div className="col-sm-12 col-lg-7 themed-grid-col p-0">
+                          Cursos y divisiones
                           <NavegaciónCursoDivisión navLinksData={navLinksData} />
                         </div>
                       </div>
@@ -46,11 +37,12 @@ function App() {
                   </div>
                 </div>
 
+
                 <div id="fila-herramientas"></div>
                 <div className="row">
-                  <div className="container-fluid text-center">
-                    <div className="row text-center">
-                      <div className="col with .gx-4 gutters themed-grid-col">
+                  <div className="container-fluid text-center ">
+                    <div className="row text-center ">
+                      <div className="themed-grid-col p-0">
                         fila de herramientas
                       </div>
                     </div>
@@ -60,27 +52,27 @@ function App() {
                 <div className="row">
                   <div className="container-fluid text-center">
                     <div className="row text-center">
-                      <div className="col with .gx-4 gutters themed-grid-col">acá va una tarjeta de
+                      <div className="col with .gx-4 gutters themed-grid-col p-1">acá va una tarjeta de
                         información</div>
-                      <div className="col with .gx-4 gutters themed-grid-col">acá va una tarjeta de
+                      <div className="col with .gx-4 gutters themed-grid-col p-1">acá va una tarjeta de
                         información con mas información</div>
-                      <div className="col with .gx-4 gutters themed-grid-col">acá va una tarjeta de
+                      <div className="col with .gx-4 gutters themed-grid-col p-1">acá va una tarjeta de
                         información con mas información con mucha mas otras cosas</div>
-                      <div className="col with .gx-4 gutters themed-grid-col">acá va una tarjeta de
+                      <div className="col with .gx-4 gutters themed-grid-col p-1">acá va una tarjeta de
                         información</div>
                     </div>
                     <div className="row text-center">
-                      <div className="col with .gx-4 gutters themed-grid-col">acá va una tarjeta de
+                      <div className="col with .gx-4 gutters themed-grid-col p-1">acá va una tarjeta de
                         información</div>
-                      <div className="col with .gx-4 gutters themed-grid-col">acá va una tarjeta de
+                      <div className="col with .gx-4 gutters themed-grid-col p-1">acá va una tarjeta de
                         información con mas información con mucha mas otras cosas</div>
-                      <div className="col with .gx-4 gutters themed-grid-col">acá va una tarjeta de
+                      <div className="col with .gx-4 gutters themed-grid-col p-1">acá va una tarjeta de
                         información</div>
                     </div>
                     <div className="row text-center">
-                      <div className="col with .gx-4 gutters themed-grid-col">acá va una tarjeta de
+                      <div className="col with .gx-4 gutters themed-grid-col p-1">acá va una tarjeta de
                         información</div>
-                      <div className="col with .gx-4 gutters themed-grid-col">acá va una tarjeta de
+                      <div className="col with .gx-4 gutters themed-grid-col p-1">acá va una tarjeta de
                         información con mas información con mucha mas otras cosas</div>
                     </div>
                   </div>
