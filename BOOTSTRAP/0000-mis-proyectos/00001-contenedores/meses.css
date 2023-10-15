@@ -1,6 +1,6 @@
 .barra-año{
     display: grid;
-    gap: 6.5%;
+    gap: 6.8%;
     grid-template-columns: auto auto; /* es igual a esto -> grid-template-columns: repeat(2,auto)  */
     grid-template-areas:
         "boton-anterior  año  boton-siguiente";
@@ -21,7 +21,7 @@
 
 .meses {
     display: grid;
-    gap: 0.5%;
+    gap: 0.75%;
     grid-template-columns: auto auto; /* es igual a esto -> grid-template-columns: repeat(2,auto)  */
     grid-template-areas:
         "enero febrero marzo abril"         
