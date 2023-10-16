@@ -2,8 +2,10 @@ import { useState } from 'react'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './grid.css';
+import './meses.css';
 import { NavegaciónAñoMedición } from './componentes/NavegaciónAñoMedición';
 import { NavegaciónCursoDivisión } from './componentes/NavegaciónCursoDivisión';
+import { NavegaciónAñoMedición_v3 } from './componentes/NavegaciónAñoMedición_v3';
 import navLinkAñoMedicion from "./mediciones-2022.json";
 import navLinksData from "./cursos-divisiones.json";
 
@@ -20,20 +22,28 @@ function App() {
 
               <div id="contenedor-principal">
 
-                <div id="fila-fecha-">
+                <div id="fila-fecha-cursos-divisiones">
                   <div className="row">
-                    <div className="container-fluid text-center p-0">
-                      <div className="row text-center mt-0 ">
-                        <div className="col-sm-12 col-lg-5 themed-grid-col p-0">
-                          Ciclo lectivo / Mes
-                          <NavegaciónAñoMedición navLinkAñoMedicion={navLinkAñoMedicion} />
-                        </div>
-                        <div className="col-sm-12 col-lg-7 themed-grid-col p-0">
-                          Cursos y divisiones
-                          <NavegaciónCursoDivisión navLinksData={navLinksData} />
+
+                    <div className="row text-center mt-0 ">
+                      <div className="col-sm-12 col-lg-3 themed-grid-col">
+                        <div className="row">
+                          <div className="col-lg-6 themed-grid-col p-0">
+                            Ciclo lectivo
+                            <NavegaciónAñoMedición_v3 navLinkAñoMedicion={navLinkAñoMedicion}/>
+                          </div>
+                          <div className=" col-lg-6 themed-grid-col p-0">
+                            Mes
+                          </div>
                         </div>
                       </div>
+
+                      <div className="col-sm-12 col-lg-9 themed-grid-col p-0">
+                        Cursos y divisiones
+                        <NavegaciónCursoDivisión navLinksData={navLinksData} />
+                      </div>
                     </div>
+
                   </div>
                 </div>
 
@@ -41,11 +51,11 @@ function App() {
                 <div id="fila-herramientas"></div>
                 <div className="row">
                   <div className="container-fluid text-center ">
-                    <div className="row text-center ">
-                      <div className="themed-grid-col p-0">
-                        fila de herramientas
-                      </div>
+
+                    <div className="themed-grid-col p-0">
+                      fila de herramientas
                     </div>
+
                   </div>
                 </div>
 
