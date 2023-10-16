@@ -1,3 +1,5 @@
+// https://dev.to/andydziabo/how-to-pass-data-between-sibling-components-in-react-2cjg
+
 import { useState } from 'react'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -6,6 +8,7 @@ import './meses.css';
 import { NavegaciónAñoMedición } from './componentes/NavegaciónAñoMedición';
 import { NavegaciónCursoDivisión } from './componentes/NavegaciónCursoDivisión';
 import { NavegaciónAñoMedición_v3 } from './componentes/NavegaciónAñoMedición_v3';
+import { NavegaciónMesMedición } from './componentes/NavegaciónMesMedición';
 import navLinkAñoMedicion from "./mediciones-2022.json";
 import navLinksData from "./cursos-divisiones.json";
 
@@ -33,7 +36,7 @@ function App() {
                             <NavegaciónAñoMedición_v3 navLinkAñoMedicion={navLinkAñoMedicion}/>
                           </div>
                           <div className=" col-lg-6 themed-grid-col p-0">
-                            Mes
+                            < NavegaciónMesMedición/>
                           </div>
                         </div>
                       </div>

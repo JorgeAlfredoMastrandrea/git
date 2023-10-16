@@ -1,8 +1,13 @@
+// https://react-bootstrap.netlify.app/docs/components/modal/
+
 import React from 'react'
 import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Modal from 'react-bootstrap/Modal';
+import Row from 'react-bootstrap/Row';
 
 export const NavegaciónAñoMedición_v3 = (propiedades) => {
     const { navLinkAñoMedicion } = propiedades;
@@ -19,24 +24,27 @@ export const NavegaciónAñoMedición_v3 = (propiedades) => {
         });
     };
 
-
     return (
         <div className="">
             {navLinkAñoMedicion.map((el, i) => {
                 return (
                     <>
                         <div key={el.id} className="" >
-
-                            <button id={el.id} className="btn d-inline-flex align-items-center rounded border-1 collapsed px-0 py-0" data-bs-toggle="collapse" data-bs-target="#" aria-expanded="true" onClick={handleShow}>
+                            <button id={el.id} className="btn-primary btn d-inline-flex align-items-center rounded border-1 collapsed px-0 py-0" data-bs-toggle="collapse" data-bs-target="#" aria-expanded="true" onClick={handleShow}>
                                 <a href="#" className="m-1 px-2 py-1  h4 link-body-emphasis d-inline-flex text-decoration-none rounded"><strong>{el.año}</strong></a>
                             </button>
 
-                            <Modal show={show} onHide={handleClose}>
+                            <Modal                                
+                                size="sm"
+                                aria-labelledby="contained-modal-title-vcenter"
+                                centered="true"
+                                dialogClassName="modal-90w"
+                                show={show} onHide={handleClose}>
                                 <Modal.Header closeButton>
-                                    <Modal.Title>Modal heading</Modal.Title>
+                                    <Modal.Title>año y mes</Modal.Title>
                                 </Modal.Header>
                                 <Modal.Body>
-                                    <div id="tarjeta-año-mese" className="card border-primary bg-white" styles="width: 13.5rem; height: 13.5rem; transform: scale(0.75) translate(-35px,-35px);">
+                                    <div id="tarjeta-año-mese" className="card border-primary bg-white">
                                         <div className="card-body px-3 py-1">
                                             <div className="barra-año text-center p-0">
                                                 <div className="boton-anterior">
@@ -115,7 +123,7 @@ export const NavegaciónAñoMedición_v3 = (propiedades) => {
                                         </div>
                                     </div>
                                 </Modal.Body>
-                                <Modal.Footer>                                    
+                                <Modal.Footer>
                                     <Button variant="primary" onClick={handleClose}>
                                         Aceptar
                                     </Button>
