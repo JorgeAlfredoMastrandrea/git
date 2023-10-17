@@ -1,0 +1,78 @@
+.barra-año{
+    display: grid;
+    gap: 6.8%;
+    grid-template-columns: auto auto; /* es igual a esto -> grid-template-columns: repeat(2,auto)  */
+    grid-template-areas:
+        "boton-anterior  año  boton-siguiente";
+}
+
+.año{
+    grid-area: año;
+}
+
+.boton-anterior{
+    grid-area: boton-anterior;
+}
+
+.boton-siguiente{
+    grid-area: boton-siguiente;
+}
+
+
+.meses {
+    display: grid;
+    gap: 0.75%;
+    grid-template-columns: auto auto; /* es igual a esto -> grid-template-columns: repeat(2,auto)  */
+    grid-template-areas:
+        "enero febrero marzo abril"         
+        "mayo junio julio agosto"        
+        "setiembre octubre noviembre diciembre";
+}
+
+.enero {
+    grid-area: enero;    
+}
+
+.febrero {
+    grid-area: febrero;    
+}
+
+.marzo {
+    grid-area: marzo;    
+}
+
+.abril {
+    grid-area: abril;    
+}
+
+.mayo {
+    grid-area: mayo;    
+}
+
+.junio {
+    grid-area: junio;    
+}
+
+.julio {
+    grid-area: julio;    
+}
+
+.agosto {
+    grid-area: agosto;    
+}
+
+.setiembre {
+    grid-area: setiembre;    
+}
+
+.octubre {
+    grid-area: octubre;    
+}
+
+.noviembre {
+    grid-area: noviembre;    
+}
+
+.diciembre {
+    grid-area: diciembre;    
+}
