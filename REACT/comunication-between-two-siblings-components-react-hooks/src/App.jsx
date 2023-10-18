@@ -20,13 +20,13 @@ import { Child2 } from './componentes/Child2'
 function App() {
 
   // Here we create the initial state and set the message empty:-
-  const [selectedMessage, setMesage] = useState('mensaje vacío (esto está en App, podría no haber nada)');
+  const [selectedMessage, setMessage] = useState('mensaje vacío (esto está en App, podría no haber nada)');
 
   return (
     <>
       <div className="app">
         <p>Esta es App</p>
-        <Child1 setMessage={setMesage} />
+        <Child1 setMessage={setMessage} />
         <Child2 selectedMessage={selectedMessage} />
       </div>
     </>

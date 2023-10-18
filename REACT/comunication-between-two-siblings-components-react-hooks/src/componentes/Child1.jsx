@@ -9,9 +9,11 @@ Here on Button click, we are changing the value of our message from empty to “
 */
 
 export const Child1 = ({ setMessage }) => {
+    
     const onButtonClick = (changeValue) => {
         setMessage(changeValue);
     }
+    
     return (
         <div>
             <button onClick={() => onButtonClick('Mensaje desde Child1')}>Child1 : (pulsa para mandar el mensaje)</button>
