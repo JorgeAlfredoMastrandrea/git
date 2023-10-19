@@ -16,8 +16,8 @@ import navLinkAñoMedicion from "../medicionesAñosMeses.json";
 export const NavegaciónAñoMedición_v3 = (setMessage) => {
 
     const longitudObjeto = Object.keys(navLinkAñoMedicion).length;
-    console.log("longitud ---> " , longitudObjeto)
-    let punteroAño = longitudObjeto-1; // el puntero queda en el último año
+    console.log("longitud ---> ", longitudObjeto)
+    let punteroAño = longitudObjeto - 1; // el puntero queda en el último año
 
     // elijo el último elemento de las mediciones..o sea el ultimo año    
     const ultimoAño = Object.values(navLinkAñoMedicion).at(-1);
@@ -59,39 +59,56 @@ export const NavegaciónAñoMedición_v3 = (setMessage) => {
 
     const handleClicked = (navLinkAñoMedicion) => {
         setIsClicked(true);
-        setTimeout(() => { 
-            document.getElementById("anio").innerHTML = ultimoAño.año
+        setTimeout(() => {
+            document.getElementById("anio").innerHTML = ultimoAño.año;
+            // desactivo todos los meses..
+            desactivarTodosLosMeses();
+            // seleccionar los meses del último año..
+            activarMeses(ultimoAño.mes);
         }, 0);
-        console.log(navLinkAñoMedicion);
     }
 
-    const añoAnterior = (navLinkAñoMedicion) => {        
+    const añoAnterior = (navLinkAñoMedicion) => {
         // debo recorrer el elemento año dentro del objeto y buscar el anterior
         let añoAnt = punteroAño;
-        if (punteroAño != 0){
-            console.log("click en año anterior");
+        if (punteroAño != 0) {            
             punteroAño--;
-            añoAnt = Object.values(navLinkAñoMedicion).at(punteroAño);            
+            añoAnt = Object.values(navLinkAñoMedicion).at(punteroAño);
             document.getElementById("anio").innerHTML = añoAnt.año
             let meses = añoAnt.mes;
-            activarMeses(meses);
-        }        
-    }
-
-    const añoSiguiente = (navLinkAñoMedicion) => {        
-        let añoSig = punteroAño;
-        if (punteroAño < longitudObjeto-1){
-            console.log("click en año siguiente");
-            punteroAño++;
-            añoSig = Object.values(navLinkAñoMedicion).at(punteroAño);            
-            document.getElementById("anio").innerHTML = añoSig.año
-            let meses = añoSig.mes;
+            desactivarTodosLosMeses();
             activarMeses(meses);
         }
     }
 
+    const añoSiguiente = (navLinkAñoMedicion) => {
+        let añoSig = punteroAño;
+        if (punteroAño < longitudObjeto - 1) {
+            punteroAño++;
+            añoSig = Object.values(navLinkAñoMedicion).at(punteroAño);
+            document.getElementById("anio").innerHTML = añoSig.año
+            let meses = añoSig.mes;
+            desactivarTodosLosMeses();
+            activarMeses(meses);
+        }
+    }    
+
+    const desactivarTodosLosMeses = () => {
+        const listaDeMeses = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'setiembre', 'octubre', 'noviembre', 'diciembre'];
+        let index = 0;
+        {
+            listaDeMeses.forEach((mes) => {
+                document.getElementById(mes).style.background = "gray";
+                index++;
+            })
+        };
+    }
+
     const activarMeses = (objetoMeses) => {
-        console.log(objetoMeses)
+        for (let index = 0; index < Object.keys(objetoMeses).length; index++) {
+            // activo los meses que trae el objeto ..!
+            document.getElementById(Object.values(objetoMeses).at(index).id).style.background = "magenta";
+        }
     }
 
     return (
@@ -102,12 +119,12 @@ export const NavegaciónAñoMedición_v3 = (setMessage) => {
                         <button key={ultimoAño.año} id={ultimoAño.id} className="btn-primary btn d-inline-flex align-items-center rounded border-1 collapsed px-0 py-0" data-bs-toggle="collapse" data-bs-target="#" aria-expanded="true"
                             onClick={(event) => handleClicked(navLinkAñoMedicion)}
                         >
-                            <a  href="#" className="m-1 px-2 py-1  h4 link-body-emphasis d-inline-flex text-decoration-none rounded"><strong>{ultimoAño.año}</strong></a>
+                            <a href="#" className="m-1 px-2 py-1  h4 link-body-emphasis d-inline-flex text-decoration-none rounded"><strong>{ultimoAño.año}</strong></a>
                         </button>
                     </div>
 
                     {isClicked && (
-                        <div  className="z-3 position-absolute p-0 rounded-3 " >
+                        <div className="z-3 position-absolute p-0 rounded-3 " >
                             <div id="tarjeta-año-meses" className="card border-primary bg-white" styled="width: 13.5rem; height: 13.5rem; transform: scale(0.75) translate(-35px,-35px);">
                                 <div className="card-body px-3 py-1" >
                                     <div className="barra-año text-center p-0">
@@ -151,7 +168,7 @@ export const NavegaciónAñoMedición_v3 = (setMessage) => {
                                                 role="button"><small>mar</small></a>
                                         </div>
                                         <div className="abril">
-                                            <a id="abril" className="w-100 h-100 btn btn-primary text-white h6 p-1" href="#"
+                                            <a id="abril" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
                                                 role="button"><small>abr</small></a>
                                         </div>
 
@@ -169,7 +186,7 @@ export const NavegaciónAñoMedición_v3 = (setMessage) => {
                                         </div>
 
                                         <div className="agosto">
-                                            <a id="agosto" className="w-100 h-100 btn btn-primary text-white h6 p-1" href="#"
+                                            <a id="agosto" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
                                                 role="button"><small>ago</small></a>
                                         </div>
                                         <div className="setiembre">
@@ -181,11 +198,11 @@ export const NavegaciónAñoMedición_v3 = (setMessage) => {
                                                 role="button"><small>oct</small></a>
                                         </div>
                                         <div className="noviembre">
-                                            <a id="noviembre" className="w-100 h-100 btn btn-primary text-white h6 p-1" href="#"
+                                            <a id="noviembre" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
                                                 role="button"><small>nov</small></a>
                                         </div>
-                                        <div id="diciembre" className="diciembre">
-                                            <a className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
+                                        <div className="diciembre">
+                                            <a id="diciembre" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
                                                 role="button"><small>dic</small></a>
                                         </div>
 
@@ -193,7 +210,7 @@ export const NavegaciónAñoMedición_v3 = (setMessage) => {
                                 </div>
                             </div>
                         </div>
-                        )
+                    )
                     }
 
                 </>
