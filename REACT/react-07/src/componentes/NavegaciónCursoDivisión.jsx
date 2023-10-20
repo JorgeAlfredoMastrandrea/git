@@ -55,20 +55,20 @@ export const NavegaciónCursoDivisión = (propiedades) => {
     // voy a recorrer el objeto json recibido, uso un objeto .map para hacerlo
     // en caso de encontrar una propiedad de tipo enviado por parámetro entonces se trata de un li principal
     return (
-        <div className="mt-1">
+        <div key="divExt1" className="mt-1">
             {navLinksData.map((el, i) => {
                 return (
                     <>
-                        <div className="d-inline-flex">
+                        <div key="divExt2" className="d-inline-flex">
                             <div key={el.id} className="px-2" onClick={(event) => subMenuHandler(navLinksData, i, el, el.id, true)}>
-                                <button id={el.id} className="btn d-inline-flex align-items-center rounded border-1 collapsed px-0 py-0" data-bs-toggle="collapse" data-bs-target="#" aria-expanded="true">
-                                    <a href="#" className="m-1 px-2 py-1 h5 link-body-emphasis d-inline-flex text-decoration-none rounded"><strong>{el.nombre}</strong></a>
+                                <button key="botonCurso" id={el.id} className="btn d-inline-flex align-items-center rounded border-1 collapsed px-0 py-0" data-bs-toggle="collapse" data-bs-target="#" aria-expanded="true">
+                                    <a key="a1" href="#" className="m-1 px-2 py-1 h5 link-body-emphasis d-inline-flex text-decoration-none rounded"><strong>{el.nombre}</strong></a>
                                 </button>
                                 {showSubMenu[el.id] && el.división.map((ele) => {
                                     return (
                                         <div id={ele.id} key={ele.id} className="btn p-0 rounded border-0 m-1" onClick={(event) => showItemHandler(el.división, el.id, ele.id, true)}>
-                                            <button type="button" className="btn p-0 " data-bs-toggle="collapse" data-bs-target="#" aria-expanded="true">
-                                                <a href="#" className="text-dark h7 p-1"><small>{ele.nombre}</small></a>
+                                            <button key="botonDivision" type="button" className="btn p-0 " data-bs-toggle="collapse" data-bs-target="#" aria-expanded="true">
+                                                <a key="a2" href="#" className="text-dark h7 p-1"><small>{ele.nombre}</small></a>
                                             </button>
                                         </div>
                                     );

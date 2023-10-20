@@ -8,7 +8,7 @@ import './meses.css';
 
 import { NavegaciónAñoMedición } from './componentes/NavegaciónAñoMedición';
 import { NavegaciónCursoDivisión } from './componentes/NavegaciónCursoDivisión';
-import { NavegaciónAñoMedición_v3 } from './componentes/NavegaciónAñoMedición_v3';
+import { NavegaciónAñoMedición_v4 } from './componentes/NavegaciónAñoMedición_v4';
 import { NavegaciónMesMedición } from './componentes/NavegaciónMesMedición';
 
 import navLinksData from "./cursos-divisiones.json";
@@ -30,7 +30,7 @@ function App() {
             <div id="fila-fecha-cursos-divisiones" className="row">
               <div className="col-sm-12 col-lg-2 themed-grid-col p-0">
                 Ciclo lectivo
-                <NavegaciónAñoMedición_v3 setMessage={setMessage} />
+                <NavegaciónAñoMedición_v4 setMessage={setMessage} />
               </div>
               <div className="col-sm-12 col-lg-1 themed-grid-col p-0">
                 < NavegaciónMesMedición selectedMessage = {selectedMessage}/>
