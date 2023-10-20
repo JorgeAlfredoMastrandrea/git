@@ -19,6 +19,8 @@ export const NavegaciónAñoMedición_v3 = (setMessage) => {
     let punteroAño = longitudObjeto - 1; // el puntero queda en el último año
     // elijo el último elemento de las mediciones..o sea el ultimo año    
     const ultimoAño = Object.values(navLinkAñoMedicion).at(-1);
+    let mesesAñoVisitado;
+
     const changeMes = (changeValue) => {
         setMessage(changeValue)
     }
@@ -36,39 +38,36 @@ export const NavegaciónAñoMedición_v3 = (setMessage) => {
 
         setTimeout(() => {
             document.getElementById("año").innerHTML = ultimoAño.año;
-            // desactivo todos los meses..
-            desactivarTodosLosMeses();
-            // seleccionar los meses del último año..
-            activarMeses(ultimoAño.mes);
+            // guardo los meses que se estan mirando apenas arranca            
+            mesesAñoVisitado = ultimoAño.mes;
+            console.log('al inicio ---->',mesesAñoVisitado);
+            mostrarCicloLectivoYMeses(navLinkAñoMedicion, punteroAño);
         }, 0);
     }
 
     const añoAnterior = (navLinkAñoMedicion) => {
-        // debo recorrer el elemento año dentro del objeto y buscar el anterior
-        let añoAnt = punteroAño;
         if (punteroAño != 0) {
             punteroAño--;
-            añoAnt = Object.values(navLinkAñoMedicion).at(punteroAño);
-            document.getElementById("año").innerHTML = añoAnt.año
-            document.getElementById("añoBoton").innerHTML = añoAnt.año
-            let meses = añoAnt.mes;
-            desactivarTodosLosMeses();
-            activarMeses(meses);
+            mostrarCicloLectivoYMeses(navLinkAñoMedicion, punteroAño);
         }
     }
 
     const añoSiguiente = (navLinkAñoMedicion) => {
-        let añoSig = punteroAño;
         if (punteroAño < longitudObjeto - 1) {
             punteroAño++;
-            añoSig = Object.values(navLinkAñoMedicion).at(punteroAño);
-            document.getElementById("año").innerHTML = añoSig.año;
-            document.getElementById("añoBoton").innerHTML = añoSig.año;
-            let meses = añoSig.mes;
-            desactivarTodosLosMeses();
-            activarMeses(meses);
+            mostrarCicloLectivoYMeses(navLinkAñoMedicion, punteroAño);
         }
     }
+
+    const mostrarCicloLectivoYMeses = (navLinkAñoMedicion, punteroAño) => {
+        let añoAMostrar = Object.values(navLinkAñoMedicion).at(punteroAño);
+        document.getElementById("año").innerHTML = añoAMostrar.año;
+        document.getElementById("añoBoton").innerHTML = añoAMostrar.año;
+        mesesAñoVisitado = añoAMostrar.mes; 
+        console.log('mostrarCicloLectivoYMeses .... ' , mesesAñoVisitado);
+        desactivarTodosLosMeses();
+        activarMeses(mesesAñoVisitado);
+    }   
 
     const desactivarTodosLosMeses = () => {
         const listaDeMeses = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'setiembre', 'octubre', 'noviembre', 'diciembre'];
@@ -79,6 +78,7 @@ export const NavegaciónAñoMedición_v3 = (setMessage) => {
                 index++;
             })
         };
+        console.log('desactivarTodosLosMeses .... ' , mesesAñoVisitado);
     }
 
     const activarMeses = (objetoMeses) => {
@@ -86,6 +86,16 @@ export const NavegaciónAñoMedición_v3 = (setMessage) => {
             // activo los meses que trae el objeto ..!
             document.getElementById(Object.values(objetoMeses).at(index).id).style.background = "magenta";
         }
+        console.log('activarMeses .... ' , mesesAñoVisitado);
+    }
+
+    const mesSeleccionado = (mesElegido) => {
+        desactivarTodosLosMeses();
+        console.log('mesSeleccionado .... : ' , mesesAñoVisitado)
+        activarMeses(mesesAñoVisitado);
+        if (document.getElementById(mesElegido).style.background === "magenta") {
+                 document.getElementById(mesElegido).style.background = "green";
+        }        
     }
 
     return (
@@ -147,52 +157,64 @@ export const NavegaciónAñoMedición_v3 = (setMessage) => {
                                             <div className="meses text-center p-0">
                                                 <div className="enero">
                                                     <a id="enero" className="w-100 h-100 btn btn-secondary text-white h6 p-1 " href="#"
+                                                        onClick={(event) => mesSeleccionado('enero')}
                                                         role="button"><small>ene</small></a>
                                                 </div>
                                                 <div className="febrero">
                                                     <a id="febrero" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
+                                                        onClick={(event) => mesSeleccionado('febrero')}
                                                         role="button"><small>feb</small></a>
                                                 </div>
                                                 <div className="marzo">
                                                     <a id="marzo" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
+                                                        onClick={(event) => mesSeleccionado('marzo')}
                                                         role="button"><small>mar</small></a>
                                                 </div>
                                                 <div className="abril">
                                                     <a id="abril" className="w-100 h-100 btn btn-primary text-white h6 p-1" href="#"
+                                                        onClick={(event) => mesSeleccionado('abril')}
                                                         role="button"><small>abr</small></a>
                                                 </div>
 
                                                 <div className="mayo">
                                                     <a id="mayo" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
+                                                        onClick={(event) => mesSeleccionado('mayo')}
                                                         role="button"><small>may</small></a>
                                                 </div>
                                                 <div className="junio">
                                                     <a id="junio" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
+                                                        onClick={(event) => mesSeleccionado('junio')}
                                                         role="button"><small>jun</small></a>
                                                 </div>
                                                 <div className="julio">
                                                     <a id="julio" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
+                                                        onClick={(event) => mesSeleccionado('julio')}
                                                         role="button"><small>jul</small></a>
                                                 </div>
 
                                                 <div className="agosto">
                                                     <a id="agosto" className="w-100 h-100 btn btn-primary text-white h6 p-1" href="#"
+                                                        onClick={(event) => mesSeleccionado('agosto')}
                                                         role="button"><small>ago</small></a>
                                                 </div>
                                                 <div className="setiembre">
                                                     <a id="setiembre" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
+                                                        onClick={(event) => mesSeleccionado('setiembre')}
                                                         role="button"><small>set</small></a>
                                                 </div>
                                                 <div className="octubre">
                                                     <a id="octubre" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
+                                                        onClick={(event) => mesSeleccionado('octubre')}
                                                         role="button"><small>oct</small></a>
                                                 </div>
                                                 <div className="noviembre">
                                                     <a id="noviembre" className="w-100 h-100 btn btn-primary text-white h6 p-1" href="#"
+                                                        onClick={(event) => mesSeleccionado('noviembre')}
                                                         role="button"><small>nov</small></a>
                                                 </div>
                                                 <div className="diciembre">
                                                     <a id="diciembre" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
+                                                        onClick={(event) => mesSeleccionado('diciembre')}
                                                         role="button"><small>dic</small></a>
                                                 </div>
 
