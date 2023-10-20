@@ -50,6 +50,7 @@ export const NavegaciónAñoMedición_v3 = (setMessage) => {
             punteroAño--;
             añoAnt = Object.values(navLinkAñoMedicion).at(punteroAño);
             document.getElementById("año").innerHTML = añoAnt.año
+            document.getElementById("añoBoton").innerHTML = añoAnt.año
             let meses = añoAnt.mes;
             desactivarTodosLosMeses();
             activarMeses(meses);
@@ -61,7 +62,8 @@ export const NavegaciónAñoMedición_v3 = (setMessage) => {
         if (punteroAño < longitudObjeto - 1) {
             punteroAño++;
             añoSig = Object.values(navLinkAñoMedicion).at(punteroAño);
-            document.getElementById("año").innerHTML = añoSig.año
+            document.getElementById("año").innerHTML = añoSig.año;
+            document.getElementById("añoBoton").innerHTML = añoSig.año;
             let meses = añoSig.mes;
             desactivarTodosLosMeses();
             activarMeses(meses);
@@ -94,7 +96,7 @@ export const NavegaciónAñoMedición_v3 = (setMessage) => {
                         <button key={ultimoAño.año} id={ultimoAño.id} className="btn-primary btn d-inline-flex align-items-center rounded border-1 collapsed px-0 py-0" data-bs-toggle="collapse" data-bs-target="#" aria-expanded="true"
                             onClick={(event) => handleClicked(navLinkAñoMedicion)}
                         >
-                            <a href="#" className="m-1 px-2 py-1  h4 link-body-emphasis d-inline-flex text-decoration-none rounded"><strong>{ultimoAño.año}</strong></a>
+                            <a id="añoBoton" href="#" className="m-1 px-2 py-1  h4 link-body-emphasis d-inline-flex text-decoration-none rounded"><strong>{ultimoAño.año}</strong></a>
                         </button>
                     </div>
 
