@@ -16,51 +16,26 @@ import navLinkAñoMedicion from "../medicionesAñosMeses.json";
 export const NavegaciónAñoMedición_v3 = (setMessage) => {
 
     const longitudObjeto = Object.keys(navLinkAñoMedicion).length;
-    console.log("longitud ---> ", longitudObjeto)
     let punteroAño = longitudObjeto - 1; // el puntero queda en el último año
-
     // elijo el último elemento de las mediciones..o sea el ultimo año    
     const ultimoAño = Object.values(navLinkAñoMedicion).at(-1);
-    console.log(ultimoAño.año)
-
-    //const { navLinkAñoMedicion } = setMessage;
     const changeMes = (changeValue) => {
         setMessage(changeValue)
     }
-
-    //const [mostrarAlgo, setMostrarAñoYMes] = useState();
     const [show, setShow] = useState(false);
-
-
     const mostrarAñoYMes = (elObjetoMedicionAño) => {
         setShow(true);
-
-
-        //document.getElementById("año").innerHTML = ultimoAño.año;
-        console.log('----> modal : ', document.getElementById("modalAñoMes"));
-
-        console.log(elObjetoMedicionAño);
     };
 
     const handleClose = () => setShow(false);
-
-
-    const [isHovering, setIsHovering] = useState(false);
-
-    const handleMouseOver = () => {
-        setIsHovering(true);
-    };
-
-    const handleMouseOut = () => {
-        setIsHovering(false);
-    };
-
     const [isClicked, setIsClicked] = useState(false);
 
     const handleClicked = (navLinkAñoMedicion) => {
         setIsClicked(true);
+        setShow(true);
+
         setTimeout(() => {
-            document.getElementById("anio").innerHTML = ultimoAño.año;
+            document.getElementById("año").innerHTML = ultimoAño.año;
             // desactivo todos los meses..
             desactivarTodosLosMeses();
             // seleccionar los meses del último año..
@@ -71,10 +46,10 @@ export const NavegaciónAñoMedición_v3 = (setMessage) => {
     const añoAnterior = (navLinkAñoMedicion) => {
         // debo recorrer el elemento año dentro del objeto y buscar el anterior
         let añoAnt = punteroAño;
-        if (punteroAño != 0) {            
+        if (punteroAño != 0) {
             punteroAño--;
             añoAnt = Object.values(navLinkAñoMedicion).at(punteroAño);
-            document.getElementById("anio").innerHTML = añoAnt.año
+            document.getElementById("año").innerHTML = añoAnt.año
             let meses = añoAnt.mes;
             desactivarTodosLosMeses();
             activarMeses(meses);
@@ -86,12 +61,12 @@ export const NavegaciónAñoMedición_v3 = (setMessage) => {
         if (punteroAño < longitudObjeto - 1) {
             punteroAño++;
             añoSig = Object.values(navLinkAñoMedicion).at(punteroAño);
-            document.getElementById("anio").innerHTML = añoSig.año
+            document.getElementById("año").innerHTML = añoSig.año
             let meses = añoSig.mes;
             desactivarTodosLosMeses();
             activarMeses(meses);
         }
-    }    
+    }
 
     const desactivarTodosLosMeses = () => {
         const listaDeMeses = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'setiembre', 'octubre', 'noviembre', 'diciembre'];
@@ -124,91 +99,114 @@ export const NavegaciónAñoMedición_v3 = (setMessage) => {
                     </div>
 
                     {isClicked && (
-                        <div className="z-3 position-absolute p-0 rounded-3 " >
-                            <div id="tarjeta-año-meses" className="card border-primary bg-white" styled="width: 13.5rem; height: 13.5rem; transform: scale(0.75) translate(-35px,-35px);">
-                                <div className="card-body px-3 py-1" >
-                                    <div className="barra-año text-center p-0">
-                                        <div className="boton-anterior">
-                                            <a className="w-100 btn btn-primary text-white h7 p-1 py-2" href="#" role="button" onClick={(event) => añoAnterior(navLinkAñoMedicion)}><small><span
-                                                className="material-symbols-outlined">
-                                                arrow_back
-                                            </span></small></a>
-                                        </div>
+                        <div>
 
-                                        <div className="año">
+                            <Modal
+                                id="modalAñoMes"
+                                size="sm"
+                                aria-labelledby="contained-modal-title-vcenter"
+                                centered="true"
+                                dialogClassName="modal-90w"
+                                show={show}
 
-                                            <h5 id="anio" className="card-title h2 link-body-emphasis d-inline-flex text-decoration-none rounded py-1">
-                                                <strong>{ultimoAño.año}</strong>
-                                            </h5>
+                                onHide={handleClose}>
+                                <Modal.Header closeButton>
+                                    <Modal.Title>ciclo lectivo y mes</Modal.Title>
+                                </Modal.Header>
+                                <Modal.Body>
+                                    <div id="tarjeta-año-meses" className="card border-primary bg-white">
+                                        <div className="card-body px-3 py-1">
+                                            <div className="barra-año text-center p-0">
+                                                <div className="boton-anterior">
+                                                    <a className="w-100 btn btn-primary text-white h7 p-1 py-2" href="#" role="button"><small><span
+                                                        className="material-symbols-outlined" onClick={(event) => añoAnterior(navLinkAñoMedicion)}>
+                                                        arrow_back
+                                                    </span></small></a>
+                                                </div>
 
-                                        </div>
+                                                <div className="año">
 
+                                                    <h5 id="año" className="card-title h2 link-body-emphasis d-inline-flex text-decoration-none rounded py-1">
+                                                        <strong>{ultimoAño.año}</strong>
+                                                    </h5>
 
-                                        <div className="boton-siguiente">
-                                            <a className="w-100 btn btn-primary text-white h7 p-1 py-2" href="#" role="button" onClick={(event) => añoSiguiente(navLinkAñoMedicion)}><small><span
-                                                className="material-symbols-outlined">
-                                                arrow_forward
-                                            </span></small></a>
+                                                </div>
+
+                                                <div className="boton-siguiente">
+                                                    <a className="w-100 btn btn-primary text-white h7 p-1 py-2" href="#" role="button"><small><span
+                                                        className="material-symbols-outlined" onClick={(event) => añoSiguiente(navLinkAñoMedicion)}>
+                                                        arrow_forward
+                                                    </span></small></a>
+                                                </div>
+                                            </div>
+
+                                            <div className="border-top my-2 "></div>
+
+                                            <div className="meses text-center p-0">
+                                                <div className="enero">
+                                                    <a id="enero" className="w-100 h-100 btn btn-secondary text-white h6 p-1 " href="#"
+                                                        role="button"><small>ene</small></a>
+                                                </div>
+                                                <div className="febrero">
+                                                    <a id="febrero" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
+                                                        role="button"><small>feb</small></a>
+                                                </div>
+                                                <div className="marzo">
+                                                    <a id="marzo" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
+                                                        role="button"><small>mar</small></a>
+                                                </div>
+                                                <div className="abril">
+                                                    <a id="abril" className="w-100 h-100 btn btn-primary text-white h6 p-1" href="#"
+                                                        role="button"><small>abr</small></a>
+                                                </div>
+
+                                                <div className="mayo">
+                                                    <a id="mayo" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
+                                                        role="button"><small>may</small></a>
+                                                </div>
+                                                <div className="junio">
+                                                    <a id="junio" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
+                                                        role="button"><small>jun</small></a>
+                                                </div>
+                                                <div className="julio">
+                                                    <a id="julio" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
+                                                        role="button"><small>jul</small></a>
+                                                </div>
+
+                                                <div className="agosto">
+                                                    <a id="agosto" className="w-100 h-100 btn btn-primary text-white h6 p-1" href="#"
+                                                        role="button"><small>ago</small></a>
+                                                </div>
+                                                <div className="setiembre">
+                                                    <a id="setiembre" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
+                                                        role="button"><small>set</small></a>
+                                                </div>
+                                                <div className="octubre">
+                                                    <a id="octubre" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
+                                                        role="button"><small>oct</small></a>
+                                                </div>
+                                                <div className="noviembre">
+                                                    <a id="noviembre" className="w-100 h-100 btn btn-primary text-white h6 p-1" href="#"
+                                                        role="button"><small>nov</small></a>
+                                                </div>
+                                                <div className="diciembre">
+                                                    <a id="diciembre" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
+                                                        role="button"><small>dic</small></a>
+                                                </div>
+
+                                            </div>
                                         </div>
                                     </div>
+                                </Modal.Body>
+                                <Modal.Footer>
+                                    <Button variant="primary" onClick={handleClose}>
+                                        Aceptar
+                                    </Button>
+                                </Modal.Footer>
+                            </Modal >
 
-                                    <div className="border-top my-2 "></div>
 
-                                    <div className="meses text-center p-0">
-                                        <div className="enero">
-                                            <a id="enero" className="w-100 h-100 btn btn-secondary text-white h6 p-1 " href="#"
-                                                role="button"><small>ene</small></a>
-                                        </div>
-                                        <div className="febrero">
-                                            <a id="febrero" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
-                                                role="button"><small>feb</small></a>
-                                        </div>
-                                        <div className="marzo">
-                                            <a id="marzo" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
-                                                role="button"><small>mar</small></a>
-                                        </div>
-                                        <div className="abril">
-                                            <a id="abril" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
-                                                role="button"><small>abr</small></a>
-                                        </div>
 
-                                        <div className="mayo">
-                                            <a id="mayo" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
-                                                role="button"><small>may</small></a>
-                                        </div>
-                                        <div className="junio">
-                                            <a id="junio" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
-                                                role="button"><small>jun</small></a>
-                                        </div>
-                                        <div className="julio">
-                                            <a id="julio" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
-                                                role="button"><small>jul</small></a>
-                                        </div>
-
-                                        <div className="agosto">
-                                            <a id="agosto" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
-                                                role="button"><small>ago</small></a>
-                                        </div>
-                                        <div className="setiembre">
-                                            <a id="setiembre" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
-                                                role="button"><small>set</small></a>
-                                        </div>
-                                        <div className="octubre">
-                                            <a id="octubre" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
-                                                role="button"><small>oct</small></a>
-                                        </div>
-                                        <div className="noviembre">
-                                            <a id="noviembre" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
-                                                role="button"><small>nov</small></a>
-                                        </div>
-                                        <div className="diciembre">
-                                            <a id="diciembre" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
-                                                role="button"><small>dic</small></a>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     )
                     }

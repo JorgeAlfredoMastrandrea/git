@@ -1,0 +1,86 @@
+<div className="z-3 position-absolute p-0 rounded-3 " >
+    <div id="tarjeta-año-meses" className="card border-primary bg-white" styled="width: 13.5rem; height: 13.5rem; transform: scale(0.75) translate(-35px,-35px);">
+        <div className="card-body px-3 py-1" >
+            <div className="barra-año text-center p-0">
+                <div className="boton-anterior">
+                    <a className="w-100 btn btn-primary text-white h7 p-1 py-2" href="#" role="button" onClick={(event) => añoAnterior(navLinkAñoMedicion)}><small><span
+                        className="material-symbols-outlined">
+                        arrow_back
+                    </span></small></a>
+                </div>
+
+                <div className="año">
+
+                    <h5 id="anio" className="card-title h2 link-body-emphasis d-inline-flex text-decoration-none rounded py-1">
+                        <strong>{ultimoAño.año}</strong>
+                    </h5>
+
+                </div>
+
+
+                <div className="boton-siguiente">
+                    <a className="w-100 btn btn-primary text-white h7 p-1 py-2" href="#" role="button" onClick={(event) => añoSiguiente(navLinkAñoMedicion)}><small><span
+                        className="material-symbols-outlined">
+                        arrow_forward
+                    </span></small></a>
+                </div>
+            </div>
+
+            <div className="border-top my-2 "></div>
+
+            <div className="meses text-center p-0">
+                <div className="enero">
+                    <a id="enero" className="w-100 h-100 btn btn-secondary text-white h6 p-1 " href="#"
+                        role="button"><small>ene</small></a>
+                </div>
+                <div className="febrero">
+                    <a id="febrero" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
+                        role="button"><small>feb</small></a>
+                </div>
+                <div className="marzo">
+                    <a id="marzo" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
+                        role="button"><small>mar</small></a>
+                </div>
+                <div className="abril">
+                    <a id="abril" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
+                        role="button"><small>abr</small></a>
+                </div>
+
+                <div className="mayo">
+                    <a id="mayo" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
+                        role="button"><small>may</small></a>
+                </div>
+                <div className="junio">
+                    <a id="junio" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
+                        role="button"><small>jun</small></a>
+                </div>
+                <div className="julio">
+                    <a id="julio" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
+                        role="button"><small>jul</small></a>
+                </div>
+
+                <div className="agosto">
+                    <a id="agosto" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
+                        role="button"><small>ago</small></a>
+                </div>
+                <div className="setiembre">
+                    <a id="setiembre" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
+                        role="button"><small>set</small></a>
+                </div>
+                <div className="octubre">
+                    <a id="octubre" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
+                        role="button"><small>oct</small></a>
+                </div>
+                <div className="noviembre">
+                    <a id="noviembre" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
+                        role="button"><small>nov</small></a>
+                </div>
+                <div className="diciembre">
+                    <a id="diciembre" className="w-100 h-100 btn btn-secondary text-white h6 p-1" href="#"
+                        role="button"><small>dic</small></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
