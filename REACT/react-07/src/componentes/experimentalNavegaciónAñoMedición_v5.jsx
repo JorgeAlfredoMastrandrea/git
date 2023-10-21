@@ -3,7 +3,7 @@
 // https://stackblitz.com/edit/reactstrap-tnlqis?file=Example.js
 
 
-import React, { useRef , useMemo } from 'react'
+import React, { useRef } from 'react'
 import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
@@ -13,89 +13,25 @@ import Modal from 'react-bootstrap/Modal';
 import Row from 'react-bootstrap/Row';
 import navLinkAñoMedicion from "../medicionesAñosMeses.json";
 
-export const NavegaciónAñoMedición_v4 = ({setMessage}) => {
-
-    const longitudObjeto = Object.keys(navLinkAñoMedicion).length;
-    let punteroAño = longitudObjeto - 1; // el puntero queda en el último año
-    // elijo el último elemento de las mediciones..o sea el ultimo año    
-    const ultimoAño = Object.values(navLinkAñoMedicion).at(-1);
-    let mesesAñoVisitado = ultimoAño.mes;
-
-    const changeMes = (changeValue) => {
-        setMessage(changeValue)
-    }
-    const [show, setShow] = useState(false);
+export const NavegaciónAñoMedición_v5 = (setMessage) => {
 
     const handleClose = () => setShow(false);
     const [isClicked, setIsClicked] = useState(false);
 
-    const handleClicked = (navLinkAñoMedicion) => {
-        setIsClicked(true);
-        setShow(true);
-        setTimeout(() => {
-            document.getElementById("año").innerHTML = ultimoAño.año;
-            // guardo los meses que se estan mirando apenas arranca            
-            mesesAñoVisitado = ultimoAño.mes;
-            //console.log('al inicio ---->', mesesAñoVisitado);
-            mostrarCicloLectivoYMeses(navLinkAñoMedicion, punteroAño);
-        }, 0);
-    };
+    const longitudObjeto = Object.keys(navLinkAñoMedicion).length;
+    // el puntero queda en el último año
+    let punteroAño = longitudObjeto - 1; 
+    // elijo el último elemento de las mediciones..o sea el ultimo año    
+    const ultimoAño = Object.values(navLinkAñoMedicion).at(-1);
+    let mesesAñoVisitado = ultimoAño.mes;
 
-    const añoAnterior = (navLinkAñoMedicion) => {
-        if (punteroAño != 0) {
-            punteroAño--;
-            mostrarCicloLectivoYMeses(navLinkAñoMedicion, punteroAño);
-        }
-    }
+    const objetoCalendario = [{
+        pointerActualAño : punteroAño,
+        ultimoAñoMostrado : ultimoAño,
+        mesesMostrado : ultimoAño.mes,
+    }]
 
-    const añoSiguiente = (navLinkAñoMedicion) => {
-        if (punteroAño < longitudObjeto - 1) {
-            punteroAño++;
-            mostrarCicloLectivoYMeses(navLinkAñoMedicion, punteroAño);
-        }
-    }
-
-    const mostrarCicloLectivoYMeses = (navLinkAñoMedicion, punteroAño) => {
-        let añoAMostrar = Object.values(navLinkAñoMedicion).at(punteroAño);
-        document.getElementById("año").innerHTML = añoAMostrar.año;
-        document.getElementById("añoBoton").innerHTML = añoAMostrar.año;
-        mesesAñoVisitado = añoAMostrar.mes;
-        //console.log('mostrarCicloLectivoYMeses .... ', mesesAñoVisitado);
-        desactivarTodosLosMeses();
-        activarMeses(mesesAñoVisitado);
-    }
-
-    const desactivarTodosLosMeses = () => {
-        const listaDeMeses = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'setiembre', 'octubre', 'noviembre', 'diciembre'];
-        let index = 0;
-        {
-            listaDeMeses.forEach((mes) => {
-                document.getElementById(mes).style.background = "gray";
-                index++;
-            })
-        };
-        //console.log('desactivarTodosLosMeses .... ', mesesAñoVisitado);
-    }
-
-    const activarMeses = (objetoMeses) => {
-        for (let index = 0; index < Object.keys(objetoMeses).length; index++) {
-            // activo los meses que trae el objeto ..!
-            document.getElementById(Object.values(objetoMeses).at(index).id).style.background = "magenta";
-        }
-        //console.log('activarMeses .... ', mesesAñoVisitado);
-    }
-
-    const mesSeleccionado = (mesElegido) => {
-        if (document.getElementById(mesElegido).style.background != "gray") {
-            desactivarTodosLosMeses();
-            //console.log('mesSeleccionado .... : ', mesesAñoVisitado)
-            activarMeses(mesesAñoVisitado);
-            if (document.getElementById(mesElegido).style.background === "magenta") {
-                document.getElementById(mesElegido).style.background = "green";
-                changeMes(mesElegido);
-            }
-        }
-    }
+    
 
     return (
         <div className="">

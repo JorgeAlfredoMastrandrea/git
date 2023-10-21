@@ -1,7 +1,7 @@
 import React from 'react'
 
-export const NavegaciónMesMedición = () => {
+export const NavegaciónMesMedición = ({selectedMessage}) => {
   return (
-    <div>seleccione el ciclo lectivo para empezar</div>
+    <div>{selectedMessage}</div>
   )
 }

@@ -32,10 +32,10 @@ function App() {
                 Ciclo lectivo
                 <NavegaciónAñoMedición_v4 setMessage={setMessage} />
               </div>
-              <div className="col-sm-12 col-lg-1 themed-grid-col p-0">
-                < NavegaciónMesMedición selectedMessage = {selectedMessage}/>
+              <div className="col-sm-12 col-lg-2 themed-grid-col p-3 ">
+                <strong><h4>< NavegaciónMesMedición selectedMessage={ selectedMessage }/> </h4></strong>
               </div>
-              <div className="col-sm-12 col-lg-9 themed-grid-col p-0">
+              <div className="col-sm-12 col-lg-8 themed-grid-col p-0">
                 Cursos y divisiones
                 <NavegaciónCursoDivisión navLinksData={navLinksData} />
               </div>
