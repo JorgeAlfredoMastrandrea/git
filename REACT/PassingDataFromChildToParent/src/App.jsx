@@ -1,47 +1,36 @@
+// https://bobbyhadz.com/blog/react-pass-data-from-child-to-parent
+// Passing data from child to parent component in ReactJS
+
+/*
+To pass data from a child to a parent component in React:
+
+1- Pass a function as a prop to the Child component.
+2- Call the function in the Child component and pass the data as arguments.
+3- Access the data in the function in the Parent.
+
+*/
+
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import navLinkAñoMedicion from "./medicionesAñosMeses.json";
+import { Componente1 } from './Componente1'
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
-  const [data, viewData] = useState(navLinkAñoMedicion);
-  const viewDataHandler = () => {
-    viewData(() => {
-      console.log(data)
-    })
-  }
+  const handleClick = num => {
+    // 👇️ take the parameter passed from the Child component
+    setCount(current => current + num);
+
+    console.log('argument from Child: ', num);
+  };
+
 
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <div className="read-the-docs">
-        <button onClick={() => viewDataHandler()}> press </button>
-        {data.map((el, indice) => {
-          return (
-            <div key={el.id}>
-              {el.id}
-            </div>
-          )
-        })}
+        <Componente1 handleClick={handleClick} />
+        <h2>Count: {count}</h2>
       </div>
     </>
   )
