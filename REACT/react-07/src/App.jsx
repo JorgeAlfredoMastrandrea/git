@@ -12,6 +12,7 @@ import { NavegaciónAñoMedición } from './componentes/NavegaciónAñoMedición
 import { NavegaciónCursoDivisión } from './componentes/NavegaciónCursoDivisión';
 import { NavegaciónAñoMedición_v5 } from './componentes/NavegaciónAñoMedición_v5';
 import { NavegaciónMesMedición } from './componentes/NavegaciónMesMedición';
+import { DataInspect } from './componentes/DataInspect';
 
 import navLinksData from "./cursos-divisiones.json";
 
@@ -22,63 +23,55 @@ function App() {
 
   return (
     <>
-      
-        <div className="d-flex flex-nowrap ">
-          <div className="vh-100 row  text-center ">
-            <div id="contenedor-principal">
+
+      <div className="d-flex flex-nowrap ">
+        <div className="vh-100 row  text-center ">
+          <div id="contenedor-principal">
 
 
 
-              <div id="fila-fecha-cursos-divisiones" className="row">
-                <div className="col-sm-12 col-lg-2 themed-grid-col p-0">
-                  Ciclo lectivo
-                  <NavegaciónAñoMedición_v5 navLinkAñoMedicion={navLinkAñoMedicion} />
-                </div>
-                <div className="col-sm-12 col-lg-2 themed-grid-col p-3 ">
-                  <strong><h4>< NavegaciónMesMedición selectedMessage={selectedMessage} /> </h4></strong>
-                </div>
-                <div className="col-sm-12 col-lg-8 themed-grid-col p-0">
-                  Cursos y divisiones
-
-                </div>
+            <div id="fila-fecha-cursos-divisiones" className="row">
+              <div className="col-sm-12 col-lg-2 themed-grid-col p-0">
+                Ciclo lectivo
+                <NavegaciónAñoMedición_v5 navLinkAñoMedicion={navLinkAñoMedicion} />
               </div>
-
-
-              <div id="fila-herramientas" className="row">
-                <div className="themed-grid-col p-0">
-                  fila de herramientas
-                </div>
+              <div className="col-sm-12 col-lg-2 themed-grid-col p-3 ">
+                <strong><h4>< NavegaciónMesMedición selectedMessage={selectedMessage} /> </h4></strong>
               </div>
+              <div className="col-sm-12 col-lg-8 themed-grid-col p-0">
+                Cursos y divisiones
 
-              <div className="row text-center">
-                <div className="col with .gx-4 gutters themed-grid-col p-1">acá va una tarjeta de
-                  información</div>
-                <div className="col with .gx-4 gutters themed-grid-col p-1">acá va una tarjeta de
-                  información con mas información</div>
-                <div className="col with .gx-4 gutters themed-grid-col p-1">acá va una tarjeta de
-                  información con mas información con mucha mas otras cosas</div>
-                <div className="col with .gx-4 gutters themed-grid-col p-1">acá va una tarjeta de
-                  información</div>
               </div>
-              <div className="row text-center">
-                <div className="col with .gx-4 gutters themed-grid-col p-1">acá va una tarjeta de
-                  información</div>
-                <div className="col with .gx-4 gutters themed-grid-col p-1">acá va una tarjeta de
-                  información con mas información con mucha mas otras cosas</div>
-                <div className="col with .gx-4 gutters themed-grid-col p-1">acá va una tarjeta de
-                  información</div>
-              </div>
-              <div className="row text-center">
-                <div className="col with .gx-4 gutters themed-grid-col p-1">acá va una tarjeta de
-                  información</div>
-                <div className="col with .gx-4 gutters themed-grid-col p-1">acá va una tarjeta de
-                  información con mas información con mucha mas otras cosas</div>
-              </div>
-
             </div>
+
+
+            <div id="fila-herramientas" className="row">
+              <div className="themed-grid-col p-0">
+                fila de herramientas
+              </div>
+            </div>
+
+            <div className="row text-center">
+              <div className="col with .gx-4 gutters themed-grid-col p-1">acá va una tarjeta de
+                información</div>
+              <div className="col with .gx-4 gutters themed-grid-col p-1">acá va una tarjeta de
+                información con mas información</div>
+              <div className="col with .gx-4 gutters themed-grid-col p-1">acá va una tarjeta de
+                información con mas información con mucha mas otras cosas</div>
+              <div className="col with .gx-4 gutters themed-grid-col p-1">acá va una tarjeta de
+                información</div>
+            </div>
+            <div className="row text-center">
+              <div className="col with .gx-4 gutters themed-grid-col p-1">acá va una tarjeta de
+                <DataInspect />
+              </div>
+            </div>
+
+
           </div>
         </div>
-      
+      </div>
+
 
     </>
   )

@@ -32,7 +32,7 @@ export const NavegaciónAñoMedición_v5 = (propiedades) => {
     const handleClicked = (navLinkAñoMedicion) => {
         setIsClicked(true);
         setShow(true);
-        console.log('handleClicked : ', navLinkAñoMedicion);
+        //console.log('handleClicked : ', navLinkAñoMedicion);
     }
 
     let objetoCalendario = [{
@@ -40,6 +40,9 @@ export const NavegaciónAñoMedición_v5 = (propiedades) => {
         año : (Object.values(navLinkAñoMedicion).at(pointerToObjetoNavLinkAñoMedicion)).id
     }];
     let año = Object.values(Object.values(objetoCalendario)).at(0).año;
+
+    let año_ = Object.values(navLinkAñoMedicion).at(pointerToObjetoNavLinkAñoMedicion);
+    console.log(año_)
    
     //console.log((Object.values(navLinkAñoMedicion).at(pointerToObjetoNavLinkAñoMedicion)).id);
     
@@ -48,18 +51,20 @@ export const NavegaciónAñoMedición_v5 = (propiedades) => {
     const handleClickBotonAñoAnterior = mensajeBotonAñoAnterior => {
         // 👇️ take the parameter passed from the Child component
         setMensajeDesdeBotonAñoAnterior(mensajeBotonAñoAnterior);
-        if ((mensajeBotonAñoAnterior === 'BotonAñoAnteriorPresionado') && (pointerToObjetoNavLinkAñoMedicion > -1)) {
+        if ((mensajeBotonAñoAnterior === 'BotonAñoAnteriorPresionado') && (pointerToObjetoNavLinkAñoMedicion > -1)) {            
             pointerToObjetoNavLinkAñoMedicion--;
             if (pointerToObjetoNavLinkAñoMedicion < 0) pointerToObjetoNavLinkAñoMedicion = 0;
-            console.log('argumento desde Boton Año Anterior: ', mensajeBotonAñoAnterior, ' ', 'coun_boton_año_Anterior_longitudObjetoNavLinkAñoMedicion ', coun_boton_año_Anterior_longitudObjetoNavLinkAñoMedicion, ' ', 'pointerToObjetoNavLinkAñoMedicion ', pointerToObjetoNavLinkAñoMedicion);
+            //console.log('argumento desde Boton Año Anterior: ', mensajeBotonAñoAnterior, ' ', 'coun_boton_año_Anterior_longitudObjetoNavLinkAñoMedicion ', coun_boton_año_Anterior_longitudObjetoNavLinkAñoMedicion, ' ', 'pointerToObjetoNavLinkAñoMedicion ', pointerToObjetoNavLinkAñoMedicion);
             objetoCalendario = [
                 {
                     puntero : pointerToObjetoNavLinkAñoMedicion,
                     año : (Object.values(navLinkAñoMedicion).at(pointerToObjetoNavLinkAñoMedicion)).id
                 }
             ]
-            console.log('---> ' , Object.values(Object.values(objetoCalendario)).at(0).año);
-            año = Object.values(Object.values(objetoCalendario)).at(0).año;            
+            //console.log('---> ' , Object.values(Object.values(objetoCalendario)).at(0).año);
+            //año = Object.values(Object.values(objetoCalendario)).at(0).año;
+            año = coun_boton_año_Anterior_longitudObjetoNavLinkAñoMedicion 
+            console.log('---> ' , año)                   
         }
     };
 
@@ -71,15 +76,17 @@ export const NavegaciónAñoMedición_v5 = (propiedades) => {
         if ((mensajeBotonAñoSiguiente === 'BotonAñoSiguientePresionado') && (pointerToObjetoNavLinkAñoMedicion <= longitudObjetoNavLinkAñoMedicion - 1)) {
             pointerToObjetoNavLinkAñoMedicion++;
             if (pointerToObjetoNavLinkAñoMedicion > longitudObjetoNavLinkAñoMedicion - 1) pointerToObjetoNavLinkAñoMedicion = longitudObjetoNavLinkAñoMedicion - 1;
-            console.log('argumento desde Boton Año Siguiente: ', mensajeBotonAñoSiguiente, ' ', 'coun_boton_año_Siguiente_longitudObjetoNavLinkAñoMedicion ', coun_boton_año_Siguiente_longitudObjetoNavLinkAñoMedicion, ' ', 'pointerToObjetoNavLinkAñoMedicion ', pointerToObjetoNavLinkAñoMedicion);
+            //console.log('argumento desde Boton Año Siguiente: ', mensajeBotonAñoSiguiente, ' ', 'coun_boton_año_Siguiente_longitudObjetoNavLinkAñoMedicion ', coun_boton_año_Siguiente_longitudObjetoNavLinkAñoMedicion, ' ', 'pointerToObjetoNavLinkAñoMedicion ', pointerToObjetoNavLinkAñoMedicion);
             objetoCalendario = [
                 {
                     puntero : pointerToObjetoNavLinkAñoMedicion,
                     año : (Object.values(navLinkAñoMedicion).at(pointerToObjetoNavLinkAñoMedicion)).id
                 }
             ]
-            console.log('---> ' , Object.values(Object.values(objetoCalendario)).at(0).año);
-            año = Object.values(Object.values(objetoCalendario)).at(0).año;
+            //console.log('---> ' , Object.values(Object.values(objetoCalendario)).at(0).año);
+            //año = Object.values(Object.values(objetoCalendario)).at(0).año;
+            año = coun_boton_año_Siguiente_longitudObjetoNavLinkAñoMedicion 
+            console.log('---> ' , año)        
         }
     };
 
@@ -126,7 +133,7 @@ export const NavegaciónAñoMedición_v5 = (propiedades) => {
                                                     <div className="año">
 
                                                         <h5 id="año" className="card-title h2 link-body-emphasis d-inline-flex text-decoration-none rounded py-1">
-                                                            <strong>{ coun_boton_año_Anterior_longitudObjetoNavLinkAñoMedicion }</strong>
+                                                            <strong>{  }</strong>
                                                         </h5>
 
                                                     </div>
