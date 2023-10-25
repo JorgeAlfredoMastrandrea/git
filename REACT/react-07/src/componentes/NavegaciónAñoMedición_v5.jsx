@@ -22,6 +22,7 @@ import { BotónAñoSiguiente } from './BotónAñoSiguiente';
 export const NavegaciónAñoMedición_v5 = (propiedades) => {
 
     let pointerToObjetoNavLinkAñoMedicion = 0;
+   
 
     const { navLinkAñoMedicion } = propiedades;
     const longitudObjetoNavLinkAñoMedicion = Object.keys(navLinkAñoMedicion).length;
@@ -30,6 +31,10 @@ export const NavegaciónAñoMedición_v5 = (propiedades) => {
     const handleClose = () => setShow(false);
     const [isClicked, setIsClicked] = useState(false);
     const [show, setShow] = useState(false);
+
+    let objetoCalendario = {        
+        año: (Object.values(navLinkAñoMedicion).at(pointerToObjetoNavLinkAñoMedicion)).id
+    };
 
     // para manejar el click de la ventana modal
     const handleClicked = (navLinkAñoMedicion) => {
@@ -106,93 +111,95 @@ export const NavegaciónAñoMedición_v5 = (propiedades) => {
     const [añoOperativo, setAñoOperativo] = useState((Object.values(navLinkAñoMedicion).at(pointerToObjetoNavLinkAñoMedicion)).id);
 
     const onButtonClickedBotonAñoAnterior = (argumentoQueVieneDelComponenteBotonAnterior) => {
-        --pointerToObjetoNavLinkAñoMedicion;
+        //--pointerToObjetoNavLinkAñoMedicion;
         console.log('-- : ', pointerToObjetoNavLinkAñoMedicion, ' ', argumentoQueVieneDelComponenteBotonAnterior)
-        setAñoOperativo(añoOperativo-1)
+        console.log(Object.values(navLinkAñoMedicion).at(pointerToObjetoNavLinkAñoMedicion));
+        setAñoOperativo((Object.values(navLinkAñoMedicion).at(--pointerToObjetoNavLinkAñoMedicion)).id);
+
     }
 
     const onButtonClickedBotonAñoSiguiente = (argumentoQueVieneDelComponenteBotonSiguiente) => {
         ++pointerToObjetoNavLinkAñoMedicion;
         console.log('-- : ', pointerToObjetoNavLinkAñoMedicion, ' ', argumentoQueVieneDelComponenteBotonSiguiente)
-        setAñoOperativo(añoOperativo+1)
+        console.log(Object.values(navLinkAñoMedicion).at(pointerToObjetoNavLinkAñoMedicion));
+        setAñoOperativo((Object.values(navLinkAñoMedicion).at(++pointerToObjetoNavLinkAñoMedicion)).id);
     }
 
 
+    return (
 
-return (
 
+        <div className="">
+            {
+                <>
+                    <StrictMode>
+                        <div key={'div1'} className="" >
+                            <button key={'div2'} id={'id1'} className="btn-primary btn d-inline-flex align-items-center rounded border-1 collapsed px-0 py-0" data-bs-toggle="collapse" data-bs-target="#" aria-expanded="true"
+                                onClick={(event) => handleClicked(navLinkAñoMedicion)}                            >
+                                <a id="añoBoton" href="#" className="m-1 px-2 py-1  h4 link-body-emphasis d-inline-flex text-decoration-none rounded"><strong>{ }</strong></a>
+                            </button>
+                        </div>
 
-    <div className="">
-        {
-            <>
-                <StrictMode>
-                    <div key={'div1'} className="" >
-                        <button key={'div2'} id={'id1'} className="btn-primary btn d-inline-flex align-items-center rounded border-1 collapsed px-0 py-0" data-bs-toggle="collapse" data-bs-target="#" aria-expanded="true"
-                            onClick={(event) => handleClicked(navLinkAñoMedicion)}                            >
-                            <a id="añoBoton" href="#" className="m-1 px-2 py-1  h4 link-body-emphasis d-inline-flex text-decoration-none rounded"><strong>{ }</strong></a>
-                        </button>
-                    </div>
+                        {isClicked && (
+                            <div>
 
-                    {isClicked && (
-                        <div>
+                                <Modal
+                                    id="modalAñoMes"
+                                    size="sm"
+                                    aria-labelledby="contained-modal-title-vcenter"
+                                    centered="true"
+                                    dialogClassName="modal-90w"
+                                    show={show}
 
-                            <Modal
-                                id="modalAñoMes"
-                                size="sm"
-                                aria-labelledby="contained-modal-title-vcenter"
-                                centered="true"
-                                dialogClassName="modal-90w"
-                                show={show}
+                                    onHide={handleClose}>
+                                    <Modal.Header closeButton>
+                                        <Modal.Title>ciclo lectivo y mes</Modal.Title>
+                                    </Modal.Header>
+                                    <Modal.Body>
+                                        <div id="tarjeta-año-meses" className="card border-primary bg-white">
+                                            <div className="card-body px-3 py-1">
+                                                <div className="barra-año text-center p-0">
 
-                                onHide={handleClose}>
-                                <Modal.Header closeButton>
-                                    <Modal.Title>ciclo lectivo y mes</Modal.Title>
-                                </Modal.Header>
-                                <Modal.Body>
-                                    <div id="tarjeta-año-meses" className="card border-primary bg-white">
-                                        <div className="card-body px-3 py-1">
-                                            <div className="barra-año text-center p-0">
+                                                    <BotónAñoAnterior setMensageBotónAñoAnterior={onButtonClickedBotonAñoAnterior} />
 
-                                                <BotónAñoAnterior setMensageBotónAñoAnterior={onButtonClickedBotonAñoAnterior} />
+                                                    <div className="año">
 
-                                                <div className="año">
+                                                        <h5 id="año" className="card-title h2 link-body-emphasis d-inline-flex text-decoration-none rounded py-1">
+                                                            <strong>{añoOperativo}</strong>
+                                                        </h5>
 
-                                                    <h5 id="año" className="card-title h2 link-body-emphasis d-inline-flex text-decoration-none rounded py-1">
-                                                        <strong>{añoOperativo}</strong>
-                                                    </h5>
+                                                    </div>
+
+                                                    <BotónAñoSiguiente setMensageBotónAñoSiguiente={onButtonClickedBotonAñoSiguiente} />
 
                                                 </div>
 
-                                                <BotónAñoSiguiente setMensageBotónAñoSiguiente={onButtonClickedBotonAñoSiguiente} />
+                                                <div className="border-top my-2 "></div>
 
-                                            </div>
+                                                <div className="meses text-center p-0">
 
-                                            <div className="border-top my-2 "></div>
-
-                                            <div className="meses text-center p-0">
-
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </Modal.Body>
-                                <Modal.Footer>
-                                    <Button variant="primary" onClick={handleClose}>
-                                        Aceptar
-                                    </Button>
-                                </Modal.Footer>
-                            </Modal >
+                                    </Modal.Body>
+                                    <Modal.Footer>
+                                        <Button variant="primary" onClick={handleClose}>
+                                            Aceptar
+                                        </Button>
+                                    </Modal.Footer>
+                                </Modal >
 
 
 
-                        </div>
-                    )
-                    }
-                </StrictMode>
+                            </div>
+                        )
+                        }
+                    </StrictMode>
 
-            </>
+                </>
 
-        }
-    </div >
-);
+            }
+        </div >
+    );
 
 }
