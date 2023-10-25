@@ -34,7 +34,6 @@ export const ComponenteEventoContador = ({ valor }) => {
     // se declara primero el nombre de la variable y luego la funcion
     // que la va a modificar
     const [contador , setContador] = useState(valor)
-
     // esta es la forma recomendada de armar a las funciones..
     const handleClickCuartoBoton = () => {        
         setContador(contador+1);
