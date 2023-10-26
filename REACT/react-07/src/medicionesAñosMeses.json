@@ -2,7 +2,7 @@
     {
         "id": 2021,
         "año": "2021",
-        "mes": [
+        "meses": [
             {
                 "id": "enero",
                 "nombre": "enero"
@@ -16,7 +16,7 @@
     {
         "id": 2022,
         "año": "2022",
-        "mes": [
+        "meses": [
             {
                 "id": "febrero",
                 "nombre": "febrero"
@@ -34,7 +34,7 @@
     {
         "id": 2023,
         "año": "2023",
-        "mes": [
+        "meses": [
             {
                 "id": "junio",
                 "nombre": "junio"
@@ -56,7 +56,7 @@
     {
         "id": 2024,
         "año": "2024",
-        "mes": [
+        "meses": [
             {
                 "id": "abril",
                 "nombre": "abril"
@@ -78,7 +78,7 @@
     {
         "id": 2025,
         "año": "2025",
-        "mes": [
+        "meses": [
             {
                 "id": "enero",
                 "nombre": "enero"

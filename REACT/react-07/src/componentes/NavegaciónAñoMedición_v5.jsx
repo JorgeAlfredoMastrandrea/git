@@ -17,6 +17,7 @@ import Row from 'react-bootstrap/Row';
 import { BotónAñoAnterior } from './BotónAñoAnterior';
 import { BotónAñoSiguiente } from './BotónAñoSiguiente';
 import { VisorAño } from './VisorAño';
+import { TableroMeses } from './TableroMeses';
 
 export const NavegaciónAñoMedición_v5 = (propiedades) => {
 
@@ -33,37 +34,28 @@ export const NavegaciónAñoMedición_v5 = (propiedades) => {
         setShow(true);
     }
 
-    const [lrg] = useState(longitudObjetoNavLinkAñoMedicion-1);
-    const [cero] = useState(0);
-    const [ptrAño, setPtrAño] = useState(lrg);
+    const [lrg] = useState(longitudObjetoNavLinkAñoMedicion-1);    
     const [añoOperativo, setAñoOperativo] = useState(Object.values(navLinkAñoMedicion).at(lrg).id);
+    const [ptrAño , setPtrAño] = useState(0);
+    const [meseAMostrar , setMesesAMostrar] = useState(Object.values(navLinkAñoMedicion).at(lrg).meses)
 
     const onButtonClickedBotonAñoAnterior = (argumentoQueVieneDelComponenteBotonAnterior) => {
-        console.log('B. Anterior -- : ', ptrAño, ' ', argumentoQueVieneDelComponenteBotonAnterior, ' ', Object.values(navLinkAñoMedicion).at(ptrAño))
-        if (Object.values(navLinkAñoMedicion).at(ptrAño) !== 'undefined') {
-            if (ptrAño > cero) {
-                setPtrAño(ptrAño - 1);
-                setAñoOperativo((Object.values(navLinkAñoMedicion).at(ptrAño)).id); console.log('pulse btn ant. : ', ptrAño);
-            } else {
-                setPtrAño(cero);
-                setAñoOperativo((Object.values(navLinkAñoMedicion).at(0)).id);
-            }
-        }
+        const esPrimerAño = ptrAño === 0;
+        const nuevoAño = esPrimerAño ? Object.keys(navLinkAñoMedicion).length - 1 : ptrAño - 1;
+        setPtrAño(nuevoAño);
+        setAñoOperativo((Object.values(navLinkAñoMedicion).at(nuevoAño)).id);
+        setMesesAMostrar((Object.values(navLinkAñoMedicion).at(nuevoAño)).meses);
+        //console.log('B. Anterior -- : ', ptrAño, ' ', nuevoAño ,' ' , argumentoQueVieneDelComponenteBotonAnterior, ' ', Object.values(navLinkAñoMedicion).at(ptrAño))        
     }
 
     const onButtonClickedBotonAñoSiguiente = (argumentoQueVieneDelComponenteBotonSiguiente) => {
-        console.log('B. Siguiente -- : ', ptrAño, ' ', argumentoQueVieneDelComponenteBotonSiguiente, ' ', Object.values(navLinkAñoMedicion).at(ptrAño));
-        if (Object.values(navLinkAñoMedicion).at(ptrAño) !== 'undefined') {
-            if (ptrAño < lrg) {
-                setPtrAño(ptrAño + 1);
-                setAñoOperativo((Object.values(navLinkAñoMedicion).at(ptrAño)).id); console.log('pulse btn sig. : ', ptrAño);
-            } else {
-                setPtrAño(lrg); console.log('else --- > pulse btn sig. : ', ptrAño);
-                setAñoOperativo((Object.values(navLinkAñoMedicion).at(lrg)).id);
-            }
-        }
+        const esUltimoAño = ptrAño === Object.keys(navLinkAñoMedicion).length - 1;
+        const nuevoAño = esUltimoAño ? 0 : ptrAño + 1;
+        setPtrAño(nuevoAño);        
+        setAñoOperativo((Object.values(navLinkAñoMedicion).at(nuevoAño)).id);
+        setMesesAMostrar((Object.values(navLinkAñoMedicion).at(nuevoAño)).meses);
+        //console.log('B. Siguiente -- : ', ptrAño, ' ', nuevoAño ,' ' , argumentoQueVieneDelComponenteBotonSiguiente, ' ', Object.values(navLinkAñoMedicion).at(ptrAño));     
     }
-
 
     return (
 
@@ -114,7 +106,11 @@ export const NavegaciónAñoMedición_v5 = (propiedades) => {
                                                 <div className="border-top my-2 "></div>
 
                                                 <div className="meses text-center p-0">
-                                                    {console.log('meses')}
+                                                    {
+                                                        // renderizar los botones acá dentro ? o crear un componente que los incluye a todos ??
+                                                        <TableroMeses meseAMostrar={meseAMostrar}></TableroMeses>
+
+                                                    }
 
                                                 </div>
                                             </div>
