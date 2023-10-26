@@ -1,25 +1,20 @@
 // es el componente que mantien todos los meses agrupados y que va a comunicarse con el padre.
 // el componente padre le va a mandar los meses a renderizar..
 import { useState } from "react";
+import { useEffect } from "react";
 
-const listaDeMeses = [
-    'enero', 'febrero', 'marzo', 'abril',
-    'mayo', 'junio', 'julio', 'agosto',
-    'setiembre', 'octubre', 'noviembre', 'diciembre'
-];
-
-export const TableroMeses = ({ meseAMostrar }) => {
+export const TableroMeses = ({ meseAMostrar , setMessage}) => {
 
     // desempaquetar el objeto meses y guardarlo en un array para mayor facilidad de manejo ...
     const cantidadMeses = Object.keys(meseAMostrar).length;
     const arrayMeseAMostrar = [];
-    // console.log(' objeto meses a mostrar : ', ...Object.values(meseAMostrar));
+    // console.log(' objeto meses a mostrar : ', ...Object.values(meseAMostrar));    
     for (let index = 0; index < cantidadMeses; index++) {
         // console.log(Object.values(meseAMostrar).at(index).nombre);
         arrayMeseAMostrar[index] = Object.values(meseAMostrar).at(index).nombre;
     }
-    // console.log('arrayMeseAMostrar : ', arrayMeseAMostrar);
 
+    // console.log('arrayMeseAMostrar : ', arrayMeseAMostrar);
     const [active_enero, setActive_enero] = useState(false);
     const [active_febrero, setActive_febrero] = useState(false);
     const [active_marzo, setActive_marzo] = useState(false);
@@ -32,14 +27,73 @@ export const TableroMeses = ({ meseAMostrar }) => {
     const [active_octubre, setActive_octubre] = useState(false);
     const [active_noviembre, setActive_noviembre] = useState(false);
     const [active_diciembre, setActive_diciembre] = useState(false);
-    const mesSeleccionado = (event, mesElegido) => {
-        // console.log(event , mesElegido);
+
+    // obtener el último mes de la medicion para dejar activa esa ...
+    const ultimoMes = arrayMeseAMostrar[arrayMeseAMostrar.length - 1];
+    console.log(ultimoMes);
+
+    
+    const activarUltimoMes = () => {
+        // obtener el último mes de la medicion para dejar activa esa ...
+        const ultimoMes = arrayMeseAMostrar[arrayMeseAMostrar.length - 1];
         // acá debo poner en color verde al botón cuando se lo selecciona ...
-        setActive_enero(!active_enero);
+        if (ultimoMes === 'enero') setActive_enero(true);
+        if (ultimoMes === 'febrero') setActive_febrero(true);
+        if (ultimoMes === 'marzo') setActive_marzo(true);
+        if (ultimoMes === 'abril') setActive_abril(true);
+        if (ultimoMes === 'mayo') setActive_mayo(true);
+        if (ultimoMes === 'junio') setActive_junio(true);
+        if (ultimoMes === 'julio') setActive_julio(true);
+        if (ultimoMes === 'agosto') setActive_agosto(true);
+        if (ultimoMes === 'setiembre') setActive_setiembre(true);
+        if (ultimoMes === 'octubre') setActive_octubre(true);
+        if (ultimoMes === 'noviembre') setActive_noviembre(true);
+        if (ultimoMes === 'diciembre') setActive_diciembre(true);
     }
 
+    const desactivarTodosLosMeses = () => {
+        setActive_enero(false);
+        setActive_febrero(false);
+        setActive_marzo(false);
+        setActive_abril(false);
+        setActive_mayo(false);
+        setActive_junio(false);
+        setActive_julio(false);
+        setActive_agosto(false);
+        setActive_setiembre(false);
+        setActive_octubre(false);
+        setActive_noviembre(false);
+        setActive_diciembre(false);
+    }
+
+    const mesSeleccionado = (event, setMessage) => {
+        //console.log(event, mesElegido);
+        desactivarTodosLosMeses();
+        // acá debo poner en color verde al botón cuando se lo selecciona ...
+        if (mesElegido === 'enero') setActive_enero(true);
+        if (mesElegido === 'febrero') setActive_febrero(true);
+        if (mesElegido === 'marzo') setActive_marzo(true);
+        if (mesElegido === 'abril') setActive_abril(true);
+        if (mesElegido === 'mayo') setActive_mayo(true);
+        if (mesElegido === 'junio') setActive_junio(true);
+        if (mesElegido === 'julio') setActive_julio(true);
+        if (mesElegido === 'agosto') setActive_agosto(true);
+        if (mesElegido === 'setiembre') setActive_setiembre(true);
+        if (mesElegido === 'octubre') setActive_octubre(true);
+        if (mesElegido === 'noviembre') setActive_noviembre(true);
+        if (mesElegido === 'diciembre') setActive_diciembre(true);
+
+        // devuelvo al padre el mes elegido..
+        setMessage(mesElegido);
+    }
+
+    useEffect( () => {
+        activarUltimoMes()
+    },[]
+    )
+
     return (
-        <>
+        <>        
             <div className="enero">
                 {arrayMeseAMostrar.includes('enero') ? <a id="enero" className={active_enero ? "w-100 h-100 btn btn-success text-white h6 p-1" : "w-100 h-100 btn btn-primary text-white h6 p-1"} href="#"
                     onClick={(event) => mesSeleccionado(event, 'enero')}

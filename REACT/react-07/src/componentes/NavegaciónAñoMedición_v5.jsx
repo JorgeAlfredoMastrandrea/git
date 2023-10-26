@@ -6,14 +6,11 @@
 // https://bobbyhadz.com/blog/react-pass-data-from-child-to-parent
 
 import { StrictMode } from 'react';
-import React, { useRef } from 'react'
+import React from 'react'
 import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
 import Modal from 'react-bootstrap/Modal';
-import Row from 'react-bootstrap/Row';
 import { BotónAñoAnterior } from './BotónAñoAnterior';
 import { BotónAñoSiguiente } from './BotónAñoSiguiente';
 import { VisorAño } from './VisorAño';
@@ -34,10 +31,12 @@ export const NavegaciónAñoMedición_v5 = (propiedades) => {
         setShow(true);
     }
 
-    const [lrg] = useState(longitudObjetoNavLinkAñoMedicion-1);    
+    const [selectedMes , setMessage] = useState('');
+
+    const [lrg] = useState(longitudObjetoNavLinkAñoMedicion - 1);
     const [añoOperativo, setAñoOperativo] = useState(Object.values(navLinkAñoMedicion).at(lrg).id);
-    const [ptrAño , setPtrAño] = useState(0);
-    const [meseAMostrar , setMesesAMostrar] = useState(Object.values(navLinkAñoMedicion).at(lrg).meses)
+    const [ptrAño, setPtrAño] = useState(0);
+    const [meseAMostrar, setMesesAMostrar] = useState(Object.values(navLinkAñoMedicion).at(lrg).meses)
 
     const onButtonClickedBotonAñoAnterior = (argumentoQueVieneDelComponenteBotonAnterior) => {
         const esPrimerAño = ptrAño === 0;
@@ -51,11 +50,15 @@ export const NavegaciónAñoMedición_v5 = (propiedades) => {
     const onButtonClickedBotonAñoSiguiente = (argumentoQueVieneDelComponenteBotonSiguiente) => {
         const esUltimoAño = ptrAño === Object.keys(navLinkAñoMedicion).length - 1;
         const nuevoAño = esUltimoAño ? 0 : ptrAño + 1;
-        setPtrAño(nuevoAño);        
+        setPtrAño(nuevoAño);
         setAñoOperativo((Object.values(navLinkAñoMedicion).at(nuevoAño)).id);
         setMesesAMostrar((Object.values(navLinkAñoMedicion).at(nuevoAño)).meses);
         //console.log('B. Siguiente -- : ', ptrAño, ' ', nuevoAño ,' ' , argumentoQueVieneDelComponenteBotonSiguiente, ' ', Object.values(navLinkAñoMedicion).at(ptrAño));     
     }
+
+    
+    
+    
 
     return (
 
@@ -70,70 +73,44 @@ export const NavegaciónAñoMedición_v5 = (propiedades) => {
                                 <a id="añoBoton" href="#" className="m-1 px-2 py-1  h4 link-body-emphasis d-inline-flex text-decoration-none rounded"><strong>{añoOperativo}</strong></a>
                             </button>
                         </div>
-
                         {isClicked && (
-                            <div>
-
-                                <Modal
-                                    id="modalAñoMes"
-                                    size="sm"
-                                    aria-labelledby="contained-modal-title-vcenter"
-                                    centered="true"
-                                    dialogClassName="modal-90w"
-                                    show={show}
-
-                                    onHide={handleClose}>
-                                    <Modal.Header closeButton>
-                                        <Modal.Title>ciclo lectivo y mes</Modal.Title>
-                                    </Modal.Header>
-                                    <Modal.Body>
-                                        <div id="tarjeta-año-meses" className="card border-primary bg-white">
-                                            <div className="card-body px-3 py-1">
-                                                <div className="barra-año text-center p-0">
-
-                                                    <BotónAñoAnterior setMensageBotónAñoAnterior={onButtonClickedBotonAñoAnterior} />
-
-                                                    <div className="año">
-
-                                                        <VisorAño añoOperativo={añoOperativo} />
-
-                                                    </div>
-
-                                                    <BotónAñoSiguiente setMensageBotónAñoSiguiente={onButtonClickedBotonAñoSiguiente} />
-
+                            <Modal
+                                id="modalAñoMes"
+                                size="sm"
+                                aria-labelledby="contained-modal-title-vcenter"
+                                centered="true"
+                                dialogClassName="modal-90w"
+                                show={show}
+                                onHide={handleClose}>
+                                <Modal.Header closeButton>
+                                    <Modal.Title>ciclo lectivo y mes</Modal.Title>
+                                </Modal.Header>
+                                <Modal.Body>
+                                    <div id="tarjeta-año-meses" className="card border-primary bg-white">
+                                        <div className="card-body px-3 py-1">
+                                            <div className="barra-año text-center p-0">
+                                                <BotónAñoAnterior setMensageBotónAñoAnterior={onButtonClickedBotonAñoAnterior} />
+                                                <div className="año">
+                                                    <VisorAño añoOperativo={añoOperativo} />
                                                 </div>
-
-                                                <div className="border-top my-2 "></div>
-
-                                                <div className="meses text-center p-0">
-                                                    {
-                                                        // renderizar los botones acá dentro ? o crear un componente que los incluye a todos ??
-                                                        <TableroMeses meseAMostrar={meseAMostrar}></TableroMeses>
-
-                                                    }
-
-                                                </div>
+                                                <BotónAñoSiguiente setMensageBotónAñoSiguiente={onButtonClickedBotonAñoSiguiente} />
+                                            </div>
+                                            <div className="border-top my-2 "></div>
+                                            <div className="meses text-center p-0">
+                                                <TableroMeses meseAMostrar={meseAMostrar}></TableroMeses>
+                                                {/*console.log('mes elegido : ' , setMessage(setMessage))*/}
                                             </div>
                                         </div>
-                                    </Modal.Body>
-                                    <Modal.Footer>
-                                        <Button variant="primary" onClick={handleClose}>
-                                            Aceptar
-                                        </Button>
-                                    </Modal.Footer>
-                                </Modal >
-
-
-
-                            </div>
+                                    </div>
+                                </Modal.Body>
+                                <Modal.Footer>
+                                </Modal.Footer>
+                            </Modal >
                         )
                         }
                     </StrictMode>
-
                 </>
-
             }
         </div >
     );
-
 }
