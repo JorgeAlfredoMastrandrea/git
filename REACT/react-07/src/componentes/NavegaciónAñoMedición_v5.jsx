@@ -31,7 +31,7 @@ export const NavegaciónAñoMedición_v5 = (propiedades) => {
         setShow(true);
     }
 
-    const [selectedMes , setMessage] = useState('');
+    const [word, setWord] = useState();
 
     const [lrg] = useState(longitudObjetoNavLinkAñoMedicion - 1);
     const [añoOperativo, setAñoOperativo] = useState(Object.values(navLinkAñoMedicion).at(lrg).id);
@@ -56,13 +56,7 @@ export const NavegaciónAñoMedición_v5 = (propiedades) => {
         //console.log('B. Siguiente -- : ', ptrAño, ' ', nuevoAño ,' ' , argumentoQueVieneDelComponenteBotonSiguiente, ' ', Object.values(navLinkAñoMedicion).at(ptrAño));     
     }
 
-    
-    
-    
-
     return (
-
-
         <div className="">
             {
                 <>
@@ -97,8 +91,8 @@ export const NavegaciónAñoMedición_v5 = (propiedades) => {
                                             </div>
                                             <div className="border-top my-2 "></div>
                                             <div className="meses text-center p-0">
-                                                <TableroMeses meseAMostrar={meseAMostrar}></TableroMeses>
-                                                {/*console.log('mes elegido : ' , setMessage(setMessage))*/}
+                                                <TableroMeses meseAMostrar={meseAMostrar} changeWord={word => setWord(word)}></TableroMeses>
+                                                {console.log('--- mes elecionado en el tablero : ', word)}
                                             </div>
                                         </div>
                                     </div>

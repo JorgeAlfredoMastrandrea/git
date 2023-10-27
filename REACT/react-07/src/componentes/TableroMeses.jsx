@@ -1,17 +1,20 @@
 // es el componente que mantien todos los meses agrupados y que va a comunicarse con el padre.
-// el componente padre le va a mandar los meses a renderizar..
+// el componente padre le va a mandar los meses a renderizar..setMessage
 import { useState } from "react";
 import { useEffect } from "react";
 
-export const TableroMeses = ({ meseAMostrar , setMessage}) => {
+export const TableroMeses = ( props ) => {   
+    
+    //{ meseAMostrar }, {props}
+    //console.log(props);
 
     // desempaquetar el objeto meses y guardarlo en un array para mayor facilidad de manejo ...
-    const cantidadMeses = Object.keys(meseAMostrar).length;
+    const cantidadMeses = Object.keys(props.meseAMostrar).length;
     const arrayMeseAMostrar = [];
     // console.log(' objeto meses a mostrar : ', ...Object.values(meseAMostrar));    
     for (let index = 0; index < cantidadMeses; index++) {
         // console.log(Object.values(meseAMostrar).at(index).nombre);
-        arrayMeseAMostrar[index] = Object.values(meseAMostrar).at(index).nombre;
+        arrayMeseAMostrar[index] = Object.values(props.meseAMostrar).at(index).nombre;
     }
 
     // console.log('arrayMeseAMostrar : ', arrayMeseAMostrar);
@@ -30,9 +33,9 @@ export const TableroMeses = ({ meseAMostrar , setMessage}) => {
 
     // obtener el último mes de la medicion para dejar activa esa ...
     const ultimoMes = arrayMeseAMostrar[arrayMeseAMostrar.length - 1];
-    console.log(ultimoMes);
+    //console.log(ultimoMes);
 
-    
+
     const activarUltimoMes = () => {
         // obtener el último mes de la medicion para dejar activa esa ...
         const ultimoMes = arrayMeseAMostrar[arrayMeseAMostrar.length - 1];
@@ -66,7 +69,9 @@ export const TableroMeses = ({ meseAMostrar , setMessage}) => {
         setActive_diciembre(false);
     }
 
-    const mesSeleccionado = (event, setMessage) => {
+    
+
+    const mesSeleccionado = (event, mesElegido) => {
         //console.log(event, mesElegido);
         desactivarTodosLosMeses();
         // acá debo poner en color verde al botón cuando se lo selecciona ...
@@ -84,16 +89,17 @@ export const TableroMeses = ({ meseAMostrar , setMessage}) => {
         if (mesElegido === 'diciembre') setActive_diciembre(true);
 
         // devuelvo al padre el mes elegido..
-        setMessage(mesElegido);
+        props.changeWord(mesElegido)
+
     }
 
-    useEffect( () => {
+    useEffect(() => {
         activarUltimoMes()
-    },[]
+    }, []
     )
 
     return (
-        <>        
+        <>
             <div className="enero">
                 {arrayMeseAMostrar.includes('enero') ? <a id="enero" className={active_enero ? "w-100 h-100 btn btn-success text-white h6 p-1" : "w-100 h-100 btn btn-primary text-white h6 p-1"} href="#"
                     onClick={(event) => mesSeleccionado(event, 'enero')}
