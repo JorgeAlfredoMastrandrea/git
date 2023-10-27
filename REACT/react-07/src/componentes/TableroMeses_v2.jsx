@@ -27,12 +27,12 @@ export const TableroMeses_v2 = (props) => {
 
     // poner de color azul a todos los botones menos al que fue seleccionado ...
     const onDesactivar = (mesSeleccioando) => {
-        console.log('desactivo todos menos el mes de : ', mesSeleccioando);
-        for (let index = 0; index < arrayMeseAMostrar.length; index++) {
-            if (arrayMeseAMostrar[index] !== mesSeleccioando) console.log('desactivo : ', arrayMeseAMostrar[index]);
+        //console.log('desactivo todos menos el mes de : ', mesSeleccioando);
+        //for (let index = 0; index < arrayMeseAMostrar.length; index++) {
+        //    if (arrayMeseAMostrar[index] !== mesSeleccioando) console.log('desactivo : ', arrayMeseAMostrar[index]);
             // cómo los desactivo a los que ya están dibujados ??
             //childRef.current.doSomething();
-        }
+        //}
     }
 
     return (
@@ -42,7 +42,9 @@ export const TableroMeses_v2 = (props) => {
                     <>
                         {
                             arrayMeseAMostrar.includes(mes) ?
-                                <BotonMesCondicionalActivado mes={mes} cambiarMes={mesSeleccioando => setMesSeleccionado(mesSeleccioando)}/> :
+                                <BotonMesCondicionalActivado    mes={mes} 
+                                                                arrayMeseAMostrar={arrayMeseAMostrar} 
+                                                                cambiarMes={mesSeleccioando => setMesSeleccionado(mesSeleccioando)}/> :
                                 <BotonMesCondicionalDesactivado mes={mes} />
                         }
                     </>
