@@ -14,7 +14,7 @@ import Modal from 'react-bootstrap/Modal';
 import { BotónAñoAnterior } from './BotónAñoAnterior';
 import { BotónAñoSiguiente } from './BotónAñoSiguiente';
 import { VisorAño } from './VisorAño';
-import { TableroMeses } from './TableroMeses';
+import { TableroMeses_v2 } from './TableroMeses_v2';
 
 export const NavegaciónAñoMedición_v5 = (propiedades) => {
 
@@ -56,6 +56,8 @@ export const NavegaciónAñoMedición_v5 = (propiedades) => {
         //console.log('B. Siguiente -- : ', ptrAño, ' ', nuevoAño ,' ' , argumentoQueVieneDelComponenteBotonSiguiente, ' ', Object.values(navLinkAñoMedicion).at(ptrAño));     
     }
 
+    const [mesSeleccioando, setMesSeleccionado] = useState();
+
     return (
         <div className="">
             {
@@ -69,6 +71,7 @@ export const NavegaciónAñoMedición_v5 = (propiedades) => {
                         </div>
                         {isClicked && (
                             <Modal
+                                key="keyModal"
                                 id="modalAñoMes"
                                 size="sm"
                                 aria-labelledby="contained-modal-title-vcenter"
@@ -80,19 +83,19 @@ export const NavegaciónAñoMedición_v5 = (propiedades) => {
                                     <Modal.Title>ciclo lectivo y mes</Modal.Title>
                                 </Modal.Header>
                                 <Modal.Body>
-                                    <div id="tarjeta-año-meses" className="card border-primary bg-white">
-                                        <div className="card-body px-3 py-1">
-                                            <div className="barra-año text-center p-0">
+                                    <div key="tarjeta-año-meses-key" id="tarjeta-año-meses" className="card border-primary bg-white">
+                                        <div key="card-body-key" className="card-body px-3 py-1">
+                                            <div key="barra-key" className="barra-año text-center p-0">
                                                 <BotónAñoAnterior setMensageBotónAñoAnterior={onButtonClickedBotonAñoAnterior} />
-                                                <div className="año">
+                                                <div key="año-key-a" className="año">
                                                     <VisorAño añoOperativo={añoOperativo} />
                                                 </div>
                                                 <BotónAñoSiguiente setMensageBotónAñoSiguiente={onButtonClickedBotonAñoSiguiente} />
                                             </div>
-                                            <div className="border-top my-2 "></div>
-                                            <div className="meses text-center p-0">
-                                                <TableroMeses meseAMostrar={meseAMostrar} changeWord={word => setWord(word)}></TableroMeses>
-                                                {console.log('--- mes elecionado en el tablero : ', word)}
+                                            <div key="borde-key" className="border-top my-2 "></div>
+                                            <div key="los-meses-key" className="meses text-center p-0">
+                                                <TableroMeses_v2 meseAMostrar={meseAMostrar} cambiarMes={mesSeleccioando => setMesSeleccionado(mesSeleccioando)}></TableroMeses_v2>
+                                                {console.log('NavegacionAñoMedicion_v5 : ', mesSeleccioando)}
                                             </div>
                                         </div>
                                     </div>
