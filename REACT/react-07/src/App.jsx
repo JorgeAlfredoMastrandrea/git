@@ -33,7 +33,12 @@ function App() {
             <div id="fila-fecha-cursos-divisiones" className="row">
               <div className="col-sm-12 col-lg-2 themed-grid-col p-0">
                 Ciclo lectivo
-                <NavegaciónAñoMedición_v5 navLinkAñoMedicion={navLinkAñoMedicion} />
+                <NavegaciónAñoMedición_v5
+                  navLinkAñoMedicion={navLinkAñoMedicion}
+                  setMessage={setMessage} />
+                  {
+                    console.log('App : ' , selectedMessage)
+                  }
               </div>
               <div className="col-sm-12 col-lg-2 themed-grid-col p-3 ">
                 <strong><h4>< NavegaciónMesMedición selectedMessage={selectedMessage} /> </h4></strong>

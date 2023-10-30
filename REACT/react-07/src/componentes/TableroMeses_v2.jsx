@@ -5,11 +5,9 @@ import { BotonMesCondicionalActivado } from './BotonMesCondicionalActivado';
 import { BotonMesCondicionalDesactivado } from './BotonMesCondicionalDesactivado';
 
 
-export const TableroMeses_v2 = (props) => {
+export const TableroMeses_v2 = (props ) => {
 
-
-
-    const [mesSeleccioando, setMesSeleccionado] = useState();
+    const [mesSeleccioando, cambiarMes] = useState();
 
     const listaDeMeses = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'setiembre', 'octubre', 'noviembre', 'diciembre'];
 
@@ -30,9 +28,21 @@ export const TableroMeses_v2 = (props) => {
         //console.log('desactivo todos menos el mes de : ', mesSeleccioando);
         //for (let index = 0; index < arrayMeseAMostrar.length; index++) {
         //    if (arrayMeseAMostrar[index] !== mesSeleccioando) console.log('desactivo : ', arrayMeseAMostrar[index]);
-            // cómo los desactivo a los que ya están dibujados ??
-            //childRef.current.doSomething();
+        // cómo los desactivo a los que ya están dibujados ??
+        //childRef.current.doSomething();
         //}
+
+    }
+
+    const onEnviarMes = (mesSeleccioando) => {
+        //console.log('desactivo todos menos el mes de : ', mesSeleccioando);
+        //for (let index = 0; index < arrayMeseAMostrar.length; index++) {
+        //    if (arrayMeseAMostrar[index] !== mesSeleccioando) console.log('desactivo : ', arrayMeseAMostrar[index]);
+        // cómo los desactivo a los que ya están dibujados ??
+        //childRef.current.doSomething();
+        //}
+        console.log('TableroMeses_v2 ------------------> ' ,mesSeleccioando)
+        props.hijoAPadre(mesSeleccioando)
     }
 
     return (
@@ -42,9 +52,10 @@ export const TableroMeses_v2 = (props) => {
                     <>
                         {
                             arrayMeseAMostrar.includes(mes) ?
-                                <BotonMesCondicionalActivado    mes={mes} 
-                                                                arrayMeseAMostrar={arrayMeseAMostrar} 
-                                                                cambiarMes={mesSeleccioando => setMesSeleccionado(mesSeleccioando)}/> :
+                                <BotonMesCondicionalActivado
+                                    mes={mes}
+                                    arrayMeseAMostrar={arrayMeseAMostrar}
+                                    cambiarMes={mesSeleccioando => cambiarMes(mesSeleccioando)} /> :
                                 <BotonMesCondicionalDesactivado mes={mes} />
                         }
                     </>
@@ -54,7 +65,7 @@ export const TableroMeses_v2 = (props) => {
             }
             {
                 // desactivo todos los meses que no ha sido seleccionados ...               
-                onDesactivar(mesSeleccioando)
+                onEnviarMes( mesSeleccioando)
             }
         </>
     )

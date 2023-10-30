@@ -27,8 +27,8 @@ export const BotonMesCondicionalActivado = (propiedades) => {
 
   return (
     <>
-      <div key={propiedades.mes} className={propiedades.mes} >
-        <a id={propiedades.mes} className={active ? "w-100 h-100 btn btn-success text-white h6 p-1" : "w-100 h-100 btn btn-primary text-white h6 p-1"} href="#"
+      <div key={propiedades.mes+'_activo'} className={propiedades.mes} >
+        <a key={propiedades.mes+'_anchor'} id={propiedades.mes} className={active ? "w-100 h-100 btn btn-success text-white h6 p-1" : "w-100 h-100 btn btn-primary text-white h6 p-1"} href="#"
           onClick={(event) => onButtonClicked(event, propiedades.mes)}
           role="button"><small>{propiedades.mes.substr(0, 3)}</small></a>
       </div>

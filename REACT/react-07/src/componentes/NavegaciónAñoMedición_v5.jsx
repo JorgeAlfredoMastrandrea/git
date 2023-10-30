@@ -5,6 +5,8 @@
 // https://bobbyhadz.com/blog/react-pass-data-from-child-to-parent
 // https://bobbyhadz.com/blog/react-pass-data-from-child-to-parent
 
+// https://www.freecodecamp.org/espanol/news/pasar-data-y-eventos-entre-componentes-en-reactjs/
+
 import { StrictMode } from 'react';
 import React from 'react'
 import { useState } from 'react';
@@ -21,7 +23,7 @@ export const NavegaciónAñoMedición_v5 = (propiedades) => {
     const { navLinkAñoMedicion } = propiedades;
     const longitudObjetoNavLinkAñoMedicion = Object.keys(navLinkAñoMedicion).length;
 
-    const handleClose = () => setShow(false);
+
     const [isClicked, setIsClicked] = useState(false);
     const [show, setShow] = useState(false);
 
@@ -56,7 +58,24 @@ export const NavegaciónAñoMedición_v5 = (propiedades) => {
         //console.log('B. Siguiente -- : ', ptrAño, ' ', nuevoAño ,' ' , argumentoQueVieneDelComponenteBotonSiguiente, ' ', Object.values(navLinkAñoMedicion).at(ptrAño));     
     }
 
-    const [mesSeleccioando, setMesSeleccionado] = useState();
+
+    
+
+    const handleClose = (event, arg) => {
+        // acá puedo pasar el resultado del mes al componente hermano que muestra el mes ...
+        //console.log('desde NavegacionAñoMecion_v5 dice --> el mes es : ', mesSeleccioando)
+        //cambiarMes(mesSeleccioando);
+        setShow(false);
+        
+
+    }
+
+    const [datos, estableceDatos] = useState('');
+
+    const hijoAPadre = (datoshijo) => {
+        estableceDatos(datoshijo);
+        console.log('NavegaciónAñoMedición_v5 -----------------> : ' , datoshijo)
+    }
 
     return (
         <div className="">
@@ -94,13 +113,20 @@ export const NavegaciónAñoMedición_v5 = (propiedades) => {
                                             </div>
                                             <div key="borde-key" className="border-top my-2 "></div>
                                             <div key="los-meses-key" className="meses text-center p-0">
-                                                <TableroMeses_v2 meseAMostrar={meseAMostrar} cambiarMes={mesSeleccioando => setMesSeleccionado(mesSeleccioando)}></TableroMeses_v2>
-                                                {console.log('NavegacionAñoMedicion_v5 : ', mesSeleccioando)}
+                                                <TableroMeses_v2
+                                                    meseAMostrar={meseAMostrar}
+                                                    hijoAPadre={hijoAPadre}
+                                                >
+                                                </TableroMeses_v2>
+
                                             </div>
                                         </div>
                                     </div>
                                 </Modal.Body>
                                 <Modal.Footer>
+                                    <Button variant="primary" onClick={(event) => handleClose(event, a)}>
+                                        Aceptar
+                                    </Button>
                                 </Modal.Footer>
                             </Modal >
                         )
