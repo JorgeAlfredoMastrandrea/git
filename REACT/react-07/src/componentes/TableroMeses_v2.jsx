@@ -21,18 +21,7 @@ export const TableroMeses_v2 = (props ) => {
     }
 
     // obtener el último mes de la medicion para dejar activa esa ...
-    const ultimoMes = arrayMeseAMostrar[arrayMeseAMostrar.length - 1];
-
-    // poner de color azul a todos los botones menos al que fue seleccionado ...
-    const onDesactivar = (mesSeleccioando) => {
-        //console.log('desactivo todos menos el mes de : ', mesSeleccioando);
-        //for (let index = 0; index < arrayMeseAMostrar.length; index++) {
-        //    if (arrayMeseAMostrar[index] !== mesSeleccioando) console.log('desactivo : ', arrayMeseAMostrar[index]);
-        // cómo los desactivo a los que ya están dibujados ??
-        //childRef.current.doSomething();
-        //}
-
-    }
+    const ultimoMes = arrayMeseAMostrar[arrayMeseAMostrar.length - 1]; 
 
     const onEnviarMes = (mesSeleccioando) => {
         //console.log('desactivo todos menos el mes de : ', mesSeleccioando);
@@ -42,7 +31,8 @@ export const TableroMeses_v2 = (props ) => {
         //childRef.current.doSomething();
         //}
         console.log('TableroMeses_v2 ------------------> ' ,mesSeleccioando)
-        props.hijoAPadre(mesSeleccioando)
+        props.tableroMesesANavegacionAñoMedicion(mesSeleccioando)
+        //props.tableroMesesANavegacionAñoMedicionUltimoMes(ultimoMes);
     }
 
     return (

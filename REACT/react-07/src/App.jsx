@@ -19,7 +19,12 @@ import navLinksData from "./cursos-divisiones.json";
 
 function App() {
 
-  const [selectedMessage, setMessage] = useState();
+  const [mesAMostrarSeleccionado, estableceMesAMostrar] = useState('');
+
+  const navegacionAñoMedicionAApp = (datosNavegacionAñoMedicion) => {
+    estableceMesAMostrar(datosNavegacionAñoMedicion);
+    console.log('App -----------------> : ', datosNavegacionAñoMedicion)
+  }
 
   return (
     <>
@@ -35,13 +40,15 @@ function App() {
                 Ciclo lectivo
                 <NavegaciónAñoMedición_v5
                   navLinkAñoMedicion={navLinkAñoMedicion}
-                  setMessage={setMessage} />
-                  {
-                    console.log('App : ' , selectedMessage)
-                  }
+                  navegacionAñoMedicionAApp={navegacionAñoMedicionAApp}
+                />
+
               </div>
               <div className="col-sm-12 col-lg-2 themed-grid-col p-3 ">
-                <strong><h4>< NavegaciónMesMedición selectedMessage={selectedMessage} /> </h4></strong>
+                <strong><h4>< NavegaciónMesMedición
+                  navLinkAñoMedicion={navLinkAñoMedicion}
+                  mesAMostrarSeleccionado={mesAMostrarSeleccionado} />
+                </h4></strong>
               </div>
               <div className="col-sm-12 col-lg-8 themed-grid-col p-0">
                 Cursos y divisiones

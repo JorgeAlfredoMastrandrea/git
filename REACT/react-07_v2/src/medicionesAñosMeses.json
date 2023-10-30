@@ -1,0 +1,92 @@
+[
+    {
+        "id": 2021,
+        "año": "2021",
+        "meses": [
+            {
+                "id": "enero",
+                "nombre": "enero"
+            },
+            {
+                "id": "mayo",
+                "nombre": "mayo"
+            }
+        ]
+    },
+    {
+        "id": 2022,
+        "año": "2022",
+        "meses": [
+            {
+                "id": "febrero",
+                "nombre": "febrero"
+            },
+            {
+                "id": "agosto",
+                "nombre": "agosto"
+            },
+            {
+                "id": "noviembre",
+                "nombre": "noviembre"
+            }
+        ]
+    },
+    {
+        "id": 2023,
+        "año": "2023",
+        "meses": [
+            {
+                "id": "junio",
+                "nombre": "junio"
+            },
+            {
+                "id": "julio",
+                "nombre": "julio"
+            },
+            {
+                "id": "agosto",
+                "nombre": "agosto"
+            },
+            {
+                "id": "diciembre",
+                "nombre": "diciembre"
+            }
+        ]
+    },
+    {
+        "id": 2024,
+        "año": "2024",
+        "meses": [
+            {
+                "id": "abril",
+                "nombre": "abril"
+            },
+            {
+                "id": "julio",
+                "nombre": "julio"
+            },
+            {
+                "id": "agosto",
+                "nombre": "agosto"
+            },
+            {
+                "id": "setiembre",
+                "nombre": "setiembre"
+            }
+        ]
+    },
+    {
+        "id": 2025,
+        "año": "2025",
+        "meses": [
+            {
+                "id": "enero",
+                "nombre": "enero"
+            },            
+            {
+                "id": "noviembre",
+                "nombre": "noviembre"
+            }
+        ]
+    }
+]

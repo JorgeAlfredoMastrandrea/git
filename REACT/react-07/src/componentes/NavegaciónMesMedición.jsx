@@ -1,7 +1,10 @@
 import React from 'react'
 
-export const NavegaciónMesMedición = ({selectedMessage}) => {
+export const NavegaciónMesMedición = (props) => {
+  
+  {console.log('res final : NavegaciónMesMedición : ' , props.mesAMostrarSeleccionado , ' ' , props.navLinkAñoMedicion)}
+  
   return (
-    <div>{selectedMessage}</div>
+    <div>{props.mesAMostrarSeleccionado}</div>    
   )
 }

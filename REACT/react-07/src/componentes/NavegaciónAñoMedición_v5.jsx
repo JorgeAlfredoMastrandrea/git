@@ -32,9 +32,7 @@ export const NavegaciónAñoMedición_v5 = (propiedades) => {
         setIsClicked(true);
         setShow(true);
     }
-
-    const [word, setWord] = useState();
-
+    
     const [lrg] = useState(longitudObjetoNavLinkAñoMedicion - 1);
     const [añoOperativo, setAñoOperativo] = useState(Object.values(navLinkAñoMedicion).at(lrg).id);
     const [ptrAño, setPtrAño] = useState(0);
@@ -58,23 +56,29 @@ export const NavegaciónAñoMedición_v5 = (propiedades) => {
         //console.log('B. Siguiente -- : ', ptrAño, ' ', nuevoAño ,' ' , argumentoQueVieneDelComponenteBotonSiguiente, ' ', Object.values(navLinkAñoMedicion).at(ptrAño));     
     }
 
-
     
+    const [mesSeleccionado, estableceMes] = useState('');
 
-    const handleClose = (event, arg) => {
+    const tableroMesesANavegacionAñoMedicion = (datosTableroMeses) => {
+        estableceMes(datosTableroMeses);
+        console.log('NavegaciónAñoMedición_v5 -----------------> : ' , datosTableroMeses)
+        propiedades.navegacionAñoMedicionAApp(datosTableroMeses);
+    }
+
+    const [ultimoMes, estableceUltimoMes] = useState('');
+
+    const tableroMesesANavegacionAñoMedicionUltimoMes = (datosTableroMeses) => {
+        estableceUltimoMes(datosTableroMeses)
+        console.log('ultimo  mes NavegaciónAñoMedición_v5' , datosTableroMeses);
+    }
+    
+    
+    const handleClose = (event) => {
         // acá puedo pasar el resultado del mes al componente hermano que muestra el mes ...
+        console.log('handleClose -------> :  ' , mesSeleccionado);
         //console.log('desde NavegacionAñoMecion_v5 dice --> el mes es : ', mesSeleccioando)
         //cambiarMes(mesSeleccioando);
         setShow(false);
-        
-
-    }
-
-    const [datos, estableceDatos] = useState('');
-
-    const hijoAPadre = (datoshijo) => {
-        estableceDatos(datoshijo);
-        console.log('NavegaciónAñoMedición_v5 -----------------> : ' , datoshijo)
     }
 
     return (
@@ -115,7 +119,7 @@ export const NavegaciónAñoMedición_v5 = (propiedades) => {
                                             <div key="los-meses-key" className="meses text-center p-0">
                                                 <TableroMeses_v2
                                                     meseAMostrar={meseAMostrar}
-                                                    hijoAPadre={hijoAPadre}
+                                                    tableroMesesANavegacionAñoMedicion={tableroMesesANavegacionAñoMedicion}
                                                 >
                                                 </TableroMeses_v2>
 
@@ -124,7 +128,7 @@ export const NavegaciónAñoMedición_v5 = (propiedades) => {
                                     </div>
                                 </Modal.Body>
                                 <Modal.Footer>
-                                    <Button variant="primary" onClick={(event) => handleClose(event, a)}>
+                                    <Button variant="primary" onClick={(event) => handleClose(event )}>
                                         Aceptar
                                     </Button>
                                 </Modal.Footer>
