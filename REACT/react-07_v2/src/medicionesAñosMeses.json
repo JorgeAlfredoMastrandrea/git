@@ -4,11 +4,13 @@
         "año": "2021",
         "meses": [
             {
-                "id": "enero",
+                "id": "2021 enero",
+                "año-mes" : "2021",
                 "nombre": "enero"
             },
             {
-                "id": "mayo",
+                "id": "2021 mayo",
+                "año-mes" : "2021",
                 "nombre": "mayo"
             }
         ]
@@ -18,15 +20,18 @@
         "año": "2022",
         "meses": [
             {
-                "id": "febrero",
+                "id": "2022 febrero",
+                "año-mes" : "2022",
                 "nombre": "febrero"
             },
             {
-                "id": "agosto",
+                "id": "2022 agosto",
+                "año-mes" : "2022",
                 "nombre": "agosto"
             },
             {
-                "id": "noviembre",
+                "id": "2022 noviembre",
+                "año-mes" : "2022",
                 "nombre": "noviembre"
             }
         ]
@@ -36,19 +41,23 @@
         "año": "2023",
         "meses": [
             {
-                "id": "junio",
+                "id": "2023 junio",
+                "año-mes" : "2023",
                 "nombre": "junio"
             },
             {
-                "id": "julio",
+                "id": "2023 julio",
+                "año-mes" : "2023",
                 "nombre": "julio"
             },
             {
-                "id": "agosto",
+                "id": "2023 agosto",
+                "año-mes" : "2023",
                 "nombre": "agosto"
             },
             {
-                "id": "diciembre",
+                "id": "2023 diciembre",
+                "año-mes" : "2023",
                 "nombre": "diciembre"
             }
         ]
@@ -58,19 +67,23 @@
         "año": "2024",
         "meses": [
             {
-                "id": "abril",
+                "id": "2024 abril",
+                "año-mes" : "2024",
                 "nombre": "abril"
             },
             {
-                "id": "julio",
+                "id": "2024 julio",
+                "año-mes" : "2024",
                 "nombre": "julio"
             },
             {
-                "id": "agosto",
+                "id": "2024 agosto",
+                "año-mes" : "2024",
                 "nombre": "agosto"
             },
             {
-                "id": "setiembre",
+                "id": "2024 setiembre",
+                "año-mes" : "2024",
                 "nombre": "setiembre"
             }
         ]
@@ -80,11 +93,13 @@
         "año": "2025",
         "meses": [
             {
-                "id": "enero",
+                "id": "2025 enero",
+                "año-mes" : "2025",
                 "nombre": "enero"
             },            
             {
-                "id": "noviembre",
+                "id": "2025 noviembre",
+                "año-mes" : "2025",
                 "nombre": "noviembre"
             }
         ]
