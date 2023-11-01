@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { BotonMesCondicionalActivado } from '../componentes2/BotonMesCondicionalActivado';
-import { BotonMesCondicionalDesactivado } from '../componentes2/BotonMesCondicionalDesactivado';
+import { BotonMesCondicionalActivado } from '../componentes_navegación_año_meses/BotonMesCondicionalActivado';
+import { BotonMesCondicionalDesactivado } from '../componentes_navegación_año_meses/BotonMesCondicionalDesactivado';
 
 export const TableroMeses_v3 = (props) => {
 

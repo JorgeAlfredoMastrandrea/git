@@ -1,0 +1,1328 @@
+[
+    {
+        "id": 2021,
+        "año": "2021",
+        "meses": [
+            {
+                "id": "2021 enero",
+                "año-mes": "2021",
+                "nombre": "enero",
+                "data": "datos enero 2021",
+                "cursosdivisiones": [
+                    {
+                        "id": 1,
+                        "curso": "1°",
+                        "nombre": "1°",
+                        "división": [
+                            {
+                                "id": 11,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 12,
+                                "nombre": "B"
+                            },
+                            {
+                                "id": 13,
+                                "nombre": "C"
+                            },
+                            {
+                                "id": 14,
+                                "nombre": "D"
+                            },
+                            {
+                                "id": 15,
+                                "nombre": "E"
+                            },
+                            {
+                                "id": 16,
+                                "nombre": "F"
+                            },
+                            {
+                                "id": 17,
+                                "nombre": "G"
+                            },
+                            {
+                                "id": 18,
+                                "nombre": "H"
+                            },
+                            {
+                                "id": 19,
+                                "nombre": "I"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 2,
+                        "curso": "2°",
+                        "nombre": "2°",
+                        "división": [
+                            {
+                                "id": 21,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 22,
+                                "nombre": "B"
+                            },
+                            {
+                                "id": 23,
+                                "nombre": "C"
+                            },
+                            {
+                                "id": 24,
+                                "nombre": "D"
+                            },
+                            {
+                                "id": 25,
+                                "nombre": "E"
+                            },
+                            {
+                                "id": 26,
+                                "nombre": "F"
+                            },
+                            {
+                                "id": 27,
+                                "nombre": "G"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 3,
+                        "curso": "3°",
+                        "nombre": "3°",
+                        "división": [
+                            {
+                                "id": 31,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 32,
+                                "nombre": "B"
+                            },
+                            {
+                                "id": 33,
+                                "nombre": "C"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 4,
+                        "curso": "4°",
+                        "nombre": "4°",
+                        "división": [
+                            {
+                                "id": 41,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 42,
+                                "nombre": "B"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 5,
+                        "curso": "5°",
+                        "nombre": "5°",
+                        "división": [
+                            {
+                                "id": 51,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 52,
+                                "nombre": "B"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 6,
+                        "curso": "6°",
+                        "nombre": "6°",
+                        "división": [
+                            {
+                                "id": 61,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 62,
+                                "nombre": "B"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 7,
+                        "curso": "7°",
+                        "nombre": "7°",
+                        "división": [
+                            {
+                                "id": 71,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 72,
+                                "nombre": "B"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "2021 mayo",
+                "año-mes": "2021",
+                "nombre": "mayo",
+                "data": "datos mayo 2021",
+                "cursosdivisiones": [
+                    {
+                        "id": 2,
+                        "curso": "2°",
+                        "nombre": "2°",
+                        "división": [
+                            {
+                                "id": 21,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 22,
+                                "nombre": "B"
+                            },
+                            {
+                                "id": 23,
+                                "nombre": "C"
+                            },
+                            {
+                                "id": 24,
+                                "nombre": "D"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 3,
+                        "curso": "3°",
+                        "nombre": "3°",
+                        "división": [
+                            {
+                                "id": 31,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 32,
+                                "nombre": "B"
+                            },
+                            {
+                                "id": 33,
+                                "nombre": "C"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 4,
+                        "curso": "4°",
+                        "nombre": "4°",
+                        "división": [
+                            {
+                                "id": 41,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 42,
+                                "nombre": "B"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 5,
+                        "curso": "5°",
+                        "nombre": "5°",
+                        "división": [
+                            {
+                                "id": 51,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 52,
+                                "nombre": "B"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 6,
+                        "curso": "6°",
+                        "nombre": "6°",
+                        "división": [
+                            {
+                                "id": 61,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 62,
+                                "nombre": "B"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 7,
+                        "curso": "7°",
+                        "nombre": "7°",
+                        "división": [
+                            {
+                                "id": 71,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 72,
+                                "nombre": "B"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2022,
+        "año": "2022",
+        "meses": [
+            {
+                "id": "2022 febrero",
+                "año-mes": "2022",
+                "nombre": "febrero",
+                "data": "datos febrero 2022",
+                "cursosdivisiones": [
+                    {
+                        "id": 1,
+                        "curso": "1°",
+                        "nombre": "1°",
+                        "división": [
+                            {
+                                "id": 11,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 12,
+                                "nombre": "B"
+                            },
+                            {
+                                "id": 13,
+                                "nombre": "C"
+                            },
+                            {
+                                "id": 14,
+                                "nombre": "D"
+                            },
+                            {
+                                "id": 15,
+                                "nombre": "E"
+                            },
+                            {
+                                "id": 16,
+                                "nombre": "F"
+                            },
+                            {
+                                "id": 17,
+                                "nombre": "G"
+                            },
+                            {
+                                "id": 18,
+                                "nombre": "H"
+                            },
+                            {
+                                "id": 19,
+                                "nombre": "I"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 3,
+                        "curso": "3°",
+                        "nombre": "3°",
+                        "división": [
+                            {
+                                "id": 31,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 32,
+                                "nombre": "B"
+                            },
+                            {
+                                "id": 33,
+                                "nombre": "C"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 5,
+                        "curso": "5°",
+                        "nombre": "5°",
+                        "división": [
+                            {
+                                "id": 51,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 52,
+                                "nombre": "B"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 6,
+                        "curso": "6°",
+                        "nombre": "6°",
+                        "división": [
+                            {
+                                "id": 61,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 62,
+                                "nombre": "B"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 7,
+                        "curso": "7°",
+                        "nombre": "7°",
+                        "división": [
+                            {
+                                "id": 71,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 72,
+                                "nombre": "B"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "2022 agosto",
+                "año-mes": "2022",
+                "nombre": "agosto",
+                "data": "datos agosto 2022",
+                "cursosdivisiones": [
+                    {
+                        "id": 4,
+                        "curso": "4°",
+                        "nombre": "4°",
+                        "división": [
+                            {
+                                "id": 41,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 42,
+                                "nombre": "B"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 5,
+                        "curso": "5°",
+                        "nombre": "5°",
+                        "división": [
+                            {
+                                "id": 51,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 52,
+                                "nombre": "B"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 6,
+                        "curso": "6°",
+                        "nombre": "6°",
+                        "división": [
+                            {
+                                "id": 61,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 62,
+                                "nombre": "B"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "2022 noviembre",
+                "año-mes": "2022",
+                "nombre": "noviembre",
+                "data": "datos noviembre 2022",
+                "cursosdivisiones": [
+                    {
+                        "id": 2,
+                        "curso": "2°",
+                        "nombre": "2°",
+                        "división": [
+                            {
+                                "id": 21,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 22,
+                                "nombre": "B"
+                            },
+                            {
+                                "id": 23,
+                                "nombre": "C"
+                            },
+                            {
+                                "id": 24,
+                                "nombre": "D"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 4,
+                        "curso": "4°",
+                        "nombre": "4°",
+                        "división": [
+                            {
+                                "id": 41,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 42,
+                                "nombre": "B"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 6,
+                        "curso": "6°",
+                        "nombre": "6°",
+                        "división": [
+                            {
+                                "id": 61,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 62,
+                                "nombre": "B"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 7,
+                        "curso": "7°",
+                        "nombre": "7°",
+                        "división": [
+                            {
+                                "id": 71,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 72,
+                                "nombre": "B"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2023,
+        "año": "2023",
+        "meses": [
+            {
+                "id": "2023 junio",
+                "año-mes": "2023",
+                "nombre": "junio",
+                "data": "datos junio 2023",
+                "cursosdivisiones": [
+                    {
+                        "id": 1,
+                        "curso": "1°",
+                        "nombre": "1°",
+                        "división": [
+                            {
+                                "id": 11,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 12,
+                                "nombre": "B"
+                            },
+                            {
+                                "id": 13,
+                                "nombre": "C"
+                            },
+                            {
+                                "id": 14,
+                                "nombre": "D"
+                            },
+                            {
+                                "id": 15,
+                                "nombre": "E"
+                            },
+                            {
+                                "id": 16,
+                                "nombre": "F"
+                            },
+                            {
+                                "id": 17,
+                                "nombre": "G"
+                            },
+                            {
+                                "id": 18,
+                                "nombre": "H"
+                            },
+                            {
+                                "id": 19,
+                                "nombre": "I"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "2023 julio",
+                "año-mes": "2023",
+                "nombre": "julio",
+                "data": "datos julio 2023",
+                "cursosdivisiones": [
+                    {
+                        "id": 2,
+                        "curso": "2°",
+                        "nombre": "2°",
+                        "división": [
+                            {
+                                "id": 21,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 22,
+                                "nombre": "B"
+                            },
+                            {
+                                "id": 23,
+                                "nombre": "C"
+                            },
+                            {
+                                "id": 24,
+                                "nombre": "D"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "2023 agosto",
+                "año-mes": "2023",
+                "nombre": "agosto",
+                "data": "datos agosto 2023",
+                "cursosdivisiones": [
+                    {
+                        "id": 3,
+                        "curso": "3°",
+                        "nombre": "3°",
+                        "división": [
+                            {
+                                "id": 31,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 32,
+                                "nombre": "B"
+                            },
+                            {
+                                "id": 33,
+                                "nombre": "C"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 4,
+                        "curso": "4°",
+                        "nombre": "4°",
+                        "división": [
+                            {
+                                "id": 41,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 42,
+                                "nombre": "B"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "2023 diciembre",
+                "año-mes": "2023",
+                "nombre": "diciembre",
+                "data": "datos diciembre 2023",
+                "cursosdivisiones": [
+                    {
+                        "id": 1,
+                        "curso": "1°",
+                        "nombre": "1°",
+                        "división": [
+                            {
+                                "id": 11,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 12,
+                                "nombre": "B"
+                            },
+                            {
+                                "id": 13,
+                                "nombre": "C"
+                            },
+                            {
+                                "id": 14,
+                                "nombre": "D"
+                            },
+                            {
+                                "id": 15,
+                                "nombre": "E"
+                            },
+                            {
+                                "id": 16,
+                                "nombre": "F"
+                            },
+                            {
+                                "id": 17,
+                                "nombre": "G"
+                            },
+                            {
+                                "id": 18,
+                                "nombre": "H"
+                            },
+                            {
+                                "id": 19,
+                                "nombre": "I"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 2,
+                        "curso": "2°",
+                        "nombre": "2°",
+                        "división": [
+                            {
+                                "id": 21,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 22,
+                                "nombre": "B"
+                            },
+                            {
+                                "id": 23,
+                                "nombre": "C"
+                            },
+                            {
+                                "id": 24,
+                                "nombre": "D"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 3,
+                        "curso": "3°",
+                        "nombre": "3°",
+                        "división": [
+                            {
+                                "id": 31,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 32,
+                                "nombre": "B"
+                            },
+                            {
+                                "id": 33,
+                                "nombre": "C"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 4,
+                        "curso": "4°",
+                        "nombre": "4°",
+                        "división": [
+                            {
+                                "id": 41,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 42,
+                                "nombre": "B"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 5,
+                        "curso": "5°",
+                        "nombre": "5°",
+                        "división": [
+                            {
+                                "id": 51,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 52,
+                                "nombre": "B"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2024,
+        "año": "2024",
+        "meses": [
+            {
+                "id": "2024 abril",
+                "año-mes": "2024",
+                "nombre": "abril",
+                "data": "datos abril 2024",
+                "cursosdivisiones": [
+                    {
+                        "id": 5,
+                        "curso": "5°",
+                        "nombre": "5°",
+                        "división": [
+                            {
+                                "id": 51,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 52,
+                                "nombre": "B"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 6,
+                        "curso": "6°",
+                        "nombre": "6°",
+                        "división": [
+                            {
+                                "id": 61,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 62,
+                                "nombre": "B"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 7,
+                        "curso": "7°",
+                        "nombre": "7°",
+                        "división": [
+                            {
+                                "id": 71,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 72,
+                                "nombre": "B"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "2024 julio",
+                "año-mes": "2024",
+                "nombre": "julio",
+                "data": "datos julio 2024",
+                "cursosdivisiones": [
+                    {
+                        "id": 4,
+                        "curso": "4°",
+                        "nombre": "4°",
+                        "división": [
+                            {
+                                "id": 41,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 42,
+                                "nombre": "B"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 5,
+                        "curso": "5°",
+                        "nombre": "5°",
+                        "división": [
+                            {
+                                "id": 51,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 52,
+                                "nombre": "B"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 6,
+                        "curso": "6°",
+                        "nombre": "6°",
+                        "división": [
+                            {
+                                "id": 61,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 62,
+                                "nombre": "B"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 7,
+                        "curso": "7°",
+                        "nombre": "7°",
+                        "división": [
+                            {
+                                "id": 71,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 72,
+                                "nombre": "B"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "2024 agosto",
+                "año-mes": "2024",
+                "nombre": "agosto",
+                "data": "datos agosto 2024",
+                "cursosdivisiones": [
+                    {
+                        "id": 1,
+                        "curso": "1°",
+                        "nombre": "1°",
+                        "división": [
+                            {
+                                "id": 11,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 12,
+                                "nombre": "B"
+                            },
+                            {
+                                "id": 13,
+                                "nombre": "C"
+                            },
+                            {
+                                "id": 14,
+                                "nombre": "D"
+                            },
+                            {
+                                "id": 15,
+                                "nombre": "E"
+                            },
+                            {
+                                "id": 16,
+                                "nombre": "F"
+                            },
+                            {
+                                "id": 17,
+                                "nombre": "G"
+                            },
+                            {
+                                "id": 18,
+                                "nombre": "H"
+                            },
+                            {
+                                "id": 19,
+                                "nombre": "I"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 2,
+                        "curso": "2°",
+                        "nombre": "2°",
+                        "división": [
+                            {
+                                "id": 21,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 22,
+                                "nombre": "B"
+                            },
+                            {
+                                "id": 23,
+                                "nombre": "C"
+                            },
+                            {
+                                "id": 24,
+                                "nombre": "D"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 3,
+                        "curso": "3°",
+                        "nombre": "3°",
+                        "división": [
+                            {
+                                "id": 31,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 32,
+                                "nombre": "B"
+                            },
+                            {
+                                "id": 33,
+                                "nombre": "C"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 4,
+                        "curso": "4°",
+                        "nombre": "4°",
+                        "división": [
+                            {
+                                "id": 41,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 42,
+                                "nombre": "B"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 5,
+                        "curso": "5°",
+                        "nombre": "5°",
+                        "división": [
+                            {
+                                "id": 51,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 52,
+                                "nombre": "B"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 6,
+                        "curso": "6°",
+                        "nombre": "6°",
+                        "división": [
+                            {
+                                "id": 61,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 62,
+                                "nombre": "B"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 7,
+                        "curso": "7°",
+                        "nombre": "7°",
+                        "división": [
+                            {
+                                "id": 71,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 72,
+                                "nombre": "B"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "2024 setiembre",
+                "año-mes": "2024",
+                "nombre": "setiembre",
+                "data": "datos setiembre 2024",
+                "cursosdivisiones": [
+                    {
+                        "id": 1,
+                        "curso": "1°",
+                        "nombre": "1°",
+                        "división": [
+                            {
+                                "id": 11,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 12,
+                                "nombre": "B"
+                            },
+                            {
+                                "id": 13,
+                                "nombre": "C"
+                            },
+                            {
+                                "id": 14,
+                                "nombre": "D"
+                            },
+                            {
+                                "id": 15,
+                                "nombre": "E"
+                            },
+                            {
+                                "id": 16,
+                                "nombre": "F"
+                            },
+                            {
+                                "id": 17,
+                                "nombre": "G"
+                            },
+                            {
+                                "id": 18,
+                                "nombre": "H"
+                            },
+                            {
+                                "id": 19,
+                                "nombre": "I"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 2,
+                        "curso": "2°",
+                        "nombre": "2°",
+                        "división": [
+                            {
+                                "id": 21,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 22,
+                                "nombre": "B"
+                            },
+                            {
+                                "id": 23,
+                                "nombre": "C"
+                            },
+                            {
+                                "id": 24,
+                                "nombre": "D"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 3,
+                        "curso": "3°",
+                        "nombre": "3°",
+                        "división": [
+                            {
+                                "id": 31,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 32,
+                                "nombre": "B"
+                            },
+                            {
+                                "id": 33,
+                                "nombre": "C"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 4,
+                        "curso": "4°",
+                        "nombre": "4°",
+                        "división": [
+                            {
+                                "id": 41,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 42,
+                                "nombre": "B"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 5,
+                        "curso": "5°",
+                        "nombre": "5°",
+                        "división": [
+                            {
+                                "id": 51,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 52,
+                                "nombre": "B"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 6,
+                        "curso": "6°",
+                        "nombre": "6°",
+                        "división": [
+                            {
+                                "id": 61,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 62,
+                                "nombre": "B"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 7,
+                        "curso": "7°",
+                        "nombre": "7°",
+                        "división": [
+                            {
+                                "id": 71,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 72,
+                                "nombre": "B"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2025,
+        "año": "2025",
+        "meses": [
+            {
+                "id": "2025 enero",
+                "año-mes": "2025",
+                "nombre": "enero",
+                "data": "datos enero 2025",
+                "cursosdivisiones": [                    
+                    {
+                        "id": 3,
+                        "curso": "3°",
+                        "nombre": "3°",
+                        "división": [
+                            {
+                                "id": 31,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 32,
+                                "nombre": "B"
+                            },
+                            {
+                                "id": 33,
+                                "nombre": "C"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "2025 noviembre",
+                "año-mes": "2025",
+                "nombre": "noviembre",
+                "data": "datos noviembre 2025",
+                "cursosdivisiones": [
+                    {
+                        "id": 2,
+                        "curso": "2°",
+                        "nombre": "2°",
+                        "división": [
+                            {
+                                "id": 21,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 22,
+                                "nombre": "B"
+                            },
+                            {
+                                "id": 23,
+                                "nombre": "C"
+                            },
+                            {
+                                "id": 24,
+                                "nombre": "D"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 4,
+                        "curso": "4°",
+                        "nombre": "4°",
+                        "división": [
+                            {
+                                "id": 41,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 42,
+                                "nombre": "B"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 5,
+                        "curso": "5°",
+                        "nombre": "5°",
+                        "división": [
+                            {
+                                "id": 51,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 52,
+                                "nombre": "B"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 6,
+                        "curso": "6°",
+                        "nombre": "6°",
+                        "división": [
+                            {
+                                "id": 61,
+                                "nombre": "A"
+                            },
+                            {
+                                "id": 62,
+                                "nombre": "B"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

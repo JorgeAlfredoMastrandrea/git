@@ -1,13 +1,13 @@
 import { StrictMode } from 'react';
 import React from 'react'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import { VisorAño } from '../componentes2/VisorAño';
-import { VisorMes } from '../componentes2/VisorMes';
-import { BotónAñoAnterior } from '../componentes2/BotónAñoAnterior';
-import { BotónAñoSiguiente } from '../componentes2/BotónAñoSiguiente';
-import { TableroMeses_v3 } from '../componentes2/TableroMeses_v3';
+import { VisorAño } from '../componentes_navegación_año_meses/VisorAño';
+import { VisorMes } from '../componentes_navegación_año_meses/VisorMes';
+import { BotónAñoAnterior } from './BotónAñoAnterior';
+import { BotónAñoSiguiente } from './BotónAñoSiguiente';
+import { TableroMeses_v3 } from '../componentes_navegación_año_meses/TableroMeses_v3';
 
 export const NavegaciónAñoMedición_v6 = (propiedades) => {
 
@@ -28,7 +28,13 @@ export const NavegaciónAñoMedición_v6 = (propiedades) => {
     // el mes seleccionado por el sistema .. en un principio sería el último mes del operativo !!
     const [mesSeleccionadoSistema, setMesSeleccionadoSistema] = useState(ultimoMes);
     // el objeto completo de año y meses, solamente del que se muestra en el objeto de navegación ...
-    const [añoOperativoCompleto, setAñoOperativoCompleto] = useState(Object.values(navLinkAñoMedicion).at(lrg));    
+    const [añoOperativoCompleto, setAñoOperativoCompleto] = useState(Object.values(navLinkAñoMedicion).at(lrg));
+
+    const firstBlood = () => {
+        console.log('viva Rambooo concha su madre!!!');
+        // cuando este componente se monta por primera vez, se lee el último mes de la última medición
+        propiedades.gettCursosYDivisiones(((Object.values(navLinkAñoMedicion).at(lrg).meses).at(((Object.values(navLinkAñoMedicion).at(lrg).meses)).length - 1)).data);
+    }
 
     const onButtonClickedBotonAñoAnterior = (argumentoQueVieneDelComponenteBotonAnterior) => {
         const esPrimerAño = ptrAño === 0;
@@ -52,10 +58,11 @@ export const NavegaciónAñoMedición_v6 = (propiedades) => {
     }
 
     const tableroMesesYAñoANavegacionMedicion = (datososObjetoTableroMesesConAño) => {
-
-        if (datososObjetoTableroMesesConAño !== undefined) {            
-            console.log('NavegaciónAñoMedición_v6 ------- objeto ----------> : ', datososObjetoTableroMesesConAño)
+        if (datososObjetoTableroMesesConAño !== undefined) {
+            //console.log('NavegaciónAñoMedición_v6 ------- objeto ----------> : ', datososObjetoTableroMesesConAño)
             setUltimoMes(datososObjetoTableroMesesConAño.nombre);
+            propiedades.gettCursosYDivisiones(datososObjetoTableroMesesConAño.data);
+            console.log(datososObjetoTableroMesesConAño.data);
             setShow(false);
         }
     }
@@ -73,7 +80,14 @@ export const NavegaciónAñoMedición_v6 = (propiedades) => {
         setShow(false);
     }
 
+    useEffect(() => {
+        firstBlood();
+    }, []);
+
+
+
     return (
+
         <div className="">
             {
                 <>
@@ -87,7 +101,7 @@ export const NavegaciónAñoMedición_v6 = (propiedades) => {
                         </div>
                         {isClicked && (
                             <Modal
-                            
+
                                 key="keyModal"
                                 id="modalAñoMes"
                                 size="sm"
@@ -96,7 +110,7 @@ export const NavegaciónAñoMedición_v6 = (propiedades) => {
                                 dialogClassName="modal-90w"
                                 show={show}
                                 onHide={handleClose}>
-                                
+
                                 <Modal.Body>
                                     <div key="tarjeta-año-meses-key" id="tarjeta-año-meses" className="card border-primary bg-white">
                                         <div key="card-body-key" className="card-body px-3 py-1">

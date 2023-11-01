@@ -5,12 +5,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './grid.css';
 import './meses.css';
 
-import navLinkAñoMedicion from "./medicionesAñosMeses.json";
-import { NavegaciónAñoMedición_v6 } from './componentes2/NavegaciónAñoMedición_v6';
-
+import navLinkAñoMedicion from "./medicionesAñosMesesCursosDivisiones.json";
+import { NavegaciónAñoMedición_v6 } from './componentes_navegación_año_meses/NavegaciónAñoMedición_v6';
+import { NavegaciónCursoDivisión } from './comṕonentes_navegación_curso_división/NavegaciónCursoDivisión';
 
 
 function App() {
+
+    const [cursosYDivisiones , setCursosYDivisiones] = useState();    
+    const gettCursosYDivisiones = (datosDeNavegaciónAñoMedición_v6) => {
+        //console.log('gettCursosYDivisiones : ', datosDeNavegaciónAñoMedición_v6);
+        setCursosYDivisiones(datosDeNavegaciónAñoMedición_v6)
+    }
 
     return (
         <>
@@ -23,16 +29,16 @@ function App() {
                             <div className="col-sm-12 col-lg-2 themed-grid-col p-0">
                                 Ciclo lectivo y mes medido
                                 <NavegaciónAñoMedición_v6
-                                    navLinkAñoMedicion={navLinkAñoMedicion} />
+                                    navLinkAñoMedicion={navLinkAñoMedicion}
+                                    gettCursosYDivisiones={gettCursosYDivisiones}
+                                />
                             </div>
-                            <div className="col-sm-12 col-lg-2 themed-grid-col p-3 ">
-                                <strong><h4>
 
-                                </h4></strong>
-                            </div>
-                            <div className="col-sm-12 col-lg-8 themed-grid-col p-0">
+                            <div className="col-sm-12 col-lg-10 themed-grid-col p-0">
                                 Cursos y divisiones
-
+                                <NavegaciónCursoDivisión
+                                    cursosYDivisiones={cursosYDivisiones}
+                                />
                             </div>
                         </div>
 
