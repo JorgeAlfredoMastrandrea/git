@@ -2,18 +2,13 @@
 // en caso contrario, solamente deberá verse el div de color gris..
 import { useState } from "react";
 
-export const BotonMesCondicionalActivado = (propiedades) => {
-
-
-
+export const BotonMesCondicionalActivado = ( propiedades ) => {
+  
   const [active, setActive] = useState(false);
 
   const onButtonClicked = (event, mesElegido) => {
-    //propiedades.setMensageBotónMes(arg);
     setActive(true);
-
-    // desactivo ..
-    //console.log('los meses ', propiedades.arrayMeseAMostrar)
+    
     for (let index = 0; index < propiedades.arrayMeseAMostrar.length; index++) {
       if (propiedades.arrayMeseAMostrar[index] !== mesElegido) {
         //console.log('desactivo : ', propiedades.arrayMeseAMostrar[index]);
@@ -22,7 +17,8 @@ export const BotonMesCondicionalActivado = (propiedades) => {
       document.getElementById(mesElegido).style.background = "#198754";
     }
     // devuelvo al padre el mes elegido..
-    propiedades.cambiarMes(mesElegido);
+    // cuando lo devuelvo, debo armar el objeto mes completo ..!!!
+    propiedades.cambiarMes( mesElegido ); // acá se puede hacer esto --> { mes : mesElegido }
   }
 
   return (

@@ -6,12 +6,14 @@
             {
                 "id": "2021 enero",
                 "año-mes" : "2021",
-                "nombre": "enero"
+                "nombre": "enero",
+                "data" : "datos enero 2021"
             },
             {
                 "id": "2021 mayo",
                 "año-mes" : "2021",
-                "nombre": "mayo"
+                "nombre": "mayo",
+                "data" : "datos mayo 2021"
             }
         ]
     },
@@ -22,17 +24,20 @@
             {
                 "id": "2022 febrero",
                 "año-mes" : "2022",
-                "nombre": "febrero"
+                "nombre": "febrero",
+                "data" : "datos febrero 2022"
             },
             {
                 "id": "2022 agosto",
                 "año-mes" : "2022",
-                "nombre": "agosto"
+                "nombre": "agosto",
+                "data" : "datos agosto 2022"
             },
             {
                 "id": "2022 noviembre",
                 "año-mes" : "2022",
-                "nombre": "noviembre"
+                "nombre": "noviembre",
+                "data" : "datos noviembre 2022"
             }
         ]
     },
@@ -43,22 +48,26 @@
             {
                 "id": "2023 junio",
                 "año-mes" : "2023",
-                "nombre": "junio"
+                "nombre": "junio",
+                "data" : "datos junio 2023"
             },
             {
                 "id": "2023 julio",
                 "año-mes" : "2023",
-                "nombre": "julio"
+                "nombre": "julio",
+                "data" : "datos julio 2023"
             },
             {
                 "id": "2023 agosto",
                 "año-mes" : "2023",
-                "nombre": "agosto"
+                "nombre": "agosto",
+                "data" : "datos agosto 2023"
             },
             {
                 "id": "2023 diciembre",
                 "año-mes" : "2023",
-                "nombre": "diciembre"
+                "nombre": "diciembre",
+                "data" : "datos diciembre 2023"
             }
         ]
     },
@@ -69,22 +78,26 @@
             {
                 "id": "2024 abril",
                 "año-mes" : "2024",
-                "nombre": "abril"
+                "nombre": "abril",
+                "data" : "datos abril 2024"
             },
             {
                 "id": "2024 julio",
                 "año-mes" : "2024",
-                "nombre": "julio"
+                "nombre": "julio",
+                "data" : "datos julio 2024"
             },
             {
                 "id": "2024 agosto",
                 "año-mes" : "2024",
-                "nombre": "agosto"
+                "nombre": "agosto",
+                "data" : "datos agosto 2024"
             },
             {
                 "id": "2024 setiembre",
                 "año-mes" : "2024",
-                "nombre": "setiembre"
+                "nombre": "setiembre",
+                "data" : "datos setiembre 2024"
             }
         ]
     },
@@ -95,12 +108,14 @@
             {
                 "id": "2025 enero",
                 "año-mes" : "2025",
-                "nombre": "enero"
+                "nombre": "enero",
+                "data" : "datos enero 2025"
             },            
             {
                 "id": "2025 noviembre",
                 "año-mes" : "2025",
-                "nombre": "noviembre"
+                "nombre": "noviembre",
+                "data" : "datos noviembre 2025"
             }
         ]
     }

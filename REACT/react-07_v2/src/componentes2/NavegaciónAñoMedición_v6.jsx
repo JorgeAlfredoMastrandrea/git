@@ -11,7 +11,6 @@ import { TableroMeses_v3 } from '../componentes2/TableroMeses_v3';
 
 export const NavegaciónAñoMedición_v6 = (propiedades) => {
 
-
     // el prop que traer el json con los años y mediciones
     const { navLinkAñoMedicion } = propiedades;
     // el largo total del objeto json (cantidad de objetos dentro del json)
@@ -29,50 +28,37 @@ export const NavegaciónAñoMedición_v6 = (propiedades) => {
     // el mes seleccionado por el sistema .. en un principio sería el último mes del operativo !!
     const [mesSeleccionadoSistema, setMesSeleccionadoSistema] = useState(ultimoMes);
     // el objeto completo de año y meses, solamente del que se muestra en el objeto de navegación ...
-    const [añoOperativoCompleto , setAñoOperativoCompleto] = useState(Object.values(navLinkAñoMedicion).at(lrg));
-
-    console.log('objeto completo de años y meses : ', navLinkAñoMedicion);
-    console.log('longitud Objeto Nav Link Año Medicion : ', longitudObjetoNavLinkAñoMedicion);
-    console.log('largo del objeto menos 1 : ', lrg);
-    console.log('año operativo : ', añoOperativo); // al principio muestra el último operativo hecho ...
-    console.log('los meses a mostrar del último operativo : ', meseAMostrar);
-    console.log('último mes del último año del operativo : ', ultimoMes);
-    console.log('mes seleccioando por el sistema : ', mesSeleccionadoSistema); // acá una diferencia con respecto al anterior.. el mes seleccionado es el último medido
-    console.log('el objeto completo de año y meses, solamente del que se muestra en el objeto de navegación : ' , añoOperativoCompleto);
-
+    const [añoOperativoCompleto, setAñoOperativoCompleto] = useState(Object.values(navLinkAñoMedicion).at(lrg));    
 
     const onButtonClickedBotonAñoAnterior = (argumentoQueVieneDelComponenteBotonAnterior) => {
         const esPrimerAño = ptrAño === 0;
         const nuevoAño = esPrimerAño ? Object.keys(navLinkAñoMedicion).length - 1 : ptrAño - 1;
-        
-        setAñoOperativoCompleto(Object.values(navLinkAñoMedicion).at(nuevoAño));
-        setPtrAño(nuevoAño);
-        setAñoOperativo((Object.values(navLinkAñoMedicion).at(nuevoAño)).id);
-        setMesSeleccionadoSistema(ultimoMes)
-        setUltimoMes(ultimoMes)
-        //setUltimoMes(((Object.values(navLinkAñoMedicion).at(nuevoAño).meses).at(((Object.values(navLinkAñoMedicion).at(nuevoAño).meses)).length - 1)).nombre);
-        setMesesAMostrar((Object.values(navLinkAñoMedicion).at(nuevoAño)).meses);
-        
-        console.log('B. Anterior -- : ', ptrAño, ' ', nuevoAño, ' ', argumentoQueVieneDelComponenteBotonAnterior, ' ', Object.values(navLinkAñoMedicion).at(nuevoAño), ' ', (Object.values(navLinkAñoMedicion).at(nuevoAño).meses), ' ', ((Object.values(navLinkAñoMedicion).at(nuevoAño).meses)).length, ' ', ((Object.values(navLinkAñoMedicion).at(nuevoAño).meses).at(((Object.values(navLinkAñoMedicion).at(nuevoAño).meses)).length - 1)).nombre)
+        setGeneral(nuevoAño);
     }
 
     const onButtonClickedBotonAñoSiguiente = (argumentoQueVieneDelComponenteBotonSiguiente) => {
         const esUltimoAño = ptrAño === Object.keys(navLinkAñoMedicion).length - 1;
         const nuevoAño = esUltimoAño ? 0 : ptrAño + 1;
-        
+        setGeneral(nuevoAño);
+    }
+
+    const setGeneral = (nuevoAño) => {
         setAñoOperativoCompleto(Object.values(navLinkAñoMedicion).at(nuevoAño));
         setPtrAño(nuevoAño);
         setAñoOperativo((Object.values(navLinkAñoMedicion).at(nuevoAño)).id);
-        setMesSeleccionadoSistema(ultimoMes)
-        setUltimoMes(ultimoMes)
-        //setUltimoMes(((Object.values(navLinkAñoMedicion).at(nuevoAño).meses).at(((Object.values(navLinkAñoMedicion).at(nuevoAño).meses)).length - 1)).nombre);
+        setUltimoMes(((Object.values(navLinkAñoMedicion).at(nuevoAño).meses).at(((Object.values(navLinkAñoMedicion).at(nuevoAño).meses)).length - 1)).nombre);
+        setMesSeleccionadoSistema(((Object.values(navLinkAñoMedicion).at(nuevoAño).meses).at(((Object.values(navLinkAñoMedicion).at(nuevoAño).meses)).length - 1)).nombre);
         setMesesAMostrar((Object.values(navLinkAñoMedicion).at(nuevoAño)).meses);
-        console.log('B. Siguiente -- : ', ptrAño, ' ', nuevoAño, ' ', argumentoQueVieneDelComponenteBotonSiguiente, ' ', Object.values(navLinkAñoMedicion).at(nuevoAño), ' ', (Object.values(navLinkAñoMedicion).at(nuevoAño).meses), ' ', ((Object.values(navLinkAñoMedicion).at(nuevoAño).meses)).length, ' ', ((Object.values(navLinkAñoMedicion).at(nuevoAño).meses).at(((Object.values(navLinkAñoMedicion).at(nuevoAño).meses)).length - 1)).nombre)
     }
 
+    const tableroMesesYAñoANavegacionMedicion = (datososObjetoTableroMesesConAño) => {
 
-
-
+        if (datososObjetoTableroMesesConAño !== undefined) {            
+            console.log('NavegaciónAñoMedición_v6 ------- objeto ----------> : ', datososObjetoTableroMesesConAño)
+            setUltimoMes(datososObjetoTableroMesesConAño.nombre);
+            setShow(false);
+        }
+    }
 
     const [isClicked, setIsClicked] = useState(false);
     const [show, setShow] = useState(false);
@@ -84,10 +70,6 @@ export const NavegaciónAñoMedición_v6 = (propiedades) => {
     }
 
     const handleClose = (event) => {
-        // acá puedo pasar el resultado del mes al componente hermano que muestra el mes ...
-        console.log('handleClose -------> :  ', mesSeleccionado);
-        //console.log('desde NavegacionAñoMecion_v5 dice --> el mes es : ', mesSeleccioando)
-        //cambiarMes(mesSeleccioando);
         setShow(false);
     }
 
@@ -105,6 +87,7 @@ export const NavegaciónAñoMedición_v6 = (propiedades) => {
                         </div>
                         {isClicked && (
                             <Modal
+                            
                                 key="keyModal"
                                 id="modalAñoMes"
                                 size="sm"
@@ -113,9 +96,7 @@ export const NavegaciónAñoMedición_v6 = (propiedades) => {
                                 dialogClassName="modal-90w"
                                 show={show}
                                 onHide={handleClose}>
-                                <Modal.Header closeButton>
-                                    <Modal.Title>ciclo lectivo y mes</Modal.Title>
-                                </Modal.Header>
+                                
                                 <Modal.Body>
                                     <div key="tarjeta-año-meses-key" id="tarjeta-año-meses" className="card border-primary bg-white">
                                         <div key="card-body-key" className="card-body px-3 py-1">
@@ -134,9 +115,10 @@ export const NavegaciónAñoMedición_v6 = (propiedades) => {
 
                                             <div key="los-meses-key" className="meses text-center p-0">
                                                 {/* le debo mandar el objeto completo de año y meses, no solamente los meses ...*/}
-                                                <TableroMeses_v3 
+                                                <TableroMeses_v3
                                                     añoOperativoCompleto={añoOperativoCompleto}
-                                                    mesSeleccionadoSistema={mesSeleccionadoSistema}>
+                                                    ultimoMes={ultimoMes}
+                                                    tableroMesesYAñoANavegacionMedicion={tableroMesesYAñoANavegacionMedicion}>
                                                 </TableroMeses_v3>
 
                                             </div>
@@ -145,9 +127,6 @@ export const NavegaciónAñoMedición_v6 = (propiedades) => {
                                     </div>
                                 </Modal.Body>
                                 <Modal.Footer>
-                                    <Button variant="primary" onClick={(event) => handleClose(event)}>
-                                        Aceptar
-                                    </Button>
                                 </Modal.Footer>
                             </Modal >
                         )
