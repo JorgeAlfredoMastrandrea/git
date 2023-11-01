@@ -33,36 +33,38 @@ export const NavegaciónAñoMedición_v6 = (propiedades) => {
     const firstBlood = () => {
         console.log('viva Rambooo concha su madre!!!');
         // cuando este componente se monta por primera vez, se lee el último mes de la última medición
-        propiedades.gettCursosYDivisiones(((Object.values(navLinkAñoMedicion).at(lrg).meses).at(((Object.values(navLinkAñoMedicion).at(lrg).meses)).length - 1)).data);
+        propiedades.gettCursosYDivisiones(((Object.values(navLinkAñoMedicion).at(lrg).meses).at(((Object.values(navLinkAñoMedicion).at(lrg).meses)).length - 1)).cursosdivisiones);
     }
 
     const onButtonClickedBotonAñoAnterior = (argumentoQueVieneDelComponenteBotonAnterior) => {
         const esPrimerAño = ptrAño === 0;
         const nuevoAño = esPrimerAño ? Object.keys(navLinkAñoMedicion).length - 1 : ptrAño - 1;
-        setGeneral(nuevoAño);
+        setGeneral(nuevoAño , ptrAño);
     }
 
     const onButtonClickedBotonAñoSiguiente = (argumentoQueVieneDelComponenteBotonSiguiente) => {
         const esUltimoAño = ptrAño === Object.keys(navLinkAñoMedicion).length - 1;
         const nuevoAño = esUltimoAño ? 0 : ptrAño + 1;
-        setGeneral(nuevoAño);
+        setGeneral(nuevoAño , ptrAño);
     }
 
-    const setGeneral = (nuevoAño) => {
+    const setGeneral = (nuevoAño , ptrAño ) => {
         setAñoOperativoCompleto(Object.values(navLinkAñoMedicion).at(nuevoAño));
         setPtrAño(nuevoAño);
         setAñoOperativo((Object.values(navLinkAñoMedicion).at(nuevoAño)).id);
         setUltimoMes(((Object.values(navLinkAñoMedicion).at(nuevoAño).meses).at(((Object.values(navLinkAñoMedicion).at(nuevoAño).meses)).length - 1)).nombre);
         setMesSeleccionadoSistema(((Object.values(navLinkAñoMedicion).at(nuevoAño).meses).at(((Object.values(navLinkAñoMedicion).at(nuevoAño).meses)).length - 1)).nombre);
         setMesesAMostrar((Object.values(navLinkAñoMedicion).at(nuevoAño)).meses);
+        // acá debo ir actualizando la parte de los cursos y divisiones cada vez que pulso las flechas y mostrar el último mes..!        
+        propiedades.gettCursosYDivisiones(((Object.values(navLinkAñoMedicion).at(nuevoAño).meses).at(((Object.values(navLinkAñoMedicion).at(nuevoAño).meses)).length - 1)).cursosdivisiones)
     }
 
     const tableroMesesYAñoANavegacionMedicion = (datososObjetoTableroMesesConAño) => {
         if (datososObjetoTableroMesesConAño !== undefined) {
             //console.log('NavegaciónAñoMedición_v6 ------- objeto ----------> : ', datososObjetoTableroMesesConAño)
             setUltimoMes(datososObjetoTableroMesesConAño.nombre);
-            propiedades.gettCursosYDivisiones(datososObjetoTableroMesesConAño.data);
-            console.log(datososObjetoTableroMesesConAño.data);
+            propiedades.gettCursosYDivisiones(datososObjetoTableroMesesConAño.cursosdivisiones);
+            console.log(datososObjetoTableroMesesConAño.cursosdivisiones);
             setShow(false);
         }
     }

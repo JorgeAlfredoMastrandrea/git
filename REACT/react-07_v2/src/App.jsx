@@ -12,11 +12,21 @@ import { NavegaciónCursoDivisión } from './comṕonentes_navegación_curso_div
 
 function App() {
 
-    const [cursosYDivisiones , setCursosYDivisiones] = useState();    
+    const [cursosYDivisiones, setCursosYDivisiones] = useState();
     const gettCursosYDivisiones = (datosDeNavegaciónAñoMedición_v6) => {
         //console.log('gettCursosYDivisiones : ', datosDeNavegaciónAñoMedición_v6);
         setCursosYDivisiones(datosDeNavegaciónAñoMedición_v6)
     }
+
+    // debo leer por primera vez acá los datos de los cursos y divisiones también ?? para eso uso el :
+    /*
+    {
+                                    cursosYDivisiones &&
+                                    <NavegaciónCursoDivisión
+                                        cursosYDivisiones={cursosYDivisiones}
+                                    />
+                                }
+    */
 
     return (
         <>
@@ -36,9 +46,12 @@ function App() {
 
                             <div className="col-sm-12 col-lg-10 themed-grid-col p-0">
                                 Cursos y divisiones
-                                <NavegaciónCursoDivisión
-                                    cursosYDivisiones={cursosYDivisiones}
-                                />
+                                {
+                                    cursosYDivisiones &&
+                                    <NavegaciónCursoDivisión
+                                        cursosYDivisiones={cursosYDivisiones}
+                                    />
+                                }
                             </div>
                         </div>
 
