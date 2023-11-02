@@ -5,8 +5,8 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { VisorAño } from '../componentes_navegación_año_meses/VisorAño';
 import { VisorMes } from '../componentes_navegación_año_meses/VisorMes';
-import { BotónAñoAnterior } from './BotónAñoAnterior';
-import { BotónAñoSiguiente } from './BotónAñoSiguiente';
+import { BotónAñoAnterior } from '../componentes_navegación_año_meses/BotónAñoAnterior';
+import { BotónAñoSiguiente } from '../componentes_navegación_año_meses/BotónAñoSiguiente';
 import { TableroMeses_v3 } from '../componentes_navegación_año_meses/TableroMeses_v3';
 
 export const NavegaciónAñoMedición_v6 = (propiedades) => {

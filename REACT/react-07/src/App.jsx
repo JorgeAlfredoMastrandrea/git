@@ -52,6 +52,7 @@ function App() {
               </div>
               <div className="col-sm-12 col-lg-8 themed-grid-col p-0">
                 Cursos y divisiones
+                <NavegaciónCursoDivisión navLinksData={navLinksData}/>
 
               </div>
             </div>
