@@ -31,7 +31,7 @@ export const NavegaciónAñoMedición_v6 = (propiedades) => {
     const [añoOperativoCompleto, setAñoOperativoCompleto] = useState(Object.values(navLinkAñoMedicion).at(lrg));
 
     const firstBlood = () => {
-        console.log('viva Rambooo concha su madre!!!');
+        // console.log('viva Rambooo concha su madre!!!');
         // cuando este componente se monta por primera vez, se lee el último mes de la última medición
         propiedades.gettCursosYDivisiones(((Object.values(navLinkAñoMedicion).at(lrg).meses).at(((Object.values(navLinkAñoMedicion).at(lrg).meses)).length - 1)).cursosdivisiones);
     }
@@ -64,7 +64,7 @@ export const NavegaciónAñoMedición_v6 = (propiedades) => {
             //console.log('NavegaciónAñoMedición_v6 ------- objeto ----------> : ', datososObjetoTableroMesesConAño)
             setUltimoMes(datososObjetoTableroMesesConAño.nombre);
             propiedades.gettCursosYDivisiones(datososObjetoTableroMesesConAño.cursosdivisiones);
-            console.log(datososObjetoTableroMesesConAño.cursosdivisiones);
+            //console.log(datososObjetoTableroMesesConAño.cursosdivisiones);
             setShow(false);
         }
     }
@@ -116,6 +116,7 @@ export const NavegaciónAñoMedición_v6 = (propiedades) => {
                                 <Modal.Body>
                                     <div key="tarjeta-año-meses-key" id="tarjeta-año-meses" className="card border-primary bg-white">
                                         <div key="card-body-key" className="card-body px-3 py-1">
+                                            
                                             <div key="barra-key" className="barra-año text-center p-0">
                                                 <BotónAñoAnterior setMensageBotónAñoAnterior={onButtonClickedBotonAñoAnterior} />
                                                 <div key="año-key-a" className="año">
@@ -123,9 +124,11 @@ export const NavegaciónAñoMedición_v6 = (propiedades) => {
                                                 </div>
                                                 <BotónAñoSiguiente setMensageBotónAñoSiguiente={onButtonClickedBotonAñoSiguiente} />
                                             </div>
+                                            
                                             <div key="mes-key-a" className="text-center p-0">
                                                 <VisorMes ultimoMes={ultimoMes} />
                                             </div>
+                                            
                                             <div key="borde-key" className="border-top my-2 "></div>
 
 
@@ -136,7 +139,6 @@ export const NavegaciónAñoMedición_v6 = (propiedades) => {
                                                     ultimoMes={ultimoMes}
                                                     tableroMesesYAñoANavegacionMedicion={tableroMesesYAñoANavegacionMedicion}>
                                                 </TableroMeses_v3>
-
                                             </div>
 
                                         </div>

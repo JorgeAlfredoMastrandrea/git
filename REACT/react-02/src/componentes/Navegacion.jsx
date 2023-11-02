@@ -26,6 +26,7 @@ export const Navegacion = (props) => {
       console.log("running");
       let arr = [...prev];
       arr[subMenuId] = true;
+      console.log('A')
       return arr;
     });
   };
@@ -35,6 +36,7 @@ export const Navegacion = (props) => {
       console.log("running");
       let arr = [...prev];
       arr[subMenuId] = false;
+      console.log('B')
       return arr;
     });
   };

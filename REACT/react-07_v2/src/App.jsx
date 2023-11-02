@@ -9,11 +9,12 @@ import './meses.css';
 import navLinkAñoMedicion from "./medicionesAñosMesesCursosDivisiones.json";
 import { NavegaciónAñoMedición_v6 } from './componentes_navegación_año_meses/NavegaciónAñoMedición_v6';
 import { NavegaciónCursoDivisión } from './componentes_navegación_curso_división/NavegaciónCursoDivisión';
+import { NavegaciónCursoDivisión_v2 } from './componentes_navegación_curso_división/NavegaciónCursoDivisión_v2';
 import { DataContainer } from './componentes_contenedor_datos/DataContainer';
 
 function App() {
 
-    const [dataSeleccionada, cambiarDataSeleccionada] = useState(); // ???
+    const [dataSeleccionadaPorCurso, cambiarDataSeleccionadaPorCurso] = useState(); // ???
     const [cursosYDivisiones, setCursosYDivisiones] = useState();
     const gettCursosYDivisiones = (datosDeNavegaciónAñoMedición_v6) => {
         //console.log('gettCursosYDivisiones : ', datosDeNavegaciónAñoMedición_v6);
@@ -29,7 +30,7 @@ function App() {
                                     />
                                 }
     */
-    const onBuscarDatosSelecionados = (dataSeleccionada) => {
+    const onBuscarDatosSelecionadaPorCurso = (dataSeleccionada) => {
         console.log('data seleccionada ------ >' , dataSeleccionada)
     }
 
@@ -52,7 +53,7 @@ function App() {
                             cursosYDivisiones &&
                             <NavegaciónCursoDivisión
                                 cursosYDivisiones={cursosYDivisiones}
-                                cambiarDataSeleccionada={dataSeleccionada => cambiarDataSeleccionada(dataSeleccionada)}
+                                onBuscarDatosSelecionadaPorCurso={onBuscarDatosSelecionadaPorCurso}
                             />
                         }
                     </div>
@@ -75,7 +76,7 @@ function App() {
             </div>
             {
                 // desactivo todos los meses que no ha sido seleccionados ...               
-                onBuscarDatosSelecionados(dataSeleccionada)
+                //onBuscarDatosSelecionadaPorCurso(dataSeleccionadaPorCurso)                
             }
         </>
     )
