@@ -1,0 +1,10 @@
+[
+    {
+        "id":1,
+        "título":"Hola, andres se la come !!!",
+        "gráfico":{
+            "tipo":"barras apiladas",
+            "datos":[0,1,2,3]
+        }
+    }
+]

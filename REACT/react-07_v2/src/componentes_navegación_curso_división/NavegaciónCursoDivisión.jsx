@@ -29,7 +29,8 @@ export const NavegaciónCursoDivisión = (props) => {
         })
       };
       document.getElementById(elementos.id).style.background = "magenta";
-      props.onBuscarDatosSelecionadaPorCurso('datos por curso : x ')
+      // agregar el enlace correspondiente como debe ser .. no borrar la linea de abajo
+      // props.onBuscarDatosSelecionadaPorCurso('datos por curso : x ')
       return arr;
     });
   };
@@ -46,8 +47,8 @@ export const NavegaciónCursoDivisión = (props) => {
       })
     };
     // ... y al final dejo en naranja al que he pulsado
-    document.getElementById(divisionID).style.background = "orange";
-    props.onBuscarDatosSelecionadaPorCurso('--- datos por división : ' + divisionID + ' ' + linkDatosPorDivisión )
+    document.getElementById(divisionID).style.background = "orange";    
+    props.onBuscarDatosSelecionadaPorCurso(linkDatosPorDivisión)
   };
 
   return (
@@ -58,13 +59,13 @@ export const NavegaciónCursoDivisión = (props) => {
             <div key="divExt2" className="d-inline-flex align-items-center">
               <div key={el.id} className="px-3 ">
                 <button id={el.id} className="btn  align-items-center rounded border-1 collapsed px-0 py-0" data-bs-toggle="collapse" data-bs-target="#" aria-expanded="true">
-                  <a href="#" className="m-1 px-2 py-1 h4 link-body-emphasis text-decoration-none rounded" onClick={(event) => onButtonClickedCurso(data, i, el, el.id, true)}><small>{el.curso}</small></a>
+                  <a href="#" className="m-1 px-2 py-1 h5 link-body-emphasis text-decoration-none rounded" onClick={(event) => onButtonClickedCurso(data, i, el, el.id, true)}><small>{el.curso}</small></a>
                 </button>
                 {mostrarSelección[el.id] && el.división.map((ele) => {
                   return (
                     <div id={ele.id} key={ele.id} className="btn p-0 rounded border-0 m-1">
                       <button type="button" className="btn p-0 " data-bs-toggle="collapse" data-bs-target="#" aria-expanded="true">
-                        <a href="#" className="text-dark h5 p-1" onClick={(event) => onButtonClickedDivision(el.división, el.id, ele.id, ele.linkDatosPorDivisión ,true)}><small>{ele.nombre}</small></a>
+                        <a href="#" className="text-dark h6 p-1" onClick={(event) => onButtonClickedDivision(el.división, el.id, ele.id, ele.linkDatosPorDivisión ,true)}><small>{ele.nombre}</small></a>
                       </button>
                     </div>
                   );

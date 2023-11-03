@@ -5,9 +5,16 @@ import App from './App.jsx'
 import './assets/css/bootstrap.min.css';
 import './assets/js/color-modes.js';
 
+/*
+le he saco estos :
+
+<React.StrictMode>
+</React.StrictMode>,
+
+*/
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  
     <App />
-  </React.StrictMode>,
+  
 )
