@@ -11,13 +11,13 @@
 import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
+//import { useMemo } from 'react';
 
 export const DataProvider = (props) => {
 
   const [data, setData] = useState([]);
 
-  // un array que va a mantener objetos que son los datos que se van leyendo
-  const [dataObjectos , setDataObjetos ] = useState([])
+
 
   const fetchData = async () => {
     try {
@@ -25,17 +25,16 @@ export const DataProvider = (props) => {
       const data = await response.json();
       setData(data);
       // console.log(data)
-      
-      setDataObjetos(dataObjectos.push(data))
-
-      console.log('dataObjectos ..... : ' , dataObjectos)
+      // un array que va a mantener objetos que son los datos que se van leyendo
+      // const dataObjectos = useMemo(() => dataObjectos.push(data) , [])
+      // console.log('dataObjectos ..... : ', dataObjectos)
 
     } catch (error) {
       console.log(error)
     }
   }
 
-  
+
 
   // siempre se va a quedar escuchando los cambios, cada vez que se manda un url diferente, se eejecuta useEffect
   useEffect(() => {
@@ -60,7 +59,7 @@ export const DataProvider = (props) => {
           // pero lo que debe hacer es guardar el resultado en un objeto que él mantiene (DataProvider)..
         }
         {
-          data && data.length>0 && data.map(item =>
+          data && data.length > 0 && data.map(item =>
             <div key={item.id}>
               {item.título}
             </div>
