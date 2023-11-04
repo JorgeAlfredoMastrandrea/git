@@ -1,0 +1,221 @@
+https://www.pluralsight.com/guides/how-to-render-a-component-dynamically-based-on-a-json-config
+
+Introduction
+React makes it super easy to create and render components dynamically. It enables us to build large, fast web apps with modern JavaScript. 
+It has scaled pretty well for the folks at Facebook, Instagram, and many others. One of the coolest features is that you don't have to use JSX, 
+a template extension to JavaScript, if you don't want to.
+
+In this guide, instead of using JSX to render the component, 
+we will use React.createElement() and build the component based on a JSON config. As an example for this guide, 
+we'll use the Reactstrap library and render a card component.
+
+const CardConfig = {
+  component: "card",
+  children: [
+    {
+      component: "img",
+      src:
+        "https://images.pexels.com/photos/2877188/pexels-photo-2877188.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    },
+    {
+      component: "body",
+      children: [
+        {
+          component: "title",
+          children: "This is a title"
+        },
+        {
+          component: "subtitle",
+          children: "This is the subtitle"
+        },
+        {
+          component: "text",
+          children:
+            "Some quick example text to build on the card title and make up the bulk of the card's content."
+        },
+        {
+          component: "button",
+          children: "Click Me!"
+        }
+      ]
+    }
+  ]
+};
+
+This JSON structure corresponds to how the components are to be nested and rendered on the page or screen. 
+Notice that I have added a component key in the config so that we can map it to the respective Reactstrap component. 
+There's also a children key, which specifies all the child components for the current component. 
+Its value can be either a string or an array of components.
+
+Other than that, we can have additional keys that we want to pass to the component as a prop. 
+For example, here, the src key in the image component will be given as a prop.
+
+Ideally, the JSON config should be rendered as shown below.
+
+<div class="card">
+  <img
+    src="https://images.pexels.com/photos/2877188/pexels-photo-2877188.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500"
+    class="card-img"
+  />
+  <div class="card-body">
+    <div class="card-title">This is a title</div>
+    <div class="card-subtitle">This is the subtitle</div>
+    <p class="card-text">
+      Some quick example text to build on the card title and make up the bulk of
+      the card's content.
+    </p>
+    <button class="btn btn-secondary">Click Me!</button>
+  </div>
+</div>
+
+Write the Renderer Function
+To render the components based on the component key in the JSON config, 
+we first need to create an object that maps the components with the component key.
+
+const KeysToComponentMap = {
+  card: Card,
+  img: CardImg,
+  text: CardText,
+  body: CardBody,
+  title: CardTitle,
+  subtitle: CardSubtitle,
+  button: Button
+};
+
+As you can see, I have mapped the component key with the corresponding Reactstrap component.
+
+At the top, we will import all the required components.
+
+import {
+  Card,
+  CardImg,
+  CardText,
+  CardBody,
+  CardTitle,
+  CardSubtitle,
+  Button
+} from "reactstrap";
+
+In the renderer() function, we will first check if the key exists in the KeysToComponentMap object.
+
+const renderer = config => {
+  if (typeof KeysToComponentMap[config.component] !== "undefined") {
+    // ..
+  }
+};
+
+Next we will use the React.createElement() function to render the component.
+
+React.createElement()
+The React.createElement() function creates and returns a new React element of the given type.
+
+React.createElement(
+  type, 
+  [props], 
+  [...children]
+);
+
+It takes in three arguments: type, props, and children.
+
+The type here is the React component that we want to render; props is the data or properties that we want to pass on to the component, 
+and children is another component that we want to pass between the DOM elements.
+
+The JSX we write in React gets compiled to a React.createElement() function call with the help of a babel compiler.
+
+Let's take a look at a simple example.
+
+let WelcomeText = React.createElement(
+  "h1",
+  { style: { color: "blue" } },
+  "This is a welcome text"
+);
+
+The above gets rendered in the DOM as
+
+<h1 style="color:blue">
+  This is a welcome text
+</h1>
+
+Now that you understand how React.createElement() method works, let's get back to our original quest.
+
+Into the createElement function, we will pass the component that we want to render as the first argument, i.e., 
+KeysToComponentMap[config.component]. Notice that here to access the object, we are using the bracket [] notation and not the dot . notation.
+
+function renderer(config) {
+  if (typeof KeysToComponentMap[config.component] !== "undefined") {
+    return React.createElement(KeysToComponentMap[config.component]);
+  }
+}
+
+The bracket [] notation allows us to dynamically access a property using a variable. 
+Hence, it is easier to get the component this way, rather than having a switch case block to determine which component to render.
+
+If you run the code we have so far, you will notice that the <Card /> component gets rendered onto the DOM. 
+That means we are going in the right direction.
+
+<div class="card-container">
+  <div class="card"></div>
+</div>
+
+Now, let's take this further and render the child components as well.
+
+We need to check if the child components exist. Then map over each child component and pass it on to the renderer() function, 
+making it recursive.
+
+config.children && config.children.map(c => renderer(c));
+
+This looks fine. Let's try it out.
+
+function renderer(config) {
+  if (typeof KeysToComponentMap[config.component] !== "undefined") {
+    return React.createElement(
+      KeysToComponentMap[config.component],
+      {},
+      {
+        config.children && config.children.map(c => renderer(c))
+      }
+    );
+  }
+}
+
+Bummer! If you got the error config.children.map is not a function, don't worry; that's because all children are not the type of an array, 
+and we have not taken that into consideration. 
+For instance, the button component has children of string type. So let's rewrite our condition.
+
+
+function renderer(config) {
+  if (typeof KeysToComponentMap[config.component] !== "undefined") {
+    return React.createElement(
+      KeysToComponentMap[config.component],
+      {},
+      {
+        config.children &&
+        (typeof config.children === "string"
+          ? config.children
+          : config.children.map(c => renderer(c)))
+      }
+    );
+  }
+}
+
+Yay! We got the child components to render. But wait, we still have an image component that isn't showing up.
+
+For that, we need to pass the src as a property in the prop argument.
+
+function renderer(config) {
+  if (typeof KeysToComponentMap[config.component] !== "undefined") {
+    return React.createElement(
+      KeysToComponentMap[config.component],
+      {
+        src: config.src
+      },
+      {
+        config.children &&
+        (typeof config.children === "string"
+          ? config.children
+          : config.children.map(c => renderer(c)))
+      }
+    );
+  }
+}
+
