@@ -88,7 +88,7 @@ export const ReactPdfPrint = () => {
         </div>  
         
         <p style={{textAlign:"justify"}}>
-            Andres es un mentiroso que no le importa el trabajo Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
             Molestias, aperiam, nihil blanditiis nobis ad modi delectus nemo vel enim dignissimos in. 
             Itaque quos nisi autem error nemo pariatur provident dolore?
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
