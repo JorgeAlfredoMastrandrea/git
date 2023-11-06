@@ -13,15 +13,11 @@ import { Párrafo } from './Párrafo';
 import { Fila } from '../componentes/ComponentesGrid/Fila';
 import { Columna } from '../componentes/ComponentesGrid/Columna';
 import { Barras } from '../componentes/ComponentesGoogleCharts/Barras';
-import { BarrasData } from '../componentes/ComponentesGoogleCharts/BarrasData';
-import { BarrasOptions } from '../componentes/ComponentesGoogleCharts/BarrasOptions';
 
 const KeysToComponentMap = {
     fila: Fila,
     columna: Columna,
     barras: Barras,
-    barras_data : BarrasData,
-    barras_options : BarrasOptions,
     párrafo: Párrafo,
 };
 
@@ -39,7 +35,6 @@ export const RenderizarComponentes = (config) => {
                     ? config.children
                     : config.children.map(c => render(c))
                 )
-
             );
         }
     }
