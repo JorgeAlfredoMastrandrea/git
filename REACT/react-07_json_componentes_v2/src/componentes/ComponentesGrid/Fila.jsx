@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Fila = ({ children }) => {
   return (
-    <div className="row text-center">
+    <div className="row text-center align-items-center equal-height-row" >
       {children}
     </div>
   )

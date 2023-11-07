@@ -1,8 +1,9 @@
 import React from 'react'
 
-export const Columna = ({ children }) => {
+export const Columna = ( { children }) => {
+  
   return (
-    <div className="col-6">
+    <div className="col text-center align-middle equal-height-col ">
       {children}
     </div>
   )

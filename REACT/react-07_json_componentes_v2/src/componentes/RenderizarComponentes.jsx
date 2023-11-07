@@ -13,12 +13,16 @@ import { Párrafo } from './Párrafo';
 import { Fila } from '../componentes/ComponentesGrid/Fila';
 import { Columna } from '../componentes/ComponentesGrid/Columna';
 import { Barras } from '../componentes/ComponentesGoogleCharts/Barras';
+import { BarrasVerticalesChartJS } from './ComponentesChartJS/BarrasVerticalesChartJS';
+import { BarrasHorizontalesChartJS } from './ComponentesChartJS/BarrasHorizontalesChartJS';
 
 const KeysToComponentMap = {
     fila: Fila,
     columna: Columna,
     barras: Barras,
     párrafo: Párrafo,
+    barrasVerticalesChartJS : BarrasVerticalesChartJS,
+    barrasHorizontalesChartJS : BarrasHorizontalesChartJS,
 };
 
 export const RenderizarComponentes = (config) => {

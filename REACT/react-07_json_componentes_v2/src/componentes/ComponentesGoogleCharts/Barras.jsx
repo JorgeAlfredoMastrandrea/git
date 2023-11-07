@@ -3,18 +3,18 @@
 import React from 'react'
 import { Chart } from 'react-google-charts';
 
-export const Barras = (children) => {
+export const Barras = (children) => { 
 
   return (
     <>
       <div>
         Barras
         <Chart
-          chartType="Bar"
-          width="148mm"
-          height="400px"
+          chartType="Bar"          
           data={children.src[0]}
           options={children.src[1]}
+          width={ children.src[2] }
+          height={ children.src[3] }
         />
       </div>
     </>
