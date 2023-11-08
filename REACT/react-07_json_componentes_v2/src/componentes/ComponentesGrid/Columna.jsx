@@ -1,10 +1,12 @@
 import React from 'react'
 
-export const Columna = ( { children }) => {
-  
+export const Columna = ({ children }) => {
+
   return (
-    <div className="col text-center align-middle equal-height-col ">
-      {children}
-    </div>
+    <>
+      <div className="col-sm text-center align-middle">
+        {children}
+      </div>
+    </>
   )
 }

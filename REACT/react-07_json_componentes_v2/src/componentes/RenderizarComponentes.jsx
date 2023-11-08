@@ -1,3 +1,4 @@
+
 import React from 'react'
 import {
     Card,
@@ -12,17 +13,13 @@ import {
 import { Párrafo } from './Párrafo';
 import { Fila } from '../componentes/ComponentesGrid/Fila';
 import { Columna } from '../componentes/ComponentesGrid/Columna';
-import { Barras } from '../componentes/ComponentesGoogleCharts/Barras';
-import { BarrasVerticalesChartJS } from './ComponentesChartJS/BarrasVerticalesChartJS';
-import { BarrasHorizontalesChartJS } from './ComponentesChartJS/BarrasHorizontalesChartJS';
+import { BarrasChartJS } from '../componentes/ComponentesChartJS/BarrasChartJS';
 
 const KeysToComponentMap = {
     fila: Fila,
     columna: Columna,
-    barras: Barras,
     párrafo: Párrafo,
-    barrasVerticalesChartJS : BarrasVerticalesChartJS,
-    barrasHorizontalesChartJS : BarrasHorizontalesChartJS,
+    barrasChartJS : BarrasChartJS,
 };
 
 export const RenderizarComponentes = (config) => {

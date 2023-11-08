@@ -1,10 +1,10 @@
 import React from 'react'
 
-export const Párrafo = ({ children }) => {
+export const Párrafo = ({ src }) => {
     return (
         <>
-            <p>
-                {children}
+            <p className={src.className}>
+                { src.texto }
             </p>
         </>
     )
