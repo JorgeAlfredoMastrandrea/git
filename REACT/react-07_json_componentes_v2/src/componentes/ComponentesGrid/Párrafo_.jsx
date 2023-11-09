@@ -1,11 +1,9 @@
 import React from 'react'
 
-export const Párrafo_ = ({ src, className, children }) => {
+export const Párrafo_ = ({ src, className, ky, children }) => {
     return (
-        <>
-            <p  key="culo" className={className}>
-                 {src}
-            </p>
-        </>
+        <p key={ky} className={className}>
+            {src}
+        </p>
     )
 }

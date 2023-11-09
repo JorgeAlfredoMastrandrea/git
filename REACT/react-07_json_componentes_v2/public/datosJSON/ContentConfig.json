@@ -1,0 +1,365 @@
+[
+    {
+        "component": "fila",
+        "src": "datos para fila",
+        "className": "row text-center align-items-center",
+        "ky": "1",
+        "children": [
+            {
+                "component": "columna",
+                "src": "datos adicionales para columna",
+                "className": "col-sm text-center align-middle bg-primary text-white",
+                "ky": "2",
+                "children": [
+                    {
+                        "component": "párrafo",
+                        "src": "Tipos de diagramas de barras"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "component": "fila",
+        "src": "datos para fila",
+        "className": "row text-center align-items-center",
+        "ky": "1",
+        "children": [
+            {
+                "component": "columna",
+                "src": "datos adicionales para columna",
+                "className": "col-sm text-center align-middle",
+                "ky": "2",
+                "children": [
+                    {
+                        "component": "párrafo",
+                        "src": "Barras Verticales"
+                    },
+                    {
+                        "component": "barrasChartJS",
+                        "className": "className",
+                        "ky": "ky",
+                        "src": "src",
+                        "responsive": true,
+                        "opcionesBarra": [
+                            {
+                                "responsive": true,
+                                "maintainAspectRatio": true,
+                                "aspectRatio": 0.8,                                
+                                "plugins": {
+                                    "legend": {
+                                        "position": "top"
+                                    },
+                                    "title": {
+                                        "display": true,
+                                        "text": "Ejemplo 2"
+                                    }
+                                }
+                            }
+                        ],
+                        "datosBarra": [
+                            {
+                                "labels": [
+                                    "January",
+                                    "February",
+                                    "March",
+                                    "April",
+                                    "May",
+                                    "June",
+                                    "July"
+                                ],
+                                "datasets": [
+                                    {
+                                        "label": "Dataset 1",
+                                        "data": [
+                                            100,
+                                            200,
+                                            300,
+                                            400,
+                                            500,
+                                            600,
+                                            700
+                                        ],
+                                        "backgroundColor": "rgba(255, 99, 132, 0.5)"
+                                    },
+                                    {
+                                        "label": "Dataset 2",
+                                        "data": [
+                                            150,
+                                            250,
+                                            350,
+                                            450,
+                                            550,
+                                            650,
+                                            750
+                                        ],
+                                        "backgroundColor": "rgba(53, 162, 235, 0.5)"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "component": "columna",
+                "src": "datos adicionales para columna",
+                "className": "col-sm text-center align-middle",
+                "ky": "3",
+                "children": [
+                    {
+                        "component": "párrafo",
+                        "src": "Barras Horizontales",
+                        "className": "",
+                        "ky": "4"
+                    },
+                    {
+                        "component": "barrasChartJS",
+                        "className": "className",
+                        "ky": "ky",
+                        "src": "src",
+                        "responsive": true,
+                        "opcionesBarra": [
+                            {   
+                                "porcentaje":true,                             
+                                "responsive": true,
+                                "maintainAspectRatio": true,
+                                "aspectRatio": 0.8,
+                                "indexAxis": "y",
+                                "plugins": {
+                                    "legend": {
+                                        "position": "top"
+                                    },
+                                    "title": {
+                                        "display": true,
+                                        "text": "Ejemplo 2"
+                                    }
+                                }
+                            }
+                        ],
+                        "datosBarra": [
+                            {
+                                "labels": [
+                                    "January",
+                                    "February",
+                                    "March",
+                                    "April",
+                                    "May",
+                                    "June",
+                                    "July"
+                                ],
+                                "datasets": [
+                                    {
+                                        "label": "Dataset 1",
+                                        "data": [
+                                            100,
+                                            200,
+                                            300,
+                                            400,
+                                            500,
+                                            600,
+                                            700
+                                        ],
+                                        "backgroundColor": "rgba(255, 99, 132, 0.5)"
+                                    },
+                                    {
+                                        "label": "Dataset 2",
+                                        "data": [
+                                            150,
+                                            250,
+                                            350,
+                                            450,
+                                            550,
+                                            650,
+                                            750
+                                        ],
+                                        "backgroundColor": "rgba(53, 162, 235, 0.5)"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "component": "columna",
+                "src": "datos adicionales para columna",
+                "className": "col-sm text-center align-middle",
+                "ky": "3",
+                "children": [
+                    {
+                        "component": "párrafo",
+                        "src": "Barras Apiladas",
+                        "className": "",
+                        "ky": "4"
+                    },
+                    {
+                        "component": "barrasChartJS",
+                        "className": "className",
+                        "ky": "ky",
+                        "src": "src",
+                        "responsive": true,
+                        "opcionesBarra": [
+                            {                                
+                                "scales": {
+                                    "x": {
+                                        "stacked": true
+                                    },
+                                    "y": {
+                                        "stacked": true
+                                    }
+                                },
+                                "responsive": true,
+                                "maintainAspectRatio": true,
+                                "aspectRatio": 0.8,
+                                "plugins": {
+                                    "legend": {
+                                        "position": "top"
+                                    },
+                                    "title": {
+                                        "display": true,
+                                        "text": "Ejemplo 2"
+                                    }
+                                }
+                            }
+                        ],
+                        "datosBarra": [
+                            {
+                                "labels": [
+                                    "January",
+                                    "February",
+                                    "March",
+                                    "April",
+                                    "May",
+                                    "June",
+                                    "July"
+                                ],
+                                "datasets": [
+                                    {
+                                        "label": "Dataset 1",
+                                        "data": [
+                                            100,
+                                            200,
+                                            300,
+                                            400,
+                                            500,
+                                            600,
+                                            700
+                                        ],
+                                        "backgroundColor": "rgba(255, 99, 132, 0.5)"
+                                    },
+                                    {
+                                        "label": "Dataset 2",
+                                        "data": [
+                                            150,
+                                            250,
+                                            350,
+                                            450,
+                                            550,
+                                            650,
+                                            750
+                                        ],
+                                        "backgroundColor": "rgba(53, 162, 235, 0.5)"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "component": "columna",
+                "src": "datos adicionales para columna",
+                "className": "col-sm text-center align-middle",
+                "ky": "3",
+                "children": [
+                    {
+                        "component": "párrafo",
+                        "src": "Barras Agrupadas",
+                        "className": "",
+                        "ky": "4"
+                    },
+                    {
+                        "component": "barrasChartJS",
+                        "className": "className",
+                        "ky": "ky",
+                        "src": "src",
+                        "responsive": true,
+                        "opcionesBarra": [                            
+                            {
+                                "porcentaje":true,
+                                "scales": {
+                                    "x": {
+                                        "stacked": true
+                                    },
+                                    "y": {
+                                        "stacked": true
+                                    }
+                                },
+                                "responsive": true,
+                                "maintainAspectRatio": true,
+                                "aspectRatio": 0.8,                                
+                                "plugins": {
+                                    "legend": {
+                                        "position": "top"
+                                    },
+                                    "title": {
+                                        "display": true,
+                                        "text": "Ejemplo 2"
+                                    }
+                                }
+                            }
+                        ],
+                        "datosBarra": [
+                            {
+                                "labels": [
+                                    "3° Grado",
+                                    "4° Grado",
+                                    "5° Grado"
+                                ],
+                                "datasets": [
+                                    {
+                                        "label": "Crítico",
+                                        "data": [
+                                            40,
+                                            30,
+                                            20
+                                        ],
+                                        "backgroundColor": "rgba(32, 81, 89, 0.5)"
+                                    },
+                                    {
+                                        "label": "Básico",
+                                        "data": [
+                                            20,
+                                            10,
+                                            40
+                                        ],
+                                        "backgroundColor": "rgba(48, 122, 138, 0.5)"
+                                    },
+                                    {
+                                        "label": "Medio",
+                                        "data": [
+                                            10,
+                                            50,
+                                            20
+                                        ],
+                                        "backgroundColor": "rgba(74, 172, 174, 0.5)"
+                                    },
+                                    {
+                                        "label": "Avanzado",
+                                        "data": [
+                                            30,
+                                            10,
+                                            20
+                                        ],
+                                        "backgroundColor": "rgba(157, 222, 220, 0.5)"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

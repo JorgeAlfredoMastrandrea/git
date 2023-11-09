@@ -1,13 +1,11 @@
 import React from 'react'
 
-export const Fila_ = ({ src, className,  children }) => {
+export const Fila_ = ({ src, className, ky, children }) => {
     return (
-        <>
-            <div key={src} className={className}>
-                {/* Aquí puedes utilizar la propiedad "src" y renderizar otros elementos */}
-                {children}
-            </div>
-        </>
+        <div key={ky} className={className}>
+            {/* Aquí puedes utilizar la propiedad "src" y renderizar otros elementos */}
+            {children}
+        </div>
     )
 }
 

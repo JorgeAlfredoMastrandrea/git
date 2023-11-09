@@ -15,30 +15,36 @@ import {
 import { Párrafo_ } from '../componentes/ComponentesGrid/Párrafo_';
 import { Fila_ } from '../componentes/ComponentesGrid/Fila_';
 import { Columna_ } from '../componentes/ComponentesGrid/Columna_';
+import { BarrasChartJS } from '../componentes/ComponentesChartJS/BarrasChartJS';
 
 const KeysToComponentMap = {
   fila: Fila_,
   columna: Columna_,
-  párrafo:Párrafo_
+  párrafo: Párrafo_,
+  barrasChartJS: BarrasChartJS,
 };
 
 export const RenderizarComponentes_v2 = (config) => {
-  console.log(config)
 
   const render = (config, additionalProps) => {
     if (typeof KeysToComponentMap[config.component] !== 'undefined') {
       return React.createElement(
         KeysToComponentMap[config.component],
         {
-          src: config.src, ...additionalProps
+          src: config.src,
+          className: config.className,
+          ky: config.key,
+          opcionesBarra:config.opcionesBarra,
+          datosBarra : config.datosBarra,
+          ...additionalProps
         },
         config.children &&
-          (typeof config.children === 'string'
-            ? config.children
-            : Array.isArray(config.children)
+        (typeof config.children === 'string'
+          ? config.children
+          : Array.isArray(config.children)
             ? config.children.map((c, index) =>
-                render(c, additionalProps)
-              )
+              render(c, additionalProps)
+            )
             : render(config.children, additionalProps))
       );
     }
