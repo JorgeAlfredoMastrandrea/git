@@ -8,12 +8,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
 
-  const [archivo] = useState('datosJSON/ContentConfig.json')
+  const [archivo] = useState('datosJSON/Layout_1.json')
 
   return (
     <>
-      <div key="init" className="container-xxl">
-        <ComponentsDemo archivo={archivo}/>
+      <div key="init" className="container d-flex align-items-center justify-content-center">
+        <ComponentsDemo archivo={archivo} />
       </div>
     </>
   )
@@ -24,3 +24,4 @@ export default App
 
 // <BarDemos />
 // <ComponentsDemo/>
+// 'datosJSON/ContentConfig.json'

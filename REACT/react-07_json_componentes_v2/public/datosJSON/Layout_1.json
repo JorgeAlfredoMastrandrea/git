@@ -1,0 +1,23 @@
+[
+    {
+        "component": "fila",
+        "src": "datos para fila",
+        "className": "row align-items-center",
+        "ky": "1",
+        "children": [
+            {
+                "component": "columna",
+                "src": "datos adicionales para columna",
+                "className": " col ",
+                "style":"",
+                "ky": "2",
+                "children": [
+                    {
+                        "component": "párrafo",
+                        "src": "Layout 1 centrado al medio"
+                    }
+                ]                
+            }
+        ]
+    }
+]

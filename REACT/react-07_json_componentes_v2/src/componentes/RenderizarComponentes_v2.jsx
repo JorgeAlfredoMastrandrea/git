@@ -16,12 +16,18 @@ import { Párrafo_ } from '../componentes/ComponentesGrid/Párrafo_';
 import { Fila_ } from '../componentes/ComponentesGrid/Fila_';
 import { Columna_ } from '../componentes/ComponentesGrid/Columna_';
 import { BarrasChartJS } from '../componentes/ComponentesChartJS/BarrasChartJS';
+import { AreaChartJS } from '../componentes/ComponentesChartJS/AreaChartJS';
+import { LineaChartJS } from '../componentes/ComponentesChartJS/LineaChartJS';
+import { MultiAxisChartJS } from '../componentes/ComponentesChartJS/MultiAxisChartJS';
 
 const KeysToComponentMap = {
   fila: Fila_,
   columna: Columna_,
   párrafo: Párrafo_,
   barrasChartJS: BarrasChartJS,
+  areaChartJS:AreaChartJS,
+  lineaChartJS:LineaChartJS,
+  multiAxisChartJS:MultiAxisChartJS
 };
 
 export const RenderizarComponentes_v2 = (config) => {
@@ -32,8 +38,9 @@ export const RenderizarComponentes_v2 = (config) => {
         KeysToComponentMap[config.component],
         {
           src: config.src,
-          className: config.className,
+          className: config.className,          
           ky: config.key,
+          style:config.style,
           opcionesBarra:config.opcionesBarra,
           datosBarra : config.datosBarra,
           ...additionalProps

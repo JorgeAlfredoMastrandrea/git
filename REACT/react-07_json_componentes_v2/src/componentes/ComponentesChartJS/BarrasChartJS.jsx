@@ -29,13 +29,11 @@ export const BarrasChartJS = (src) => {
     const opciones = src.opcionesBarra[0]
     // en caso de querer expresar los resultados en porcentajes, si es true
     // se efectua el cálculo y se lo agrega al objeto
-    if (src.opcionesBarra[0].porcentaje === true) {        
+    if (src.opcionesBarra[0].porcentaje === true) {
         opciones.plugins = datalabels;
     }
 
     return (
-        <div>
-            <Bar options={opciones} data={src.datosBarra[0]} plugins={[ChartDataLabels]} />
-        </div>
+        <Bar options={opciones} data={src.datosBarra[0]} plugins={[ChartDataLabels]} />
     )
 }

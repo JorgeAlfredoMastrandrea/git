@@ -1,7 +1,7 @@
 [
     {
         "id":1,
-        "título":"Hola, soy el dato que está en el archivo JSON..pero el de la otra division!!",
+        "título":"Hola, soy el dato que está en el archivo JSON..hola MOni pero el de la otra division!!",
         "gráfico":{
             "tipo":"barras apiladas",
             "datos":[0,1,2,3]

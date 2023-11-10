@@ -1,7 +1,7 @@
 [
     {
         "id":0,
-        "título":"Hola, soy el dato que está en el archivo JSON..!!",
+        "título":"Hola, soy el dato que está en el archivo xxx JSON..!!",
         "gráfico":{
             "tipo":"barras apiladas",
             "datos":[0,1,2,3]
