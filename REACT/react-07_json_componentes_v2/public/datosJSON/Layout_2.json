@@ -2,7 +2,7 @@
     {
         "component": "contenedor",
         "src": "datos para contenedor",
-        "className": "container d-flex align-items-center justify-content-center",
+        "className": "container align-items-center justify-content-center",
         "id": 0,
         "mKey": 0,
         "style": [
@@ -14,10 +14,7 @@
                 "transform": "translate(-50%, -50%)",
                 "border": "1px solid #666",
                 "backgroundColor": "#b9faac",
-                "position": "fixed",
-                "overflowY": "scroll",
-                "scrollbarWidth": "thin",
-                "scrollbarColor": "blue orange"
+                "position": "fixed"
             }
         ],
         "children": [

@@ -1,14 +1,20 @@
-div::-webkit-scrollbar {
+.contenido-scrollable{
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: blue orange
+}
+
+.contenido-scrollable::-webkit-scrollbar {
     width: 15px;
     /* width of the entire scrollbar */
 }
 
-div::-webkit-scrollbar-track {
+.contenido-scrollable::-webkit-scrollbar-track {
     background: rgb(145, 239, 116);
     /* color of the tracking area */
 }
 
-div::-webkit-scrollbar-thumb {
+.contenido-scrollable::-webkit-scrollbar-thumb {
     background-color: white;
     /* color of the scroll thumb */
     border-radius: 20px;
