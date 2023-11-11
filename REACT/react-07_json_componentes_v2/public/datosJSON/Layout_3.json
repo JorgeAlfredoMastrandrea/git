@@ -1,0 +1,154 @@
+[
+    {
+        "component": "contenedor",
+        "src": "datos para contenedor",
+        "className": "container align-items-center justify-content-center",
+        "id": 0,
+        "mKey": 0,
+        "style": [
+            {
+                "top": "50%",
+                "left": "50%",
+                "width": "75em",
+                "height": "35em",
+                "transform": "translate(-50%, -50%)",
+                "border": "1px solid #666",
+                "backgroundColor": "#b9faac",
+                "position": "fixed",
+                "overflowY": "scroll",
+                "scrollbarWidth": "thin",
+                "scrollbarColor": "blue orange"
+            }
+        ],
+        "children": [
+            {
+                "component": "fila",
+                "src": "datos para fila",
+                "className": "row align-items-center",
+                "id": 1,
+                "mKey": 1,
+                "children": [
+                    {
+                        "component": "columna",
+                        "src": "datos adicionales para columna",
+                        "className": " col  ",
+                        "id": 2,
+                        "mKey": 2,
+                        "children": [
+                            {
+                                "component": "párrafo",
+                                "src": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimos voluptas perspiciatis incidunt, esse odit rem culpa in doloremque deserunt, corrupti reprehenderit repellat, ut perferendis tenetur temporibus!Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimos voluptas perspiciatis incidunt, esse odit rem culpa in doloremque deserunt, corrupti reprehenderit repellat, ut perferendis tenetur temporibus!Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimos voluptas perspiciatis incidunt, esse odit rem culpa in doloremque deserunt, corrupti reprehenderit repellat, ut perferendis tenetur temporibus!Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimos voluptas perspiciatis incidunt, esse odit rem culpa in doloremque deserunt, corrupti reprehenderit repellat, ut perferendis tenetur temporibus!Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. ",
+                                "className": "text-primary",
+                                "id": 3,
+                                "mKey": 3,
+                                "style": [
+                                    {
+                                        "textAlign": "justify"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "component": "fila",
+                "src": "datos para fila",
+                "className": "row align-items-center",
+                "id": 1,
+                "mKey": 1,
+                "children": [
+                    {
+                        "component": "columna",
+                        "src": "datos adicionales para columna",
+                        "className": " col  ",
+                        "id": 2,
+                        "mKey": 2,
+                        "children": [
+                            {
+                                "component": "barrasChartJS",
+                                "className": "className",
+                                "ky": "ky",
+                                "src": "src",
+                                "responsive": true,
+                                "opcionesBarra": [
+                                    {
+                                        "responsive": true,
+                                        "maintainAspectRatio": true,
+                                        "aspectRatio": 3,
+                                        "plugins": {
+                                            "legend": {
+                                                "position": "top",
+                                                "display": true,
+                                                "labels": {
+                                                    "font": {
+                                                        "size": 15,
+                                                        "family": "Arial"
+                                                    }
+                                                }
+                                            },
+                                            "title": {
+                                                "display": true,
+                                                "text": "Ejemplo 1"
+                                            },
+                                            "datalabels": {
+                                                "labels": {
+                                                    "position": "top",
+                                                    "size": 20,
+                                                    "fontColor": "white",
+                                                    "weight": "bold",
+                                                    "family": "Arial"
+                                                }
+                                            }
+                                        }
+                                    }
+                                ],
+                                "datosBarra": [
+                                    {
+                                        "labels": [
+                                            "Enero",
+                                            "Febrero",
+                                            "March",
+                                            "April",
+                                            "May",
+                                            "June",
+                                            "July"
+                                        ],
+                                        "datasets": [
+                                            {
+                                                "label": "Dataset 1",
+                                                "data": [
+                                                    100,
+                                                    200,
+                                                    300,
+                                                    400,
+                                                    500,
+                                                    600,
+                                                    700
+                                                ],
+                                                "backgroundColor": "rgba(255, 99, 132, 0.5)"
+                                            },
+                                            {
+                                                "label": "Dataset 2",
+                                                "data": [
+                                                    150,
+                                                    250,
+                                                    350,
+                                                    450,
+                                                    550,
+                                                    650,
+                                                    750
+                                                ],
+                                                "backgroundColor": "rgba(53, 162, 235, 0.5)"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

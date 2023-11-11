@@ -8,7 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
 
-  const [archivo] = useState('datosJSON/Layout_1.json')
+  const [archivo] = useState('datosJSON/Layout_3.json')
 
   return (
     <>
@@ -30,10 +30,10 @@ export default App
 // <BarDemos />
 // <ComponentsDemo/>
 // 'datosJSON/ContentConfig.json'
+// 'datosJSON/Layout_1.json'
 
 /*
 alineado y centrado el contenido en el medio : className="container d-flex align-items-center justify-content-center"
-
 */
 
 /*
