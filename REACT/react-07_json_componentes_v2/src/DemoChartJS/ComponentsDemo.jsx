@@ -22,14 +22,14 @@ export const ComponentsDemo = (prop) => {
 
     useEffect(() => {
         fetchData()
-    }, [prop.archivo])    
+    }, [prop.archivo])
 
     return (
-        <div key='a'>
+        <>
             {
                 data.map(data => RenderizarComponentes_v2(data, { additionalProp: 'value' }))
             }
-        </div>
+        </>
     );
 }
 

@@ -12,12 +12,17 @@ function App() {
 
   return (
     <>
-      <div key="init" className="container d-flex align-items-center justify-content-center">
+      <div
+        key="init"
+        className="container"
+        style={{}}>
         <ComponentsDemo archivo={archivo} />
-      </div>
+      </div >
     </>
   )
 }
+
+
 
 export default App
 
@@ -25,3 +30,28 @@ export default App
 // <BarDemos />
 // <ComponentsDemo/>
 // 'datosJSON/ContentConfig.json'
+
+/*
+alineado y centrado el contenido en el medio : className="container d-flex align-items-center justify-content-center"
+
+*/
+
+/*
+ <div
+        key="init"
+        className="container d-flex align-items-center justify-content-center"
+        style={{
+          top: '50%',
+          left: '50%',
+          width: '60em',
+          height: '30em',
+          transform: 'translate(-50%, -50%)',
+          border: '1px solid #666',
+          backgroundColor: "#b9faac",
+          position: 'fixed',
+        }}>
+        <ComponentsDemo archivo={archivo} />
+      </div >
+
+
+*/
