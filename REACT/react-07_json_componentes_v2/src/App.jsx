@@ -8,13 +8,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
 
-  const [archivo] = useState('datosJSON/Layout_4.json')
+  const [archivo] = useState('datosJSON/Layout_5.json')
 
   return (
     <>
       <div
         key="init"
-        className="container"
+        className="container-xxl p-0"
         style={{}}>
         <ComponentsDemo archivo={archivo} />
       </div >

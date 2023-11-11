@@ -2,18 +2,12 @@
     {
         "component": "contenedor",
         "src": "datos para contenedor",
-        "className": "container align-items-center justify-content-center",
+        "className": " align-items-center justify-content-center  container-xxl m-0",
         "id": 0,
         "mKey": 0,
         "style": [
-            {
-                "top": "50%",
-                "left": "50%",
-                "width": "80em",
-                "height": "35em",
-                "transform": "translate(-50%, -50%)",
+            {                
                 "border": "1px solid #666",                
-                "position": "fixed",
                 "backgroundColor" :"#aedcca"
             }
         ],
@@ -28,7 +22,7 @@
                     {
                         "component": "columna",
                         "src": "datos adicionales para columna",
-                        "className": " col p-1",
+                        "className": "col p-1",
                         "id": 2,
                         "mKey": 2,                        
                         "children": [
@@ -50,13 +44,13 @@
                     {
                         "component": "columna",
                         "src": "datos adicionales para columna",
-                        "className": " col p-1",
+                        "className": "col p-1",
                         "id": 2,
                         "mKey": 2,                        
                         "children": [
                             {
                                 "component": "párrafo",
-                                "src": "  ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimos voluptas perspiciatis incidunt, esse odit rem culpa in doloremque deserunt, corrupti reprehenderit repellat, ut perferendis tenetur temporibus!Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimos voluptas perspiciatis incidunt, esse odit rem culpa in doloremque deserunt, corrupti reprehenderit repellat, ut perferendis tenetur temporibus!Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimos voluptas perspiciatis incidunt, esse odit rem culpa in doloremque deserunt, corrupti reprehenderit repellat, ut perferendis tenetur temporibus!Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. ",
+                                "src": " ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas.ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimos voluptas perspiciatis incidunt, esse odit rem culpa in doloremque deserunt, corrupti reprehenderit repellat, ut perferendis tenetur temporibus!Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimos voluptas perspiciatis incidunt, esse odit rem culpa in doloremque deserunt, corrupti reprehenderit repellat, ut perferendis tenetur temporibus!Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimos voluptas perspiciatis incidunt, esse odit rem culpa in doloremque deserunt, corrupti reprehenderit repellat, ut perferendis tenetur temporibus!Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. ",
                                 "className": "text-white",
                                 "id": 3,
                                 "mKey": 3,
@@ -75,7 +69,7 @@
             {
                 "component": "fila",
                 "src": "datos para fila",
-                "className": "row align-items-center p-0",
+                "className": "row align-items-center p-0 m-0",
                 "id": 4,
                 "mKey": 4,
                 "style": [
@@ -88,7 +82,7 @@
                     {
                         "component": "columna",
                         "src": "datos adicionales para columna",
-                        "className": " col p-0",
+                        "className": "col p-1 m-1",
                         "id": 5,
                         "mKey": 5,                        
                         "children": [
@@ -102,7 +96,7 @@
                                     {
                                         "responsive": true,
                                         "maintainAspectRatio": true,
-                                        "aspectRatio": 4,
+                                        "aspectRatio": 3.9,
                                         "plugins": {
                                             "legend": {
                                                 "position": "top",
