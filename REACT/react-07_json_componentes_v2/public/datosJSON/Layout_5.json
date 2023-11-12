@@ -7,7 +7,14 @@
         "mKey": 0,
         "style": [
             {
-                "border": "1px solid #666"
+                "top": "50%",
+                "left": "50%",
+                "width": "98.9%",
+                "height": "90%",
+                "transform": "translate(-50%, -50%)",
+                "border": "1px solid #666",
+                "backgroundColor": "#b9faac",
+                "position": "fixed"
             }
         ],
         "children": [
@@ -143,7 +150,7 @@
                         "children": [
                             {
                                 "component": "párrafo",
-                                "src": " ipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimos ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimos voluptas perspiciatis incidunt, esse odit rem culpa in doloremque deserunt, corrupti reprehenderit repellat, ut perferendis tenetur temporibus!Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimos voluptas perspiciatis incidunt, esse odit rem culpa in doloremque deserunt, corrupti reprehenderit repellat, ut perferendis tenetur temporibus!Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimos voluptas perspiciatis incidunt, esse odit rem culpa in doloremque deserunt, corrupti reprehenderit repellat, ut perferendis tenetur temporibus!Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. ",
+                                "src": "ipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimos ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimos voluptas perspiciatis incidunt, esse odit rem culpa in doloremque deserunt, corrupti reprehenderit repellat, ut perferendis tenetur temporibus!Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimos voluptas perspiciatis incidunt, esse odit rem culpa in doloremque deserunt, corrupti reprehenderit repellat, ut perferendis tenetur temporibus!Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimos voluptas perspiciatis incidunt, esse odit rem culpa in doloremque deserunt, corrupti reprehenderit repellat, ut perferendis tenetur temporibus!Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas.  ipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimos ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimos voluptas perspiciatis incidunt, esse odit rem culpa in doloremque deserunt, corrupti reprehenderit repellat, ut perferendis tenetur temporibus!Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimos voluptas perspiciatis incidunt, esse odit rem culpa in doloremque deserunt, corrupti reprehenderit repellat, ut perferendis tenetur temporibus!Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimos voluptas perspiciatis incidunt, esse odit rem culpa in doloremque deserunt, corrupti reprehenderit repellat, ut perferendis tenetur temporibus!Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. ",
                                 "className": "text-white",
                                 "id": 3,
                                 "mKey": 3,
