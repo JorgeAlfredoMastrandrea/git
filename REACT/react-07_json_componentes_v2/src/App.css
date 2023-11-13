@@ -22,3 +22,9 @@
     border: 3px solid rgb(67, 67, 139);
     /* creates padding around scroll thumb */
 }
+
+.chart-wrapper {
+    border: 1px solid blue;
+    height: 50%;
+    width: 35%;
+  }

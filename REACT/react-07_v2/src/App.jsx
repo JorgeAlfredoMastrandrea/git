@@ -10,10 +10,15 @@ import navLinkAñoMedicion from "./medicionesAñosMesesCursosDivisiones.json";
 import { NavegaciónAñoMedición_v6 } from './componentes_navegación_año_meses/NavegaciónAñoMedición_v6';
 import { NavegaciónCursoDivisión } from './componentes_navegación_curso_división/NavegaciónCursoDivisión';
 import { DataProvider } from './componentes_contenedor_datos/DataProvider';
+import { DataLayout } from './componentes_contenedor_datos/DataLayout';
 
 function App() {
 
     const [dataSeleccionadaPorCurso, cambiarDataSeleccionadaPorCurso] = useState(); // ???
+    const [layoutSeleccionada_, setLayoutSeleccionada_] = useState(); // ???
+
+
+
     const [cursosYDivisiones, setCursosYDivisiones] = useState();
     const gettCursosYDivisiones = (datosDeNavegaciónAñoMedición_v6) => {
         //console.log('gettCursosYDivisiones : ', datosDeNavegaciónAñoMedición_v6);
@@ -31,7 +36,12 @@ function App() {
     */
     const onBuscarDatosSelecionadaPorCurso = (dataSeleccionada) => {
         console.log('data seleccionada ------ >', dataSeleccionada)
-        cambiarDataSeleccionadaPorCurso(dataSeleccionada)
+        cambiarDataSeleccionadaPorCurso(dataSeleccionada)        
+    }
+
+    const onMostrarDatosSeleccionadoPorCurso = (layout) => {
+        console.log("soy el layout de datos que estás buscando : " , layout)
+        setLayoutSeleccionada_(layout)        
     }
 
     return (
@@ -78,7 +88,17 @@ function App() {
                             dataSeleccionadaPorCurso &&
                             <DataProvider
                                 dataSeleccionadaPorCurso={dataSeleccionadaPorCurso}
+                                onMostrarDatosSeleccionadoPorCurso = {onMostrarDatosSeleccionadoPorCurso}
                             />
+
+
+                        }
+                        {
+                            layoutSeleccionada_ &&
+                            <DataLayout
+                            layoutSeleccionada_={layoutSeleccionada_}
+                                 />
+
                         }
 
                     </div>

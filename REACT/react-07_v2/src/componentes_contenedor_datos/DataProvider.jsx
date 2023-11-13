@@ -43,6 +43,13 @@ export const DataProvider = (props) => {
     fetchData()
   }, [props.dataSeleccionadaPorCurso])
 
+
+  const onEnviarDatosLayout = (datos) => {    
+    console.log('---- ' , datos)
+    props.onMostrarDatosSeleccionadoPorCurso(datos);
+    
+}
+
   return (
     <div>
       DataProvider
@@ -61,10 +68,14 @@ export const DataProvider = (props) => {
         {
           data && data.length > 0 && data.map(item =>
             <div key={item.id}>
-              {item.título}
+              <span><strong>Dato: { item.título }</strong></span> { onEnviarDatosLayout(data) }
+              <span><strong>... esto -el valor que está en data !!- debo devolverlo al DataLayout ..!!</strong></span>
             </div>
           )}
       </p>
+      
+    
     </div>
+
   )
 }

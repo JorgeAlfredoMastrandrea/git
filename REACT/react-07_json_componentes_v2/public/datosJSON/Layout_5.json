@@ -2,7 +2,7 @@
     {
         "component": "contenedor",
         "src": "datos para contenedor",
-        "className": " align-items-center justify-content-center  container-xxl m-0  contenido-scrollable",
+        "className": " align-items-center justify-content-center  container   contenido-scrollable",
         "id": 0,
         "mKey": 0,
         "style": [
@@ -10,7 +10,7 @@
                 "top": "50%",
                 "left": "50%",
                 "width": "98.9%",
-                "height": "90%",
+                "height": "99%",
                 "transform": "translate(-50%, -50%)",
                 "border": "1px solid #666",
                 "backgroundColor": "#b9faac",
@@ -39,89 +39,80 @@
                         "mKey": 2,
                         "children": [
                             {
-                                "component": "columna",
-                                "src": "datos adicionales para columna",
-                                "className": "col p-1 m-1",
-                                "id": 5,
-                                "mKey": 5,
-                                "children": [
+                                "component": "barrasChartJS",
+                                "src": "src",
+                                "className": "",
+                                "id": 6,
+                                "mKey": 6,
+                                "opcionesBarra": [
                                     {
-                                        "component": "barrasChartJS",
-                                        "src": "src",
-                                        "className": "className",
-                                        "id": 6,
-                                        "mKey": 6,
-                                        "opcionesBarra": [
-                                            {
-                                                "responsive": true,
-                                                "maintainAspectRatio": true,
-                                                "aspectRatio": 5,
-                                                "plugins": {
-                                                    "legend": {
-                                                        "position": "top",
-                                                        "display": true,
-                                                        "labels": {
-                                                            "font": {
-                                                                "size": 15,
-                                                                "family": "Arial"
-                                                            }
-                                                        }
-                                                    },
-                                                    "title": {
-                                                        "display": true,
-                                                        "text": "Ejemplo 1"
-                                                    },
-                                                    "datalabels": {
-                                                        "labels": {
-                                                            "position": "top",
-                                                            "size": 20,
-                                                            "fontColor": "white",
-                                                            "weight": "bold",
-                                                            "family": "Arial"
-                                                        }
+                                        "responsive": true,
+                                        "maintainAspectRatio": true,
+                                        "aspectRatio": 3,
+                                        "plugins": {
+                                            "legend": {
+                                                "position": "top",
+                                                "display": true,
+                                                "labels": {
+                                                    "font": {
+                                                        "size": 15,
+                                                        "family": "Arial"
                                                     }
                                                 }
+                                            },
+                                            "title": {
+                                                "display": true,
+                                                "text": "Ejemplo 1"
+                                            },
+                                            "datalabels": {
+                                                "labels": {
+                                                    "position": "top",
+                                                    "size": 20,
+                                                    "fontColor": "white",
+                                                    "weight": "bold",
+                                                    "family": "Arial"
+                                                }
                                             }
+                                        }
+                                    }
+                                ],
+                                "datosBarra": [
+                                    {
+                                        "labels": [
+                                            "Enero",
+                                            "Febrero",
+                                            "March",
+                                            "April",
+                                            "May",
+                                            "June",
+                                            "July"
                                         ],
-                                        "datosBarra": [
+                                        "datasets": [
                                             {
-                                                "labels": [
-                                                    "Enero",
-                                                    "Febrero",
-                                                    "March",
-                                                    "April",
-                                                    "May",
-                                                    "June",
-                                                    "July"
+                                                "label": "Dataset 1",
+                                                "data": [
+                                                    100,
+                                                    200,
+                                                    300,
+                                                    400,
+                                                    500,
+                                                    600,
+                                                    700
                                                 ],
-                                                "datasets": [
-                                                    {
-                                                        "label": "Dataset 1",
-                                                        "data": [
-                                                            100,
-                                                            200,
-                                                            300,
-                                                            400,
-                                                            500,
-                                                            600,
-                                                            700
-                                                        ],
-                                                        "backgroundColor": "rgba(255, 99, 132, 0.5)"
-                                                    },
-                                                    {
-                                                        "label": "Dataset 2",
-                                                        "data": [
-                                                            150,
-                                                            250,
-                                                            350,
-                                                            450,
-                                                            550,
-                                                            650,
-                                                            750
-                                                        ],
-                                                        "backgroundColor": "rgba(53, 162, 235, 0.5)"
-                                                    }
-                                                ]
+                                                "backgroundColor": "rgba(255, 99, 132, 0.5)"
+                                            },
+                                            {
+                                                "label": "Dataset 2",
+                                                "data": [
+                                                    150,
+                                                    250,
+                                                    350,
+                                                    450,
+                                                    550,
+                                                    650,
+                                                    750
+                                                ],
+                                                "backgroundColor": "rgba(53, 162, 235, 0.5)"
                                             }
                                         ]
                                     }
@@ -144,9 +135,11 @@
                         "className": "col p-1",
                         "id": 2,
                         "mKey": 2,
-                        "style":[{
-                            "backgroundColor": "#100000"
-                        }],
+                        "style": [
+                            {
+                                "backgroundColor": "#100000"
+                            }
+                        ],
                         "children": [
                             {
                                 "component": "párrafo",
@@ -156,7 +149,7 @@
                                 "mKey": 3,
                                 "style": [
                                     {
-                                        "textAlign": "justify"                                        
+                                        "textAlign": "justify"
                                     }
                                 ]
                             }
@@ -168,9 +161,11 @@
                         "className": "col p-1",
                         "id": 2,
                         "mKey": 2,
-                        "style":[{
-                            "backgroundColor": "#00aa00"
-                        }],
+                        "style": [
+                            {
+                                "backgroundColor": "#00aa00"
+                            }
+                        ],
                         "children": [
                             {
                                 "component": "párrafo",
@@ -180,7 +175,7 @@
                                 "mKey": 3,
                                 "style": [
                                     {
-                                        "textAlign": "justify"                                        
+                                        "textAlign": "justify"
                                     }
                                 ]
                             }

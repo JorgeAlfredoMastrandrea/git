@@ -8,7 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
 
-  const [archivo] = useState('datosJSON/Layout_5.json')
+  const [archivo] = useState('datosJSON/Layout_11.json')
 
   return (
     <>
