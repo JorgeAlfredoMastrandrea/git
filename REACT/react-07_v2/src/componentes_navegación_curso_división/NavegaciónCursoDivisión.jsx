@@ -35,8 +35,8 @@ export const NavegaciónCursoDivisión = (props) => {
     });
   };
 
-  const onButtonClickedDivision = (división, curso, divisionID, linkDatosPorDivisión , mostrarDivisionBool) => {
-    //console.log('-', división);
+  const onButtonClickedDivision = (data , el , ele , curso, división, divisionID, linkDatosPorDivisión , objetoDatosPorDivisión , mostrarDivisionBool) => {
+    // console.log('data : ' , data ,'el - ', el , 'ele - ', ele , 'curso - ', curso, 'division - ', división, 'divisionID - ', divisionID, 'linkDatosPorDivisión - ', linkDatosPorDivisión , objetoDatosPorDivisión );
     // pongo a todos los elementos de color de fondo white y al final dejo en naranja al que he pulsado
     // esto es para que se quede seleccionado solamente un boton de división a la vez
     let index = 0;
@@ -47,8 +47,10 @@ export const NavegaciónCursoDivisión = (props) => {
       })
     };
     // ... y al final dejo en naranja al que he pulsado
-    document.getElementById(divisionID).style.background = "orange";    
-    props.onBuscarDatosSelecionadaPorCurso(linkDatosPorDivisión)
+    document.getElementById(divisionID).style.background = "orange";
+    // devuelvo el enlace y el objeto asociado (o sea el layout) al principio va a estar vació pero luego debe poder irse completando con cada
+    // uno de los layouts que se van cargando ..    
+    props.onBuscarDatosSelecionadaPorCurso(linkDatosPorDivisión , divisionID , objetoDatosPorDivisión)
   };
 
   return (
@@ -65,7 +67,7 @@ export const NavegaciónCursoDivisión = (props) => {
                   return (
                     <div id={ele.id} key={ele.id} className="btn p-0 rounded border-0 m-1">
                       <button type="button" className="btn p-0 " data-bs-toggle="collapse" data-bs-target="#" aria-expanded="true">
-                        <a href="#" className="text-dark h6 p-1" onClick={(event) => onButtonClickedDivision(el.división, el.id, ele.id, ele.linkDatosPorDivisión ,true)}><small>{ele.nombre}</small></a>
+                        <a href="#" className="text-dark h6 p-1" onClick={(event) => onButtonClickedDivision(data , el , ele , el.id , el.división,  ele.id, ele.linkDatosPorDivisión ,ele.objetoDatosPorDivisión ,true)}><small>{ele.nombre}</small></a>
                       </button>
                     </div>
                   );

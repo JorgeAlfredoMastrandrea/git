@@ -15,7 +15,7 @@
                         "nombre": "Presentación",
                         "división": [
                             {
-                                "id": "presentaciónInformeParaEnero2021",
+                                "id_div": "presentaciónInformeParaEnero2021",
                                 "nombre": "ver"
                             }
                         ]
@@ -25,61 +25,61 @@
                         "curso": "1°",
                         "nombre": "1°",
                         "linkDatosPorCurso":"enlace_2021_enero_curso_1°",
-                        "onjetoDatosPorCurso":"",
+                        "objetoDatosPorCurso":"",
                         "división": [
                             {
-                                "id": 11,
+                                "id": "enlace_2021_enero_curso_1°_división_A",
                                 "nombre": "A",
                                 "linkDatosPorDivisión":"enlace_2021_enero_curso_1°_división_A.json",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             },
                             {
-                                "id": 12,
+                                "id": "enlace_2021_enero_curso_1°_división_B",
                                 "nombre": "B",
                                 "linkDatosPorDivisión":"enlace_2021_enero_curso_1°_división_B.json",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             },
                             {
-                                "id": 13,
+                                "id": "enlace_2021_enero_curso_1°_división_C",
                                 "nombre": "C",
                                 "linkDatosPorDivisión":"enlace_2021_enero_curso_1°_división_C.json",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             },
                             {
-                                "id": 14,
+                                "id": "enlace_2021_enero_curso_1°_división_D",
                                 "nombre": "D",
                                 "linkDatosPorDivisión":"enlace_2021_enero_curso_1°_división_D.json",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             },
                             {
-                                "id": 15,
+                                "id": "enlace_2021_enero_curso_1°_división_E",
                                 "nombre": "E",
                                 "linkDatosPorDivisión":"enlace_2021_enero_curso_1°_división_E",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             },
                             {
-                                "id": 16,
+                                "id": "enlace_2021_enero_curso_1°_división_F",
                                 "nombre": "F",
                                 "linkDatosPorDivisión":"enlace_2021_enero_curso_1°_división_F",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             },
                             {
-                                "id": 17,
+                                "id": "enlace_2021_enero_curso_1°_división_G",
                                 "nombre": "G",
                                 "linkDatosPorDivisión":"enlace_2021_enero_curso_1°_división_G",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             },
                             {
-                                "id": 18,
+                                "id": "enlace_2021_enero_curso_1°_división_H",
                                 "nombre": "H",
                                 "linkDatosPorDivisión":"enlace_2021_enero_curso_1°_división_H",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             },
                             {
-                                "id": 19,
+                                "id": "enlace_2021_enero_curso_1°_división_I",
                                 "nombre": "I",
                                 "linkDatosPorDivisión":"enlace_2021_enero_curso_1°_división_I",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             }
                         ]
                     },
@@ -88,49 +88,49 @@
                         "curso": "2°",
                         "nombre": "2°",
                         "linkDatosPorCurso":"enlace_2021_enero_curso_2°",
-                        "onjetoDatosPorCurso":"",
+                        "objetoDatosPorCurso":"",
                         "división": [
                             {
                                 "id": 21,
                                 "nombre": "A",
                                 "linkDatosPorDivisión":"enlace_2021_enero_curso_2°_división_A",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             },
                             {
                                 "id": 22,
                                 "nombre": "B",
                                 "linkDatosPorDivisión":"enlace_2021_enero_curso_2°_división_B",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             },
                             {
                                 "id": 23,
                                 "nombre": "C",
                                 "linkDatosPorDivisión":"enlace_2021_enero_curso_2°_división_C",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             },
                             {
                                 "id": 24,
                                 "nombre": "D",
                                 "linkDatosPorDivisión":"enlace_2021_enero_curso_2°_división_D",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             },
                             {
                                 "id": 25,
                                 "nombre": "E",
                                 "linkDatosPorDivisión":"enlace_2021_enero_curso_2°_división_E",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             },
                             {
                                 "id": 26,
                                 "nombre": "F",
                                 "linkDatosPorDivisión":"enlace_2021_enero_curso_2°_división_F",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             },
                             {
                                 "id": 27,
                                 "nombre": "G",
                                 "linkDatosPorDivisión":"enlace_2021_enero_curso_2°_división_G",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             }
                         ]
                     },
@@ -139,25 +139,25 @@
                         "curso": "3°",
                         "nombre": "3°",
                         "linkDatosPorCurso":"enlace_2021_enero_curso_3°",
-                        "onjetoDatosPorCurso":"",
+                        "objetoDatosPorCurso":"",
                         "división": [
                             {
                                 "id": 31,
                                 "nombre": "A",
                                 "linkDatosPorDivisión":"enlace_2021_enero_curso_3°_división_A",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             },
                             {
                                 "id": 32,
                                 "nombre": "B",
                                 "linkDatosPorDivisión":"enlace_2021_enero_curso_3°_división_B",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             },
                             {
                                 "id": 33,
                                 "nombre": "C",
                                 "linkDatosPorDivisión":"enlace_2021_enero_curso_3°_división_C",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             }
                         ]
                     },
@@ -166,19 +166,19 @@
                         "curso": "4°",
                         "nombre": "4°",
                         "linkDatosPorCurso":"enlace_2021_enero_curso_4°",
-                        "onjetoDatosPorCurso":"",
+                        "objetoDatosPorCurso":"",
                         "división": [
                             {
                                 "id": 41,
                                 "nombre": "A",
                                 "linkDatosPorDivisión":"enlace_2021_enero_curso_4°_división_A",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             },
                             {
                                 "id": 42,
                                 "nombre": "B",
                                 "linkDatosPorDivisión":"enlace_2021_enero_curso_4°_división_B",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             }
                         ]
                     },
@@ -187,19 +187,19 @@
                         "curso": "5°",
                         "nombre": "5°",
                         "linkDatosPorCurso":"enlace_2021_enero_curso_5°",
-                        "onjetoDatosPorCurso":"",
+                        "objetoDatosPorCurso":"",
                         "división": [
                             {
                                 "id": 51,
                                 "nombre": "A",
                                 "linkDatosPorDivisión":"enlace_2021_enero_curso_5°_división_A",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             },
                             {
                                 "id": 52,
                                 "nombre": "B",
                                 "linkDatosPorDivisión":"enlace_2021_enero_curso_5°_división_B",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             }
                         ]
                     },
@@ -208,19 +208,19 @@
                         "curso": "6°",
                         "nombre": "6°",
                         "linkDatosPorCurso":"enlace_2021_enero_curso_6°",
-                        "onjetoDatosPorCurso":"",
+                        "objetoDatosPorCurso":"",
                         "división": [
                             {
                                 "id": 61,
                                 "nombre": "A",
                                 "linkDatosPorDivisión":"enlace_2021_enero_curso_6°_división_A",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             },
                             {
                                 "id": 62,
                                 "nombre": "B",
                                 "linkDatosPorDivisión":"enlace_2021_enero_curso_6°_división_B",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             }
                         ]
                     },
@@ -229,19 +229,19 @@
                         "curso": "7°",
                         "nombre": "7°",
                         "linkDatosPorCurso":"enlace_2021_enero_curso_7°",
-                        "onjetoDatosPorCurso":"",
+                        "objetoDatosPorCurso":"",
                         "división": [
                             {
                                 "id": 71,
                                 "nombre": "A",
                                 "linkDatosPorDivisión":"enlace_2021_enero_curso_7°_división_A",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             },
                             {
                                 "id": 72,
                                 "nombre": "B",
                                 "linkDatosPorDivisión":"enlace_2021_enero_curso_7°_división_B",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             }
                         ]
                     }
@@ -258,31 +258,31 @@
                         "curso": "2°",
                         "nombre": "2°",
                         "linkDatosPorCurso":"enlace_2021_mayo_curso_2°",
-                        "onjetoDatosPorCurso":"",
+                        "objetoDatosPorCurso":"",
                         "división": [
                             {
                                 "id": 21,
                                 "nombre": "A",
                                 "linkDatosPorDivisión":"enlace_2021_mayo_curso_2°_división_A",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             },
                             {
                                 "id": 22,
                                 "nombre": "B",
                                 "linkDatosPorDivisión":"enlace_2021_mayo_curso_2°_división_B",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             },
                             {
                                 "id": 23,
                                 "nombre": "C",
                                 "linkDatosPorDivisión":"enlace_2021_mayo_curso_2°_división_C",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             },
                             {
                                 "id": 24,
                                 "nombre": "D",
                                 "linkDatosPorDivisión":"enlace_2021_mayo_curso_2°_división_D",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             }
                         ]
                     },
@@ -291,25 +291,25 @@
                         "curso": "3°",
                         "nombre": "3°",
                         "linkDatosPorCurso":"enlace_2021_mayo_curso_3°",
-                        "onjetoDatosPorCurso":"",
+                        "objetoDatosPorCurso":"",
                         "división": [
                             {
                                 "id": 31,
                                 "nombre": "A",
                                 "linkDatosPorDivisión":"enlace_2021_mayo_curso_3°_división_A",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             },
                             {
                                 "id": 32,
                                 "nombre": "B",
                                 "linkDatosPorDivisión":"enlace_2021_mayo_curso_3°_división_B",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             },
                             {
                                 "id": 33,
                                 "nombre": "C",
                                 "linkDatosPorDivisión":"enlace_2021_mayo_curso_3°_división_C",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             }
                         ]
                     },
@@ -318,19 +318,19 @@
                         "curso": "4°",
                         "nombre": "4°",
                         "linkDatosPorCurso":"enlace_2021_mayo_curso_4°",
-                        "onjetoDatosPorCurso":"",
+                        "objetoDatosPorCurso":"",
                         "división": [
                             {
                                 "id": 41,
                                 "nombre": "A",
                                 "linkDatosPorDivisión":"enlace_2021_mayo_curso_4°_división_A",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             },
                             {
                                 "id": 42,
                                 "nombre": "B",
                                 "linkDatosPorDivisión":"enlace_2021_mayo_curso_4°_división_B",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             }
                         ]
                     },
@@ -339,19 +339,19 @@
                         "curso": "5°",
                         "nombre": "5°",
                         "linkDatosPorCurso":"enlace_2021_mayo_curso_5°",
-                        "onjetoDatosPorCurso":"",
+                        "objetoDatosPorCurso":"",
                         "división": [
                             {
                                 "id": 51,
                                 "nombre": "A",
                                 "linkDatosPorDivisión":"enlace_2021_mayo_curso_5°_división_A",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             },
                             {
                                 "id": 52,
                                 "nombre": "B",
                                 "linkDatosPorDivisión":"enlace_2021_mayo_curso_5°_división_B",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             }
                         ]
                     },
@@ -360,19 +360,19 @@
                         "curso": "6°",
                         "nombre": "6°",
                         "linkDatosPorCurso":"enlace_2021_mayo_curso_6°",
-                        "onjetoDatosPorCurso":"",
+                        "objetoDatosPorCurso":"",
                         "división": [
                             {
                                 "id": 61,
                                 "nombre": "A",
                                 "linkDatosPorDivisión":"enlace_2021_mayo_curso_6°_división_A",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             },
                             {
                                 "id": 62,
                                 "nombre": "B",
                                 "linkDatosPorDivisión":"enlace_2021_mayo_curso_6°_división_B",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             }
                         ]
                     },
@@ -381,19 +381,19 @@
                         "curso": "7°",
                         "nombre": "7°",
                         "linkDatosPorCurso":"enlace_2021_mayo_curso_7°",
-                        "onjetoDatosPorCurso":"",
+                        "objetoDatosPorCurso":"",
                         "división": [
                             {
                                 "id": 71,
                                 "nombre": "A",
                                 "linkDatosPorDivisión":"enlace_2021_mayo_curso_7°_división_A",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             },
                             {
                                 "id": 72,
                                 "nombre": "B",
                                 "linkDatosPorDivisión":"enlace_2021_mayo_curso_7°_división_B",
-                                "objetoDatosPorDivisión":""
+                                "objetoDatosPorDivisión":[]
                             }
                         ]
                     }

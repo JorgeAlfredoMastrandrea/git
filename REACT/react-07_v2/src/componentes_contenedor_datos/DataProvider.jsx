@@ -45,7 +45,7 @@ export const DataProvider = (props) => {
 
 
   const onEnviarDatosLayout = (datos) => {    
-    console.log('---- ' , datos)
+    //console.log('DataProvider---- ' , datos)
     props.onMostrarDatosSeleccionadoPorCurso(datos);
     
 }
