@@ -11,52 +11,44 @@
 import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { useRef } from 'react';
+import { DataLayout } from './DataLayout';
 //import { useMemo } from 'react';
 
 export const DataProvider = (props) => {
 
   const [data, setData] = useState([]);
-  console.log('nav link ' , props.navLinkAñoMedicion)
+  const [dataDictionary, setDataDictionary] = useState({});  
 
   const fetchData = async () => {
-    try {
-      const response = await fetch('datosJSON/' + props.dataSeleccionadaPorCurso)
-      const data = await response.json();
-      setData(data);
-      // console.log(data)
-      // un array que va a mantener objetos que son los datos que se van leyendo
-      // const dataObjectos = useMemo(() => dataObjectos.push(data) , [])
-      // console.log('dataObjectos ..... : ', dataObjectos)
-
-    } catch (error) {
-      console.log(error)
+    //console.log('-->', props.division_id)
+    if ( dataDictionary[props.division_id] ) {
+      console.log('ya esta cargado no hace falta hacer fetch !!')
+      setData(dataDictionary[props.division_id]);
+    } else {
+      try {
+        console.log('haciendo fetch con la API..!!!')
+        const response = await fetch('datosJSON/' + props.dataSeleccionadaPorCurso)
+        const data = await response.json();
+        setData(data);
+        //setDataDictionary(prevData => ({ ...prevData, newData: data }));
+        //setDataDictionary(prevData => ({ ...prevData, [`newData${Date.now()}`]: data }));
+        setDataDictionary(prevData => ({ ...prevData, [props.division_id]: data }));
+      } catch (error) {
+        console.log(error)
+      }
     }
   }
-
-
-
   // siempre se va a quedar escuchando los cambios, cada vez que se manda un url diferente, se eejecuta useEffect
   useEffect(() => {
-    console.log('esto se hace una sola vez !!!... haciendo fetch a : ', 'datosJSON/' + props.dataSeleccionadaPorCurso)
-    // este componente no renderiza nada, lo que hace es leer el JSON y devolverlo a otro comp que lo va a interpretar y ejecutar
+    //console.log('esto se hace una sola vez !!!... haciendo fetch a : ', 'datosJSON/' + props.dataSeleccionadaPorCurso)
     fetchData()
   }, [props.dataSeleccionadaPorCurso])
 
-
-  // const onEnviarDatosLayout = () => {    
-  //   //console.log('DataProvider---- ' , data)
-  //   props.onMostrarDatosSeleccionadoPorCurso(data);
-    
+  // const ver_dataDictionary = () => {
+  //   const dataDictionaryLength = Object.keys(dataDictionary).length;
+  //   //console.log('layout-> ', data, 'dataDictionaryLongitud ', dataDictionaryLength, 'dataDictionary ', dataDictionary)
   // }
-
-  // actualizar NavLink
-  const mostrarDatos = () => {
-
-  }
-
-  const actualizarNavLink = () => {
-    
-  }
 
   return (
     <>
@@ -65,25 +57,21 @@ export const DataProvider = (props) => {
         {props.dataSeleccionadaPorCurso}
       </p>
 
-      <p>
-        {
-          // {
-          //   data && data.length>0 && data.map((item)=><p>{item.about}</p>)
-          // }
-          // no se renderiza nada, lo que hace es devolver el resultado para que el DataLayout lo dibuje
-          // pero lo que debe hacer es guardar el resultado en un objeto que él mantiene (DataProvider)..
-        }
+      <p>        
         {
           data && data.length > 0 && data.map(item =>
-            <div key={item.id}>
-              <span><strong>Dato: { item.título }</strong></span> { props.onMostrarDatosSeleccionadoPorCurso(data) }
+            <div key={item.id} >
+              <span><strong>Dato: {
+                //item.título
+                // ver_dataDictionary({})
+              }</strong></span>
+              {
+                <DataLayout data={data} />
+              }
               <span><strong>... esto -el valor que está en data !!- debo devolverlo al DataLayout ..!!</strong></span>
             </div>
           )}
       </p>
-      
-    
     </>
-
   )
 }
