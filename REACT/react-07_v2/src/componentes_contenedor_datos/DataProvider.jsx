@@ -16,8 +16,7 @@ import { useState } from 'react';
 export const DataProvider = (props) => {
 
   const [data, setData] = useState([]);
-
-
+  console.log('nav link ' , props.navLinkAñoMedicion)
 
   const fetchData = async () => {
     try {
@@ -44,14 +43,23 @@ export const DataProvider = (props) => {
   }, [props.dataSeleccionadaPorCurso])
 
 
-  const onEnviarDatosLayout = (datos) => {    
-    //console.log('DataProvider---- ' , datos)
-    props.onMostrarDatosSeleccionadoPorCurso(datos);
+  // const onEnviarDatosLayout = () => {    
+  //   //console.log('DataProvider---- ' , data)
+  //   props.onMostrarDatosSeleccionadoPorCurso(data);
     
-}
+  // }
+
+  // actualizar NavLink
+  const mostrarDatos = () => {
+
+  }
+
+  const actualizarNavLink = () => {
+    
+  }
 
   return (
-    <div>
+    <>
       DataProvider
       <p>
         {props.dataSeleccionadaPorCurso}
@@ -68,14 +76,14 @@ export const DataProvider = (props) => {
         {
           data && data.length > 0 && data.map(item =>
             <div key={item.id}>
-              <span><strong>Dato: { item.título }</strong></span> { onEnviarDatosLayout(data) }
+              <span><strong>Dato: { item.título }</strong></span> { props.onMostrarDatosSeleccionadoPorCurso(data) }
               <span><strong>... esto -el valor que está en data !!- debo devolverlo al DataLayout ..!!</strong></span>
             </div>
           )}
       </p>
       
     
-    </div>
+    </>
 
   )
 }

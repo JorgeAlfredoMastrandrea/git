@@ -15,7 +15,7 @@ import { DataLayout } from './componentes_contenedor_datos/DataLayout';
 function App() {
 
     const [dataSeleccionadaPorCurso, cambiarDataSeleccionadaPorCurso] = useState(); // ???
-    const [division_id , setDivision_id] = useState(); // ???
+    const [division_id, setDivision_id] = useState(); // ???
     const [layoutSeleccionada_, setLayoutSeleccionada_] = useState(); // ???
 
     const refLayout = useRef(null)
@@ -38,77 +38,31 @@ function App() {
                                 }
     */
     const onBuscarDatosSelecionadaPorCurso = (dataSeleccionada, divisionID, objetoDatosPorDivisión) => {
-        //console.log('data seleccionada ------ >', dataSeleccionada, '----- layout ---- :', objetoDatosPorDivisión)
-        // acá verifico si en el 'objetoDatosPorDivisión' ya está el layout guardado anteriormente ...???
+        cambiarDataSeleccionadaPorCurso(dataSeleccionada) // ----> le pasa al DP el enlace a buscar ... ojo ese es el enlace , no los datos del layout !!
+        console.log('------------------------------------------------------------------')
+        console.log('dataSeleccionada ', ' ', dataSeleccionada)
+        console.log('divisionID ', ' ', divisionID);
+        setDivision_id(divisionID)
+        console.log('objetoDatosPorDivisión ', ' ', objetoDatosPorDivisión)
+        console.log('------------------------------------------------------------------')
+    }
 
-        // experimental ::::: busco por divisionID
-        // const objetoDivisión = buscarPorId(navLinkAñoMedicion, divisionID)
-
-        // si no tengo nada cargado 'un layout' , entonces lo busco
-        // if (objetoDivisión.objetoDatosPorDivisión.length === 0) {
-        //     //console.log('no hay layout cargado aun en !! ' , divisionID)
-        //     cambiarDataSeleccionadaPorCurso(dataSeleccionada)
-        //     // lo que hago acá es guardar el id de la división así luego puedo guardar el layout mas adelante ..!!
-        //     refLayout.current = objetoDivisión.id
-        //     // luego lo inserto para que ya quede dentro del JSON grande así no lo vuelvo a buscar...
-        //     // const inserto = insertarObjetoPorDivisionId(navLinkAñoMedicion, divisionID, objetoDatosPorDivisión)
-        //     //console.log(`inserté en ${divisionID}`, inserto , ' --> : ' , objetoDatosPorDivisión)
-        //     //console.log(navLinkAñoMedicion)
-        // } else {
-        //     // si el objeto tiene datos que ya han sido cargados o sea ya tiene un layout cargado, no lo buscamos nuevamente, lo saco y lo muestro..
-        //     //console.log('ya tengo el layout cargado..!!!.. no hace falta hacer fetch del mismo')
-
-        //     // onMostrarDatosSeleccionadoPorCurso(objetoDatosPorDivisión) está mal !!!
-        //     // debo crear otra funcion para que lea el layout directamente desde el objeto navLink...
-        //     //console.log('leo el layout directamente desde le JSON navlink..!')
-        //     buscarLayoutCargadoAnteriormente(divisionID)
-        // }
-        // le pasa al DataProvider el nombre del JSON, el D.P. hace fetch de ese archivo y luego mediante 'onEnviarDatosLayout'
-        // devuelve el layout 'data' para que sea representado por el DataLayout usando 'onMostrarDatosSeleccionadoPorCurso'-> setLayoutSeleccionada_(layout)
-
-        const objetoDivisión = buscarPorId(navLinkAñoMedicion, divisionID) // esto trae todo el objeto completo de la division
-        if (objetoDivisión.objetoDatosPorDivisión.length === 0){
-            console.log('enlace -- >', dataSeleccionada, ' -- divisionID -- ', divisionID, '-- layout -- :', objetoDatosPorDivisión)
-            cambiarDataSeleccionadaPorCurso(dataSeleccionada) // ----> le pasa al DP el enlace a buscar ... ojo ese es el enlace , no los datos del layout !!
-            setDivision_id(divisionID)
-        }else{
-            console.log('lo busco en el objeto nav a la division : ' , division_id )
-            buscarLayoutCargadoAnteriormente(division_id)
-        }
-
-
+    const onMostrarDatosSeleccionadoPorCurso = (data) => {
+        console.log('------------------------------------------------------------------')
+        console.log('division_id : ', division_id)
+        setLayoutSeleccionada_(data)
+        // inserto el layout
+        insertarObjetoPorDivisionId(navLinkAñoMedicion, division_id, data)
+        console.log('navLinkAñoMedicion : ', navLinkAñoMedicion)
+        console.log('------------------------------------------------------------------')
     }
 
     const buscarLayoutCargadoAnteriormente = (divisionID) => {
-        //console.log('andres se la come ' , divisionID)
+        console.log('andres se la come ', divisionID)
         const objetoDivisión = buscarPorId(navLinkAñoMedicion, divisionID)
         const elLayoutCargado = objetoDivisión.objetoDatosPorDivisión
         console.log('ahi tene puto el layout !!! : ', elLayoutCargado)
         setLayoutSeleccionada_(elLayoutCargado)
-    }
-
-    const onMostrarDatosSeleccionadoPorCurso = (layout) => {
-        // console.log("soy el layout de datos que estás buscando : ", layout)
-        // acá debería poder guardar el layout dentro del atributo 'objetoDatosPorDivisión'
-
-        // inserto el layout..!!
-        // const objetoDivisión = buscarPorId(navLinkAñoMedicion, refLayout.current)
-        // if (objetoDivisión.objetoDatosPorDivisión.length === 0){
-        //     const inserto = insertarObjetoPorDivisionId(navLinkAñoMedicion, refLayout.current, layout)
-        // }
-        //console.log('objetoDivisión ' , refLayout.current)
-        setLayoutSeleccionada_(layout)
-
-        // ahora inserto ese layout en donde corresponde.., pero me fijo que su dimension no sea mayor a cero
-        // si fuese así es porque ya hay insertado uno con anterioridad 
-                
-        const objetoDivisión = buscarPorId(navLinkAñoMedicion, division_id) // esto trae todo el objeto completo de la division
-        console.log('division_id : ' , division_id , ' -- ' , ' objetoDatosPorDivisión : ' , objetoDivisión , ' tipo ' , typeof objetoDivisión)
-        if (objetoDivisión.objetoDatosPorDivisión.length === 0){
-            console.log('lo inserto a : ' , layout)
-            const inserto = insertarObjetoPorDivisionId(navLinkAñoMedicion, division_id , layout)
-        }
-
     }
 
     // Función para buscar recursivamente por ID
@@ -219,6 +173,7 @@ function App() {
                         {
                             dataSeleccionadaPorCurso &&
                             <DataProvider
+                                navLinkAñoMedicion={navLinkAñoMedicion}
                                 dataSeleccionadaPorCurso={dataSeleccionadaPorCurso}
                                 onMostrarDatosSeleccionadoPorCurso={onMostrarDatosSeleccionadoPorCurso}
                             />
