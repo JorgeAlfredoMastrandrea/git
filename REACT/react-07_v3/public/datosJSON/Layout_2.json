@@ -1,7 +1,7 @@
 [
     {
         "component": "fila",
-        "src": "datos para fila",
+        "src": "siempre se empieza por una fila",
         "className": "row align-items-center",
         "id": 1,
         "mKey": 1,
