@@ -1,0 +1,153 @@
+.barra-año {
+    display: grid;
+    gap: 6.8%;
+    grid-template-columns: auto auto;
+    /* es igual a esto -> grid-template-columns: repeat(2,auto)  */
+    grid-template-areas:
+        "boton-anterior  año  boton-siguiente";
+}
+
+.año {
+    grid-area: año;
+}
+
+.boton-anterior {
+    grid-area: boton-anterior;
+}
+
+.boton-siguiente {
+    grid-area: boton-siguiente;
+}
+
+
+.meses {
+    display: grid;
+    gap: 0.75%;
+    grid-template-columns: auto auto;
+    /* es igual a esto -> grid-template-columns: repeat(2,auto)  */
+    grid-template-areas:
+        "enero febrero marzo abril"
+        "mayo junio julio agosto"
+        "setiembre octubre noviembre diciembre";
+}
+
+.enero {
+    grid-area: enero;
+}
+
+.febrero {
+    grid-area: febrero;
+}
+
+.marzo {
+    grid-area: marzo;
+}
+
+.abril {
+    grid-area: abril;
+}
+
+.mayo {
+    grid-area: mayo;
+}
+
+.junio {
+    grid-area: junio;
+}
+
+.julio {
+    grid-area: julio;
+}
+
+.agosto {
+    grid-area: agosto;
+}
+
+.setiembre {
+    grid-area: setiembre;
+}
+
+.octubre {
+    grid-area: octubre;
+}
+
+.noviembre {
+    grid-area: noviembre;
+}
+
+.diciembre {
+    grid-area: diciembre;
+}
+
+
+/************** styles.css ******************/
+.d-flex {
+    display: flex !important;
+    height: 100vh;
+}
+
+.center {
+    margin: 0 auto;
+    align-self: center;
+}
+
+/************** grid.css ******************/
+.themed-grid-col {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    background-color: rgba(112.520718, 44.062154, 249.437846, .15);
+    border: 1px solid rgba(112.520718, 44.062154, 249.437846, .3);
+}
+
+.themed-container {
+    padding: .75rem;
+    margin-bottom: 1.5rem;
+    background-color: rgba(112.520718, 44.062154, 249.437846, .15);
+    border: 1px solid rgba(112.520718, 44.062154, 249.437846, .3);
+}
+
+/************** contenido-scrollable.css ******************/
+.contenido-scrollable {
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: blue orange
+}
+
+.contenido-scrollable::-webkit-scrollbar {
+    width: 15px;
+    /* width of the entire scrollbar */
+}
+
+.contenido-scrollable::-webkit-scrollbar-track {
+    background: rgb(145, 239, 116);
+    /* color of the tracking area */
+}
+
+.contenido-scrollable::-webkit-scrollbar-thumb {
+    background-color: white;
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: 3px solid rgb(67, 67, 139);
+    /* creates padding around scroll thumb */
+}
+
+.chart-wrapper {
+    border: 1px solid blue;
+    height: 50%;
+    width: 35%;
+}
+
+/************** layout-style.css ******************/
+.layout-style {
+    top: 50%;
+    left: 50%;
+    width: 98%;
+    height: 85%;
+    transform: translate(-50%, -35%);
+    border: 1px solid #666;
+    background-color: "#b9faac";
+    position: fixed
+}
+
+/************** ?.css ******************/

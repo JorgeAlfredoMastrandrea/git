@@ -1,0 +1,266 @@
+[
+    {
+        "component": "fila",
+        "src": "siempre se empieza por una fila",
+        "className": "row align-items-center",
+        "id": 1,
+        "mKey": 1,
+        "children": [
+            {
+                "component": "fila",
+                "src": "datos para fila",
+                "className": "row align-items-center",
+                "id": 1,
+                "mKey": 1,
+                "style": [
+                    {
+                        "backgroundColor": "#aedcca"
+                    }
+                ],
+                "children": [
+                    {
+                        "component": "columna",
+                        "src": "datos adicionales para columna",
+                        "className": "col p-1",
+                        "id": 2,
+                        "mKey": 2,
+                        "children": [
+                            {
+                                "component": "párrafo",
+                                "src": "ipsum dolor sit amet consectetur adipisicing elit. Natusnsectetuipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametr adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet",
+                                "className": "text-white",
+                                "id": 3,
+                                "mKey": 3,
+                                "style": [
+                                    {
+                                        "textAlign": "justify",
+                                        "backgroundColor": "#aafaff"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "component": "columna",
+                        "src": "datos adicionales para columna",
+                        "className": "col p-1",
+                        "id": 2,
+                        "mKey": 2,
+                        "children": [
+                            {
+                                "component": "barrasChartJS",
+                                "src": "src",
+                                "className": "",
+                                "id": 6,
+                                "mKey": 6,
+                                "opcionesBarra": [
+                                    {
+                                        "responsive": true,
+                                        "maintainAspectRatio": true,
+                                        "aspectRatio": 2.5,
+                                        "plugins": {
+                                            "legend": {
+                                                "position": "top",
+                                                "display": true,
+                                                "labels": {
+                                                    "font": {
+                                                        "size": 15,
+                                                        "family": "Arial"
+                                                    }
+                                                }
+                                            },
+                                            "title": {
+                                                "display": true,
+                                                "text": "Ejemplo 1"
+                                            },
+                                            "datalabels": {
+                                                "labels": {
+                                                    "position": "top",
+                                                    "size": 20,
+                                                    "fontColor": "white",
+                                                    "weight": "bold",
+                                                    "family": "Arial"
+                                                }
+                                            }
+                                        }
+                                    }
+                                ],
+                                "datosBarra": [
+                                    {
+                                        "labels": [
+                                            "Enero",
+                                            "Febrero",
+                                            "March",
+                                            "April",
+                                            "May",
+                                            "June",
+                                            "July"
+                                        ],
+                                        "datasets": [
+                                            {
+                                                "label": "Dataset 1",
+                                                "data": [
+                                                    100,
+                                                    200,
+                                                    300,
+                                                    400,
+                                                    500,
+                                                    600,
+                                                    700
+                                                ],
+                                                "backgroundColor": "rgba(255, 99, 132, 0.5)"
+                                            },
+                                            {
+                                                "label": "Dataset 2",
+                                                "data": [
+                                                    150,
+                                                    250,
+                                                    350,
+                                                    450,
+                                                    550,
+                                                    650,
+                                                    750
+                                                ],
+                                                "backgroundColor": "rgba(53, 162, 235, 0.5)"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "component": "fila",
+                "src": "datos para fila",
+                "className": "row align-items-center",
+                "id": 1,
+                "mKey": 1,
+                "style": [
+                    {
+                        "backgroundColor": "#aedcca"
+                    }
+                ],
+                "children": [
+                    {
+                        "component": "columna",
+                        "src": "datos adicionales para columna",
+                        "className": "col p-1",
+                        "id": 2,
+                        "mKey": 2,
+                        "style": [
+                            {
+                                "backgroundColor": "#ff00aa"
+                            }
+                        ],
+                        "children": [
+                            {
+                                "component": "barrasChartJS",
+                                "src": "src",
+                                "className": "",
+                                "id": 6,
+                                "mKey": 6,
+                                "opcionesBarra": [
+                                    {
+                                        "responsive": true,
+                                        "maintainAspectRatio": true,
+                                        "aspectRatio": 2.5,
+                                        "plugins": {
+                                            "legend": {
+                                                "position": "top",
+                                                "display": true,
+                                                "labels": {
+                                                    "font": {
+                                                        "size": 15,
+                                                        "family": "Arial"
+                                                    }
+                                                }
+                                            },
+                                            "title": {
+                                                "display": true,
+                                                "text": "Ejemplo 1"
+                                            },
+                                            "datalabels": {
+                                                "labels": {
+                                                    "position": "top",
+                                                    "size": 20,
+                                                    "fontColor": "white",
+                                                    "weight": "bold",
+                                                    "family": "Arial"
+                                                }
+                                            }
+                                        }
+                                    }
+                                ],
+                                "datosBarra": [
+                                    {
+                                        "labels": [
+                                            "Enero",
+                                            "Febrero",
+                                            "March",
+                                            "April",
+                                            "May",
+                                            "June",
+                                            "July"
+                                        ],
+                                        "datasets": [
+                                            {
+                                                "label": "Dataset 1",
+                                                "data": [
+                                                    100,
+                                                    200,
+                                                    300,
+                                                    400,
+                                                    500,
+                                                    600,
+                                                    700
+                                                ],
+                                                "backgroundColor": "rgba(255, 99, 132, 0.5)"
+                                            },
+                                            {
+                                                "label": "Dataset 2",
+                                                "data": [
+                                                    150,
+                                                    250,
+                                                    350,
+                                                    450,
+                                                    550,
+                                                    650,
+                                                    750
+                                                ],
+                                                "backgroundColor": "rgba(53, 162, 235, 0.5)"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "component": "columna",
+                        "src": "datos adicionales para columna",
+                        "className": "col p-1",
+                        "id": 2,
+                        "mKey": 2,
+                        "children": [
+                            {
+                                "component": "párrafo",
+                                "src": "ipsum dolor sit amet consectetur adipisicing elit. Natusnsectetuipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametr adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet",
+                                "className": "text-white",
+                                "id": 3,
+                                "mKey": 3,
+                                "style": [
+                                    {
+                                        "textAlign": "justify",
+                                        "backgroundColor": "#aafaff"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

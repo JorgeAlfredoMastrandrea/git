@@ -1,0 +1,10 @@
+[
+    {
+        "id":1,
+        "título":"Hola, soy el dato de primer año división C!!",
+        "gráfico":{
+            "tipo":"barras apiladas",
+            "datos":[0,1,2,3]
+        }
+    }
+]
