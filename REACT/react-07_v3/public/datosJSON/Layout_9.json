@@ -1,27 +1,27 @@
 [
     {
         "component": "fila",
-        "src": "siempre se empieza por una fila",
-        "className": "row align-items-center",
+        "src": "siempre se empieza por una fila p-2 m-2",
+        "className": "row align-items-center ",
         "id": 1,
         "mKey": 1,
         "children": [
             {
                 "component": "fila",
                 "src": "datos para fila",
-                "className": "row align-items-center",
+                "className": "row align-items-center ",
                 "id": 1,
                 "mKey": 1,
                 "children": [
                     {
-                        "component": "columna",
+                        "component": "col",
                         "src": "datos adicionales para columna",
                         "className": "col p-1",
                         "id": 2,
                         "mKey": 2,
                         "children": [
                             {
-                                "component": "párrafo",
+                                "component": "p_",
                                 "src": "  ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimos voluptas perspiciatis incidunt, esse odit rem culpa in doloremque deserunt, corrupti reprehenderit repellat, ut perferendis tenetur temporibus!Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimos voluptas perspiciatis incidunt, esse odit rem culpa in doloremque deserunt, corrupti reprehenderit repellat, ut perferendis tenetur temporibus!Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimos voluptas perspiciatis incidunt, esse odit rem culpa in doloremque deserunt, corrupti reprehenderit repellat, ut perferendis tenetur temporibus!Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. ",
                                 "className": "text-white",
                                 "id": 3,
@@ -36,7 +36,7 @@
                         ]
                     },
                     {
-                        "component": "columna",
+                        "component": "col",
                         "src": "datos adicionales para columna",
                         "className": "col p-1",
                         "id": 2,
@@ -125,14 +125,14 @@
                         ]
                     },
                     {
-                        "component": "columna",
+                        "component": "col",
                         "src": "datos adicionales para columna",
                         "className": "col p-1",
                         "id": 2,
                         "mKey": 2,
                         "children": [
                             {
-                                "component": "párrafo",
+                                "component": "p_",
                                 "src": "  ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimos voluptas perspiciatis incidunt, esse odit rem culpa in doloremque deserunt, corrupti reprehenderit repellat, ut perferendis tenetur temporibus!Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimos voluptas perspiciatis incidunt, esse odit rem culpa in doloremque deserunt, corrupti reprehenderit repellat, ut perferendis tenetur temporibus!Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimos voluptas perspiciatis incidunt, esse odit rem culpa in doloremque deserunt, corrupti reprehenderit repellat, ut perferendis tenetur temporibus!Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. ",
                                 "className": "text-white",
                                 "id": 3,
@@ -151,7 +151,7 @@
             {
                 "component": "fila",
                 "src": "datos para fila",
-                "className": "row align-items-center p-0 m-0",
+                "className": "row align-items-center p-2 m-2",
                 "id": 4,
                 "mKey": 4,
                 "style": [
@@ -162,7 +162,7 @@
                 ],
                 "children": [
                     {
-                        "component": "columna",
+                        "component": "col",
                         "src": "datos adicionales para columna",
                         "className": "col p-1 m-1",
                         "id": 5,

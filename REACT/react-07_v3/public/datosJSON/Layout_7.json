@@ -19,14 +19,14 @@
                 ],
                 "children": [
                     {
-                        "component": "columna",
+                        "component": "col",
                         "src": "datos adicionales para columna",
                         "className": "col p-1",
                         "id": 2,
                         "mKey": 2,
                         "children": [
                             {
-                                "component": "párrafo",
+                                "component": "p_",
                                 "src": "ipsum",
                                 "className": "text-white",
                                 "id": 3,
@@ -41,7 +41,7 @@
                         ]
                     },
                     {
-                        "component": "columna",
+                        "component": "col",
                         "src": "datos adicionales para columna",
                         "className": "col p-1",
                         "id": 2,
@@ -60,7 +60,7 @@
                                 ],
                                 "children": [
                                     {
-                                        "component": "columna",
+                                        "component": "col",
                                         "src": "datos adicionales para columna",
                                         "className": "col p-2",
                                         "id": 2,
@@ -168,14 +168,14 @@
                                 ],
                                 "children": [
                                     {
-                                        "component": "columna",
+                                        "component": "col",
                                         "src": "datos adicionales para columna",
                                         "className": "col p-1",
                                         "id": 2,
                                         "mKey": 2,
                                         "children": [
                                             {
-                                                "component": "párrafo",
+                                                "component": "p_",
                                                 "src": "dolor",
                                                 "className": "text-white",
                                                 "id": 3,

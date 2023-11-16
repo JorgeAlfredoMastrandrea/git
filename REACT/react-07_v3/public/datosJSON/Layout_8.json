@@ -19,14 +19,14 @@
                 ],
                 "children": [
                     {
-                        "component": "columna",
+                        "component": "col",
                         "src": "datos adicionales para columna",
                         "className": "col p-1",
                         "id": 2,
                         "mKey": 2,
                         "children": [
                             {
-                                "component": "párrafo",
+                                "component": "p_",
                                 "src": "ipsum dolor sit amet consectetur adipisicing elit. Natusnsectetuipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametr adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet",
                                 "className": "text-white",
                                 "id": 3,
@@ -41,7 +41,7 @@
                         ]
                     },
                     {
-                        "component": "columna",
+                        "component": "col",
                         "src": "datos adicionales para columna",
                         "className": "col p-1",
                         "id": 2,
@@ -144,7 +144,7 @@
                 ],
                 "children": [
                     {
-                        "component": "columna",
+                        "component": "col",
                         "src": "datos adicionales para columna",
                         "className": "col p-1",
                         "id": 2,
@@ -238,14 +238,14 @@
                         ]
                     },
                     {
-                        "component": "columna",
+                        "component": "col",
                         "src": "datos adicionales para columna",
                         "className": "col p-1",
                         "id": 2,
                         "mKey": 2,
                         "children": [
                             {
-                                "component": "párrafo",
+                                "component": "p_",
                                 "src": "ipsum dolor sit amet consectetur adipisicing elit. Natusnsectetuipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametr adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet",
                                 "className": "text-white",
                                 "id": 3,

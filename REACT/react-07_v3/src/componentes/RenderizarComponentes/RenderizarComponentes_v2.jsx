@@ -12,6 +12,12 @@ import {
   Button
 } from "react-bootstrap";
 
+import { Título_h1_ } from '../ComponentesGrid/Título_h1_';
+import { Título_h2_ } from '../ComponentesGrid/Título_h2_';
+import { Título_h3_ } from '../ComponentesGrid/Título_h3_';
+import { Título_h4_ } from '../ComponentesGrid/Título_h4_';
+import { Título_h5_ } from '../ComponentesGrid/Título_h5_';
+import { Título_h6_ } from '../ComponentesGrid/Título_h6_';
 import { Párrafo_ } from '../ComponentesGrid/Párrafo_';
 import { Contenedor_ } from '../ComponentesGrid/Contenedor_';
 import { Fila_ } from '../ComponentesGrid/Fila_';
@@ -22,10 +28,16 @@ import { LineaChartJS } from '../ComponentesChartJS/LineaChartJS';
 import { MultiAxisChartJS } from '../ComponentesChartJS/MultiAxisChartJS';
 
 const KeysToComponentMap = {  
+  h1_ : Título_h1_,
+  h2_ : Título_h2_,
+  h3_ : Título_h3_,
+  h4_ : Título_h4_,
+  h5_ : Título_h5_,
+  h6_ : Título_h6_,  
   fila: Fila_,
-  columna: Columna_,
-  contenedor: Contenedor_,
-  párrafo: Párrafo_,
+  col: Columna_,
+  cont: Contenedor_,
+  p_: Párrafo_,
   barrasChartJS: BarrasChartJS,
   areaChartJS:AreaChartJS,
   lineaChartJS:LineaChartJS,

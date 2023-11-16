@@ -14,14 +14,14 @@
                 "mKey": 1,
                 "children": [
                     {
-                        "component": "columna",
+                        "component": "col",
                         "src": "datos adicionales para columna",
                         "className": "col p-1",
                         "id": 2,
                         "mKey": 2,
                         "children": [
                             {
-                                "component": "párrafo",
+                                "component": "p_",
                                 "src": "  ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimos voluptas perspiciatis incidunt, esse odit rem culpa in doloremque deserunt, corrupti reprehenderit repellat, ut perferendis tenetur temporibus!Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimos voluptas perspiciatis incidunt, esse odit rem culpa in doloremque deserunt, corrupti reprehenderit repellat, ut perferendis tenetur temporibus!Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimos voluptas perspiciatis incidunt, esse odit rem culpa in doloremque deserunt, corrupti reprehenderit repellat, ut perferendis tenetur temporibus!Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. ",
                                 "className": "text-white",
                                 "id": 3,
@@ -36,7 +36,7 @@
                         ]
                     },
                     {
-                        "component": "columna",
+                        "component": "col",
                         "src": "datos adicionales para columna",
                         "className": "col p-1",
                         "id": 2,
@@ -125,14 +125,14 @@
                         ]
                     },
                     {
-                        "component": "columna",
+                        "component": "col",
                         "src": "datos adicionales para columna",
                         "className": "col p-1",
                         "id": 2,
                         "mKey": 2,
                         "children": [
                             {
-                                "component": "párrafo",
+                                "component": "p_",
                                 "src": "  ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimos voluptas perspiciatis incidunt, esse odit rem culpa in doloremque deserunt, corrupti reprehenderit repellat, ut perferendis tenetur temporibus!Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimos voluptas perspiciatis incidunt, esse odit rem culpa in doloremque deserunt, corrupti reprehenderit repellat, ut perferendis tenetur temporibus!Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimos voluptas perspiciatis incidunt, esse odit rem culpa in doloremque deserunt, corrupti reprehenderit repellat, ut perferendis tenetur temporibus!Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. ",
                                 "className": "text-white",
                                 "id": 3,
@@ -162,7 +162,7 @@
                 ],
                 "children": [
                     {
-                        "component": "columna",
+                        "component": "col",
                         "src": "datos adicionales para columna",
                         "className": "col p-1 m-1",
                         "id": 5,
@@ -251,7 +251,7 @@
                         ]
                     },
                     {
-                        "component": "columna",
+                        "component": "col",
                         "src": "datos adicionales para columna",
                         "className": "col p-1 m-1",
                         "id": 5,

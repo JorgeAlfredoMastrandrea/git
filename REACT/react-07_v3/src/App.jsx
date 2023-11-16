@@ -7,7 +7,6 @@ import navLinkAñoMedicion from "./medicionesAñosMesesCursosDivisiones.json";
 import { NavegaciónAñoMedición_v6 } from '../src/componentes/componentes_navegación_año_meses/NavegaciónAñoMedición_v6';
 import { NavegaciónCursoDivisión } from '../src/componentes/componentes_navegación_curso_división/NavegaciónCursoDivisión';
 import { DataProvider } from './componentes/componentes_contenedor_datos/DataProvider';
-import { DataLayout } from './componentes/componentes_contenedor_datos/DataLayout';
 
 function App() {
 
