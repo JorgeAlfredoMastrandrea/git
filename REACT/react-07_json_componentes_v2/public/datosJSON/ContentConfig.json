@@ -134,7 +134,6 @@
                         "className": "className",
                         "ky": "ky",
                         "src": "src",
-                        "responsive": true,
                         "opcionesBarra": [
                             {
                                 "porcentaje": true,
@@ -677,6 +676,47 @@
                                 ]
                             }
                         ]
+                    }
+                ]
+            }
+        ]
+    }
+    ,
+    {
+        "component": "fila",
+        "src": "datos para fila",
+        "className": "row text-center align-items-center p-0 m-0",
+        "ky": "1",
+        "children": [
+            {
+                "component": "columna",
+                "src": "datos adicionales para columna",
+                "className": "col-sm text-center align-middle bg-primary text-white p-0",
+                "ky": "2",
+                "children": [
+                    {
+                        "component": "párrafo",
+                        "src": "Tablas"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "component": "fila",
+        "src": "datos para fila",
+        "className": "row text-center align-items-center p-0 m-0",
+        "ky": "1",
+        "children": [
+            {
+                "component": "columna",
+                "src": "datos adicionales para columna",
+                "className": "col-sm text-center align-middle ",
+                "ky": "2",
+                "children": [
+                    {
+                        "component": "tabla",
+                        "src": "?"
                     }
                 ]
             }

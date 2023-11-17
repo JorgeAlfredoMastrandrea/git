@@ -3,7 +3,7 @@
 import React from 'react'
 import { Chart } from 'react-google-charts';
 
-export const Barras = (children) => { 
+export const BarrasGoogleChart = (children) => { 
 
   return (
     <>

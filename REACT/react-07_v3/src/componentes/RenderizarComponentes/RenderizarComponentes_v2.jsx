@@ -22,10 +22,13 @@ import { Párrafo_ } from '../ComponentesGrid/Párrafo_';
 import { Contenedor_ } from '../ComponentesGrid/Contenedor_';
 import { Fila_ } from '../ComponentesGrid/Fila_';
 import { Columna_ } from '../ComponentesGrid/Columna_';
+
 import { BarrasChartJS } from '../ComponentesChartJS/BarrasChartJS';
 import { AreaChartJS } from '../ComponentesChartJS/AreaChartJS';
 import { LineaChartJS } from '../ComponentesChartJS/LineaChartJS';
 import { MultiAxisChartJS } from '../ComponentesChartJS/MultiAxisChartJS';
+
+import { BarrasGoogleChart } from '../ComponentesGoogleCharts/BarrasGoogleChart';
 
 const KeysToComponentMap = {  
   h1_ : Título_h1_,
@@ -38,10 +41,13 @@ const KeysToComponentMap = {
   col: Columna_,
   cont: Contenedor_,
   p_: Párrafo_,
+
   barrasChartJS: BarrasChartJS,
   areaChartJS:AreaChartJS,
   lineaChartJS:LineaChartJS,
-  multiAxisChartJS:MultiAxisChartJS
+  multiAxisChartJS:MultiAxisChartJS,
+
+  barrasGoogleChart : BarrasGoogleChart,
 };
 
 export const RenderizarComponentes_v2 = (config) => {

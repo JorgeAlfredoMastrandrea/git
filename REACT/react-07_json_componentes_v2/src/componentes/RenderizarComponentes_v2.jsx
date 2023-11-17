@@ -20,16 +20,20 @@ import { BarrasChartJS } from '../componentes/ComponentesChartJS/BarrasChartJS';
 import { AreaChartJS } from '../componentes/ComponentesChartJS/AreaChartJS';
 import { LineaChartJS } from '../componentes/ComponentesChartJS/LineaChartJS';
 import { MultiAxisChartJS } from '../componentes/ComponentesChartJS/MultiAxisChartJS';
+import { Tabla } from '../componentes/ComponenteTabla/Tabla';
 
 const KeysToComponentMap = {  
   fila: Fila_,
   columna: Columna_,
   contenedor: Contenedor_,
   párrafo: Párrafo_,
+
   barrasChartJS: BarrasChartJS,
   areaChartJS:AreaChartJS,
   lineaChartJS:LineaChartJS,
-  multiAxisChartJS:MultiAxisChartJS
+  multiAxisChartJS:MultiAxisChartJS,
+
+  tabla : Tabla
 };
 
 export const RenderizarComponentes_v2 = (config) => {

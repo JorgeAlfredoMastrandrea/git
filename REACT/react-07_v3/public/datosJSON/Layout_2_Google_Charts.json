@@ -1,0 +1,87 @@
+[
+    {
+        "component": "fila",
+        "src": "siempre se empieza por una fila",
+        "className": "row align-items-center",
+        "id": 1,
+        "mKey": 1,
+        "children": [
+            {
+                "component": "col",
+                "src": "datos adicionales para columna",
+                "className": " col  ",
+                "id": 2,
+                "mKey": 2,
+                "children": [
+                    {
+                        "component": "p_",
+                        "src": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimos voluptas perspiciatis incidunt, esse odit rem culpa in doloremque deserunt, corrupti reprehenderit repellat, ut perferendis tenetur temporibus!Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimos voluptas perspiciatis incidunt, esse odit rem culpa in doloremque deserunt, corrupti reprehenderit repellat, ut perferendis tenetur temporibus!Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimos voluptas perspiciatis incidunt, esse odit rem culpa in doloremque deserunt, corrupti reprehenderit repellat, ut perferendis tenetur temporibus!Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimos voluptas perspiciatis incidunt, esse odit rem culpa in doloremque deserunt, corrupti reprehenderit repellat, ut perferendis tenetur temporibus!Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. ",
+                        "className": "text-primary",
+                        "id": 3,
+                        "mKey": 3,
+                        "style": [
+                            {
+                                "textAlign": "justify"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "component": "col",
+                "src": "datos adicionales para columna",
+                "className": "col",
+                "id": 2,
+                "mKey": 2,
+                "children": [
+                    {
+                        "component": "barrasGoogleChart",
+                        "className": "className",
+                        "ky": "ky",
+                        "src": "src",
+                        "data": [
+                            [
+                                "Year",
+                                "Sales",
+                                "Expenses",
+                                "Profit"
+                            ],
+                            [
+                                "2014",
+                                1000,
+                                400,
+                                200
+                            ],
+                            [
+                                "2015",
+                                1170,
+                                460,
+                                250
+                            ],
+                            [
+                                "2016",
+                                660,
+                                1120,
+                                300
+                            ],
+                            [
+                                "2017",
+                                1030,
+                                540,
+                                350
+                            ]
+                        ],
+                        "options": {
+                            "chart": {
+                                "title": "Company Performance",
+                                "subtitle": "Sales, Expenses, and Profit: 2014-2017"
+                            }
+                        },
+                        "width" : "100%",
+                        "height": "100%"
+                    }
+                ]
+            }
+        ]
+    }
+]
