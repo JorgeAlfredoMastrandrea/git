@@ -62,7 +62,46 @@
 - sobre Django.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------
--sobre AlchemySQL y MySQL
+-sobre sqlAlchem (ORM) y MySQL también MySQL Workbench !!!
+    -------sql Alchemy
+    .- Seguir los pasos para instalar y activar el entorno virtual
+    Instalar sql alchemy    :   pip install sqlalchemy
+    Instalar py mysql       :   pip install pymysql
+
+    ------MySQL
+    How To Install MySQL on Ubuntu 22.04 LTS (Linux) (2023) : ------> https://www.youtube.com/watch?v=zRfI79BHf3k
+    How to install MySQL on Ubuntu 20.04 : -------------------------> https://www.ionos.com/digitalguide/websites/web-development/installing-mysql-on-ubuntu-2004/
+
+    Desde la terminal de ubuntu : ctrl+alt+t
+    sudo apt update
+    sudo apt install mysql-server
+    sudo systemctl status mysql.service (para revisar el estado, en caso que que diga que no está activo usar : sudo systemctl start mysql.service)
+    sudo mysql ( de esta manera entramos al shell de MySQL) , escribir : exit y salimos del shell
+
+    Password y Usuarios:
+    sudo mysql_secure_installation
+    ... presionamos n ante la pregunta de validar la fortaleza del password...
+    ... para el caso que estemos en modo prueba o testing dejamos el usuario anonimo.. pero para usarlo en producción, debemos quitarlo
+    en el caso de la pregunta que sigue y para el caso de pruebas, decimos n
+    ... contestamos que no a la siguiente sobre la conección localhost..
+    ... dejamos la base test por las dudas que queramos usarla para puebas ...
+    ... para el caso de la pregunta : Reload privilege tables now? responder Y
+    ..
+    podemos cambiar el password de MySQL de la siguiente manera:
+    ejecutamos el shell de MySQL : 
+    sudo MySQL
+    ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'VicenteForEver'; --> VicenteForEver es la clave de MySQL, para la conexión
+
+     ------MySQL Workbench
+     sudo snap install mysql-workbench-community
+
+
+
+
+
+
+    
+    
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 
