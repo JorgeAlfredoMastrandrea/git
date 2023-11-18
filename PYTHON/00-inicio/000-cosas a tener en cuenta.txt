@@ -1,0 +1,68 @@
+----------------------------------------------------------------------------------------------------------------------------------------------------
+- sobre el uso de Python dentro de Visual Studio Code
+    .- Seguir los paso de los entornos virtuales
+    .- Cuando hemos escrito algún código en python, pulsamos la combinación de teclas ctrl+p 
+    esto es útil para poder setear la versión de python que tenemos instalada dentro del entorno virtual
+    .- Escribir signo de > y luego python interpreter, de ahí seleccionamos el que está instalado dentro del entorno
+    lo va a mostrar con una estrellita rellena.
+    .- Eso es todo...
+    
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+- sobre Python.
+    ---------------------------- uso de entornos virtuales.
+    .- Recomendable crear entornos virtuales para instalar nuevas versiones de python.
+    .- No hacerlo a nivel global de la instalación de linux.!!
+    .- Cada vez que vaya a crear un proyecto, hacerlo dentro de la carpeta PYTHON/PROYECTOS !!
+
+    Creamos una carpeta dentro de la carpeta PROYECTOS usando el mismo Visual Studio Code, por ejemplo Proyecto-0000
+    Cambiamos a esa carpeta desde el mismo Visual Studio Code.
+    Ejecutar por primera vez                        :   python3 -m venv nombre-del-entorno-virtual (podemos usar el mismo nombre del Proyecto)
+    Activar el entorno virtual                      :   source Proyecto-xxxx/bin/activate
+    ......cuando lo activamos vamos a ver el nombre del entorno virtual al principio, y si hacemos dir vamos a ver que aparece dentro del proyecto
+    una carpeta con el mismo nombre...recordar que el nombre del entorno no necesariamente debe ser el mismo que el del proyecto..
+    Instalar pip dentro                             :   pip3 install --upgrade pip
+    Instalar paquetes dentro del entorno virtual    :   python -m pip install <package-name>
+    ... desactivar el entorno virtual : deactivate (lo escribimos tal cual.., no cambiamos de carpeta ni nada..)
+
+
+    ---------------------------- instalaciones y actualizaciones de python (HACERLO DENTRO DE LOS ENTORNOS VIRTUALES..!!!).--------------------------
+    
+    python3 --version
+    sudo apt update && sudo apt upgrade -y
+    sudo add-apt-repository ppa:deadsnakes/ppa
+    sudo apt update
+    apt list | grep python3.12
+
+    ---------------------------- actualización de pip
+    pip3 install --upgrade pip
+
+    
+----------------------------------------------------------------------------------------------------------------------------------------------------
+    - sobre Pandas y otras librerías relacionadas.
+    .- Seguir los pasos para instalar entornos virtuales...(SIEMPRE DENTRO DE LOS ENTORNOS VIRTUALES..!)
+    .- Ejecutar la instalación de Pandas y otras... :   python -m pip install pandas
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+- sobre FastAPI.
+    .- Seguir los pasos para instalar y activar el entorno virtual
+    ..
+    pip install fastapi uvicorn
+    .- Ejecutar uvicorn (es un servidor)
+    uvicorn app:app --reload    (la app que aparece detrás es el nombr de nuesta app y debe tener importado ya a FastAPI)
+    
+    .- Si dentro del navegador vamos a http://127.0.0.1:8000/docs veremos la integración con el paquete swager que es para hacer documentación
+    de nuestas Rest API
+    .- Creamos nuestra estructura para el proyecto: (se puede usar algún tipo de bash para esto)
+        -dentro del proyecto creamos estas carpetas : config, models, routes, schemas 
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+- sobre Django.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+-sobre AlchemySQL y MySQL
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
