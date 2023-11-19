@@ -5,7 +5,9 @@
     esto es útil para poder setear la versión de python que tenemos instalada dentro del entorno virtual
     .- Escribir signo de > y luego python interpreter, de ahí seleccionamos el que está instalado dentro del entorno
     lo va a mostrar con una estrellita rellena.
-    .- Eso es todo...
+    
+    .- Formatear el código de Python en Visual Studio Code
+    .- ctrl+p signo de >  formatear documento , usamos autopep8..
     
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -65,8 +67,22 @@
 -sobre sqlAlchem (ORM) y MySQL también MySQL Workbench !!!
     -------sql Alchemy
     .- Seguir los pasos para instalar y activar el entorno virtual
-    Instalar sql alchemy    :   pip install sqlalchemy
+    Instalar sql alchemy    :   pip3 install SQLAlchemy
     Instalar py mysql       :   pip install pymysql
+    Instalar cryptography   :   pip install cryptography
+
+    *********************************************** PROBLEMAS CON EL VENV EN VISUAL STUDIO CODE QUE AFECTAN A SQLALCHEMY ************************
+    https://stackoverflow.com/questions/66869413/visual-studio-code-does-not-detect-virtual-environments
+    In VSCode open your command palette — Ctrl+Shift+P by default
+
+                        Look for Python: Select Interpreter
+
+                        In Select Interpreter choose Enter interpreter path... and then Find...
+
+                        Navigate to your venv folder — eg, ~/pyenvs/myenv/ or \Users\Foo\Bar\PyEnvs\MyEnv\
+
+                        In the virtual environment folder choose <your-venv-name>/bin/python or <your-venv-name>/bin/python3
+
 
     ------MySQL
     How To Install MySQL on Ubuntu 22.04 LTS (Linux) (2023) : ------> https://www.youtube.com/watch?v=zRfI79BHf3k
@@ -92,16 +108,20 @@
     sudo MySQL
     ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'VicenteForEver'; --> VicenteForEver es la clave de MySQL, para la conexión
 
+    *********************************************************password de conexión a mySQL*******************************************************************
+    *********************************************                  VicenteForEver               ************************************************************
+    ********************************************************************************************************************************************************
+
      ------MySQL Workbench
-     sudo snap install mysql-workbench-community
-
-
-
-
-
-
-    
+     sudo snap install mysql-workbench-community   
     
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------
+-- creando una bd en MySQL
+desde la terminal:
+mysql -u root -pVicenteForEver
+...dentro del shell de MySQL ejecutamos:
+create database storedb; (storedb es el nombre de la base de datos)
+show databses;
+
 
