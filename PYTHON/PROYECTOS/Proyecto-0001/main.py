@@ -1,13 +1,16 @@
-from fastapi import FastAPI ,HTTPException ,Depends , status
-from pydantic import BaseModel
+from fastapi import FastAPI ,HTTPException ,Depends , status # 
+from pydantic import BaseModel # data validation
 from typing import Annotated
 import models
 from database import engine , SessionLocal
 from sqlalchemy.orm import Session
 
-app = FastAPI()
+# instanciamos la app
+app = FastAPI() 
 models.Base.metadata.create_all(bind = engine)
 
+
+# acá creamo los pydantics models...: PostBase y UserBase
 class PostBase(BaseModel):
     title : str
     content : str
@@ -16,14 +19,17 @@ class PostBase(BaseModel):
 class UserBase(BaseModel):
     username : str
 
+############## crear nuestra dependencia con la db ##############
 def get_db():
     db = SessionLocal()
     try: 
         yield db
     finally:
         db.close()
-
 db_dependency = Annotated[Session , Depends(get_db)]
+#################################################################
+
+
 
 @app.post("/posts/" , status_code = status.HTTP_201_CREATED)
 async def create_post(post: PostBase, db: db_dependency):
@@ -46,9 +52,12 @@ async def delete_post(post_id: int , db : db_dependency):
     db.delete(db_post)
     db.commit()
 
+
+
+
 @app.post("/users/" , status_code = status.HTTP_201_CREATED)
 async def create_user(user:UserBase , db: db_dependency):
-    db_user = models.User(**user.model_dump())
+    db_user = models.User(**user.model_dump())  # tomamos todos los datos y los vamos a deserealizar en un objeto el cual será db_user
     db.add(db_user)
     db.commit()
 
