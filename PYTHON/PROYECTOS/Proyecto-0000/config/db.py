@@ -4,4 +4,4 @@ engine = create_engine("mysql+pymysql://root:VicenteForEver@localhost:3306/store
 
 meta = MetaData()
 
-conección = engine.connect()
+conn = engine.connect()

@@ -50,7 +50,7 @@
 - sobre FastAPI.
     .- Seguir los pasos para instalar y activar el entorno virtual
     ..
-    pip install fastapi uvicorn
+    pip install fastapi uvicorn sqlalchemy pymysql (lo podemos hacer todo junto de una..!)
     .- Ejecutar uvicorn (es un servidor)
     uvicorn app:app --reload    (la app que aparece detrás es el nombr de nuesta app y debe tener importado ya a FastAPI)
     
@@ -94,6 +94,10 @@
     sudo systemctl status mysql.service (para revisar el estado, en caso que que diga que no está activo usar : sudo systemctl start mysql.service)
     sudo mysql ( de esta manera entramos al shell de MySQL) , escribir : exit y salimos del shell
 
+    ...si hacemos sudo mysql nos va saltar el error 1045 (28000) Access denied for user 'root'@'localhost' (ussing password No)
+    debemos hacer lo siguiente:
+        mysql -u root -p   (de esta manera nos va a pedir el pass para la conexión que será VicenteForEver)
+
     Password y Usuarios:
     sudo mysql_secure_installation
     ... presionamos n ante la pregunta de validar la fortaleza del password...
@@ -122,6 +126,17 @@ desde la terminal:
 mysql -u root -pVicenteForEver
 ...dentro del shell de MySQL ejecutamos:
 create database storedb; (storedb es el nombre de la base de datos)
-show databses;
+show databases;
 
+----------------------------------------------------------------------------------------------------------------------------------------------------
+- sobre cómo hacer ingeniería inversa para convertir un modelo de BD en clases compatibles con SQLAlchemy
+    .- usamos           :   sqlautocode 0.5.2
+    .-instalación       :   pip install sqlautocode==0.5.2
+
+    Descripción de proyecto :
+    This is a tool that helps you creating a model based on an existing database scheme. 
+    The resulting code will be compatible with sqlalchemy.
+
+    https://pypi.org/project/sqlautocode/0.5.2/
+    Example: sqlautocode postgres://user:password@myhost/database -o out.py -t person*,account
 
