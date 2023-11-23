@@ -9,7 +9,10 @@ engine = create_engine(URL_BASE) # le vamos a pasar la variable de la base para 
 SessionLocal = sessionmaker(autocommit = False ,  
                             autoflush = False , 
                             bind = engine)
-session = SessionLocal()
 
 Base = declarative_base()
+
+session = SessionLocal()
+
+#Base.metadata.create_all(bind = engine)
 

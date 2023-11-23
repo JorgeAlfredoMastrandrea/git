@@ -161,5 +161,3 @@ class EntidadInforme(Base):
     
     archivo_JSON = Column(String(256), nullable=False  , unique=True)
 
-
-
