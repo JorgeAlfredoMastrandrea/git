@@ -1,0 +1,9 @@
+--NEXT JS
+
+NUEVO PROYECTO : npx create-next-app@latest
+
+INSTALAR BOOTSTRAP : npm install bootstrap
+
+INSTALAR SASS DENTRO DEL PROYECTO : npm install sass
+
+RENOMBRAR LOS ARCHIVOS .css A .SCSS
