@@ -1,0 +1,2 @@
+[0:11 p. m., 29/12/2023] Andrés Alonso: npm config set proxy http://<username><password>@proxy-server-url>:<port>
+[0:11 p. m., 29/12/2023] Andrés Alonso: npm config set proxy http://proxy.hacienda.mendoza.gov.ar:8080
