@@ -45,3 +45,7 @@ running...
 flask --app <nombre-archivo> run
 
 flask --app app.py --debug run
+
+5--##########################################################################
+flask corresponding
+pip install -U flask-cors
