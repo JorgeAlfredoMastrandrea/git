@@ -1,0 +1,218 @@
+NO FUNCONA !!!
+HAY QUE ACTUALIZARLO A UNA VERSIÓN MAS NUEVA
+DADO QUE LA VERSION DE NEXT ES MEJORA QUE LA VERSIÓN
+EN LA QUE ESTÁ BASADO LA EXPLICACIÓN..!!!
+
+
+Para lograr la comunicación entre componentes usando Redux en un proyecto Next.js, 
+primero asegúrate de haber instalado Redux y React Redux en tu proyecto. 
+Si aún no lo has hecho, puedes instalarlos ejecutando:
+
+npm install redux react-redux
+
+Y si planeas manejar efectos secundarios (como llamadas a APIs), 
+también podrías querer instalar redux-thunk o redux-saga.
+
+npm install redux-thunk
+
+-------------------------------------------------------------------------------------------------------
+
+Paso 1: Configurar la Store de Redux
+Primero, necesitas configurar tu store de Redux. 
+Crea una carpeta llamada store en tu proyecto 
+y dentro de esta carpeta, crea un archivo index.js.
+
+
+
+// store/index.js
+import { createStore, applyMiddleware, compose } from 'redux';
+import thunk from 'redux-thunk';
+import rootReducer from './reducers'; // Asume que tienes un archivo de reducers combinados
+
+const initialState = {};
+
+const middleware = [thunk];
+
+const store = createStore(
+  rootReducer,
+  initialState,
+  compose(
+    applyMiddleware(...middleware),
+    typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__() : f => f
+  )
+);
+
+export default store;
+
+
+Paso 2: Configurar Reducers
+Ahora, configura tus reducers. Por ejemplo, crea una carpeta reducers dentro de store, 
+y dentro, crea un archivo index.js para combinar tus reducers, 
+y otro archivo para tu reducer, por ejemplo, messagesReducer.js.
+
+
+// store/reducers/index.js
+import { combineReducers } from 'redux';
+import messagesReducer from './messagesReducer';
+
+export default combineReducers({
+  messages: messagesReducer,
+});
+
+// store/reducers/messagesReducer.js
+const initialState = {
+  message: "",
+};
+
+export default function(state = initialState, action) {
+  switch (action.type) {
+    case 'SET_MESSAGE':
+      return {
+        ...state,
+        message: action.payload,
+      };
+    default:
+      return state;
+  }
+}
+
+
+Paso 3: Envolver tu aplicación con Provider
+Envuelve tu aplicación con el Provider de React-Redux en _app.js 
+y pasa la store de Redux.
+
+
+// pages/_app.js
+import App from 'next/app';
+import { Provider } from 'react-redux';
+import store from '../store';
+
+class MyApp extends App {
+  render() {
+    const { Component, pageProps } = this.props;
+    return (
+      <Provider store={store}>
+        <Component {...pageProps} />
+      </Provider>
+    );
+  }
+}
+
+export default MyApp;
+
+
+Paso 4: Usar Redux en Componentes
+Ahora, puedes usar Redux para comunicar de padre a hijo y de hijo a padre.
+
+De Padre a Hijo:
+
+Supongamos que tienes un componente padre donde quieres establecer un mensaje, 
+y un componente hijo que muestra ese mensaje.
+
+
+
+// Componente Padre
+import { useDispatch } from 'react-redux';
+
+function ParentComponent() {
+  const dispatch = useDispatch();
+
+  const setMessage = message => {
+    dispatch({
+      type: 'SET_MESSAGE',
+      payload: message,
+    });
+  };
+
+  return (
+    <div>
+      <button onClick={() => setMessage("Hola desde el padre!")}>Establecer Mensaje</button>
+      <ChildComponent />
+    </div>
+  );
+}
+
+// Componente Hijo
+import { useSelector } from 'react-redux';
+
+function ChildComponent() {
+  const message = useSelector(state => state.messages.message);
+
+  return <div>{message}</div>;
+}
+
+
+
+De Hijo a Padre:
+
+Si deseas comunicar del hijo al padre, puedes hacerlo de manera similar, 
+despachando acciones desde el hijo y escuchando esos cambios en el padre 
+a través de useSelector o pasando callbacks como props.
+
+Este ejemplo básico te muestra cómo configurar Redux en un proyecto Next.js 
+para la comunicación entre componentes. 
+Según tus necesidades específicas, puedes adaptar y expandir este ejemplo, por ejemplo, 
+implementando acciones asíncronas con redux-thunk o redux-saga.
+
+
+
+Para comunicar cambios de un componente hijo a un componente padre usando Redux en un proyecto Next.js, 
+usualmente manejarías los cambios de estado a través de acciones de Redux que modifican el estado global. 
+A diferencia de la comunicación directa de hijo a padre mediante props o callbacks, 
+Redux permite una comunicación indirecta pero centralizada a través de su store.
+
+Aquí te muestro cómo hacerlo siguiendo el ejemplo anterior, enfocándonos en la parte de hijo a padre.
+
+Paso 1: Definir la Acción en el Componente Hijo
+Primero, el componente hijo despachará una acción hacia el store de 
+Redux cuando quieras comunicar un cambio (por ejemplo, cambiar un mensaje).
+
+
+// Componente Hijo
+import { useDispatch } from 'react-redux';
+
+function ChildComponent() {
+  const dispatch = useDispatch();
+
+  const updateMessage = () => {
+    dispatch({
+      type: 'SET_MESSAGE',
+      payload: "Mensaje actualizado desde el hijo",
+    });
+  };
+
+  return <button onClick={updateMessage}>Actualizar Mensaje</button>;
+}
+
+
+Paso 2: El Componente Padre Escucha los Cambios
+El componente padre puede escuchar cambios en el estado que ha sido modificado 
+por el componente hijo a través de useSelector. 
+Esto permite que el componente padre reaccione a los cambios de estado iniciados por el hijo.
+
+// Componente Padre
+import { useSelector } from 'react-redux';
+
+function ParentComponent() {
+  const message = useSelector(state => state.messages.message);
+
+  return (
+    <div>
+      <h1>Mensaje: {message}</h1>
+      <ChildComponent />
+    </div>
+  );
+}
+
+
+Nota:
+En este enfoque, la comunicación "de hijo a padre" se realiza a través del cambio de estado global en Redux, 
+que es escuchado por el componente padre. Aunque técnicamente no es una comunicación directa de hijo a padre 
+como lo sería pasar una función de callback como prop, este método aprovecha la arquitectura de Redux para lograr 
+un flujo de datos efectivo y centralizado, lo cual es particularmente útil en aplicaciones grandes 
+donde la gestión directa de estado y la prop drilling pueden volverse complicadas.
+
+Este método también promueve una separación clara de responsabilidades, donde Redux maneja el estado global 
+y la comunicación entre componentes, permitiendo que cada componente se mantenga enfocado en su propia lógica y presentación.
+
+
