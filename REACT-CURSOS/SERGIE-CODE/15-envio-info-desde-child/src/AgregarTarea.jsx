@@ -4,6 +4,7 @@ import { useState } from 'react'
 export const AgregarTarea = ({agregarTarea}) => {
 
     const [inputValue, setInputValue] = useState('');
+    
     const onInputChange = (evento) => {
         setInputValue(evento.target.value);
         console.log('está escribiendo');
@@ -23,6 +24,5 @@ export const AgregarTarea = ({agregarTarea}) => {
                 onChange={(evento) => onInputChange(evento)}
             />
         </form>
-
     )
 }

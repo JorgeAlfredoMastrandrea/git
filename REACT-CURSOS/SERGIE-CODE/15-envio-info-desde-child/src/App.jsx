@@ -1,4 +1,3 @@
-import './App.css'
 import { ListadoApp } from './ListadoApp'
 
 function App() {
@@ -6,9 +5,7 @@ function App() {
   return (
     <>
       <div>
-
         <ListadoApp />
-
       </div>
     </>
   )

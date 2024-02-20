@@ -9,7 +9,7 @@ para cuando se enseña react... nosotros podemos usar cualquier nombre
 import React from 'react'
 import PropTypes from 'prop-types';
 
-export const ComponenteProps = ( {titulo , subtitulo , numero} ) => {
+export const ComponenteProps = ({ titulo, subtitulo, numero }) => {
     // lo podemos ver por consola pero no lo podemos renderizar dentro 
     // de las  { props } ... esto daría un error..! 
     console.log(titulo)
@@ -26,5 +26,5 @@ export const ComponenteProps = ( {titulo , subtitulo , numero} ) => {
 }
 
 ComponenteProps.propTypes = {
-    titulo: PropTypes.string.isRequired, /*esto significa que si o si necesitamos que esté ese props*/    
+    titulo: PropTypes.string.isRequired, /*esto significa que si o si necesitamos que esté ese props*/
 }

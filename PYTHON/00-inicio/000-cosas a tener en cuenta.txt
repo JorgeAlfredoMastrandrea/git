@@ -140,3 +140,18 @@ show databases;
     https://pypi.org/project/sqlautocode/0.5.2/
     Example: sqlautocode postgres://user:password@myhost/database -o out.py -t person*,account
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Speech Rec en Python:
+
+- seguir los pasos para utilizar el entorno virtual...
+- luego :
+        sudo apt install portaudio19-dev
+
+        pip install SpeechRecognition
+
+        pip install pyaudio
+
+            or
+
+        pip3 install pyaudio

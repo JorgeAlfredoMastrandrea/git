@@ -1,5 +1,5 @@
 /*
-los eventos en ract son mecanismo por lo cual los componentes pueden reaccionar
+los eventos en react son mecanismo por lo cual los componentes pueden reaccionar
 a la interacción del usuario..
 por ejemplo: un click, a escribir en un input mover el mouse o cualquier otra cosa
 que haga el usuario con la interaccion de la app
@@ -18,8 +18,10 @@ function handleClick(event, arg) {
     // pero debería ponerse un nombre
     console.log('me haz hecho click');
     console.log('un argumento :', arg);
-    console.log(event); // podemos usar el event para poder sacar mucha info que podría ser usada para otras cosas
+    // podemos usar el event para poder sacar mucha info que podría ser usada para otras cosas
+    console.log(event); 
 }
+
 const Boton = () => {
     return (
         <button onClick={(event) => handleClick(event, 'otro argumento')}>
@@ -30,8 +32,9 @@ const Boton = () => {
 
 function handleClickOtroBoton(event) {
     console.log('me hiciste click, soy el otro botón');
-    console.log('soy el evento del otro boton ', event);
+    console.log('soy el evento del otro botón ', event);
 }
+
 const OtroBoton = () => {
     return (
         <button onClick={handleClickOtroBoton}>
@@ -42,18 +45,17 @@ const OtroBoton = () => {
 
 export const ComponenteEventos = ({ valor }) => {
     function handleClickTercerBoton(event) {
-        console.log('soy el tercer boton largo')
+        console.log('soy el tercer botón largo')
         console.log(event)
     }
 
     // esta es la forma recomendada de armar a las funciones..
     const handleClickCuartoBoton = () => {
-        // cuando hagan click sobre este botón, reeact tiene que
+        // cuando hagan click sobre este botón, react tiene que
         // saber el cambio del estado del valor para poder
         // redibujarlo, por lo tanto 'valor' va a cambiar de acuerdo al estado
-        console.log('soy el caurto boton largo')
+        console.log('soy el cuarto botón largo')
     }
-
 
     return (
         <>

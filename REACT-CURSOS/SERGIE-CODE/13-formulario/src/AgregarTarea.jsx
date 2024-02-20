@@ -5,6 +5,8 @@ export const AgregarTarea = () => {
 
     const [inputValue, setInputValue] = useState('');
     const onInputChange = (evento) => {
+        // esto hace que se cambie el valor del input
+        // de acuerdo a lo que se va escribiendo
         setInputValue(evento.target.value);
         console.log('está escribiendo');
     }
@@ -22,6 +24,5 @@ export const AgregarTarea = () => {
                 onChange={(evento) => onInputChange(evento)}
             />
         </form>
-
     )
 }

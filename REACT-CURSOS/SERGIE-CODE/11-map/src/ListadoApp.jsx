@@ -14,12 +14,7 @@ const Items = ({ nombre, visto }) => {
   )
 }
 
-
-
 export const ListadoApp = () => {
-
-  
-
 
   let listadoSecciones = [
     { nombre: "Tema 1", visto: true },
@@ -35,8 +30,10 @@ export const ListadoApp = () => {
 
   const addTask = () => {
     // no podemos usar push en react porque no vamos a poder visualizar
-    // el nuevo item agregado ...
-    setArreglo([...arreglo , { nombre : 'nuevo' , visto : false }]);
+    // el nuevo item agregado ...por eso se usa el useState (setArreglo)
+    // no se puede usar push cuando estamos tratando de modificar un estado..
+    // se pasa un array con el spread operator ... , y luego { } el nuevo objeto
+    setArreglo([...arreglo, { nombre: 'nuevo', visto: false }]);
     console.log(arreglo);
   }
 
@@ -53,7 +50,6 @@ export const ListadoApp = () => {
             visto={itemLista.visto}
           >
           </Items>)}
-
         <button onClick={() => addTask()}>agregar Tarea</button>
       </ol>
     </div>

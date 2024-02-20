@@ -1,0 +1,6 @@
+{
+    "python.analysis.extraPaths": [
+        "./JMastrandrea.DEV/RepoPython/DataAnalisis/Libs/DataFetching",
+        "./JMastrandrea.DEV/RepoPython/DataAnalisis/Libs/DataFrameOperations"
+    ]
+}

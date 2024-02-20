@@ -11,20 +11,21 @@ export const UsersList = ({ endPoint }) => {
             const response = await fetch(`https://jsonplaceholder.typicode.com/${endPoint}`)
             const data = await response.json();
             setData(data);
+            console.log(data)
         } catch (error) {
             console.log(error)
         }
     }
 
-    useEffect( () => {
+    useEffect(() => {
         fetchData()
-    } , [endPoint])
+    }, [endPoint])
 
     return (
         <>
             <ul>
-                {endPoint == 'users'    ?   data.map(item => <li key={item.id}>{item.name}</li>) 
-                                        :   data.map(item => <li key={item.id}>{item.name}</li>)
+                {endPoint == 'users' ? data.map(item => <li key={item.id}>{item.name}</li>)
+                    : data.map(item => <li key={item.id}>{item.name}</li>)
                 }
             </ul>
         </>

@@ -27,6 +27,5 @@ export const AgregarTarea = ({agregarTarea}) => {
                 onChange={(evento) => onInputChange(evento)}
             />
         </form>
-
     )
 }
