@@ -20,6 +20,7 @@ import { BarrasChartJS } from '../componentes/ComponentesChartJS/BarrasChartJS';
 import { AreaChartJS } from '../componentes/ComponentesChartJS/AreaChartJS';
 import { LineaChartJS } from '../componentes/ComponentesChartJS/LineaChartJS';
 import { MultiAxisChartJS } from '../componentes/ComponentesChartJS/MultiAxisChartJS';
+import { PieChartJS } from '../componentes/ComponentesChartJS/PieChartJS';
 import { Tabla } from '../componentes/ComponenteTabla/Tabla';
 
 const KeysToComponentMap = {  
@@ -32,6 +33,8 @@ const KeysToComponentMap = {
   areaChartJS:AreaChartJS,
   lineaChartJS:LineaChartJS,
   multiAxisChartJS:MultiAxisChartJS,
+
+  pieChartJS:PieChartJS,
 
   tabla : Tabla
 };
