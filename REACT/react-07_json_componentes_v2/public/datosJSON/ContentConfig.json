@@ -641,8 +641,6 @@
                                     "June",
                                     "July"
                                 ],
-                                
-
                                 "datasets": [
                                     {
                                         "label": "Dataset 1",
@@ -680,9 +678,7 @@
                 ]
             }
         ]
-    }
-    ,
-
+    },
     {
         "component": "fila",
         "src": "datos para fila",
@@ -702,8 +698,7 @@
                 ]
             }
         ]
-    }
-    ,
+    },
     {
         "component": "fila",
         "src": "datos para fila",
@@ -715,7 +710,7 @@
                 "src": "datos adicionales para columna",
                 "className": "col-sm text-center align-middle text-white p-0",
                 "ky": "25",
-                "children": [                    
+                "children": [
                     {
                         "component": "pieChartJS",
                         "className": "className",
@@ -748,43 +743,34 @@
                                         "data": [
                                             10,
                                             20,
-                                            30                                            
+                                            30
                                         ],
                                         "backgroundColor": [
                                             "rgba(255, 0, 0, 0.5)",
-                                            "rgba(0, 255, 0, 0.5)",                                            
+                                            "rgba(0, 255, 0, 0.5)",
                                             "rgba(0, 0, 255, 0.5)"
                                         ],
                                         "borderColor": [
                                             "rgba(255, 0, 0, 0.5)",
-                                            "rgba(0, 255, 0, 0.5)",                                            
+                                            "rgba(0, 255, 0, 0.5)",
                                             "rgba(0, 0, 255, 0.5)"
                                         ],
                                         "hoverOffset": 4
-                                    }                                   
+                                    }
                                 ]
                             }
                         ]
                     }
                 ]
-            }
-        ]
-    },
-
-    {
-        "component": "fila",
-        "src": "datos para fila",
-        "className": "row text-center align-items-center p-0 m-0",
-        "ky": "1",
-        "children": [
+            },
             {
                 "component": "columna",
                 "src": "datos adicionales para columna",
                 "className": "col-sm text-center align-middle text-white p-0",
                 "ky": "25",
-                "children": [                    
+                "children": [
                     {
-                        "component": "pieChartJS",
+                        "component": "doughnutChartJS",
                         "className": "className",
                         "ky": "ky",
                         "src": "src",
@@ -800,7 +786,8 @@
                                         "text": "Diagrama de dona"
                                     }
                                 },
-                                "type": "doughnut"
+                                "cutoutPercentage": 80,
+                                "rotation": 180
                             }
                         ],
                         "datosBarra": [
@@ -816,20 +803,20 @@
                                         "data": [
                                             10,
                                             20,
-                                            30                                            
+                                            30
                                         ],
                                         "backgroundColor": [
                                             "rgba(255, 0, 0, 0.5)",
-                                            "rgba(0, 255, 0, 0.5)",                                            
+                                            "rgba(0, 255, 0, 0.5)",
                                             "rgba(0, 0, 255, 0.5)"
                                         ],
                                         "borderColor": [
                                             "rgba(255, 0, 0, 0.5)",
-                                            "rgba(0, 255, 0, 0.5)",                                            
+                                            "rgba(0, 255, 0, 0.5)",
                                             "rgba(0, 0, 255, 0.5)"
                                         ],
                                         "hoverOffset": 4
-                                    }                                   
+                                    }
                                 ]
                             }
                         ]
@@ -838,16 +825,268 @@
             }
         ]
     },
-
-
-
-
-
-
-
-
-
-
+    {
+        "component": "fila",
+        "src": "datos para fila",
+        "className": "row text-center align-items-center p-0 m-0",
+        "ky": "1",
+        "children": [
+            {
+                "component": "columna",
+                "src": "datos adicionales para columna",
+                "className": "col-sm text-center align-middle bg-primary text-white p-0",
+                "ky": "2",
+                "children": [
+                    {
+                        "component": "párrafo",
+                        "src": "Polar Area"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "component": "fila",
+        "src": "datos para fila",
+        "className": "row text-center align-items-center p-0 m-0",
+        "ky": "1",
+        "children": [
+            {
+                "component": "columna",
+                "src": "datos adicionales para columna",
+                "className": "col-sm text-center align-middle text-white p-0",
+                "ky": "2",
+                "children": [
+                    {
+                        "component": "polarAreaChartJS",
+                        "className": "className",
+                        "ky": "ky",
+                        "src": "src",
+                        "opcionesBarra": [
+                            {
+                                "responsive": true,
+                                "plugins": {
+                                    "legend": {
+                                        "position": "top"
+                                    },
+                                    "title": {
+                                        "display": true,
+                                        "text": "Diagrama polar"
+                                    }
+                                },
+                                "cutoutPercentage": 80,
+                                "rotation": 180
+                            }
+                        ],
+                        "datosBarra": [
+                            {
+                                "labels": [
+                                    "Red",
+                                    "Yeloow",
+                                    "Blue"
+                                ],
+                                "datasets": [
+                                    {
+                                        "label": "Dataset 1",
+                                        "data": [
+                                            10,
+                                            20,
+                                            30
+                                        ],
+                                        "backgroundColor": [
+                                            "rgba(255, 0, 0, 0.5)",
+                                            "rgba(0, 255, 0, 0.5)",
+                                            "rgba(0, 0, 255, 0.5)"
+                                        ],
+                                        "borderColor": [
+                                            "rgba(255, 0, 0, 0.5)",
+                                            "rgba(0, 255, 0, 0.5)",
+                                            "rgba(0, 0, 255, 0.5)"
+                                        ],
+                                        "hoverOffset": 4
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "component": "fila",
+        "src": "datos para fila",
+        "className": "row text-center align-items-center p-0 m-0",
+        "ky": "1",
+        "children": [
+            {
+                "component": "columna",
+                "src": "datos adicionales para columna",
+                "className": "col-sm text-center align-middle bg-primary text-white p-0",
+                "ky": "2",
+                "children": [
+                    {
+                        "component": "párrafo",
+                        "src": "Radar Chart"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "component": "fila",
+        "src": "datos para fila",
+        "className": "row text-center align-items-center p-0 m-0",
+        "ky": "1",
+        "children": [
+            {
+                "component": "columna",
+                "src": "datos adicionales para columna",
+                "className": "col-sm text-center align-middle  text-white p-0",
+                "ky": "2",
+                "children": [
+                    {
+                        "component": "radarChartJS",
+                        "className": "className",
+                        "ky": "ky",
+                        "src": "src",
+                        "opcionesBarra": [
+                            {
+                                "responsive": true,
+                                "plugins": {
+                                    "legend": {
+                                        "position": "top"
+                                    },
+                                    "title": {
+                                        "display": true,
+                                        "text": "Diagrama de radar"
+                                    }
+                                },
+                                "cutoutPercentage": 80,
+                                "rotation": 180
+                            }
+                        ],
+                        "datosBarra": [
+                            {
+                                "labels": [
+                                    "Mon",
+                                    "Tue",
+                                    "Wed"
+                                ],
+                                "datasets": [
+                                    {
+                                        "label": "Weekdays",
+                                        "data": [
+                                            3,
+                                            6,
+                                            9
+                                        ],
+                                        "backgroundColor": "rgba(255, 0, 0, 0.5)",
+                                        "borderColor": "rgba(0, 255, 0, 0.5)"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "component": "fila",
+        "src": "datos para fila",
+        "className": "row text-center align-items-center p-0 m-0",
+        "ky": "1",
+        "children": [
+            {
+                "component": "columna",
+                "src": "datos adicionales para columna",
+                "className": "col-sm text-center align-middle bg-primary text-white p-0",
+                "ky": "2",
+                "children": [
+                    {
+                        "component": "párrafo",
+                        "src": "Scatter Chart"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "component": "fila",
+        "src": "datos para fila",
+        "className": "row text-center align-items-center p-0 m-0",
+        "ky": "1",
+        "children": [
+            {
+                "component": "columna",
+                "src": "datos adicionales para columna",
+                "className": "col-sm text-center align-middle  text-white p-0",
+                "ky": "2",
+                "children": [
+                    {
+                        "component": "párrafo",
+                        "src": "Gráfico de Areas 1"
+                    },
+                    {
+                        "component": "scatterChartJS",
+                        "className": "className",
+                        "ky": "ky",
+                        "src": "src",
+                        "responsive": true,
+                        "opcionesBarra": [
+                            {
+                                "responsive": true,
+                                "plugins": {
+                                    "legend": {
+                                        "position": "top"
+                                    },
+                                    "title": {
+                                        "display": true,
+                                        "text": "scatterChartJS Chart"
+                                    }
+                                }
+                            }
+                        ],
+                        "datosBarra": [
+                            {                                
+                                "datasets": [
+                                    {
+                                        "fill": true,
+                                        "label": "Dataset 2",
+                                        "data": [
+                                            {"x":2 , "y":18},
+                                            {"x":3 , "y":12},
+                                            {"x":4 , "y":6},
+                                            {"x":5 , "y":9},
+                                            {"x":6 , "y":12},
+                                            {"x":7 , "y":3}
+                                        ],
+                                        "backgroundColor": [
+                                            "rgba(255, 0, 0, 0.5)",
+                                            "rgba(0, 255, 0, 0.5)",
+                                            "rgba(0, 0, 255, 0.5)",
+                                            "rgba(255, 0, 0, 0.5)",
+                                            "rgba(0, 255, 0, 0.5)",
+                                            "rgba(0, 0, 255, 0.5)"
+                                        ],
+                                        "borderColor": [
+                                            "rgba(255, 0, 0, 0.5)",
+                                            "rgba(0, 255, 0, 0.5)",
+                                            "rgba(0, 0, 255, 0.5)",
+                                            "rgba(255, 0, 0, 0.5)",
+                                            "rgba(0, 255, 0, 0.5)",
+                                            "rgba(0, 0, 255, 0.5)"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
     {
         "component": "fila",
         "src": "datos para fila",
@@ -868,10 +1107,6 @@
             }
         ]
     },
-
-    
-
-
     {
         "component": "fila",
         "src": "datos para fila",

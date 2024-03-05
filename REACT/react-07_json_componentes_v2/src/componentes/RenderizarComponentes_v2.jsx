@@ -21,6 +21,10 @@ import { AreaChartJS } from '../componentes/ComponentesChartJS/AreaChartJS';
 import { LineaChartJS } from '../componentes/ComponentesChartJS/LineaChartJS';
 import { MultiAxisChartJS } from '../componentes/ComponentesChartJS/MultiAxisChartJS';
 import { PieChartJS } from '../componentes/ComponentesChartJS/PieChartJS';
+import { DoughnutChartJS } from '../componentes/ComponentesChartJS/DoughnutChartJS';
+import { PolarAreaChartJS } from '../componentes/ComponentesChartJS/PolarAreaChartJS';
+import { RadarChartJS} from '../componentes/ComponentesChartJS/RadarChartJS';
+import { ScatterChartJS } from './ComponentesChartJS/ScatterChartJS';
 import { Tabla } from '../componentes/ComponenteTabla/Tabla';
 
 const KeysToComponentMap = {  
@@ -35,6 +39,13 @@ const KeysToComponentMap = {
   multiAxisChartJS:MultiAxisChartJS,
 
   pieChartJS:PieChartJS,
+  doughnutChartJS:DoughnutChartJS,
+
+  polarAreaChartJS:PolarAreaChartJS,
+
+  radarChartJS:RadarChartJS,
+
+  scatterChartJS:ScatterChartJS,
 
   tabla : Tabla
 };
