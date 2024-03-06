@@ -1087,6 +1087,115 @@
             }
         ]
     },
+
+
+
+
+    {
+        "component": "fila",
+        "src": "datos para fila",
+        "className": "row text-center align-items-center p-0 m-0",
+        "ky": "1",
+        "children": [
+            {
+                "component": "columna",
+                "src": "datos adicionales para columna",
+                "className": "col-sm text-center align-middle bg-primary text-white p-0",
+                "ky": "2",
+                "children": [
+                    {
+                        "component": "párrafo",
+                        "src": "Bubble Chart"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "component": "fila",
+        "src": "datos para fila",
+        "className": "row text-center align-items-center p-0 m-0",
+        "ky": "1",
+        "children": [
+            {
+                "component": "columna",
+                "src": "datos adicionales para columna",
+                "className": "col-sm text-center align-middle  text-white p-0",
+                "ky": "2",
+                "children": [
+                    {
+                        "component": "párrafo",
+                        "src": "Gráfico de Areas 1"
+                    },
+                    {
+                        "component": "bubbleChartJS",
+                        "className": "className",
+                        "ky": "ky",
+                        "src": "src",
+                        "responsive": true,
+                        "opcionesBarra": [
+                            {
+                                "responsive": true,
+                                "plugins": {
+                                    "legend": {
+                                        "position": "top"
+                                    },
+                                    "title": {
+                                        "display": true,
+                                        "text": "Bubble Chart"
+                                    }
+                                }
+                            }
+                        ],
+                        "datosBarra": [
+                            {                                
+                                "datasets": [
+                                    {
+                                        "fill": true,
+                                        "label": "Dataset 2",
+                                        "data": [
+                                            {"x":2 , "y":18 , "r":10},
+                                            {"x":3 , "y":12 , "r":20},
+                                            {"x":4 , "y":6  , "r":30},
+                                            {"x":5 , "y":9  , "r":40},
+                                            {"x":6 , "y":12 , "r":50},
+                                            {"x":7 , "y":3  , "r":60}
+                                        ],
+                                        "backgroundColor": [
+                                            "rgba(255, 0, 0, 0.5)",
+                                            "rgba(0, 255, 0, 0.5)",
+                                            "rgba(0, 0, 255, 0.5)",
+                                            "rgba(255, 0, 0, 0.5)",
+                                            "rgba(0, 255, 0, 0.5)",
+                                            "rgba(0, 0, 255, 0.5)"
+                                        ],
+                                        "borderColor": [
+                                            "rgba(255, 0, 0, 0.5)",
+                                            "rgba(0, 255, 0, 0.5)",
+                                            "rgba(0, 0, 255, 0.5)",
+                                            "rgba(255, 0, 0, 0.5)",
+                                            "rgba(0, 255, 0, 0.5)",
+                                            "rgba(0, 0, 255, 0.5)"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+
+
+
+
+
+
+
+
+
+
     {
         "component": "fila",
         "src": "datos para fila",

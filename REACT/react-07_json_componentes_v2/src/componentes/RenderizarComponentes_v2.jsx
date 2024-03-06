@@ -25,6 +25,7 @@ import { DoughnutChartJS } from '../componentes/ComponentesChartJS/DoughnutChart
 import { PolarAreaChartJS } from '../componentes/ComponentesChartJS/PolarAreaChartJS';
 import { RadarChartJS} from '../componentes/ComponentesChartJS/RadarChartJS';
 import { ScatterChartJS } from './ComponentesChartJS/ScatterChartJS';
+import { BubbleChartJS } from './ComponentesChartJS/BubbleChartJS';
 import { Tabla } from '../componentes/ComponenteTabla/Tabla';
 
 const KeysToComponentMap = {  
@@ -46,6 +47,7 @@ const KeysToComponentMap = {
   radarChartJS:RadarChartJS,
 
   scatterChartJS:ScatterChartJS,
+  bubbleChartJS:BubbleChartJS,
 
   tabla : Tabla
 };
