@@ -21,4 +21,15 @@ module.exports = {
     },
   },
   plugins: [],
+  safelist: [
+    'bg-blue-500',
+    'text-white',
+    'container px-8 mx-auto',
+    'text-center grid grid-cols-1 gap-8 sm:grid-cols-3 bg-blue-500',
+    'text-center columns-3 text-white p-5 col-span-2',
+    'bg-red-200',
+    'text-center',
+    'grid h-screen'
+    // Agrega aquí todas las clases que uses dinámicamente
+  ],
 };

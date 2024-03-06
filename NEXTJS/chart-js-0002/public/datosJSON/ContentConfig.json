@@ -2,19 +2,19 @@
     {
         "component": "contenedor",
         "src": "",
-        "className": "container px-8 mx-auto",
+        "className": "",
         "ky": "1",
         "children": [
             {
                 "component": "fila",
                 "src": "datos para fila",
-                "className": "grid h-screen",
+                "className": "row text-center align-items-center p-0 m-0",
                 "ky": "1",
                 "children": [
                     {
                         "component": "columna",
                         "src": "datos adicionales para columna",
-                        "className": "text-center columns-3 text-white p-5 col-span-2",
+                        "className": "col-sm text-center align-middle bg-primary text-white p-0",
                         "ky": "2",
                         "children": [
                             {
@@ -29,13 +29,13 @@
             {
                 "component": "fila",
                 "src": "datos para fila",
-                "className": "",
+                "className": "row text-center align-items-center",
                 "ky": "1",
                 "children": [
                     {
                         "component": "columna",
                         "src": "datos adicionales para columna",
-                        "className": "text-center",
+                        "className": "col-sm text-center align-middle  p-0 m-0",
                         "ky": "2",
                         "children": [
                             {
