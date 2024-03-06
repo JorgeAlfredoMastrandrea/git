@@ -1,0 +1,134 @@
+[
+    {
+        "component": "contenedor",
+        "src": "",
+        "className": "grid place-items-center",
+        "ky": "1",
+        "children": [
+            {
+                "component": "fila",
+                "src": "datos para fila",
+                "className": "bg-blue-500 text-white p-4",
+                "ky": "1",
+                "children": [
+                    {
+                        "component": "columna",
+                        "src": "datos adicionales para columna",
+                        "className": "bg-blue-500 text-white p-4",
+                        "ky": "2",
+                        "children": [
+                            {
+                                "component": "párrafo",
+                                "src": "Tipos de diagramas de barras"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "component": "fila",
+                "src": "datos para fila",
+                "className": "",
+                "ky": "1",
+                "children": [
+                    {
+                        "component": "columna",
+                        "src": "datos adicionales para columna",
+                        "className": "",
+                        "ky": "2",
+                        "children": [
+                            {
+                                "component": "párrafo",
+                                "src": "Barras Verticales"
+                            },
+                            {
+                                "component": "barrasChartJS",
+                                "className": "",
+                                "ky": "ky",
+                                "src": "src",
+                                "responsive": true,
+                                "opcionesBarra": [
+                                    {
+                                        "responsive": true,
+                                        "maintainAspectRatio": true,
+                                        "aspectRatio": 0.8,
+                                        "plugins": {
+                                            "legend": {
+                                                "position": "top",
+                                                "display": true,
+                                                "labels": {
+                                                    "font": {
+                                                        "size": 40,
+                                                        "family": "Arial"
+                                                    }
+                                                }
+                                            },
+                                            "title": {
+                                                "display": true,
+                                                "text": "Ejemplo 1"
+                                            },
+                                            "datalabels": {
+                                                "labels": {
+                                                    "position": "top",
+                                                    "size": 20,
+                                                    "fontColor": "white",
+                                                    "weight": "bold",
+                                                    "family": "Arial"
+                                                }
+                                            }
+                                        }
+                                    }
+                                ],
+                                "datosBarra": [
+                                    {
+                                        "labels": [
+                                            "Enero",
+                                            "Febrero",
+                                            "March",
+                                            "April",
+                                            "May",
+                                            "June",
+                                            "July"
+                                        ],
+                                        "datasets": [
+                                            {
+                                                "label": "Dataset 1",
+                                                "data": [
+                                                    100,
+                                                    200,
+                                                    300,
+                                                    400,
+                                                    500,
+                                                    600,
+                                                    700
+                                                ],
+                                                "backgroundColor": "rgba(255, 99, 132, 0.5)"
+                                            },
+                                            {
+                                                "label": "Dataset 2",
+                                                "data": [
+                                                    150,
+                                                    250,
+                                                    350,
+                                                    450,
+                                                    550,
+                                                    650,
+                                                    750
+                                                ],
+                                                "backgroundColor": "rgba(53, 162, 235, 0.5)"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            
+                
+            }
+        ]
+    }
+
+
+]
