@@ -8,6 +8,9 @@ import { Párrafo_ } from '@/componentes/ComponentesGrid/Párrafo_';
 import { Contenedor_ } from '@/componentes/ComponentesGrid/Contenedor_';
 import { Fila_ } from '@/componentes/ComponentesGrid/Fila_';
 import { Columna_ } from '@/componentes/ComponentesGrid/Columna_';
+
+import { Card } from '@/componentes/ComponentesGrid/Card';
+
 import { BarrasChartJS } from '@/componentes/ComponentesChartJS/BarrasChartJS';
 import { AreaChartJS } from '@/componentes/ComponentesChartJS/AreaChartJS';
 import { LineaChartJS } from '@/componentes/ComponentesChartJS/LineaChartJS';
@@ -25,6 +28,8 @@ const KeysToComponentMap = {
   columna: Columna_,
   contenedor: Contenedor_,
   párrafo: Párrafo_,
+
+  card : Card,
 
   barrasChartJS: BarrasChartJS,
   areaChartJS:AreaChartJS,
@@ -45,15 +50,30 @@ const KeysToComponentMap = {
 };
 
 export const RenderizarComponentes_v2 = (config) => {
-  const render = (config, additionalProps, key) => { // Agrega un parámetro 'key' opcional
+  const render = (config, additionalProps, key) => {
     if (typeof KeysToComponentMap[config.component] !== 'undefined') {
       const { style, ...restConfig } = config;
+      
+      // Convertir la cadena de estilo a un objeto
+      let styleObj = {};
+      if (style) {
+        // Divide la cadena por ';' para obtener cada declaración de estilo, luego mapea cada una a un objeto
+        styleObj = style.split(';').reduce((acc, curr) => {
+          const [prop, value] = curr.split(':');
+          if (prop && value) {
+            // Convertir la propiedad de estilo CSS a camelCase para su uso en React
+            const propCamelCase = prop.trim().replace(/(-\w)/g, match => match[1].toUpperCase());
+            acc[propCamelCase] = value.trim();
+          }
+          return acc;
+        }, {});
+      }
 
       return React.createElement(
         KeysToComponentMap[config.component],
         {
           ...restConfig,
-          style: style && style[0], // Tomar el primer objeto de la propiedad style
+          style: styleObj, // Usar el objeto de estilo
           ...additionalProps,
           ...(key !== undefined && { key }), // Solo agrega la prop key si key no es undefined
         },
@@ -73,6 +93,7 @@ export const RenderizarComponentes_v2 = (config) => {
     </>
   )
 };
+
 
 
 /*

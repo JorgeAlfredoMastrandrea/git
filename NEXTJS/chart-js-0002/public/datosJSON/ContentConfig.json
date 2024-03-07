@@ -1,47 +1,29 @@
 [
     {
-        "component": "contenedor",
-        "src": "",
-        "className": "",
+        "component": "fila",
+        "src": "datos para fila",
+        "className": "row text-center align-items-center p-0 m-0",
         "ky": "1",
         "children": [
             {
-                "component": "fila",
-                "src": "datos para fila",
-                "className": "row text-center align-items-center p-0 m-0",
-                "ky": "1",
+                "component": "columna",
+                "src": "datos adicionales para columna",
+                "className": "col-sm text-center align-middle bg-primary text-white p-0",
+                "style": "min-height: 100vh;",
+                "ky": "2",
                 "children": [
                     {
-                        "component": "columna",
-                        "src": "datos adicionales para columna",
-                        "className": "col-sm text-center align-middle bg-primary text-white p-0",
-                        "ky": "2",
-                        "children": [
-                            {
-                                "component": "párrafo",
-                                "src": "Tipos de diagramas de barras",
-                                "className": "bg-red-200"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "component": "fila",
-                "src": "datos para fila",
-                "className": "row text-center align-items-center",
-                "ky": "1",
-                "children": [
+                        "component": "párrafo",
+                        "src": "Tipos de diagramas de barras",
+                        "className": ""
+                    },
                     {
-                        "component": "columna",
-                        "src": "datos adicionales para columna",
-                        "className": "col-sm text-center align-middle  p-0 m-0",
-                        "ky": "2",
+                        "component": "card",
+                        "src": "Tipos de diagramas de barras",
+                        "className": "card mx-auto d-block",
+                        "cardTitle": "DESEMPEÑO POR CURSO",
+                        "style": "width: 37rem;",
                         "children": [
-                            {
-                                "component": "párrafo",
-                                "src": "Barras Verticales"
-                            },
                             {
                                 "component": "barrasChartJS",
                                 "className": "",
@@ -50,23 +32,37 @@
                                 "responsive": true,
                                 "opcionesBarra": [
                                     {
+                                        "scales": {
+                                            "x": {
+                                                "stacked": true,
+                                                "grid": {
+                                                    "display": false
+                                                }
+                                            },
+                                            "y": {
+                                                "stacked": true,
+                                                "grid": {
+                                                    "display": false
+                                                }
+                                            }
+                                        },
                                         "responsive": true,
                                         "maintainAspectRatio": true,
-                                        "aspectRatio": 0.8,
+                                        "aspectRatio": 1,
                                         "plugins": {
                                             "legend": {
                                                 "position": "top",
                                                 "display": true,
                                                 "labels": {
                                                     "font": {
-                                                        "size": 40,
+                                                        "size": 20,
                                                         "family": "Arial"
                                                     }
                                                 }
                                             },
                                             "title": {
                                                 "display": true,
-                                                "text": "Ejemplo 1"
+                                                "text": "Se expresan en porcentajes"
                                             },
                                             "datalabels": {
                                                 "labels": {
@@ -83,40 +79,61 @@
                                 "datosBarra": [
                                     {
                                         "labels": [
-                                            "Enero",
-                                            "Febrero",
-                                            "March",
-                                            "April",
-                                            "May",
-                                            "June",
-                                            "July"
+                                            "2°",
+                                            "3°",
+                                            "4°",
+                                            "5°",
+                                            "6°",
+                                            "7°"
                                         ],
                                         "datasets": [
                                             {
-                                                "label": "Dataset 1",
+                                                "label": "Crítico",
                                                 "data": [
-                                                    100,
-                                                    200,
-                                                    300,
-                                                    400,
-                                                    500,
-                                                    600,
-                                                    700
+                                                    70.3,
+                                                    31.3,
+                                                    33.3,
+                                                    40.1,
+                                                    15.0,
+                                                    24.6
                                                 ],
-                                                "backgroundColor": "rgba(255, 99, 132, 0.5)"
+                                                "backgroundColor": "rgba(32, 81, 89, 0.5)"
                                             },
                                             {
-                                                "label": "Dataset 2",
+                                                "label": "Básico",
                                                 "data": [
-                                                    150,
-                                                    250,
-                                                    350,
-                                                    450,
-                                                    550,
-                                                    650,
-                                                    750
+                                                    17.7,
+                                                    37.3,
+                                                    28.8,
+                                                    28.2,
+                                                    36.2,
+                                                    20.0
                                                 ],
-                                                "backgroundColor": "rgba(53, 162, 235, 0.5)"
+                                                "backgroundColor": "rgba(48, 122, 138, 0.5)"
+                                            },
+                                            {
+                                                "label": "Medio",
+                                                "data": [
+                                                    11.0,
+                                                    17.3,
+                                                    27.9,
+                                                    18.8,
+                                                    33.6,
+                                                    44.6
+                                                ],
+                                                "backgroundColor": "rgba(74, 172, 174, 0.5)"
+                                            },
+                                            {
+                                                "label": "Avanzado",
+                                                "data": [
+                                                    0.8,
+                                                    13.9,
+                                                    9.9,
+                                                    12.8,
+                                                    15.0,
+                                                    10.7
+                                                ],
+                                                "backgroundColor": "rgba(157, 222, 220, 0.5)"
                                             }
                                         ]
                                     }
@@ -125,11 +142,7 @@
                         ]
                     }
                 ]
-            
-                
             }
         ]
     }
-
-
 ]
