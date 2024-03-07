@@ -22,6 +22,8 @@ import { RadarChartJS} from '@/componentes/ComponentesChartJS/RadarChartJS';
 import { ScatterChartJS } from '@/componentes/ComponentesChartJS/ScatterChartJS';
 import { BubbleChartJS } from '@/componentes/ComponentesChartJS/BubbleChartJS';
 
+import { SettingBarrasChartJS } from '@/componentes/ComponentesSettings/SettingBarrasChartJS';
+
 
 const KeysToComponentMap = {  
   fila: Fila_,
@@ -46,9 +48,11 @@ const KeysToComponentMap = {
   scatterChartJS:ScatterChartJS,
   bubbleChartJS:BubbleChartJS,
 
+  settingBarrasChartJS:SettingBarrasChartJS
+
   
 };
-
+/*
 export const RenderizarComponentes_v2 = (config) => {
   const render = (config, additionalProps, key) => {
     if (typeof KeysToComponentMap[config.component] !== 'undefined') {
@@ -93,42 +97,38 @@ export const RenderizarComponentes_v2 = (config) => {
     </>
   )
 };
-
-
-
-/*
+*/
 export const RenderizarComponentes_v2 = (config) => {
-
-  const render = (config, additionalProps) => {
+  const render = (config, additionalProps, parentKey = '') => {
     if (typeof KeysToComponentMap[config.component] !== 'undefined') {
-      const { style,  ...restConfig } = config;
-  
+      const { style, ...restConfig } = config;
+
       return React.createElement(
         KeysToComponentMap[config.component],
         {
           ...restConfig,
           style: style && style[0], // Tomar el primer objeto de la propiedad style
-          ...additionalProps
+          ...additionalProps,
+          key: parentKey // Asegúrate de pasar la key aquí
         },
         config.children &&
           (typeof config.children === 'string'
             ? config.children
             : Array.isArray(config.children)
-            ? config.children.map((c, index) => render(c, additionalProps))
-            : render(config.children, additionalProps))
+            ? config.children.map((c, index) => render(c, {...additionalProps, key: `${parentKey}-${index}`}, `${parentKey}-${index}`))
+            : render(config.children, additionalProps, `${parentKey}-0`))
       );
     }
   };
-  
-  
 
   return (
     <>
-      {render(config)}
+      {render(config, {}, 'root')} 
     </>
   )
 }
-*/
+
+
 
 /*
 

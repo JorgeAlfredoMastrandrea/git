@@ -2,6 +2,9 @@
 
 NUEVO PROYECTO : npx create-next-app@latest
 
+SI MANDA ERROR DE NEXT NO SE RECONOCE COMO UN COMANDO INTERNO O EXTERNO HAY QUE INSTALAR:
+npm install react react-dom next
+
 INSTALAR BOOTSTRAP : npm install bootstrap
 
 USANDO JAVASCRIPT EN PROYECTOS CON BOOTSTRAP: "use client"

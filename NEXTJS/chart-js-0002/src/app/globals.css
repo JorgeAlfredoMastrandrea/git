@@ -1,0 +1,30 @@
+.contenido-scrollable{
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: blue orange
+}
+
+.contenido-scrollable::-webkit-scrollbar {
+    width: 15px;
+    /* width of the entire scrollbar */
+}
+
+.contenido-scrollable::-webkit-scrollbar-track {
+    background: rgb(145, 239, 116);
+    /* color of the tracking area */
+}
+
+.contenido-scrollable::-webkit-scrollbar-thumb {
+    background-color: white;
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: 3px solid rgb(67, 67, 139);
+    /* creates padding around scroll thumb */
+}
+
+.chart-wrapper {
+    border: 1px solid blue;
+    height: 50%;
+    width: 35%;
+  }

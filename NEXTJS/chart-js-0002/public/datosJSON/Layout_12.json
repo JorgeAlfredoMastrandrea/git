@@ -1,0 +1,195 @@
+[
+    {
+        "component": "contenedor",
+        "src": "datos para contenedor",
+        "className": "container-fluid p-0 align-items-center justify-content-center contenido-scrollable",
+        "id": 0,
+        "mKey": 0,
+        "style": [
+            {}
+        ],
+        "children": [
+            {
+                "component": "fila",
+                "src": "datos para fila",
+                "className": "row align-items-center",
+                "id": 1,
+                "mKey": 1,
+                "style": [
+                    {
+                        "backgroundColor": "#aedcca"
+                    }
+                ],
+                "children": [
+                    {
+                        "component": "columna",
+                        "src": "datos adicionales para columna",
+                        "className": "col",
+                        "id": 2,
+                        "mKey": 2,
+                        "children": [
+                            {
+                                "component": "párrafo",
+                                "src": "columna 1",
+                                "className": "text-black",
+                                "id": 3,
+                                "mKey": 3,
+                                "style": [
+                                    {
+                                        "textAlign": "justify",
+                                        "backgroundColor": "#aafaff"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "component": "columna",
+                        "src": "",
+                        "className": "col-sm-9 bg-light p-3 border",
+                        "id": 2,
+                        "mKey": 2,
+                        "children": [
+                            {
+                                "component": "card",
+                                "src": "s",
+                                "className": "rounded col-md-4 mx-auto",
+                                "id": 3,
+                                "mKey": 3,
+                                "style": [
+                                    {
+                                        "width":"600px",
+                                        "height":"400px",
+                                        "textAlign": "center",
+                                        "backgroundColor": "#affaff"
+                                    }
+                                ],
+                                "children": [
+                                    {
+                                        "component": "barrasChartJS",
+                                        "className": "",
+                                        "ky": "DesempeñoPorCurso",
+                                        "src": "src",
+                                        "responsive": true,
+                                        "opcionesBarra": [
+                                            {
+                                                "scales": {
+                                                    "x": {
+                                                        "stacked": true,
+                                                        "grid": {
+                                                            "display": false
+                                                        }
+                                                    },
+                                                    "y": {
+                                                        "stacked": true,
+                                                        "grid": {
+                                                            "display": false
+                                                        }
+                                                    }
+                                                },
+                                                "responsive": true,
+                                                "maintainAspectRatio": true,
+                                                "aspectRatio": 1.5,
+                                                "plugins": {
+                                                    "legend": {
+                                                        "position": "top",
+                                                        "display": true,
+                                                        "labels": {
+                                                            "font": {
+                                                                "size": 20,
+                                                                "family": "Arial"
+                                                            }
+                                                        }
+                                                    },
+                                                    "title": {
+                                                        "display": true,
+                                                        "text": "Se expresan en porcentajes"
+                                                    },
+                                                    "datalabels": {
+                                                        "labels": {
+                                                            "position": "top",
+                                                            "size": 20,
+                                                            "fontColor": "white",
+                                                            "weight": "bold",
+                                                            "family": "Arial"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "datosBarra": [
+                                            {
+                                                "labels": [
+                                                    "2°",
+                                                    "3°",
+                                                    "4°",
+                                                    "5°",
+                                                    "6°",
+                                                    "7°"
+                                                ],
+                                                "datasets": [
+                                                    {
+                                                        "label": "Crítico",
+                                                        "data": [
+                                                            70.3,
+                                                            31.3,
+                                                            33.3,
+                                                            40.1,
+                                                            15.0,
+                                                            24.6
+                                                        ],
+                                                        "backgroundColor": "rgba(32, 81, 89, 0.5)",
+                                                        "barPercentage": 0.5
+                                                    },
+                                                    {
+                                                        "label": "Básico",
+                                                        "data": [
+                                                            17.7,
+                                                            37.3,
+                                                            28.8,
+                                                            28.2,
+                                                            36.2,
+                                                            20.0
+                                                        ],
+                                                        "backgroundColor": "rgba(48, 122, 138, 0.5)",
+                                                        "barPercentage": 0.5
+                                                    },
+                                                    {
+                                                        "label": "Medio",
+                                                        "data": [
+                                                            11.0,
+                                                            17.3,
+                                                            27.9,
+                                                            18.8,
+                                                            33.6,
+                                                            44.6
+                                                        ],
+                                                        "backgroundColor": "rgba(74, 172, 174, 0.5)",
+                                                        "barPercentage": 0.5
+                                                    },
+                                                    {
+                                                        "label": "Avanzado",
+                                                        "data": [
+                                                            0.8,
+                                                            13.9,
+                                                            9.9,
+                                                            12.8,
+                                                            15.0,
+                                                            10.7
+                                                        ],
+                                                        "backgroundColor": "rgba(157, 222, 220, 0.5)",
+                                                        "barPercentage": 0.5
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

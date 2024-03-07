@@ -1,0 +1,317 @@
+[
+    {
+        "component": "contenedor",
+        "src": "datos para contenedor",
+        "className": "container-fluid p-0 align-items-center justify-content-center contenido-scrollable",
+        "id": 0,
+        "mKey": 0,
+        "style": [
+            {
+                "top": "50%",
+                "left": "50%",
+                "width": "100%",
+                "height": "99%",
+                "transform": "translate(-50%, -50%)",
+                "border": "1px solid #666",
+                "backgroundColor": "#b9faac",
+                "position": "fixed"
+            }
+        ],
+        "children": [
+            {
+                "component": "fila",
+                "src": "datos para fila",
+                "className": "row align-items-center p-0 m-0",
+                "id": 1,
+                "mKey": 1,
+                "style": [
+                    {
+                        "backgroundColor": "#aedcca"
+                    }
+                ],
+                "children": [
+                    {
+                        "component": "columna",
+                        "src": "datos adicionales para columna",
+                        "className": "col p-0",
+                        "id": 2,
+                        "mKey": 2,
+                        "children": [
+                            {
+                                "component": "párrafo",
+                                "src": "ipsum dolor sit amet consectetur adipisicing elit. Natusnsectetuipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametr adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet",
+                                "className": "text-black p-1 m-0",
+                                "id": 3,
+                                "mKey": 3,
+                                "style": [
+                                    {
+                                        "textAlign": "justify",
+                                        "backgroundColor": "#aafaff"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "component": "columna",
+                        "src": "datos adicionales para columna",
+                        "className": "col",
+                        "id": 2,
+                        "mKey": 2,
+                        "children": [
+                            {
+                                "component": "barrasChartJS",
+                                "className": "",
+                                "ky": "DesempeñoPorCurso",
+                                "src": "src",
+                                "responsive": true,
+                                "opcionesBarra": [
+                                    {
+                                        "scales": {
+                                            "x": {
+                                                "stacked": true,
+                                                "grid": {
+                                                    "display": false
+                                                }
+                                            },
+                                            "y": {
+                                                "stacked": true,
+                                                "grid": {
+                                                    "display": false
+                                                }
+                                            }
+                                        },
+                                        "responsive": true,
+                                        "maintainAspectRatio": true,
+                                        "aspectRatio": 2,
+                                        "plugins": {
+                                            "legend": {
+                                                "position": "top",
+                                                "display": true,
+                                                "labels": {
+                                                    "font": {
+                                                        "size": 20,
+                                                        "family": "Arial"
+                                                    }
+                                                }
+                                            },
+                                            "title": {
+                                                "display": true,
+                                                "text": "Se expresan en porcentajes"
+                                            },
+                                            "datalabels": {
+                                                "labels": {
+                                                    "position": "top",
+                                                    "size": 20,
+                                                    "fontColor": "white",
+                                                    "weight": "bold",
+                                                    "family": "Arial"
+                                                }
+                                            }
+                                        }
+                                    }
+                                ],
+                                "datosBarra": [
+                                    {
+                                        "labels": [
+                                            "2°",
+                                            "3°",
+                                            "4°",
+                                            "5°",
+                                            "6°",
+                                            "7°"
+                                        ],
+                                        "datasets": [
+                                            {
+                                                "label": "Crítico",
+                                                "data": [
+                                                    70.3,
+                                                    31.3,
+                                                    33.3,
+                                                    40.1,
+                                                    15.0,
+                                                    24.6
+                                                ],
+                                                "backgroundColor": "rgba(32, 81, 89, 0.5)",
+                                                "barPercentage": 0.5
+                                            },
+                                            {
+                                                "label": "Básico",
+                                                "data": [
+                                                    17.7,
+                                                    37.3,
+                                                    28.8,
+                                                    28.2,
+                                                    36.2,
+                                                    20.0
+                                                ],
+                                                "backgroundColor": "rgba(48, 122, 138, 0.5)",
+                                                "barPercentage": 0.5
+                                            },
+                                            {
+                                                "label": "Medio",
+                                                "data": [
+                                                    11.0,
+                                                    17.3,
+                                                    27.9,
+                                                    18.8,
+                                                    33.6,
+                                                    44.6
+                                                ],
+                                                "backgroundColor": "rgba(74, 172, 174, 0.5)",
+                                                "barPercentage": 0.5
+                                            },
+                                            {
+                                                "label": "Avanzado",
+                                                "data": [
+                                                    0.8,
+                                                    13.9,
+                                                    9.9,
+                                                    12.8,
+                                                    15.0,
+                                                    10.7
+                                                ],
+                                                "backgroundColor": "rgba(157, 222, 220, 0.5)",
+                                                "barPercentage": 0.5
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "component": "fila",
+                "src": "datos para fila",
+                "className": "row align-items-center p-0 m-0",
+                "id": 1,
+                "mKey": 1,
+                "style": [
+                    {
+                        "backgroundColor": "#aedcca"
+                    }
+                ],
+                "children": [
+                    {
+                        "component": "columna",
+                        "src": "datos adicionales para columna",
+                        "className": "col",
+                        "id": 2,
+                        "mKey": 2,
+                        "style": [
+                            {
+                                "backgroundColor": "#ff00aa"
+                            }
+                        ],
+                        "children": [
+                            {
+                                "component": "barrasChartJS",
+                                "src": "src",
+                                "className": "",
+                                "id": 6,
+                                "mKey": 6,
+                                "opcionesBarra": [
+                                    {
+                                        "responsive": true,
+                                        "maintainAspectRatio": true,
+                                        "aspectRatio": 2.5,
+                                        "plugins": {
+                                            "legend": {
+                                                "position": "top",
+                                                "display": true,
+                                                "labels": {
+                                                    "font": {
+                                                        "size": 15,
+                                                        "family": "Arial"
+                                                    }
+                                                }
+                                            },
+                                            "title": {
+                                                "display": true,
+                                                "text": "Ejemplo 1"
+                                            },
+                                            "datalabels": {
+                                                "labels": {
+                                                    "position": "top",
+                                                    "size": 20,
+                                                    "fontColor": "white",
+                                                    "weight": "bold",
+                                                    "family": "Arial"
+                                                }
+                                            }
+                                        }
+                                    }
+                                ],
+                                "datosBarra": [
+                                    {
+                                        "labels": [
+                                            "Enero",
+                                            "Febrero",
+                                            "March",
+                                            "April",
+                                            "May",
+                                            "June",
+                                            "July"
+                                        ],
+                                        "datasets": [
+                                            {
+                                                "label": "Dataset 1",
+                                                "data": [
+                                                    100,
+                                                    200,
+                                                    300,
+                                                    400,
+                                                    500,
+                                                    600,
+                                                    700
+                                                ],
+                                                "backgroundColor": "rgba(255, 99, 132, 0.5)"
+                                            },
+                                            {
+                                                "label": "Dataset 2",
+                                                "data": [
+                                                    150,
+                                                    250,
+                                                    350,
+                                                    450,
+                                                    550,
+                                                    650,
+                                                    750
+                                                ],
+                                                "backgroundColor": "rgba(53, 162, 235, 0.5)"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "component": "columna",
+                        "src": "datos adicionales para columna",
+                        "className": "col m-0 p-0",
+                        "id": 2,
+                        "mKey": 2,
+                        "children": [
+                            {
+                                "component": "párrafo",
+                                "src": "ipsum dolor sit amet consectetur adipisicing elit. Natusnsectetuipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametipsum dolor sit amet consectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit ametr adipisicing elit. Natusnsectetur adipisicing elit. Natusnsectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet consectetur adipisicing elit. Natus dicta alias quas. Dignissimosipsum dolor sit amet",
+                                "className": "text-black p-1 m-0",
+                                "id": 3,
+                                "mKey": 3,
+                                "style": [
+                                    {
+                                        "textAlign": "justify",
+                                        "backgroundColor": "#aafaff"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
