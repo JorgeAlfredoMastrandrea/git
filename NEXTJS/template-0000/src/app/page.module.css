@@ -1,3 +1,10 @@
+.btn-xs {
+  padding: .25rem .4rem;
+  font-size: .75rem;
+  line-height: .5;
+  border-radius: .1rem;
+}
+
 .main {
   display: flex;
   flex-direction: column;
