@@ -204,8 +204,8 @@ export const DynamicGrid_copy = () => {
   return (
     <DndProvider backend={HTML5Backend}>
       <div className="container mt-3">
-        <button onClick={addRow} className="btn btn-primary mb-1">+R</button>
-        <button onClick={exportToHTML} className="btn btn-success mb-1">Exportar a HTML</button>
+        <button onClick={addRow} className="btn btn-primary mb-1 btn-xs">+R</button>
+        <button onClick={exportToHTML} className="btn btn-success mb-1 btn-xs">Exportar a HTML</button>
         {rows.map((row, rowIndex) => (
           <DraggableRow
             key={rowIndex}
@@ -217,35 +217,35 @@ export const DynamicGrid_copy = () => {
             <div key={rowIndex} className="mb-0">
               <div
                 className={`row align-items-center ${draggedRowIndex === rowIndex ? 'dragged-row' : ''}`}
-                style={{ marginBottom: '0px', height: `${row.height || 50}px` }} // Aquí ajustas la altura de la fila
+                style={{ marginBottom: '0px', height: `${row.height || 50}px` }}
               >
                 {row.columns.map((column, columnIndex) => (
                   <div
                     key={column.id}
-                    className={`col-${column.width} border text-center bg-${column.color} p-2 position-relative`}
-                    style={{ height: '100%' }} // Asegura que la columna llene la altura de la fila
+                    className={`col-${column.width} border text-center bg-${column.color} p-2 position-relative grid-cell`}
+                    style={{ height: '100%' }}
                     onMouseEnter={() => setHoveredColumn({ rowIndex, columnIndex })}
                     onMouseLeave={() => setHoveredColumn({ rowIndex: null, columnIndex: null })}
                   >
-                    {columnIndex === 0 && hoveredColumn.rowIndex === rowIndex && hoveredColumn.columnIndex === columnIndex && (
-                      <div style={{ position: 'absolute', top: 5, left: 5, display: 'flex', gap: '2px' }}>
-                        <button onClick={() => adjustRowHeight(rowIndex, -10)} className="btn btn-secondary btn-sm">-</button>
-                        <button onClick={() => adjustRowHeight(rowIndex, 10)} className="btn btn-secondary btn-sm">+</button>
+                    {columnIndex === 0 && hoveredColumn.rowIndex === rowIndex && (
+                      <div style={{ position: 'absolute', top: 0, left: 0, display: 'flex', flexDirection: 'column', gap: '2px', backgroundColor: 'white', padding: '5px', borderRadius: '5px', boxShadow: '0px 0px 5px rgba(0,0,0,0.2)', zIndex: 10 }}>
+                        <button onClick={() => adjustRowHeight(rowIndex, -10)} className="btn btn-secondary btn-xs">-</button>
+                        <button onClick={() => adjustRowHeight(rowIndex, 10)} className="btn btn-secondary btn-xs">+</button>
                       </div>
                     )}
                     {hoveredColumn.rowIndex === rowIndex && hoveredColumn.columnIndex === columnIndex && (
-                      <div className="btn-group mt-1">
-                        <button onClick={() => adjustColumnWidth(rowIndex, columnIndex, -1)} className="btn btn-secondary btn-xs" style={{ padding: "0.5rem 0.4rem", fontSize: "0.5rem", lineHeight: "0.5", borderRadius: "0.1rem" }}>-</button>
-                        <button onClick={() => adjustColumnWidth(rowIndex, columnIndex, 1)} className="btn btn-secondary btn-xs" style={{ padding: "0.5rem 0.4rem", fontSize: "0.5rem", lineHeight: "0.5", borderRadius: "0.1rem" }}>+</button>
-                        <button onClick={() => deleteColumn(rowIndex, columnIndex)} className="btn btn-danger btn-xs" style={{ padding: "0.5rem 0.4rem", fontSize: "0.5rem", lineHeight: "0.5", borderRadius: "0.1rem" }}>X</button>
+                      <div style={{ position: 'absolute', top: 5, right: 5, display: 'flex', flexDirection: 'column', gap: '2px', backgroundColor: 'white', padding: '5px', borderRadius: '5px', boxShadow: '0px 0px 5px rgba(0,0,0,0.2)', zIndex: 10 }}>
+                        <button onClick={() => adjustColumnWidth(rowIndex, columnIndex, -1)} className="btn btn-secondary btn-xs">-</button>
+                        <button onClick={() => adjustColumnWidth(rowIndex, columnIndex, 1)} className="btn btn-secondary btn-xs">+</button>
+                        <button onClick={() => deleteColumn(rowIndex, columnIndex)} className="btn btn-danger btn-xs">X</button>
                         {columnIndex === row.columns.length - 1 && (
                           <>
-                            <button onClick={() => deleteRow(rowIndex)} className="btn btn-danger btn-xs" style={{ padding: "0.5rem 0.4rem", fontSize: "0.5rem", lineHeight: "0.5", borderRadius: "0.1rem" }}>-R</button>
-                            <button onClick={() => addRowInBetween(rowIndex)} className="btn btn-info btn-xs" style={{ padding: "0.5rem 0.4rem", fontSize: "0.5rem", lineHeight: "0.5", borderRadius: "0.1rem" }}>+R</button>
+                            <button onClick={() => deleteRow(rowIndex)} className="btn btn-danger btn-xs">-R</button>
+                            <button onClick={() => addRowInBetween(rowIndex)} className="btn btn-info btn-xs">+R</button>
                           </>
                         )}
                         {row.columns.reduce((acc, column) => acc + column.width, 0) < 12 && columnIndex === row.columns.length - 1 && (
-                          <button onClick={() => addColumn(rowIndex)} className="btn btn-primary btn-xs" style={{ padding: "0.5rem 0.4rem", fontSize: "0.5rem", lineHeight: "0.5", borderRadius: "0.1rem" }}>+C</button>
+                          <button onClick={() => addColumn(rowIndex)} className="btn btn-primary btn-xs">+C</button>
                         )}
                       </div>
                     )}

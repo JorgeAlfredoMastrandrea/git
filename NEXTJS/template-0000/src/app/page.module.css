@@ -28,3 +28,27 @@
   background-color: #f0f0f0; /* Cambia esto por el color deseado */
   /* Añade cualquier otro estilo que quieras para indicar que la fila se está arrastrando */
 }
+
+
+/********************************/
+.grid-cell {
+  position: relative;
+  z-index: 1; /* Asegura que este valor sea más bajo que el del menú */
+}
+
+
+.cell-hover-menu {
+  display: none;
+  position: absolute;
+  z-index: 10; /* O incluso un valor más alto si es necesario */
+  background-color: #f9f9f9;
+  box-shadow: 0 10px 20px 0 rgba(0,0,0,0.3);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.cell-container:hover .cell-hover-menu {
+  display: block;
+}
+
+
