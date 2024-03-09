@@ -154,13 +154,15 @@ export const DynamicGrid_copy = () => {
   <div class="container">\n`;
 
     rows.forEach((row, rowIndex) => {
-      html += `  <div class="row">\n`;
+      // Utiliza la altura de la fila si está definida, o usa una altura predeterminada (e.g., 50px)
+      const rowStyle = row.height ? `style="height: ${row.height}px;"` : 'style="height: 50px;"';
+      html += `  <div class="row" ${rowStyle}>\n`;
       row.columns.forEach((column, columnIndex) => {
         // Asume que el ancho de columna es el mismo para todos los tamaños de pantalla por simplicidad
         // Modificar aquí según necesidades específicas de diseño responsive
         const responsiveWidth = `col-12 col-sm-${column.width} col-md-${column.width} col-lg-${column.width} col-xl-${column.width}`;
-        html += `    <div class="${responsiveWidth} p-2 border text-center bg-${column.color}">\n`;
-        html += `      Fila ${rowIndex + 1}, Columna ${columnIndex + 1} - Ancho: ${column.width}\n`;
+        html += `    <div class="${responsiveWidth} p-2 border text-center bg-${column.color}" style="min-height: 100%; height: 100%;">\n`;
+        // Línea eliminada que añadía texto a cada columna
         html += `    </div>\n`;
       });
       html += `  </div>\n`;
@@ -189,6 +191,16 @@ export const DynamicGrid_copy = () => {
   };
 
 
+
+  // Función para ajustar la altura de la fila
+  const adjustRowHeight = (rowIndex, delta) => {
+    const newRows = [...rows];
+    const newHeight = (newRows[rowIndex].height || 50) + delta;
+    newRows[rowIndex].height = newHeight > 30 ? newHeight : 30; // Asegura un mínimo de 30px de altura.
+    setRows(newRows);
+  };
+
+
   return (
     <DndProvider backend={HTML5Backend}>
       <div className="container mt-3">
@@ -203,19 +215,24 @@ export const DynamicGrid_copy = () => {
             setEditingRowIndex={setEditingRowIndex}
           >
             <div key={rowIndex} className="mb-0">
-
               <div
                 className={`row align-items-center ${draggedRowIndex === rowIndex ? 'dragged-row' : ''}`}
-                style={{ marginBottom: '5px' }}
+                style={{ marginBottom: '0px', height: `${row.height || 50}px` }} // Aquí ajustas la altura de la fila
               >
                 {row.columns.map((column, columnIndex) => (
                   <div
                     key={column.id}
                     className={`col-${column.width} border text-center bg-${column.color} p-2 position-relative`}
-                    style={{ padding: '.25rem .4rem', fontSize: '.75rem', lineHeight: '1', borderRadius: '.2rem' }}
+                    style={{ height: '100%' }} // Asegura que la columna llene la altura de la fila
                     onMouseEnter={() => setHoveredColumn({ rowIndex, columnIndex })}
                     onMouseLeave={() => setHoveredColumn({ rowIndex: null, columnIndex: null })}
                   >
+                    {columnIndex === 0 && hoveredColumn.rowIndex === rowIndex && hoveredColumn.columnIndex === columnIndex && (
+                      <div style={{ position: 'absolute', top: 5, left: 5, display: 'flex', gap: '2px' }}>
+                        <button onClick={() => adjustRowHeight(rowIndex, -10)} className="btn btn-secondary btn-sm">-</button>
+                        <button onClick={() => adjustRowHeight(rowIndex, 10)} className="btn btn-secondary btn-sm">+</button>
+                      </div>
+                    )}
                     {hoveredColumn.rowIndex === rowIndex && hoveredColumn.columnIndex === columnIndex && (
                       <div className="btn-group mt-1">
                         <button onClick={() => adjustColumnWidth(rowIndex, columnIndex, -1)} className="btn btn-secondary btn-xs" style={{ padding: "0.5rem 0.4rem", fontSize: "0.5rem", lineHeight: "0.5", borderRadius: "0.1rem" }}>-</button>

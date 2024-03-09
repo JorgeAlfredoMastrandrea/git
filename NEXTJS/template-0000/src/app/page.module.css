@@ -1,8 +1,8 @@
 .btn-xs {
-  padding: .25rem .4rem;
-  font-size: .75rem;
+  padding: .15rem .4rem;
+  font-size: .15rem;
   line-height: .5;
-  border-radius: .1rem;
+  border-radius: .2rem;
 }
 
 .column:hover .controls .control-btn,
