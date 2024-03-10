@@ -51,4 +51,11 @@
   display: block;
 }
 
+.selected-cell {
+  border-color: #007bff; /* Cambia el color del borde a un azul (puedes usar cualquier color que prefieras) */
+  border-width: 2px; /* Hace el borde más grueso para que sea más notable */
+  background-color: rgba(0, 123, 255, 0.2); /* Añade un ligero color de fondo azul para resaltar la celda */
+}
+
+
 
