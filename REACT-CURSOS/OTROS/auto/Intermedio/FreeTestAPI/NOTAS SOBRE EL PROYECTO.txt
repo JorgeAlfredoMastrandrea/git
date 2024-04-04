@@ -1,0 +1,20 @@
+Welcome to FreeTestAPI
+Empower Your Development Process With 350+ Quality Mock Data &
+Get Access to a Diverse Range of Fake Testing APIs at Completely Free of Cost.
+
+https://freetestapi.com/
+
+La idea de este proyecto es la de poder mostrar datos de esta página.
+Se van a separar los distintos tipos de objetos a mostrar.
+Usaremos AXIOS para hacer el fetching.
+
+Para obtener imágenes:
+https://http.cat/[status_code]
+ejemplo : https://http.cat/status/100
+https://http.cat/
+
+
+https://developers.thecatapi.com/view-account/ylX4blBYT9FaoVd6OhvR?report=bOoHBz-8t
+
+
+

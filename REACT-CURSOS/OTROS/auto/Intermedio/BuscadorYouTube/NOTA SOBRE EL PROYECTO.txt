@@ -1,0 +1,45 @@
+Objetivo:
+Desarrollar una aplicación que permita a los usuarios buscar videos en YouTube. 
+La aplicación mostrará una lista de videos relacionados con la búsqueda, 
+incluyendo miniaturas y títulos, y el usuario podrá seleccionar un video para reproducirlo.
+
+Tecnologías a Utilizar:
+React (se puede iniciar con Create React App)
+Axios para solicitudes HTTP o el Fetch API nativo de JavaScript.
+YouTube Data API V3 para las búsquedas de videos.
+
+Configura tu Proyecto React:
+
+Consigue una API Key para YouTube Data API V3:
+
+Ve a la Google Developer Console.
+Crea un nuevo proyecto.
+Busca la YouTube Data API V3 y habilítala para tu proyecto.
+Ve a credenciales, crea una nueva API Key.
+Nota: Ten cuidado con la seguridad de tu API Key. No la expongas públicamente, y restringe su uso a lo mínimo necesario.
+
+
+API Key
+AIzaSyDb0xJ9HPUH0zcmDrn2W71tT4IY325koLM
+Para usar esta clave en tu aplicación, debes transferirla con el parámetro key=API_KEY .
+
+Fecha de creación
+4 de abril de 2024, 07:54:53 GMT-3
+
+Implementa la Lógica para Buscar Videos:
+
+Puedes usar Axios para hacer las solicitudes. Instálalo con:
+npm install axios.
+
+Crea un componente donde implementarás la lógica de búsqueda:
+
+-------------------------------------------------------------------------------------------------------------
+
+PARA USAR UNAS APIS EXTRAS:
+https://fakeapi.platzi.com/
+
+https://apipheny.io/free-api/
+
+https://freetestapi.com/
+
+
