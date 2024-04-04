@@ -1,0 +1,12 @@
+Nivel       Ejercicio	                            Descripción
+Básico	    Hello World	                            Crea un componente que simplemente muestre "Hello, World!" en el DOM.
+Básico	    Contador	                            Implementa un componente de contador con botones para incrementar y decrementar el estado.
+Intermedio	Lista de Tareas	                        Desarrolla una aplicación de lista de tareas que permita añadir, eliminar y marcar tareas como completadas.
+Intermedio	Consumo de API	                        Crea un componente que consuma una API externa (como la API de JSONPlaceholder) y muestre los datos en una lista.
+Intermedio	Formulario Controlado	                Implementa un formulario con campos controlados por el estado de React, incluyendo validación básica.
+Avanzado	Rutas con React Router	                Configura React Router para manejar múltiples rutas y crea al menos dos páginas navegables.
+Avanzado	Context API	                            Utiliza Context API para gestionar y compartir el estado entre varios componentes sin prop drilling.
+Avanzado	Hooks Personalizados	                Crea y utiliza al menos un hook personalizado para abstraer la lógica de algún componente.
+Experto	    Optimización de Rendimiento	            Implementa técnicas de optimización como React.memo, useCallback, y useMemo para mejorar el rendimiento de tu aplicación.
+Experto	    Testeo de Componentes	                Escribe pruebas para tus componentes utilizando Jest y React Testing Library, cubriendo pruebas unitarias y de integración.
+Experto	    Aplicación Completa con Redux o Recoil	Desarrolla una aplicación más compleja que maneje el estado global con Redux o Recoil, integrando middleware y persistencia de estado.
